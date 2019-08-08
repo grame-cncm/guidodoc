@@ -51,10 +51,15 @@ serve:
 	cd $(MKDIR) && mkdocs serve
 
 all:
-	make tagfiles
-	make gmn
-	make zip
+	$(MAKE) tagfiles
+	$(MAKE) gmn
+	$(MAKE) zip
 	cp -r Introduction $(DOCDIR)
+
+publish:
+	$(MAKE) all
+	$(MAKE) build
+	
 
 ####################################################################
 # building guido examples
