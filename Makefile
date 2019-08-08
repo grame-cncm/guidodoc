@@ -1,4 +1,7 @@
 
+MAKE 	?= make
+
+TMPTAGDIR := .tmptags
 
 IGNORED  := "shareLocation|splitChord|chord|bembel|merge|port|shortFermata|color|colour|symbol|unit"
 MKDIR    := mkdocs
@@ -10,8 +13,9 @@ SRCDIR   := $(GUIDODIR)/src/engine
 INLINEGMN 	:= $(wildcard examples/mkdocs/*.gmn)
 INLINEHTML 	:= $(INLINEGMN:examples/mkdocs/%.gmn=$(DOCDIR)/GMN/%.html)
 GMNEXAMPLES := $(wildcard examples/mkdocs/examples/*.gmn)
-HTMLEXAMPLES:= $(GMNEXAMPLES:examples/mkdocs/%.gmn=$(DOCDIR)/GMN/%.html) 
-MDEXAMPLES  := $(GMNEXAMPLES:examples/mkdocs/%.gmn=$(DOCDIR)/%.md)
+HTMLEXAMPLES:= $(GMNEXAMPLES:examples/mkdocs/examples/%.gmn=$(DOCDIR)/GMN/examples/%.html) 
+MDEXAMPLES  := $(GMNEXAMPLES:examples/mkdocs/examples/%.gmn=$(DOCDIR)/examples/%.md)
+EXAMPLESMENU:= $(MDEXAMPLES:%.md=%.item)
 
 .PHONY: tagslist.txt
 
@@ -25,45 +29,58 @@ help:
 	@echo "Available targets are:"
 	@echo "  install  : install the required components"
 	@echo "  build    : build the web site"
-	@echo "  server   : launch the mkdoc server"
+	@echo "  serve    : launch the mkdoc server"
 	@echo "  tagfiles : create the tags documention md files from the src files"
 	@echo "  tagsindex: generates the tags index page"
+	@echo "  gmn      : call inlinegmn and examples targets"
+	@echo "  inlinegmn: process the inline gmn files"
+	@echo "  examples : process the gmn examples files"
 
 test: 
-	@echo MDEXAMPLES: $(MDEXAMPLES)
+	@echo EXAMPLESMENU: $(EXAMPLESMENU)
 
 ####################################################################
 build:
-	cd $(DOCDIR) && mkdocs build
+	cd $(MKDIR) && mkdocs build
 
-server:
-	cd $(DOCDIR) && mkdocs serve
+serve:
+	cd $(MKDIR) && mkdocs serve
 
 
 ####################################################################
 # building guido examples
+gmn:
+	$(MAKE) inlinegmn
+	$(MAKE) examples
+	
 inlinegmn: $(INLINEHTML)
 
 examples : $(MDEXAMPLES) $(HTMLEXAMPLES)
 
+examplesmd : $(MDEXAMPLES)
+exampleshtml : $(HTMLEXAMPLES)
+
 gmnclean: 
 	rm -f $(INLINEHTML) $(MDEXAMPLES) $(HTMLEXAMPLES)
+	
+menu: $(EXAMPLESMENU)
 
 ####################################################################
 tagfiles: $(GUIDODIR)
-	rm -rf tmptags
-	[ -d tmptags ] || mkdir tmptags
-	awk -v OUT=tmptags -f maketag.awk $(SRCDIR)/abstract/AR*.h
-	mv -f tmptags/*.md $(TAGSDEST)
+	@rm -rf $(TMPTAGDIR)
+	@[ -d $(TMPTAGDIR) ] || mkdir $(TMPTAGDIR)
+	awk -v OUT=$(TMPTAGDIR) -f scripts/maketag.awk $(SRCDIR)/abstract/AR*.h
+	@[ -d  $(TAGSDEST) ] || mkdir  $(TAGSDEST)
+	mv -f $(TMPTAGDIR)/*.md $(TAGSDEST)
 
 tagslist:
-	make -C $(GUIDODIR)/build/ tags | egrep -v 'make|grep' | egrep -v $(IGNORED) | grep -v ^s$ | sort -u
+	$(MAKE) -C $(GUIDODIR)/build/ tags | egrep -v 'make|grep' | egrep -v $(IGNORED) | grep -v ^s$ | sort -u
 
 $(GUIDODIR):
 	@echo "GUIDODIR not found !"
 	@echo "you should either:"
 	@echo "   - set GUIDODIR to the guidolib projet location in this Makefile"
-	@echo "   - call make GUIDODIR=guidolib_projet_path"
+	@echo "   - call $(MAKE) GUIDODIR=guidolib_projet_path"
 	@false;
 
 chapters:
@@ -79,20 +96,30 @@ docs/refs/index.md: tags.txt
 
 ####################################################################
 # rules to convert gmn to html
-$(DOCDIR)/GMN/%.html: examples/mkdocs/%.gmn
-	echo '<div class="guido-code">' > $@
+$(DOCDIR)/GMN/examples/%.html: examples/mkdocs/examples/%.gmn
+	@[ -d $(DOCDIR)/GMN/examples ] || mkdir $(DOCDIR)/GMN/examples
+	sh scripts/guido2svg.sh $<	> $@
+
+$(DOCDIR)/GMN/notes.html: examples/mkdocs/notes.gmn
+	@echo '<div class="guido-code guido-medium">' > $@
 	guido2svg $< >> $@
-	echo '</div>' >> $@
+	@echo '</div>' >> $@
+
+$(DOCDIR)/GMN/%.html: examples/mkdocs/%.gmn
+	@echo '<div class="guido-code">' > $@
+	guido2svg $< >> $@
+	@echo '</div>' >> $@
 
 $(DOCDIR)/examples/%.md: examples/mkdocs/examples/%.gmn
+	@[ -d $(DOCDIR)/examples ] || mkdir $(DOCDIR)/examples
 	$(eval name := $(patsubst $(DOCDIR)/examples/%.md, %, $@))	
 	awk -v FILE=$(name) -f scripts/sample2md.awk $< > $@
 
-$(DOCDIR)/GMN/examples/%.html/%.md: examples/mkdocs/examples/%.gmn
-	$(eval name := $(patsubst $(DOCDIR)/examples/%.md, %, $@))	
-	echo '<div class="guido-code guido-full">' > $@
-	guido2svg $< >> $@
-	echo '</div>' >> $@
+####################################################################
+# rule to generate the example menu items
+$(DOCDIR)/examples/%.item : $(DOCDIR)/examples/%.md
+	$(eval file := $(patsubst $(DOCDIR)/examples/%.item, %, $@))	
+	@echo "        - '$(shell egrep '^# ' $< | sed 's/# *//' | sed 's/ *$$//')': examples/$(file).md"
 
 
 ####################################################################
@@ -100,7 +127,7 @@ install:
 	pip install mkdocs
 	pip install mkdocs-pdf-export-plugin
 	pip install markdown-include
-	npm i railroad-diagrams
+#	npm i railroad-diagrams
 
 uninstall:
 	pip uninstall -y mkdocs-material

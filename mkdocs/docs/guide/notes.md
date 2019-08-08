@@ -105,6 +105,6 @@ No white space (blank, newline or tab) are allowed within note descriptions.
 
 ### Examples
 ~~~~~~
-d1*3/4  c#0/8 h&/6  _/4  c&&/2. cis/4.. fa##1 sol&0 
+d1*3/4  c#0/8 h&/4  _/4.  c&&/2. cis/4.. fa##1/4 sol&0  
 ~~~~~~
 {!GMN/notes.html!}

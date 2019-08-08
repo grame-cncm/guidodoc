@@ -32,29 +32,30 @@ nav:
         - 'Tags index': refs/index.md
         - 'Language specification': refs/gmnf.md
     - Examples: 
-        - '4Voices': examples/4voices.md
+        - '4 Voices': examples/4voices.md
         - 'Accidentals': examples/accidentals.md
         - 'Articulations': examples/articulations.md
         - 'Bach': examples/bach.md
         - 'Barlines': examples/barlines.md
         - 'Beaming': examples/beaming.md
-        - 'ClefKeyMeter': examples/clefkeymeter.md
+        - 'Clef, Key, Meter': examples/clefkeymeter.md
         - 'Dynamics': examples/dynamics.md
         - 'Fauré': examples/faure.md
         - 'Layout': examples/layout.md
-        - 'Mozart Quintet': examples/mozart581.md
+        - 'Mozart Clarinet Quintet': examples/mozart581.md
         - 'Slurs': examples/slurs.md
         - 'Ties & Space': examples/space.md
     - About: about.md
 
 #theme: readthedocs
 
+
 extra:
     social:
         - type: github
-          link: https://github.com/grame-cncm/guidolib
+          link: https://github.com/grame-cncm/guidodoc
         - type: home
-          link: https://guido.sf.net
+          link: https://guidolib.grame.fr
         - type: envelope
           link: mailto:fober@grame.fr
 
