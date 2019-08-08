@@ -71,8 +71,8 @@ plugins:
 
 
 extra_javascript:
-  - '/GMN/guidolib/libGUIDOEngine.js'
-  - '/GMN/guidolib/guidocode.js'
+#  - '/GMN/guidolib/libGUIDOEngine.js'
+#  - '/GMN/guidolib/guidocode.js'
 #  - '/BNF/railroad-diagrams/railroad-diagrams.js'
 
 extra_css:
