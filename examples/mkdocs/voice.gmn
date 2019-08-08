@@ -1,0 +1,6 @@
+[ 
+	\pageFormat<lm=1cm, tm=1cm, bm=1cm, rm=1cm>
+	\meter<"4/4"> 
+	a0/4 \bar c1/2 \slur( e&/4 c ) 
+	\bar g/1 
+]

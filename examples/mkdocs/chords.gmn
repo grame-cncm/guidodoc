@@ -1,0 +1,7 @@
+[ 
+	\pageFormat<lm=1cm, tm=1cm, bm=1cm, rm=1cm>
+	{c1/4., e&1/4., g1/4.}   % c minor triad , ascending order   
+	{c1/4., e&,g}            % same as above, abbreviated notation   
+	{c#1/4, e#, g#}          % C-sharp major triad, ascending order   
+	{c2, dis1, a0, fis}    % four-voice chord, descending order  
+]

@@ -1,3 +1,8 @@
+(*
+@mkdoc:Fauré
+
+Excerpt from "Après un rêve", a work by Gabriel Fauré.
+*)
 {
 [
 	\pageFormat<"A4", tm=6cm>

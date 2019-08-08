@@ -1,0 +1,4 @@
+[
+	\pageFormat<lm=1cm, tm=1cm, bm=1cm, rm=1cm>
+	\clef<"g", color="blue"> 	\key<4, color="0xaaaaaa"> 	\meter<"4/4", color="0xdd000050"> 
+]

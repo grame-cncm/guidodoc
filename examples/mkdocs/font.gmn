@@ -1,0 +1,4 @@
+[ 	
+	\pageFormat<lm=1cm, tm=1cm, bm=1cm, rm=1cm>
+	\clef<"g"> \text<"Hello world", fsize=6pt, fattrib="bi", dy=3.9> 
+]
