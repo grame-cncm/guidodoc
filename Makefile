@@ -38,6 +38,7 @@ help:
 	@echo "  gmn      : call inlinegmn and examples targets"
 	@echo "  inlinegmn: process the inline gmn files"
 	@echo "  examples : process the gmn examples files"
+	@echo "  menu     : generates the examples menu"
 
 test: 
 	@echo EXAMPLESMENU: $(EXAMPLESMENU)
@@ -52,6 +53,8 @@ serve:
 all:
 	make tagfiles
 	make gmn
+	make zip
+	cp -r Introduction $(DOCDIR)
 
 ####################################################################
 # building guido examples
@@ -70,6 +73,11 @@ gmnclean:
 	rm -f $(INLINEHTML) $(MDEXAMPLES) $(HTMLEXAMPLES)
 	
 menu: $(EXAMPLESMENU)
+
+zip: 
+	cd examples/mkdocs && zip -r examples examples 
+	mv examples/mkdocs/examples.zip $(DOCDIR)
+	
 
 ####################################################################
 tagfiles: $(GUIDODIR)

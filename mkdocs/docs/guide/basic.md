@@ -13,3 +13,5 @@ This user guide describes
 
 The reference section describes all the supported tags and tags parameters.   
 It includes also the Guido Music Notation format full [specification](../../refs/gmnf). 
+
+A quick introduction to the Guido Music Notation format is also available [here](/Introduction)
