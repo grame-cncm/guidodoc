@@ -30,6 +30,9 @@ help:
 	@echo "  install  : install the required components"
 	@echo "  build    : build the web site"
 	@echo "  serve    : launch the mkdoc server"
+	@echo "  all      : generates all the necessary files from the src code or from gmn files"
+	@echo "             actually call the 'gmn' and 'tagfiles' targets"
+	@echo "Development specific targets are available:"
 	@echo "  tagfiles : create the tags documention md files from the src files"
 	@echo "  tagsindex: generates the tags index page"
 	@echo "  gmn      : call inlinegmn and examples targets"
@@ -46,6 +49,9 @@ build:
 serve:
 	cd $(MKDIR) && mkdocs serve
 
+all:
+	make tagfiles
+	make gmn
 
 ####################################################################
 # building guido examples
