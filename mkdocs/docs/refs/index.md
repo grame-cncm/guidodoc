@@ -1,7 +1,7 @@
 # Tags index 
 
 ##A
- [\acc](tags/Articulations) [\accel](tags/Tempo) [\accelBegin](tags/Tempo) [\accelEnd](tags/Tempo) [\accelerando](tags/Tempo) [\accent](tags/Articulations) [\accidental](tags/Accidentals) [\accol](tags/Layout) [\accolade](tags/Layout) [\alter](tags/Accidentals) [\arpeggio](tags/Articulations) [\auto](tags/Settings)
+ [\acc](tags/Articulations) [\accel](tags/Tempo) [\accelBegin](tags/Tempo) [\accelEnd](tags/Tempo) [\accelerando](tags/Tempo) [\accent](tags/Articulations) [\accidental](tags/Accidentals) [\accol](tags/Layout) [\accolade](tags/Layout) [\alter](tags/Accidentals) [\arpeggio](tags/Articulations) [\auto](tags/Miscellaneous)
 
 ##B
 [\b](tags/Beaming) [\bar](tags/Barlines) [\barFormat](tags/Barlines) [\beam](tags/Beaming) [\beamBegin](tags/Beaming) [\beamEnd](tags/Beaming) [\beamsAuto](tags/Beaming) [\beamsFull](tags/Beaming) [\beamsOff](tags/Beaming) [\bm](tags/Beaming) [\breathMark](tags/Articulations)
@@ -49,7 +49,7 @@
 [\repeatBegin](tags/RepeatSigns) [\repeatEnd](tags/RepeatSigns) [\restFormat](tags/Notes) [\rit](tags/Tempo) [\ritardando](tags/Tempo) [\ritBegin](tags/Tempo) [\ritEnd](tags/Tempo)
 
 ##S
-[\segno](tags/RepeatSigns) [\set](tags/Settings) [\sl](tags/Articulations) [\slur](tags/Articulations) [\slurBegin](tags/Articulations) [\slurEnd](tags/Articulations) [\space](tags/Miscellaneous) [\special](tags/Miscellaneous) [\stacc](tags/Articulations) [\staccato](tags/Articulations) [\staccBegin](tags/Articulations) [\staccEnd](tags/Articulations) [\staff](tags/Layout) [\staffFormat](tags/Layout) [\staffOff](tags/Layout) [\staffOn](tags/Layout) [\stemsAuto](tags/Notes) [\stemsDown](tags/Notes) [\stemsOff](tags/Notes) [\stemsUp](tags/Notes) [\systemFormat](tags/Layout)
+[\segno](tags/RepeatSigns) [\set](tags/Miscellaneous) [\sl](tags/Articulations) [\slur](tags/Articulations) [\slurBegin](tags/Articulations) [\slurEnd](tags/Articulations) [\space](tags/Miscellaneous) [\special](tags/Miscellaneous) [\stacc](tags/Articulations) [\staccato](tags/Articulations) [\staccBegin](tags/Articulations) [\staccEnd](tags/Articulations) [\staff](tags/Layout) [\staffFormat](tags/Layout) [\staffOff](tags/Layout) [\staffOn](tags/Layout) [\stemsAuto](tags/Notes) [\stemsDown](tags/Notes) [\stemsOff](tags/Notes) [\stemsUp](tags/Notes) [\systemFormat](tags/Layout)
 
 ##T
 [\t](tags/Text) [\tempo](tags/Tempo) [\ten](tags/Articulations) [\tenuto](tags/Articulations) [\text](tags/Text) [\tie](tags/Notes) [\tieBegin](tags/Notes) [\tieEnd](tags/Notes) [\title](tags/Header) [\trem](tags/RepeatSigns) [\tremBegin](tags/RepeatSigns) [\tremEnd](tags/RepeatSigns) [\tremolo](tags/RepeatSigns) [\tremoloBegin](tags/RepeatSigns) [\tremoloEnd](tags/RepeatSigns) [\trill](tags/Ornaments) [\trillBegin](tags/Ornaments) [\trillEnd](tags/Ornaments) [\tuplet](tags/Notes) [\turn](tags/Ornaments)
