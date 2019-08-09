@@ -39,6 +39,9 @@ help:
 	@echo "  inlinegmn: process the inline gmn files"
 	@echo "  examples : process the gmn examples files"
 	@echo "  menu     : generates the examples menu"
+	@echo "Making the current version publicly available:"
+	@echo "  publish  : make all + build, switch to gh-pages and copy to root"
+	@echo "             commit and push are still manual operations"
 
 test: 
 	@echo EXAMPLESMENU: $(EXAMPLESMENU)
@@ -61,6 +64,7 @@ publish:
 	$(MAKE) build
 	git checkout gh-pages
 	cp -Rf $(MKDIR)/site/* .
+	@echo Review the changes, add new files, commit and push manually"
 	
 
 ####################################################################
