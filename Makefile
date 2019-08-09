@@ -11,6 +11,7 @@ GUIDODIR ?= ../guidolib
 SRCDIR   := $(GUIDODIR)/src/engine
 
 INLINEGMN 	:= $(wildcard examples/mkdocs/*.gmn)
+INLINEB64 	:= $(INLINEGMN:%.gmn=%.b64.txt)
 INLINEHTML 	:= $(INLINEGMN:examples/mkdocs/%.gmn=$(DOCDIR)/GMN/%.html)
 GMNEXAMPLES := $(wildcard examples/mkdocs/examples/*.gmn)
 HTMLEXAMPLES:= $(GMNEXAMPLES:examples/mkdocs/examples/%.gmn=$(DOCDIR)/GMN/examples/%.html) 
@@ -71,10 +72,13 @@ publish:
 ####################################################################
 # building guido examples
 gmn:
+	$(MAKE) inlineb64
 	$(MAKE) inlinegmn
 	$(MAKE) examples
 	
 inlinegmn: $(INLINEHTML)
+	
+inlineb64: $(INLINEB64)
 
 examples : $(MDEXAMPLES) $(HTMLEXAMPLES)
 
@@ -141,6 +145,11 @@ $(DOCDIR)/examples/%.md: examples/mkdocs/examples/%.gmn
 	@[ -d $(DOCDIR)/examples ] || mkdir $(DOCDIR)/examples
 	$(eval name := $(patsubst $(DOCDIR)/examples/%.md, %, $@))	
 	awk -v FILE=$(name) -f scripts/sample2md.awk $< > $@
+
+####################################################################
+# rules to convert gmn to base 64
+%.b64.txt : %.gmn
+	openssl base64 -in $< |  tr -d '\n' > $@
 
 ####################################################################
 # rule to generate the example menu items
