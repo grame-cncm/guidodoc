@@ -15,3 +15,10 @@ The reference section describes all the supported tags and tags parameters.
 It includes also the Guido Music Notation format full [specification](../../refs/gmnf). 
 
 <span style="font-size:130%;">A quick introduction to the Guido Music Notation format is also available [here](/Introduction)</span>
+
+---
+
+This documentation comes with various Guido code examples that you can download [here](/rsrc/examples.zip).
+
+You can also download the very first version of the [Guido Music Notation Format](/rsrc/GUIDO-Music-Notation-Format.pdf) and the historical [first publication](/rsrc/GUIDO-Notation-Format-ICMC98.pdf) about the format.
+

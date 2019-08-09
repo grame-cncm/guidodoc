@@ -30,5 +30,7 @@ The Guido tools include a Qt editor, various command line utilities and an [onli
 
 Compared to existing solutions in the field of music score compilation, the notable feature of the Guido engine is its efficiency and its ability to compute scores in real time.
 
-The Guido Project originates from the GUIDO NoteViewer project started in the 90th at the Darmstadt University of Technology by 3 PHD students: Holger H.Hoos, Jürgen Kilian and Kai Renz. It became an open source library in December 2002 at the initiative of [Grame-CNCM](http://www.grame.fr). 
+The Guido Project originates from the GUIDO NoteViewer project started in the 90th at the Darmstadt University of Technology by 3 PHD students: Holger H.Hoos, Jürgen Kilian and Kai Renz. 
+Keith Hamel, the author of [Notability](http://debussy.music.ubc.ca/NoteAbility/) also contributed significantly to the project. 
+The GUIDO NoteViewer became an open source library in December 2002 at the initiative of [Grame-CNCM](http://www.grame.fr). 
 

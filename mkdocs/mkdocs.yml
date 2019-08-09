@@ -45,7 +45,6 @@ nav:
         - 'Mozart Clarinet Quintet': examples/mozart581.md
         - 'Slurs': examples/slurs.md
         - 'Ties & Space': examples/space.md
-        - 'Download all examples': examples.zip
     - About: about.md
 
 #theme: readthedocs

@@ -80,8 +80,9 @@ gmnclean:
 menu: $(EXAMPLESMENU)
 
 zip: 
+	@[ -d $(DOCDIR)/rsrc ] || mkdir $(DOCDIR)/rsrc
 	cd examples/mkdocs && zip -r examples examples 
-	mv examples/mkdocs/examples.zip $(DOCDIR)
+	mv examples/mkdocs/examples.zip $(DOCDIR)/rsrc
 	
 
 ####################################################################
