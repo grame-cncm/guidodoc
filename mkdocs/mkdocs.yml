@@ -38,11 +38,15 @@ nav:
         - 'Bach': examples/bach.md
         - 'Barlines': examples/barlines.md
         - 'Beaming': examples/beaming.md
+        - 'Beethoven': examples/beethoven.md
         - 'Clef, Key, Meter': examples/clefkeymeter.md
+        - 'Sonata for flute': examples/cpebach.md
         - 'Dynamics': examples/dynamics.md
         - 'Fauré': examples/faure.md
         - 'Layout': examples/layout.md
         - 'Mozart Clarinet Quintet': examples/mozart581.md
+        - 'Notes attributes': examples/notes.md
+        - 'Ornaments': examples/ornaments.md
         - 'Slurs': examples/slurs.md
         - 'Ties & Space': examples/space.md
     - About: about.md
