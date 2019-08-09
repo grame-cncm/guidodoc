@@ -9,7 +9,7 @@ accol:Layout
 accolade:Layout
 alter:Accidentals
 arpeggio:Articulations
-auto:Settings
+auto:Miscellaneous
 b:Beaming
 bar:Barlines
 barFormat:Barlines
@@ -100,7 +100,7 @@ ritardando:Tempo
 ritBegin:Tempo
 ritEnd:Tempo
 segno:Repeat Signs
-set:Settings
+set:Miscellaneous
 sl:Articulations
 slur:Articulations
 slurBegin:Articulations
