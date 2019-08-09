@@ -65,7 +65,9 @@ See the [Articulations](../../../examples/articulations/) example.
 - **detune** is applied to the **note** parameter and works similarly as [\alter](../Accidentals#alter)
 - **accidental** is intended is intended to control how the accidental is displayed
 
-See the [Articulations](../../../examples/articulations/) example.
+See the [Ornaments](../../../examples/ornaments/) example.<br />
+See the [Bach](../../../examples/bach/) example.<br />
+See the [Sonata](../../../examples/cpebach/) example.
 
 
 
@@ -100,7 +102,8 @@ See the [Articulations](../../../examples/articulations/) example.
 
 other parameters have the same effect as for [\mordent](#mordent)
 
-See the [Articulations](../../../examples/articulations/) example.
+See the [Ornaments](../../../examples/ornaments/) example.<br />
+See the [Sonata](../../../examples/cpebach/) example.
 
 
 
@@ -130,6 +133,9 @@ See the [Articulations](../../../examples/articulations/) example.
 | position | string | above, below | above | true |
 
 The parameters have the same effect as for [\mordent](#mordent)
+
+See the [Ornaments](../../../examples/ornaments/) example.<br />
+See the [Sonata](../../../examples/cpebach/) example.
 
 
 

@@ -3,6 +3,8 @@
 
 Excerpt from "Après un rêve", a work by Gabriel Fauré.
 
+Source: [Mutopia project](https://www.mutopiaproject.org/ftp/FaureG/O7/apres/apres-a4.pdf)
+
 ~~~~~~
 {
 	[

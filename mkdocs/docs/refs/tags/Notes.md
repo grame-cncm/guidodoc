@@ -11,9 +11,9 @@
 
 | Name | Variants | Type | Notation element |
 | :----| :--------| :----| :----------------|
-| \cluster |  | R | transform chords into clusters |
+| \cluster |  | R | transform 2 notes chords into clusters |
 
-The **\cluster** takes the highest and lowest notes of a chord and transforms the range into a cluster
+The **\cluster** should be applied to a 2 notes chord and transforms the corresponding range into a cluster
 
 
 
@@ -24,6 +24,7 @@ The **\cluster** takes the highest and lowest notes of a chord and transforms th
 | hdx | unit | displacement relative to the chord | 0hs | true |
 | hdy | unit | displacement relative to the chord | 0hs | true |
 
+See the [notes](../../../examples/notes/) example.
 
 
 
@@ -84,6 +85,7 @@ The duration to display is indicated by a rational value. Provision is also made
 | d | integer | the duration denominator | *none* | false |
 | ndots | integer | the number of dots | 0 | true |
 
+See the [notes](../../../examples/notes/) example.
 
 
 
@@ -123,6 +125,7 @@ For the latter, the format is applied up to the next format specification or to 
 | :----| :--------| :----| :----------------|
 | \grace |  | R | display grace notes |
 
+See the [notes](../../../examples/notes/) example.
 
 
 
@@ -143,6 +146,7 @@ For the latter, the format is applied up to the next format specification or to 
 
 
 
+See the [notes](../../../examples/notes/) example.
 
 
 
@@ -178,6 +182,8 @@ The notehead style should be among "diamond", "x", "square", "round", "triangle"
 
 In addition, each style supports 3 types of variations that consist in enclosing the string into (), <> or [].<br />
 For standard notehead, these variations are simply the  "()", "<>" or "[]" strings.
+
+See the [notes](../../../examples/notes/) example.
 
 
 
@@ -247,6 +253,8 @@ For the latter, the format is applied up to the next format specification or to 
 The **\headsCenter** tag supports both a range and a position form.
 For the latter, it is is applied up to the next *head* specification or to the end of the voice.
 
+See the [notes](../../../examples/notes/) example.
+
 
 ## \headsLeft
 
@@ -261,6 +269,8 @@ For the latter, it is is applied up to the next *head* specification or to the e
 The **\headsLeft** tag supports both a range and a position form.
 For the latter, it is is applied up to the next *head* specification or to the end of the voice.
 
+See the [notes](../../../examples/notes/) example.
+
 
 ## \headsRight
 
@@ -274,6 +284,8 @@ For the latter, it is is applied up to the next *head* specification or to the e
 
 The **\headsRight** tag supports both a range and a position form.
 For the latter, it is is applied up to the next *head* specification or to the end of the voice.
+
+See the [notes](../../../examples/notes/) example.
 
 
 ## \headsNormal
@@ -319,6 +331,7 @@ For the latter, it is is applied up to the next *head* specification or to the e
 | :----| :--------| :----| :----------------|
 | \stemsOff |  | P | disable stems drawing |
 
+See the [notes](../../../examples/notes/) example.
 
 
 ## \stemsAuto
@@ -340,6 +353,8 @@ For the latter, it is is applied up to the next *head* specification or to the e
 | :------------ |:-------| :--------------| :------------- | :--------| 
 | length | unit | the stem length | 7.0 | true |
 
+See the [notes](../../../examples/notes/) example. <br />
+See the [notes](../../../examples/notes/) example.
 
 
 
@@ -362,7 +377,8 @@ For the latter, it is is applied up to the next *head* specification or to the e
 | :------------ |:-------| :--------------| :------------- | :--------| 
 | length | unit | the stem length | 7.0 | true |
 
-See the [4 voices](../../../examples/4voices/) example.
+See the [4 voices](../../../examples/4voices/) example. <br />
+See the [notes](../../../examples/notes/) example.
 
 
 
@@ -385,7 +401,8 @@ See the [4 voices](../../../examples/4voices/) example.
 | :------------ |:-------| :--------------| :------------- | :--------| 
 | length | unit | the stem length | 7.0 | true |
 
-See the [4 voices](../../../examples/4voices/) example.
+See the [4 voices](../../../examples/4voices/) example. <br />
+See the [notes](../../../examples/notes/) example.
 
 
 
@@ -405,7 +422,7 @@ See the [4 voices](../../../examples/4voices/) example.
 | \tie | \tieBegin \tieEnd | R | tie between successive notes |
 
 The ties parameters are similar to those of [slurs](../Articulations#slur).
-Apart from moving the curve 'up' or 'down', there is no reason to change the other parameters
+However, apart from moving the curve 'up' or 'down', there is no reason to change the other parameters.
 
 
 
@@ -448,6 +465,8 @@ See the [Tie](../../../examples/space/) example.
 where 'x' and 'y' are the numbers and '-' denotes the presence of left and right tuplet braces.
 - **textSize** is a ratio: 1 is for nominal size
 - **dispNote** is similar to [\displayDuration](#displayduration): it forces the notes appearance whatever their duration. The **dispNote** string must be in the form "/n", where n is a number (e.g. "/16" to display sixteenth notes)
+
+See the [notes](../../../examples/notes/) example.
 
 
 
