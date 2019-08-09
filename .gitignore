@@ -1,2 +1,4 @@
 .DS_Store
 mkdocs/site
+mkdocs/docs/Introduction/
+mkdocs/docs/rsrc/examples.zip
