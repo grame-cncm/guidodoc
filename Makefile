@@ -59,6 +59,8 @@ all:
 publish:
 	$(MAKE) all
 	$(MAKE) build
+	git checkout gh-pages
+	mv -f $(MKDIR)/site/* .
 	
 
 ####################################################################
