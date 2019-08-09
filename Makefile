@@ -55,6 +55,7 @@ serve:
 
 all:
 	$(MAKE) tagfiles
+	$(MAKE) tagsindex
 	$(MAKE) gmn
 	$(MAKE) zip
 	cp -r Introduction $(DOCDIR)
@@ -115,10 +116,10 @@ chapters:
 tagschapters:
 	cat tags.txt | sed -e 's/\([^:]*\):\([^:]*\)/\2:\1/' | sed 's/ *//g' | sort -u
 	
-tagsindex:  docs/refs/index.md
+tagsindex:  $(DOCDIR)/refs/index.md
 
-docs/refs/index.md: tags.txt
-	cat tags.txt | awk -f tagslist.awk  > docs/refs/index.md
+$(DOCDIR)/refs/index.md: Tags.txt
+	cat Tags.txt | awk -f scripts/tagslist.awk > $(DOCDIR)/refs/index.md
 
 ####################################################################
 # rules to convert gmn to html
