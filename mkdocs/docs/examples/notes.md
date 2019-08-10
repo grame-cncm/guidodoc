@@ -28,5 +28,9 @@ That's why a manual system break is inserted (in between two barlines).
 	\i<"sfz", autopos="on"> \marcato(b/4)  	
 ]
 ~~~~~~
+
+
+<a href="https://guidoeditor.grame.fr/?src=https://raw.githubusercontent.com/grame-cncm/guidodoc/master/examples/mkdocs/examples/notes.gmn" target=_blank><button class="try_it"> Try it online </button></a>
+
 {!GMN/examples/notes.html!}
 

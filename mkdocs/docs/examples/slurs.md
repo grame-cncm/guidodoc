@@ -13,5 +13,9 @@ This example shows nested and interleaved slurs. It makes also use of micro-tona
 	\slurEnd:2 a/1 )
 ]
 ~~~~~~
+
+
+<a href="https://guidoeditor.grame.fr/?src=https://raw.githubusercontent.com/grame-cncm/guidodoc/master/examples/mkdocs/examples/slurs.gmn" target=_blank><button class="try_it"> Try it online </button></a>
+
 {!GMN/examples/slurs.html!}
 

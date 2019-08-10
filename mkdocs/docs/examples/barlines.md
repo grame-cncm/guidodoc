@@ -25,5 +25,9 @@ This example shows the use of barlines, bar format and accolades.
 	[	c c | f g \doubleBar a f \repeatBegin  d e \repeatEnd e/2 ]
 }
 ~~~~~~
+
+
+<a href="https://guidoeditor.grame.fr/?src=https://raw.githubusercontent.com/grame-cncm/guidodoc/master/examples/mkdocs/examples/barlines.gmn" target=_blank><button class="try_it"> Try it online </button></a>
+
 {!GMN/examples/barlines.html!}
 

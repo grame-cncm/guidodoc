@@ -24,5 +24,9 @@ This example shows automatic and manual beaming. It also illustrates feathered b
 	]
 }
 ~~~~~~
+
+
+<a href="https://guidoeditor.grame.fr/?src=https://raw.githubusercontent.com/grame-cncm/guidodoc/master/examples/mkdocs/examples/beaming.gmn" target=_blank><button class="try_it"> Try it online </button></a>
+
 {!GMN/examples/beaming.html!}
 

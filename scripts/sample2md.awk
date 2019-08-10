@@ -5,7 +5,10 @@ BEGIN {
 }
 
 END {
-	print "~~~~~~\n{!GMN/examples/" FILE ".html!}\n";
+	URL = "https://raw.githubusercontent.com/grame-cncm/guidodoc/master/examples/mkdocs/examples/" FILE ".gmn"
+	print "~~~~~~\n"
+	print "\n<a href=\"https://guidoeditor.grame.fr/?src=" URL "\" target=_blank><button class=\"try_it\"> Try it online </button></a>\n"
+	print "{!GMN/examples/" FILE ".html!}\n";
 }
 
 ################# papers generation

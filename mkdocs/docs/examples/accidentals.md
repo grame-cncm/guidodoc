@@ -18,5 +18,9 @@ This example shows the use of the \accidental and \alter tags.
 	\alter<0> d a
 ]
 ~~~~~~
+
+
+<a href="https://guidoeditor.grame.fr/?src=https://raw.githubusercontent.com/grame-cncm/guidodoc/master/examples/mkdocs/examples/accidentals.gmn" target=_blank><button class="try_it"> Try it online </button></a>
+
 {!GMN/examples/accidentals.html!}
 

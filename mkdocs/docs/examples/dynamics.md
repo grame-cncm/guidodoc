@@ -14,5 +14,9 @@ This example illustrates the use of dynamics.
 	\dim<dx2=-3>(g/8 g g g g \i<"p"> g)
 ]
 ~~~~~~
+
+
+<a href="https://guidoeditor.grame.fr/?src=https://raw.githubusercontent.com/grame-cncm/guidodoc/master/examples/mkdocs/examples/dynamics.gmn" target=_blank><button class="try_it"> Try it online </button></a>
+
 {!GMN/examples/dynamics.html!}
 

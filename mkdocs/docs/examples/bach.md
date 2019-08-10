@@ -76,5 +76,9 @@ Source: [Mutopia project](https://www.mutopiaproject.org/ftp/BachJS/BWV772/bach-
 	]
 }
 ~~~~~~
+
+
+<a href="https://guidoeditor.grame.fr/?src=https://raw.githubusercontent.com/grame-cncm/guidodoc/master/examples/mkdocs/examples/bach.gmn" target=_blank><button class="try_it"> Try it online </button></a>
+
 {!GMN/examples/bach.html!}
 

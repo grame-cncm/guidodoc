@@ -116,5 +116,9 @@ Source: [Mutopia project](https://www.mutopiaproject.org/ftp/BeethovenLv/O2/LVB_
 	]
 }
 ~~~~~~
+
+
+<a href="https://guidoeditor.grame.fr/?src=https://raw.githubusercontent.com/grame-cncm/guidodoc/master/examples/mkdocs/examples/beethoven.gmn" target=_blank><button class="try_it"> Try it online </button></a>
+
 {!GMN/examples/beethoven.html!}
 

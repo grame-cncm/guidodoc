@@ -58,5 +58,9 @@ Source: [Mutopia project](https://www.mutopiaproject.org/ftp/BachCPE/Wq132/Sonat
 	_ \i<"f"> \stacc(a&1/16) \sl<dx1=-2, dy1=2, dy=4, h=3>(f#2 e&3 d) |
 ]
 ~~~~~~
+
+
+<a href="https://guidoeditor.grame.fr/?src=https://raw.githubusercontent.com/grame-cncm/guidodoc/master/examples/mkdocs/examples/cpebach.gmn" target=_blank><button class="try_it"> Try it online </button></a>
+
 {!GMN/examples/cpebach.html!}
 

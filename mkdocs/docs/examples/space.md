@@ -19,5 +19,9 @@ It makes also use of the **\special** tag.
 	\special<"g", dy=-1, dx=-5> \special<"\166", dy=12, dx=-6.5> \space<2cm> _/4 { e/16, h } 
 ]
 ~~~~~~
+
+
+<a href="https://guidoeditor.grame.fr/?src=https://raw.githubusercontent.com/grame-cncm/guidodoc/master/examples/mkdocs/examples/space.gmn" target=_blank><button class="try_it"> Try it online </button></a>
+
 {!GMN/examples/space.html!}
 

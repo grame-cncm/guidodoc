@@ -21,5 +21,9 @@ This examples illustrates ornaments: trill, turn, mordent.
 	]
 }
 ~~~~~~
+
+
+<a href="https://guidoeditor.grame.fr/?src=https://raw.githubusercontent.com/grame-cncm/guidodoc/master/examples/mkdocs/examples/ornaments.gmn" target=_blank><button class="try_it"> Try it online </button></a>
+
 {!GMN/examples/ornaments.html!}
 

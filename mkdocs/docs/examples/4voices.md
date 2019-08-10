@@ -23,5 +23,9 @@ Tag used:
 	[	\staff<2> \stemsDown f0*1/4 d g a ]
 }
 ~~~~~~
+
+
+<a href="https://guidoeditor.grame.fr/?src=https://raw.githubusercontent.com/grame-cncm/guidodoc/master/examples/mkdocs/examples/4voices.gmn" target=_blank><button class="try_it"> Try it online </button></a>
+
 {!GMN/examples/4voices.html!}
 
