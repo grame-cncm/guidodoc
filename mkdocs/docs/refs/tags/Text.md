@@ -25,6 +25,8 @@ Supports [font parameters](../../tagsparams#text-parameters)
 
 The default position for fingering is close to the note head. When **position** is specified, the fingering is placed above or below the note, avoiding collisions with the stems and always outside the staff.
 
+The position can be set at global voice level using the [\auto](../Miscellaneous/) tag.
+
 
 
 

@@ -66,7 +66,6 @@ See the [Bach](../../../examples/bach/) example.
 | :----| :--------| :----| :----------------|
 | \newLine | \newSystem | P | force a line break |
 
-See the [notes](../../../examples/notes/) example.
 
 
 
