@@ -34,6 +34,7 @@
 | instrAutoPos | string | variant for autoInstrPos | off | true |
 | autoIntensPos | string | automatic collision avoidance for \intens | off | true |
 | intensAutoPos | string | variant for autoIntensPos | off | true |
+| fingeringPos | string | above or below (see [\fingering](../Text/#fingering)) | off | true |
 
 Collision management strategies can produce unexpected results or even create new collisions.
 In this case, you should switch to manual layout using the 'dx' and 'dy' [common parameters](../../tagsparams#common-parameters).
