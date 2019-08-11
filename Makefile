@@ -11,12 +11,13 @@ GUIDODIR ?= ../guidolib
 SRCDIR   := $(GUIDODIR)/src/engine
 
 INLINEGMN 	:= $(wildcard examples/mkdocs/*.gmn)
-INLINEB64 	:= $(INLINEGMN:%.gmn=%.b64.txt)
 INLINEHTML 	:= $(INLINEGMN:examples/mkdocs/%.gmn=$(DOCDIR)/GMN/%.html)
 GMNEXAMPLES := $(wildcard examples/mkdocs/examples/*.gmn)
 HTMLEXAMPLES:= $(GMNEXAMPLES:examples/mkdocs/examples/%.gmn=$(DOCDIR)/GMN/examples/%.html) 
 MDEXAMPLES  := $(GMNEXAMPLES:examples/mkdocs/examples/%.gmn=$(DOCDIR)/examples/%.md)
 EXAMPLESMENU:= $(MDEXAMPLES:%.md=%.item)
+
+EDITOR      := https://guidoeditor.grame.fr/
 
 .PHONY: tagslist.txt
 
@@ -72,13 +73,10 @@ publish:
 ####################################################################
 # building guido examples
 gmn:
-	$(MAKE) inlineb64
 	$(MAKE) inlinegmn
 	$(MAKE) examples
 	
 inlinegmn: $(INLINEHTML)
-	
-inlineb64: $(INLINEB64)
 
 examples : $(MDEXAMPLES) $(HTMLEXAMPLES)
 
@@ -132,17 +130,16 @@ $(DOCDIR)/GMN/examples/%.html: examples/mkdocs/examples/%.gmn
 	sh scripts/guido2svg.sh $<	> $@
 
 $(DOCDIR)/GMN/notes.html: examples/mkdocs/notes.gmn
-	$(eval b64 := $(shell cat examples/mkdocs/notes.b64.txt))
-	@echo '<a href="https://guidoeditor.grame.fr/?code=$(b64)" target=_blank><button class="try_it"> Try it online </button></a>' > $@
+	$(eval b64 := $(shell openssl base64 -in $< |  tr -d '\n'))
+	@echo '<a href="$(EDITOR)?code=$(b64)" target=_blank><button class="try_it"> Try it online </button></a>' > $@
 	@echo '<div class="guido-code guido-medium">' >> $@
 	@echo  >> $@
 	guido2svg $< >> $@
 	@echo '</div>' >> $@
 
 $(DOCDIR)/GMN/%.html: examples/mkdocs/%.gmn
-	$(eval f64 := $(patsubst %.gmn, %.b64.txt, $<))
-	$(eval b64 := $(shell cat $(f64)))
-	@echo '<a href="https://guidoeditor.grame.fr/?code=$(b64)" target=_blank><button class="try_it"> Try it online </button></a>' > $@
+	$(eval b64 := $(shell openssl base64 -in $< |  tr -d '\n'))
+	@echo '<a href="$(EDITOR)?code=$(b64)" target=_blank><button class="try_it"> Try it online </button></a>' > $@
 	@echo '<div class="guido-code">' >> $@
 	@echo  >> $@
 	guido2svg $< >> $@
