@@ -41,6 +41,7 @@ help:
 	@echo "  inlinegmn: process the inline gmn files"
 	@echo "  examples : process the gmn examples files"
 	@echo "  menu     : generates the examples menu"
+	@echo "  gmnclean : remove the output of the gmn target"
 	@echo "Making the current version publicly available:"
 	@echo "  publish  : make all + build, switch to gh-pages and copy to root"
 	@echo "             commit and push are still manual operations"
