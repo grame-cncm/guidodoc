@@ -23,7 +23,7 @@ This example shows the use of \clef, \key and \meter tags.
 ~~~~~~
 
 
-<a href="https://guidoeditor.grame.fr/?src=https://raw.githubusercontent.com/grame-cncm/guidodoc/master/examples/mkdocs/examples/clefkeymeter.gmn" target=_blank><button class="try_it"> Try it online </button></a>
+<button class="try_it" onclick=window.open("https://guidoeditor.grame.fr/?src=https://raw.githubusercontent.com/grame-cncm/guidodoc/master/examples/mkdocs/examples/clefkeymeter.gmn")>Try it online</button>
 
 {!GMN/examples/clefkeymeter.html!}
 

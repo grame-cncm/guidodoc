@@ -96,7 +96,7 @@ It's a short excerpt of Mozart Clarinet Quintet, K. 581
 ~~~~~~
 
 
-<a href="https://guidoeditor.grame.fr/?src=https://raw.githubusercontent.com/grame-cncm/guidodoc/master/examples/mkdocs/examples/mozart581.gmn" target=_blank><button class="try_it"> Try it online </button></a>
+<button class="try_it" onclick=window.open("https://guidoeditor.grame.fr/?src=https://raw.githubusercontent.com/grame-cncm/guidodoc/master/examples/mkdocs/examples/mozart581.gmn")>Try it online</button>
 
 {!GMN/examples/mozart581.html!}
 

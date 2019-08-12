@@ -118,7 +118,7 @@ Source: [Mutopia project](https://www.mutopiaproject.org/ftp/BeethovenLv/O2/LVB_
 ~~~~~~
 
 
-<a href="https://guidoeditor.grame.fr/?src=https://raw.githubusercontent.com/grame-cncm/guidodoc/master/examples/mkdocs/examples/beethoven.gmn" target=_blank><button class="try_it"> Try it online </button></a>
+<button class="try_it" onclick=window.open("https://guidoeditor.grame.fr/?src=https://raw.githubusercontent.com/grame-cncm/guidodoc/master/examples/mkdocs/examples/beethoven.gmn")>Try it online</button>
 
 {!GMN/examples/beethoven.html!}
 

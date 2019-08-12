@@ -21,7 +21,7 @@ It makes also use of the **\special** tag.
 ~~~~~~
 
 
-<a href="https://guidoeditor.grame.fr/?src=https://raw.githubusercontent.com/grame-cncm/guidodoc/master/examples/mkdocs/examples/space.gmn" target=_blank><button class="try_it"> Try it online </button></a>
+<button class="try_it" onclick=window.open("https://guidoeditor.grame.fr/?src=https://raw.githubusercontent.com/grame-cncm/guidodoc/master/examples/mkdocs/examples/space.gmn")>Try it online</button>
 
 {!GMN/examples/space.html!}
 

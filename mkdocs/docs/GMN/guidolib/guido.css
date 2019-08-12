@@ -33,4 +33,10 @@
 	color: white;
 	padding-left: 12px;
 	padding-right: 12px;
+	padding-top: 4px;
+	padding-bottom: 4px;
 }
+
+.try_it:focus 	{ border-color: white; }
+.try_it:active 	{ border-color: white;}
+.try_it:after 	{ border-color: white;}

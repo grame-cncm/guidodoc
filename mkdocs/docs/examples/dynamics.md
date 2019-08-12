@@ -16,7 +16,7 @@ This example illustrates the use of dynamics.
 ~~~~~~
 
 
-<a href="https://guidoeditor.grame.fr/?src=https://raw.githubusercontent.com/grame-cncm/guidodoc/master/examples/mkdocs/examples/dynamics.gmn" target=_blank><button class="try_it"> Try it online </button></a>
+<button class="try_it" onclick=window.open("https://guidoeditor.grame.fr/?src=https://raw.githubusercontent.com/grame-cncm/guidodoc/master/examples/mkdocs/examples/dynamics.gmn")>Try it online</button>
 
 {!GMN/examples/dynamics.html!}
 
