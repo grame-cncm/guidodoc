@@ -131,7 +131,7 @@ $(DOCDIR)/GMN/examples/%.html: examples/mkdocs/examples/%.gmn
 
 $(DOCDIR)/GMN/notes.html: examples/mkdocs/notes.gmn
 	$(eval b64 := $(shell openssl base64 -in $< |  tr -d '\n'))
-	@echo '<a href="$(EDITOR)?code=$(b64)" target=_blank><button class="try_it"> Try it online </button></a>' > $@
+	@echo '<button class="try_it" onclick=window.open("$(EDITOR)?code=$(b64)")> Try it online </button>' > $@
 	@echo '<div class="guido-code guido-medium">' >> $@
 	@echo  >> $@
 	guido2svg $< >> $@
@@ -139,7 +139,7 @@ $(DOCDIR)/GMN/notes.html: examples/mkdocs/notes.gmn
 
 $(DOCDIR)/GMN/%.html: examples/mkdocs/%.gmn
 	$(eval b64 := $(shell openssl base64 -in $< |  tr -d '\n'))
-	@echo '<a href="$(EDITOR)?code=$(b64)" target=_blank><button class="try_it"> Try it online </button></a>' > $@
+	@echo '<button class="try_it" onclick=window.open("$(EDITOR)?code=$(b64)")> Try it online </button>' > $@
 	@echo '<div class="guido-code">' >> $@
 	@echo  >> $@
 	guido2svg $< >> $@

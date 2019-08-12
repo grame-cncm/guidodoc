@@ -7,7 +7,8 @@ BEGIN {
 END {
 	URL = "https://raw.githubusercontent.com/grame-cncm/guidodoc/master/examples/mkdocs/examples/" FILE ".gmn"
 	print "~~~~~~\n"
-	print "\n<a href=\"https://guidoeditor.grame.fr/?src=" URL "\" target=_blank><button class=\"try_it\"> Try it online </button></a>\n"
+	print "\n<button class=\"try_it\" onclick=window.open(\"https://guidoeditor.grame.fr/?src=" URL "\")>Try it online</button>\n"
+
 	print "{!GMN/examples/" FILE ".html!}\n";
 }
 
