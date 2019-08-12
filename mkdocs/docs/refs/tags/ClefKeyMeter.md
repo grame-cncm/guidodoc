@@ -118,5 +118,7 @@ The **\meter** tag displays a time signature.
 
 See the [Meter](../../../examples/clefkeymeter/) example.
 
+See also the [Sonata](../../../examples/cpebach/) example for measure numbers at system level.
+
 
 
