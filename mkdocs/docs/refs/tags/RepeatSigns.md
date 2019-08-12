@@ -13,6 +13,7 @@
 | :----| :--------| :----| :----------------|
 | \coda |  | P | the code sign |
 
+See the [Repeat Signs](../../../examples/repeats/) example.
 
 
 
@@ -30,6 +31,7 @@
 | :----| :--------| :----| :----------------|
 | \daCapo |  | P | Da Capo |
 
+See the [Repeat Signs](../../../examples/repeats/) example.
 
 
 ## \daCapoAlFine
@@ -42,6 +44,7 @@
 | :----| :--------| :----| :----------------|
 | \daCapoAlFine |  | P | Da Capo al Fine |
 
+See the [Repeat Signs](../../../examples/repeats/) example.
 
 
 
@@ -59,6 +62,7 @@
 | :----| :--------| :----| :----------------|
 | \daCoda |  | P | Da Coda |
 
+See the [Repeat Signs](../../../examples/repeats/) example.
 
 
 
@@ -76,6 +80,7 @@
 | :----| :--------| :----| :----------------|
 | \dalSegno |  | P | Dal Segno |
 
+See the [Repeat Signs](../../../examples/repeats/) example.
 
 
 ## \dalSegnoAlFine
@@ -88,6 +93,7 @@
 | :----| :--------| :----| :----------------|
 | \dalSegnoAlFine |  | P | Dal Segno al Fine |
 
+See the [Repeat Signs](../../../examples/repeats/) example.
 
 
 
@@ -105,6 +111,7 @@
 | :----| :--------| :----| :----------------|
 | \fine |  | P | Fine |
 
+See the [Repeat Signs](../../../examples/repeats/) example.
 
 
 
@@ -122,6 +129,7 @@
 | :----| :--------| :----| :----------------|
 | \repeatBegin |  | P | A begin repeat bar |
 
+See the [Repeat Signs](../../../examples/repeats/) example.
 
 
 
@@ -139,6 +147,7 @@
 | :----| :--------| :----| :----------------|
 | \repeatEnd |  | P | An end repeat bar |
 
+See the [Repeat Signs](../../../examples/repeats/) example.
 
 
 
@@ -156,6 +165,7 @@
 | :----| :--------| :----| :----------------|
 | \segno |  | P | Segno |
 
+See the [Repeat Signs](../../../examples/repeats/) example.
 
 
 
@@ -186,6 +196,7 @@
 | thickness | unit | the stroke thickness | 0.75 | true |
 | text | string | a string displayed over the strokes | *none* | true |
 
+See the [Repeat Signs](../../../examples/repeats/) example.
 
 
 
@@ -215,6 +226,8 @@
 | format | string | the volta format | *none* | true |
 
 - the **format** is a string in the form "|-|", "|-", "-|" or "-", that describes the shape of the line over the repeated section.
+
+See the [Repeat Signs](../../../examples/repeats/) example.
 
 
 
