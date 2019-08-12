@@ -37,6 +37,4 @@
 	padding-bottom: 4px;
 }
 
-.try_it:focus 	{ border-color: white; }
-.try_it:active 	{ border-color: white;}
-.try_it:after 	{ border-color: white;}
+.try_it:focus 	{ outline: none; }
