@@ -183,8 +183,12 @@ Supports [font parameters](../../tagsparams#text-parameters)
 | Name        	| Type   | Description    | Default value  | Optional |
 | :------------ |:-------| :--------------| :------------- | :--------| 
 | text | string | the harmony string (e.g. C7) | *none* | false |
+| position | string | above or below | below | false |
 Supports [font parameters](../../tagsparams#text-parameters)
 
+The harmony string may contain # and & characters. They are converted to sharp and flat symbols.
+
+See the [jazz](../../../examples/allthethings/) example.
 
 
 

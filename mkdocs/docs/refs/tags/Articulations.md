@@ -43,7 +43,8 @@ See the [Articulations](../../../examples/articulations/) example.
 | :----| :--------| :----| :----------------|
 | \breathMark |  | P | a breath mark |
 
-See the [Articulations](../../../examples/articulations/) example.
+See the [Articulations](../../../examples/articulations/) example.<br />
+See the [Lutkin](../../../examples/lutkin/) example.
 
 
 

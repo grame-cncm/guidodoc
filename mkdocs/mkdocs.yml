@@ -34,6 +34,7 @@ nav:
     - Examples: 
         - '4 Voices': examples/4voices.md
         - 'Accidentals': examples/accidentals.md
+        - 'All The Things You Are': examples/allthethings.md
         - 'Articulations': examples/articulations.md
         - 'Bach': examples/bach.md
         - 'Barlines': examples/barlines.md

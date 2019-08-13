@@ -39,10 +39,13 @@ Source: [Mutopia project](https://www.mutopiaproject.org/ftp/LutkinPC/TheLordBle
 
 	% measure 15
 	_/1 \stemsAuto
-	\text<"cresc. - - - - - - - - - - - - - - - - - - - - - - - - - ", fattrib="i", dy=-3> (_/4 \slurBegin c#2 f# e
+	\text<"cresc. - - - - - - - - - - - - - - - - - - - - - - - - - ", fattrib="i", dy=-3> 
+	(_/4 \slurBegin c#2 f# e
 	d \slurEnd \slurBegin f# a \acc(g))
 	\i<"f", dy=-2> f# e d \text<"dim. poco a poco e", fattrib="i", dy=-3> (c#) 
-	b1/2. \slurEnd \slur<h=3, dy1=2, dy2=3>(c2/8 b1
+	b1/2. \slurEnd \slur<h=3, dy1=3, dy2=1>(c2/8 b1
+
+	% measure 20
 	a/2.) \ritBegin<dy=-1, dx=-1> \slurBegin<"up", dy=2> b/8 a
 	g/4 e a b \slurEnd 
 	a/1 \ritEnd 
