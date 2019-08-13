@@ -44,7 +44,8 @@ See the [Repeat Signs](../../../examples/repeats/) example.
 | :----| :--------| :----| :----------------|
 | \daCapoAlFine |  | P | Da Capo al Fine |
 
-See the [Repeat Signs](../../../examples/repeats/) example.
+See the [Repeat Signs](../../../examples/repeats/) example.<br/>
+See the [Brown](../../../examples/brown/) example.
 
 
 
@@ -111,7 +112,8 @@ See the [Repeat Signs](../../../examples/repeats/) example.
 | :----| :--------| :----| :----------------|
 | \fine |  | P | Fine |
 
-See the [Repeat Signs](../../../examples/repeats/) example.
+See the [Repeat Signs](../../../examples/repeats/) example.<br/>
+See the [Brown](../../../examples/brown/) example.
 
 
 

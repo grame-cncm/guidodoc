@@ -29,6 +29,8 @@ Supports [font parameters](../../tagsparams#text-parameters)
 **Note**: the implementation of the parameters is not satisfactory, in particular because the value of the time unit is hard coded.
 It will be revised in the future to integrate the encoding of the time unit into the tempo string.
 
+See the [Tempo](../../../examples/tempo/) example.
+
 
 
 
@@ -47,6 +49,9 @@ It will be revised in the future to integrate the encoding of the time unit into
 | \ritardando | \rit <br /> \ritBegin \ritEnd | R | ritardando marks |
 
 Supports the same parameters and the same note than [\accelerando](#accelerando)
+
+See the [Tempo](../../../examples/tempo/) example. <br />
+See the [Lutkin](../../../examples/lutkin/) example.
 
 
 
@@ -76,6 +81,9 @@ Supports the same parameters and the same note than [\accelerando](#accelerando)
 
 - **tempo** is an arbitrary string that may contain a marker for note duration in the form "[n/d]" where 'n' and 'd' are integers.
 The corresponding mark is decoded as a note duration and replaced with the corresponding note symbol. <br/>Example: "Andante [1/4] = 80"
+
+See the [Tempo](../../../examples/tempo/) example. <br />
+See the [Lutkin](../../../examples/lutkin/) example.
 
 
 

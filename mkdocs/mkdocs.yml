@@ -39,16 +39,20 @@ nav:
         - 'Barlines': examples/barlines.md
         - 'Beaming': examples/beaming.md
         - 'Beethoven': examples/beethoven.md
+        - 'Chris Brown': examples/brown.md
         - 'Clef, Key, Meter': examples/clefkeymeter.md
         - 'Sonata for flute': examples/cpebach.md
         - 'Dynamics': examples/dynamics.md
         - 'Fauré': examples/faure.md
         - 'Layout': examples/layout.md
+        - 'Peter C. Lutkin': examples/lutkin.md
         - 'Mozart Clarinet Quintet': examples/mozart581.md
         - 'Notes attributes': examples/notes.md
         - 'Ornaments': examples/ornaments.md
+        - 'Repeat Signs': examples/repeats.md
         - 'Slurs': examples/slurs.md
         - 'Ties & Space': examples/space.md
+        - 'Tempo': examples/tempo.md
     - About: about.md
 
 #theme: readthedocs

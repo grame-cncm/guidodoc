@@ -67,7 +67,7 @@ See the [Dynamics](../../../examples/dynamics/) example.
 
 | Name | Variants | Type | Notation element |
 | :----| :--------| :----| :----------------|
-| \intensity | \intens \i | P | dynamic marks |
+| \intensity | \intens<br />\i | P | dynamic marks |
 
 
 
