@@ -27,6 +27,8 @@ The default position for fingering is close to the note head. When **position** 
 
 The position can be set at global voice level using the [\auto](../Miscellaneous/) tag.
 
+See the [Beethoven](../../../examples/beethoven/) example.
+
 
 
 
@@ -56,6 +58,13 @@ The position can be set at global voice level using the [\auto](../Miscellaneous
 | autopos | boolean | automatic position control | off | true |
 Supports [font parameters](../../tagsparams#text-parameters)
 
+- **name** is the instrument name (e.g. "Violin I")
+- **transp** is provided for transposing instruments. For example, with a Trumpet in B flat, you should set **transp** to "B&". When *transp* is set, a transposing key is automatically inserted and the notes are automatically transposed to the corresponding interval.
+- **autopos**: when "on", put the instrument string centered to the left of the corresponding staff. The default position if on top, left of the staff.
+
+See the [Articulations](../../../examples/articulations/) example.<br />
+See the [Mozart](../../../examples/mozart581/) example.<br />
+See the [Fauré](../../../examples/faure/) example.
 
 
 
@@ -124,9 +133,11 @@ With no range, the text is inserted at its position.
 | Name        	| Type   | Description    | Default value  | Optional |
 | :------------ |:-------| :--------------| :------------- | :--------| 
 | text | string | the mark | *none* | false |
-| enclosure | string | none, square, rectangle, oval, circle, bracket, triangle, diamond | none | true |
+| enclosure | string | none, square, rectangle, bracket, triangle, diamond | none | true |
 Supports [font parameters](../../tagsparams#text-parameters)
 
+
+See the [Tempo](../../../examples/tempo/) example.
 
 
 
@@ -157,6 +168,7 @@ With no range, the text is inserted at its position.
 | text | string | the text | *none* | false |
 Supports [font parameters](../../tagsparams#text-parameters)
 
+See the [Notes](../../../examples/notes/) example.
 
 
 

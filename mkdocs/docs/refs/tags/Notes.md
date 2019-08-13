@@ -353,7 +353,6 @@ See the [notes](../../../examples/notes/) example.
 | :------------ |:-------| :--------------| :------------- | :--------| 
 | length | unit | the stem length | 7.0 | true |
 
-See the [notes](../../../examples/notes/) example. <br />
 See the [notes](../../../examples/notes/) example.
 
 

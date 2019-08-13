@@ -36,7 +36,7 @@ Source: [Mutopia project](https://www.mutopiaproject.org/ftp/BeethovenLv/O2/LVB_
 		\sl ({ \fing<"4">(a/4), f} \stacc({ g/16, e })) 
 		\slurBegin:1 \beam(\fing<"2">(c) d \fing<"1">(e)) f f# \fing<"1">(g) g# 
 % measure 5
-		\slurBegin:2<"up", dy1=1, dy2=6> \turn<dx=5, dy=-2>(\fing<"3", dy=-4>(a/4)) 
+		\slurBegin:2<"up", dy=1> \turn<dx=5, dy=-2>(\fing<"3", dy=-4>(a/4)) 
 		\slurEnd:1 
 		\grace(c2/16) \bm ( b&1/8 { f, a } 
 		{ \fing<"2", dy=0.5>(e), \fing<"4", dy=3>(g) } f )
@@ -85,7 +85,7 @@ Source: [Mutopia project](https://www.mutopiaproject.org/ftp/BeethovenLv/O2/LVB_
 % measure 4
 		{ c0., c1 } _/8 _/4 \stemsUp
 % measure 5
-		\sl<"up", dx2=-2,dy2=3> ( \fing<"2", position="above">(c1) \bm(d/8 c b&0 
+		\sl<"up", dy=-2> ( \fing<"2", position="above">(c1) \bm(d/8 c b&0 
 		\fing<"4", position="above">(a)) \stemsDown 
 % measure 6
 		{ \fing<"1", dy=-4>(b&/4), \fing<"3">(d1) })
