@@ -42,6 +42,11 @@
 Collision management strategies can produce unexpected results or even create new collisions.
 In this case, you should switch to manual layout using the 'dx' and 'dy' [common parameters](../../tagsparams#common-parameters).
 
+See the [Jazz](../../../examples/allthethings/) example.<br />
+See the [Beethoven](../../../examples/beethoven/) example.<br />
+See the [Sonata](../../../examples/cpebach/) example.
+
+
 
 
 
