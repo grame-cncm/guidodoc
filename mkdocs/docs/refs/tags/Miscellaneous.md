@@ -20,22 +20,23 @@
 
 | Name        	| Type   | Description    | Default value  | Optional |
 | :------------ |:-------| :--------------| :------------- | :--------| 
-| autoEndBar | string | automatic end bar | on | true |
-| endBar | string | variant for autoEndBar | on | true |
-| autoPageBreak | string | automatic page break | on | true |
-| pageBreak | string | variant for autoPageBreak | on | true |
-| autoSystemBreak | string | automatic system break | on | true |
-| systemBreak | string | variant for autoSystemBreak | on | true |
-| autoClefKeyMeterOrder | string | automatic reordering of clef, key and meter | on | true |
-| clefKeyMeterOrder | string | variant for autoClefKeyMeterOrder | on | true |
-| autoLyricsPos | string | automatic collision avoidance for \lyrics | off | true |
-| lyricsAutoPos | string | ariant for autoLyricsPos | off | true |
-| autoInstrPos | string | automatic positionning for \instr | off | true |
-| instrAutoPos | string | variant for autoInstrPos | off | true |
-| autoIntensPos | string | automatic collision avoidance for \intens | off | true |
-| intensAutoPos | string | variant for autoIntensPos | off | true |
-| harmonyPos | string | above or below (see [\harmony](../Text/#harmony)) | *none* | true |
-| fingeringPos | string | above or below (see [\fingering](../Text/#fingering)) | *none* | true |
+| autoEndBar | boolean | automatic end bar | on | true |
+| endBar | boolean | variant for autoEndBar | on | true |
+| autoPageBreak | boolean | automatic page break | on | true |
+| pageBreak | boolean | variant for autoPageBreak | on | true |
+| autoSystemBreak | boolean | automatic system break | on | true |
+| systemBreak | boolean | variant for autoSystemBreak | on | true |
+| autoClefKeyMeterOrder | boolean | automatic reordering of clef, key and meter | on | true |
+| clefKeyMeterOrder | boolean | variant for autoClefKeyMeterOrder | on | true |
+| autoLyricsPos | boolean | automatic collision avoidance for \lyrics | off | true |
+| lyricsAutoPos | boolean | ariant for autoLyricsPos | off | true |
+| autoInstrPos | boolean | automatic positionning for \instr | off | true |
+| instrAutoPos | boolean | variant for autoInstrPos | off | true |
+| autoIntensPos | boolean | automatic collision avoidance for \intens | off | true |
+| intensAutoPos | boolean | variant for autoIntensPos | off | true |
+| autoHideTiedAccidentals | boolean | hide all acidentals on tied notes | off | true |
+| harmonyPos | boolean | above or below (see [\harmony](../Text/#harmony)) | *none* | true |
+| fingeringPos | boolean | above or below (see [\fingering](../Text/#fingering)) | *none* | true |
 | fingeringSize | float | the fingering text size (see [\fingering](../Text/#fingering)) | *none* | true |
 
 Collision management strategies can produce unexpected results or even create new collisions.
