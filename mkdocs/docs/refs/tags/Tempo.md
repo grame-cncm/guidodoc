@@ -78,9 +78,12 @@ See the [Lutkin](../../../examples/lutkin/) example.
 | :------------ |:-------| :--------------| :------------- | :--------| 
 | tempo | string | a tempo string | *none* | false |
 | bpm | string |  | *none* | true |
+Supports [font parameters](../../tagsparams#text-parameters)
 
 - **tempo** is an arbitrary string that may contain a marker for note duration in the form "[n/d]" where 'n' and 'd' are integers.
 The corresponding mark is decoded as a note duration and replaced with the corresponding note symbol. <br/>Example: "Andante [1/4] = 80"
+
+**Note**: [font parameters](../../tagsparams/#text-parameters) are supported but not horizontal alignment (see *textformat*)
 
 See the [Tempo](../../../examples/tempo/) example. <br />
 See the [Lutkin](../../../examples/lutkin/) example.
