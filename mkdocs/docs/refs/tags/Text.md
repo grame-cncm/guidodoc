@@ -3,6 +3,40 @@
 # Text
 
 
+## \composer
+
+-------
+
+### Description
+
+| Name | Variants | Type | Notation element |
+| :----| :--------| :----| :----------------|
+| \composer |  | P | the composer name |
+
+
+
+
+### Parameters
+
+| Name        	| Type   | Description    | Default value  | Optional |
+| :------------ |:-------| :--------------| :------------- | :--------| 
+| name | string | the composer name | *none* | false |
+| pageformat | string | a page location | 53 | true |
+Supports [font parameters](../../tagsparams#text-parameters)
+
+**pageformat** works similarly to [\title](#title).
+
+See the [Mozart](../../../examples/mozart581/) example.<br />
+See the [Fauré](../../../examples/faure/) example.<br />
+See the [Jazz](../../../examples/allthethings/) example.
+
+
+
+
+
+<br />
+
+
 ## \fingering
 
 -------
@@ -28,6 +62,70 @@ The default position for fingering is close to the note head. When **position** 
 The position can be set at global voice level using the [\auto](../Miscellaneous/) tag.
 
 See the [Beethoven](../../../examples/beethoven/) example.
+
+
+
+
+
+<br />
+
+
+## \footer
+
+-------
+
+### Description
+
+| Name | Variants | Type | Notation element |
+| :----| :--------| :----| :----------------|
+| \footer |  | P | the score footer |
+
+
+
+
+### Parameters
+
+| Name        	| Type   | Description    | Default value  | Optional |
+| :------------ |:-------| :--------------| :------------- | :--------| 
+| text | string | the footer text | *none* | false |
+| pageformat | string | a page location | c6 | true |
+Supports [font parameters](../../tagsparams#text-parameters)
+
+**pageformat** works similarly to [\title](#title).
+
+See the [Jazz](../../../examples/allthethings/) example.
+
+
+
+
+
+<br />
+
+
+## \harmony
+
+-------
+
+### Description
+
+| Name | Variants | Type | Notation element |
+| :----| :--------| :----| :----------------|
+| \harmony |  | P | harmony marking |
+
+
+
+
+### Parameters
+
+| Name        	| Type   | Description    | Default value  | Optional |
+| :------------ |:-------| :--------------| :------------- | :--------| 
+| text | string | the harmony string (e.g. C7) | *none* | false |
+| position | string | above or below | below | false |
+Supports [font parameters](../../tagsparams#text-parameters)
+
+The harmony string may contain # and & characters. They are converted to sharp and flat symbols.
+
+See the [jazz](../../../examples/allthethings/) example.
 
 
 
@@ -177,7 +275,7 @@ See the [Notes](../../../examples/notes/) example.
 <br />
 
 
-## \harmony
+## \title
 
 -------
 
@@ -185,7 +283,7 @@ See the [Notes](../../../examples/notes/) example.
 
 | Name | Variants | Type | Notation element |
 | :----| :--------| :----| :----------------|
-| \harmony |  | P | harmony marking |
+| \title |  | P | the score title |
 
 
 
@@ -194,13 +292,37 @@ See the [Notes](../../../examples/notes/) example.
 
 | Name        	| Type   | Description    | Default value  | Optional |
 | :------------ |:-------| :--------------| :------------- | :--------| 
-| text | string | the harmony string (e.g. C7) | *none* | false |
-| position | string | above or below | below | false |
+| name | string | the title of the piece | *none* | false |
+| pageformat | string | a page location | c2 | true |
 Supports [font parameters](../../tagsparams#text-parameters)
 
-The harmony string may contain # and & characters. They are converted to sharp and flat symbols.
+**pageformat** is a 2 chars string that describes the location of the title on the page: the first char gives the x position, and the secod the y position.
+This location is relative to the page size and to the page margins (see [\pageFormat](../Layout/#pageformat)).
 
-See the [jazz](../../../examples/allthethings/) example.
+Values for the first char must be in:
+
+- **1** or **l**: the x position is set to the left side of the page
+- **2**: the x position is set to the middle of left margin.
+- **3**: the x position is set to the left margin.
+- **4** or **c**: the x position is centered on the page
+- **5**: the x position is set to the right margin.
+- **6**: the x position is set to the middle of right margin.
+- **7** or **r**: the x position is set to the right side of the page
+
+Values for the second char must be in:
+
+- **1** or **t**: the y position is set to the top side of the page
+- **2**: the y position is set to the middle of top margin.
+- **3**: the y position is set to the top margin.
+- **4** or **c**: the y position is centered on the page
+- **5**: the y position is set to the bottom margin.
+- **6**: the y position is set to the middle of bottom margin.
+- **7** or **b**: the y position is set to the bottom side of the page
+
+
+See the [Mozart](../../../examples/mozart581/) example.<br />
+See the [Fauré](../../../examples/faure/) example.<br />
+See the [Jazz](../../../examples/allthethings/) example.
 
 
 

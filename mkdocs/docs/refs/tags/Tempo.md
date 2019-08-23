@@ -20,14 +20,13 @@
 
 | Name        	| Type   | Description    | Default value  | Optional |
 | :------------ |:-------| :--------------| :------------- | :--------| 
-| tempo | string | the tempo at the beginning | *none* | true |
-| abstempo | string | the tempo at the end | *none* | true |
+| before | string | a string placed before 'accel.' | *none* | true |
+| after | string | a string placed after the accel range | *none* | true |
+| dx2 | unit | displacement of the right anchor point | 0 | true |
 Supports [font parameters](../../tagsparams#text-parameters)
 
-- **tempo** and **abstempo** are intended to be tempo values. A quarter note is inserted before these strings.
-
-**Note**: the implementation of the parameters is not satisfactory, in particular because the value of the time unit is hard coded.
-It will be revised in the future to integrate the encoding of the time unit into the tempo string.
+- **before** and **after** ara arbitrary strings that may contain a marker for note duration in the form "[n/d]" where 'n' and 'd' are integers.
+The corresponding mark is decoded as a note duration and replaced with the corresponding note symbol. <br/>Example: *before="[1/4] = 80"*
 
 See the [Tempo](../../../examples/tempo/) example.
 
@@ -48,10 +47,25 @@ See the [Tempo](../../../examples/tempo/) example.
 | :----| :--------| :----| :----------------|
 | \ritardando | \rit <br /> \ritBegin \ritEnd | R | ritardando marks |
 
-Supports the same parameters and the same note than [\accelerando](#accelerando)
+Works similarly to [\accelerando](#accelerando)
+
+
+
+### Parameters
+
+| Name        	| Type   | Description    | Default value  | Optional |
+| :------------ |:-------| :--------------| :------------- | :--------| 
+| before | string | a string placed before 'accel.' | *none* | true |
+| after | string | a string placed after the accel range | *none* | true |
+| dx2 | unit | displacement of the right anchor point | 0 | true |
+Supports [font parameters](../../tagsparams#text-parameters)
+
+- **before** and **after** ara arbitrary strings that may contain a marker for note duration in the form "[n/d]" where 'n' and 'd' are integers.
+The corresponding mark is decoded as a note duration and replaced with the corresponding note symbol. <br/>Example: *before="[1/4] = 80"*
 
 See the [Tempo](../../../examples/tempo/) example. <br />
 See the [Lutkin](../../../examples/lutkin/) example.
+
 
 
 

@@ -9,6 +9,7 @@ Source: [swiss-jazz](https://www.swiss-jazz.ch/standards-jazz/AlTheThngs.pdf)
 	\pageFormat<"A4", tm=4cm, bm=2cm>
 	\title<"All The Things You Are">
 	\composer<"Hammerstein/Kern", dy=7>
+	\footer<"Typeset with Guido">
 	\systemFormat< dx=1cm> \accol<type="thinBrace">
 	\set<harmonyPos="above">
 

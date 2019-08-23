@@ -21,7 +21,6 @@ nav:
             - 'Beaming': refs/tags/Beaming.md
             - 'Clef Key Meter': refs/tags/ClefKeyMeter.md
             - 'Dynamics': refs/tags/Dynamics.md
-            - 'Header': refs/tags/Header.md
             - 'Layout': refs/tags/Layout.md
             - 'Miscellaneous': refs/tags/Miscellaneous.md
             - 'Notes': refs/tags/Notes.md
