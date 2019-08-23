@@ -68,6 +68,8 @@ publish:
 	$(MAKE) all
 	$(MAKE) build
 	git checkout gh-pages
+	$(eval remove := $(shell ls | grep -v mkdocs))
+	rm -rf $(remove)
 	cp -Rf $(MKDIR)/site/* .
 	@echo "Review the changes, add new files, commit and push manually"
 	
