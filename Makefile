@@ -72,6 +72,7 @@ publish:
 	rm -rf *
 	cp -Rf .$(MKDIR)/site/* .
 	mv .$(MKDIR) $(MKDIR)
+	git checkout CNAME				# never delete !!!
 	@echo "Review the changes, add new files, commit and push manually"
 	
 
