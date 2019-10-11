@@ -33,6 +33,35 @@ See the [Articulations](../../../examples/articulations/) example.
 <br />
 
 
+## \bow
+
+-------
+
+### Description
+
+| Name | Variants | Type | Notation element |
+| :----| :--------| :----| :----------------|
+| \bow |  | RP | bowing indication |
+
+
+
+
+### Parameters
+
+| Name        	| Type   | Description    | Default value  | Optional |
+| :------------ |:-------| :--------------| :------------- | :--------| 
+| type | string | up or down | up | false |
+| position | string | above or below | above | true |
+
+
+
+
+
+
+
+<br />
+
+
 ## \breathMark
 
 -------

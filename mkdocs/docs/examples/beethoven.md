@@ -59,7 +59,7 @@ Source: [Mutopia project](https://www.mutopiaproject.org/ftp/BeethovenLv/O2/LVB_
 		\fing<"2">(a/16))
 % measure 10
 		\fing<"4">(c3/4) 
-		\slurBegin:2<"up", dy1=4, dy2=0, dx2=14>
+		\slurBegin:2<"up", dx2=14>
 		\fing<"3">(b2/16) \slurEnd:1 c3 d \fing<"3">(c) b&2 a 
 		\fing<"3">(g) \fing<"2">(f) 
 % measure 11

@@ -34,7 +34,7 @@
 | instrAutoPos | boolean | variant for autoInstrPos | off | true |
 | autoIntensPos | boolean | automatic collision avoidance for \intens | off | true |
 | intensAutoPos | boolean | variant for autoIntensPos | off | true |
-| autoHideTiedAccidentals | boolean | hide all acidentals on tied notes | off | true |
+| autoHideTiedAccidentals | boolean | hide all acidentals on tied notes | on | true |
 | harmonyPos | boolean | above or below (see [\harmony](../Text/#harmony)) | *none* | true |
 | fingeringPos | boolean | above or below (see [\fingering](../Text/#fingering)) | *none* | true |
 | fingeringSize | float | the fingering text size (see [\fingering](../Text/#fingering)) | *none* | true |

@@ -22,3 +22,7 @@ The GUIDO Music Notation Format has been developed by Holger H. Hoos, *Technical
 Kilian. It is named after [Guido d'Arezzo](https://en.wikipedia.org/wiki/Guido_of_Arezzo) (990-1050), a renowned music theorist of his time and
 important contributor to today's conventional musical notation (CMN). His achievements include
 the perfection of the staff system for music notation and the invention of solmisation (solfege).
+
+----
+
+The current documentation describes the Guido Music Notation language as supported by the Guido Engine version 1.6.8. 
