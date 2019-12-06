@@ -39,7 +39,6 @@ See the [Slurs](/examples/slurs/) example.
 - [Beaming](tags/Beaming.md)
 - [Clef Key Meter](tags/ClefKeyMeter.md)
 - [Dynamics](tags/Dynamics.md)
-- [Header](tags/Header.md)
 - [Layout](tags/Layout.md)
 - [Miscellaneous](tags/Miscellaneous.md)
 - [Notes](tags/Notes.md)
