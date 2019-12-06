@@ -43,6 +43,7 @@ See the [Articulations](../../../examples/articulations/) example.
 | :----| :--------| :----| :----------------|
 | \bow |  | RP | bowing indication |
 
+Strings specific tag.
 
 
 

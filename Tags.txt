@@ -20,6 +20,7 @@ beamsAuto:Beaming
 beamsFull:Beaming
 beamsOff:Beaming
 bm:Beaming
+bow:Articulations
 breathMark:Articulations
 clef:Clef Key Meter
 cluster:Notes
