@@ -95,6 +95,7 @@ See the [Sonata](../../../examples/cpebach/) example.
 | ady | unit | accidental displacement (if any) | 0hs | true |
 | begin | boolean | for trill continuations | on | true |
 | tr | boolean | show/hide the leading "tr" string | true | true |
+| wavy | boolean | show/hide the wavy line | true | true |
 | position | string | above, below | above | true |
 
 - **begin** is intended for trill continutation. When false, the trill continues the preceding one (if any). It allows to write new trills with changing accidentals without breaking it.
