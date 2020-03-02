@@ -1,0 +1,1155 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../../img/favicon.ico">
+        <title>Notes - Guido Music Notation</title>
+        <link href="../../../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+        <link href="/GMN/guidolib/guido.css" rel="stylesheet">
+        <link href="/BNF/railroad-diagrams/railroad-diagrams.css" rel="stylesheet">
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+        <script src="../../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../../js/bootstrap-3.0.3.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+
+                <!-- Collapsed navigation -->
+                <div class="navbar-header">
+                    <!-- Expander button -->
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="../../..">Guido Music Notation</a>
+                </div>
+
+                <!-- Expanded navigation -->
+                <div class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li >
+                                <a href="../../..">Home</a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">User Guide <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../../guide/basic/">Basic concepts</a>
+</li>
+                                    
+<li >
+    <a href="../../../guide/notes/">Notes and Rests</a>
+</li>
+                                    
+<li >
+    <a href="../../../guide/chords/">Chords</a>
+</li>
+                                    
+<li >
+    <a href="../../../guide/tags/">Tags and Tagged Ranges</a>
+</li>
+                                    
+<li >
+    <a href="../../../guide/voices/">Voices</a>
+</li>
+                                    
+<li >
+    <a href="../../../guide/scores/">Scores</a>
+</li>
+                                    
+<li >
+    <a href="../../../guide/comments/">Comments and Spacing</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Reference <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../tagsparams/">Tags parameters</a>
+</li>
+                                    
+<li >
+    <a href="../">Tags</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Tags reference</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../Accidentals/">Accidentals</a>
+</li>
+            
+<li >
+    <a href="../Articulations/">Articulations</a>
+</li>
+            
+<li >
+    <a href="../Barlines/">Barlines</a>
+</li>
+            
+<li >
+    <a href="../Beaming/">Beaming</a>
+</li>
+            
+<li >
+    <a href="../ClefKeyMeter/">Clef Key Meter</a>
+</li>
+            
+<li >
+    <a href="../Dynamics/">Dynamics</a>
+</li>
+            
+<li >
+    <a href="../Layout/">Layout</a>
+</li>
+            
+<li >
+    <a href="../Miscellaneous/">Miscellaneous</a>
+</li>
+            
+<li class="active">
+    <a href="./">Notes</a>
+</li>
+            
+<li >
+    <a href="../Ornaments/">Ornaments</a>
+</li>
+            
+<li >
+    <a href="../RepeatSigns/">Repeat Signs</a>
+</li>
+            
+<li >
+    <a href="../Tempo/">Tempo</a>
+</li>
+            
+<li >
+    <a href="../Text/">Text</a>
+</li>
+    </ul>
+  </li>
+                                    
+<li >
+    <a href="../../">Tags index</a>
+</li>
+                                    
+<li >
+    <a href="../../gmnf/">Language specification</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Examples <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../../examples/4voices/">4 Voices</a>
+</li>
+                                    
+<li >
+    <a href="../../../examples/accidentals/">Accidentals</a>
+</li>
+                                    
+<li >
+    <a href="../../../examples/allthethings/">All The Things You Are</a>
+</li>
+                                    
+<li >
+    <a href="../../../examples/articulations/">Articulations</a>
+</li>
+                                    
+<li >
+    <a href="../../../examples/bach/">Bach</a>
+</li>
+                                    
+<li >
+    <a href="../../../examples/barlines/">Barlines</a>
+</li>
+                                    
+<li >
+    <a href="../../../examples/bartok/">Bela Bartock</a>
+</li>
+                                    
+<li >
+    <a href="../../../examples/beaming/">Beaming</a>
+</li>
+                                    
+<li >
+    <a href="../../../examples/beethoven/">Beethoven</a>
+</li>
+                                    
+<li >
+    <a href="../../../examples/brown/">Chris Brown</a>
+</li>
+                                    
+<li >
+    <a href="../../../examples/clefkeymeter/">Clef, Key, Meter</a>
+</li>
+                                    
+<li >
+    <a href="../../../examples/cpebach/">Sonata for flute</a>
+</li>
+                                    
+<li >
+    <a href="../../../examples/dynamics/">Dynamics</a>
+</li>
+                                    
+<li >
+    <a href="../../../examples/faure/">Fauré</a>
+</li>
+                                    
+<li >
+    <a href="../../../examples/layout/">Layout</a>
+</li>
+                                    
+<li >
+    <a href="../../../examples/lutkin/">Peter C. Lutkin</a>
+</li>
+                                    
+<li >
+    <a href="../../../examples/mozart581/">Mozart Clarinet Quintet</a>
+</li>
+                                    
+<li >
+    <a href="../../../examples/notes/">Notes attributes</a>
+</li>
+                                    
+<li >
+    <a href="../../../examples/ornaments/">Ornaments</a>
+</li>
+                                    
+<li >
+    <a href="../../../examples/repeats/">Repeat Signs</a>
+</li>
+                                    
+<li >
+    <a href="../../../examples/slurs/">Slurs</a>
+</li>
+                                    
+<li >
+    <a href="../../../examples/space/">Ties & Space</a>
+</li>
+                                    
+<li >
+    <a href="../../../examples/tempo/">Tempo</a>
+</li>
+                                </ul>
+                            </li>
+                            <li >
+                                <a href="../../../about/">About</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li >
+                                <a rel="next" href="../Miscellaneous/">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li >
+                                <a rel="prev" href="../Ornaments/">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="main active"><a href="#notes">Notes</a></li>
+            <li><a href="#cluster">\cluster</a></li>
+            <li><a href="#cue">\cue</a></li>
+            <li><a href="#displayduration">\displayDuration</a></li>
+            <li><a href="#dotformat">\dotFormat</a></li>
+            <li><a href="#grace">\grace</a></li>
+            <li><a href="#harmonic">\harmonic</a></li>
+            <li><a href="#noteformat">\noteFormat</a></li>
+            <li><a href="#octava">\octava</a></li>
+            <li><a href="#restformat">\restFormat</a></li>
+            <li><a href="#headscenter">\headsCenter</a></li>
+            <li><a href="#headsleft">\headsLeft</a></li>
+            <li><a href="#headsright">\headsRight</a></li>
+            <li><a href="#headsnormal">\headsNormal</a></li>
+            <li><a href="#headsreverse">\headsReverse</a></li>
+            <li><a href="#stemsoff">\stemsOff</a></li>
+            <li><a href="#stemsauto">\stemsAuto</a></li>
+            <li><a href="#stemsdown">\stemsDown</a></li>
+            <li><a href="#stemsup">\stemsUp</a></li>
+            <li><a href="#tie">\tie</a></li>
+            <li><a href="#tuplet">\tuplet</a></li>
+    </ul>
+</div></div>
+                <div class="col-md-9" role="main">
+
+<style>
+h2 { 
+    background-color: #33A5E7 ; 
+    color: white;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+}
+</style>
+
+<h1 id="notes">Notes</h1>
+<h2 id="cluster">\cluster</h2>
+<hr />
+<h3 id="description">Description</h3>
+<table>
+<thead>
+<tr>
+<th align="left">Name</th>
+<th align="left">Variants</th>
+<th align="left">Type</th>
+<th align="left">Notation element</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">\cluster</td>
+<td align="left"></td>
+<td align="left">R</td>
+<td align="left">transform 2 notes chords into clusters</td>
+</tr>
+</tbody>
+</table>
+<p>The <strong>\cluster</strong> should be applied to a 2 notes chord and transforms the corresponding range into a cluster</p>
+<h3 id="parameters">Parameters</h3>
+<table>
+<thead>
+<tr>
+<th align="left">Name</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+<th align="left">Default value</th>
+<th align="left">Optional</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">hdx</td>
+<td align="left">unit</td>
+<td align="left">displacement relative to the chord</td>
+<td align="left">0hs</td>
+<td align="left">true</td>
+</tr>
+<tr>
+<td align="left">hdy</td>
+<td align="left">unit</td>
+<td align="left">displacement relative to the chord</td>
+<td align="left">0hs</td>
+<td align="left">true</td>
+</tr>
+</tbody>
+</table>
+<p>See the <a href="../../../examples/notes/">notes</a> example.</p>
+<p><br /></p>
+<h2 id="cue">\cue</h2>
+<hr />
+<h3 id="description_1">Description</h3>
+<table>
+<thead>
+<tr>
+<th align="left">Name</th>
+<th align="left">Variants</th>
+<th align="left">Type</th>
+<th align="left">Notation element</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">\cue</td>
+<td align="left"></td>
+<td align="left">R</td>
+<td align="left">cue notes</td>
+</tr>
+</tbody>
+</table>
+<p>Regarding the notes, the <strong>\cue</strong> tag is equivalent to <strong>\noteFormat<color="blue", size=0.6></strong> tag.
+Cue notes are colored in blue by default. You can override that with  <a href="#noteformat"><strong>\noteFormat</strong></a></p>
+<h3 id="parameters_1">Parameters</h3>
+<table>
+<thead>
+<tr>
+<th align="left">Name</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+<th align="left">Default value</th>
+<th align="left">Optional</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">name</td>
+<td align="left">string</td>
+<td align="left">the cue description</td>
+<td align="left"><em>none</em></td>
+<td align="left">true</td>
+</tr>
+<tr>
+<td align="left">Supports <a href="../../tagsparams#text-parameters">font parameters</a></td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+</tbody>
+</table>
+<p><br /></p>
+<h2 id="displayduration">\displayDuration</h2>
+<hr />
+<h3 id="description_2">Description</h3>
+<table>
+<thead>
+<tr>
+<th align="left">Name</th>
+<th align="left">Variants</th>
+<th align="left">Type</th>
+<th align="left">Notation element</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">\displayDuration</td>
+<td align="left">\dispDur</td>
+<td align="left">RP</td>
+<td align="left">display an arbitrary duration for a note</td>
+</tr>
+</tbody>
+</table>
+<p>The duration to display is indicated by a rational value. Provision is also made to display dots.</p>
+<h3 id="parameters_2">Parameters</h3>
+<table>
+<thead>
+<tr>
+<th align="left">Name</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+<th align="left">Default value</th>
+<th align="left">Optional</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">n</td>
+<td align="left">integer</td>
+<td align="left">the duration numerator</td>
+<td align="left"><em>none</em></td>
+<td align="left">false</td>
+</tr>
+<tr>
+<td align="left">d</td>
+<td align="left">integer</td>
+<td align="left">the duration denominator</td>
+<td align="left"><em>none</em></td>
+<td align="left">false</td>
+</tr>
+<tr>
+<td align="left">ndots</td>
+<td align="left">integer</td>
+<td align="left">the number of dots</td>
+<td align="left">0</td>
+<td align="left">true</td>
+</tr>
+</tbody>
+</table>
+<p>See the <a href="../../../examples/notes/">notes</a> example.</p>
+<p><br /></p>
+<h2 id="dotformat">\dotFormat</h2>
+<hr />
+<h3 id="description_3">Description</h3>
+<table>
+<thead>
+<tr>
+<th align="left">Name</th>
+<th align="left">Variants</th>
+<th align="left">Type</th>
+<th align="left">Notation element</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">\dotFormat</td>
+<td align="left"></td>
+<td align="left">RP</td>
+<td align="left">control the dots format</td>
+</tr>
+</tbody>
+</table>
+<p>The <strong>\dotFormat</strong> tag supports both a range and a position form.
+For the latter, the format is applied up to the next format specification or to the end of the voice.</p>
+<p><strong>\dotFormat</strong> is a way to introduce <a href="../../tagsparams#common-parameters">common parameters</a> to dots.</p>
+<p><br /></p>
+<h2 id="grace">\grace</h2>
+<hr />
+<h3 id="description_4">Description</h3>
+<table>
+<thead>
+<tr>
+<th align="left">Name</th>
+<th align="left">Variants</th>
+<th align="left">Type</th>
+<th align="left">Notation element</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">\grace</td>
+<td align="left"></td>
+<td align="left">R</td>
+<td align="left">display grace notes</td>
+</tr>
+</tbody>
+</table>
+<p>See the <a href="../../../examples/notes/">notes</a> example.</p>
+<p><br /></p>
+<h2 id="harmonic">\harmonic</h2>
+<hr />
+<h3 id="description_5">Description</h3>
+<table>
+<thead>
+<tr>
+<th align="left">Name</th>
+<th align="left">Variants</th>
+<th align="left">Type</th>
+<th align="left">Notation element</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">\harmonic</td>
+<td align="left"></td>
+<td align="left">R</td>
+<td align="left">an harmonic sign</td>
+</tr>
+</tbody>
+</table>
+<p>See the <a href="../../../examples/notes/">notes</a> example.</p>
+<p><br /></p>
+<h2 id="noteformat">\noteFormat</h2>
+<hr />
+<h3 id="description_6">Description</h3>
+<table>
+<thead>
+<tr>
+<th align="left">Name</th>
+<th align="left">Variants</th>
+<th align="left">Type</th>
+<th align="left">Notation element</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">\noteFormat</td>
+<td align="left"></td>
+<td align="left">RP</td>
+<td align="left">control the notes format</td>
+</tr>
+</tbody>
+</table>
+<p>The <strong>\noteFormat</strong> tag supports both a range and a position form.
+For the latter, the format is applied up to the next format specification or to the end of the voice.</p>
+<p><strong>\noteFormat</strong> is a way to introduce <a href="../../tagsparams#common-parameters">common parameters</a> to notes.</p>
+<h3 id="parameters_3">Parameters</h3>
+<table>
+<thead>
+<tr>
+<th align="left">Name</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+<th align="left">Default value</th>
+<th align="left">Optional</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">style</td>
+<td align="left">string</td>
+<td align="left">the notehead style (see below)</td>
+<td align="left">standard</td>
+<td align="left">true</td>
+</tr>
+</tbody>
+</table>
+<p>The notehead style should be among "diamond", "x", "square", "round", "triangle" and "reversedTriangle".</p>
+<p>In addition, each style supports 3 types of variations that consist in enclosing the string into (), &lt;&gt; or [].<br />
+For standard notehead, these variations are simply the  "()", "&lt;&gt;" or "[]" strings.</p>
+<p>See the <a href="../../../examples/notes/">notes</a> example.</p>
+<p><br /></p>
+<h2 id="octava">\octava</h2>
+<hr />
+<h3 id="description_7">Description</h3>
+<table>
+<thead>
+<tr>
+<th align="left">Name</th>
+<th align="left">Variants</th>
+<th align="left">Type</th>
+<th align="left">Notation element</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">\octava</td>
+<td align="left">\oct</td>
+<td align="left">RP</td>
+<td align="left">displays an octava sign and transposes the notes accordingly</td>
+</tr>
+</tbody>
+</table>
+<h3 id="parameters_4">Parameters</h3>
+<table>
+<thead>
+<tr>
+<th align="left">Name</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+<th align="left">Default value</th>
+<th align="left">Optional</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">i</td>
+<td align="left">integer</td>
+<td align="left">a signed number of octaves (up or down)</td>
+<td align="left"><em>none</em></td>
+<td align="left">false</td>
+</tr>
+</tbody>
+</table>
+<p><br /></p>
+<h2 id="restformat">\restFormat</h2>
+<hr />
+<h3 id="description_8">Description</h3>
+<table>
+<thead>
+<tr>
+<th align="left">Name</th>
+<th align="left">Variants</th>
+<th align="left">Type</th>
+<th align="left">Notation element</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">\restFormat</td>
+<td align="left"></td>
+<td align="left">RP</td>
+<td align="left">control the rest format</td>
+</tr>
+</tbody>
+</table>
+<p>The <strong>\restFormat</strong> tag supports both a range and a position form.
+For the latter, the format is applied up to the next format specification or to the end of the voice.</p>
+<p><strong>\restFormat</strong> is a way to introduce <a href="../../tagsparams#common-parameters">common parameters</a> to rest.</p>
+<p><br /></p>
+<h2 id="headscenter">\headsCenter</h2>
+<hr />
+<h3 id="description_9">Description</h3>
+<table>
+<thead>
+<tr>
+<th align="left">Name</th>
+<th align="left">Variants</th>
+<th align="left">Type</th>
+<th align="left">Notation element</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">\headsCenter</td>
+<td align="left"></td>
+<td align="left">RP</td>
+<td align="left">moves the notehead centered on the stem</td>
+</tr>
+</tbody>
+</table>
+<p>The <strong>\headsCenter</strong> tag supports both a range and a position form.
+For the latter, it is is applied up to the next <em>head</em> specification or to the end of the voice.</p>
+<p>See the <a href="../../../examples/notes/">notes</a> example.</p>
+<h2 id="headsleft">\headsLeft</h2>
+<hr />
+<h3 id="description_10">Description</h3>
+<table>
+<thead>
+<tr>
+<th align="left">Name</th>
+<th align="left">Variants</th>
+<th align="left">Type</th>
+<th align="left">Notation element</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">\headsLeft</td>
+<td align="left"></td>
+<td align="left">RP</td>
+<td align="left">force the notehead to the left of the stem</td>
+</tr>
+</tbody>
+</table>
+<p>The <strong>\headsLeft</strong> tag supports both a range and a position form.
+For the latter, it is is applied up to the next <em>head</em> specification or to the end of the voice.</p>
+<p>See the <a href="../../../examples/notes/">notes</a> example.</p>
+<h2 id="headsright">\headsRight</h2>
+<hr />
+<h3 id="description_11">Description</h3>
+<table>
+<thead>
+<tr>
+<th align="left">Name</th>
+<th align="left">Variants</th>
+<th align="left">Type</th>
+<th align="left">Notation element</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">\headsRight</td>
+<td align="left"></td>
+<td align="left">RP</td>
+<td align="left">force the notehead to the right of the stem</td>
+</tr>
+</tbody>
+</table>
+<p>The <strong>\headsRight</strong> tag supports both a range and a position form.
+For the latter, it is is applied up to the next <em>head</em> specification or to the end of the voice.</p>
+<p>See the <a href="../../../examples/notes/">notes</a> example.</p>
+<h2 id="headsnormal">\headsNormal</h2>
+<hr />
+<h3 id="description_12">Description</h3>
+<table>
+<thead>
+<tr>
+<th align="left">Name</th>
+<th align="left">Variants</th>
+<th align="left">Type</th>
+<th align="left">Notation element</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">\headsNormal</td>
+<td align="left"></td>
+<td align="left">RP</td>
+<td align="left">cancel a previous <em>head</em> specification and reverts to normal head position.</td>
+</tr>
+</tbody>
+</table>
+<p>The <strong>\headsNormal</strong> tag supports both a range and a position form.
+For the latter, it is is applied up to the next <em>head</em> specification or to the end of the voice.</p>
+<h2 id="headsreverse">\headsReverse</h2>
+<hr />
+<h3 id="description_13">Description</h3>
+<table>
+<thead>
+<tr>
+<th align="left">Name</th>
+<th align="left">Variants</th>
+<th align="left">Type</th>
+<th align="left">Notation element</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">\headsReverse</td>
+<td align="left"></td>
+<td align="left">RP</td>
+<td align="left">moves the notehead on the opposite side of the normal position</td>
+</tr>
+</tbody>
+</table>
+<p>The <strong>\headsReverse</strong> tag supports both a range and a position form.
+For the latter, it is is applied up to the next <em>head</em> specification or to the end of the voice.</p>
+<p><br /></p>
+<h2 id="stemsoff">\stemsOff</h2>
+<hr />
+<h3 id="description_14">Description</h3>
+<table>
+<thead>
+<tr>
+<th align="left">Name</th>
+<th align="left">Variants</th>
+<th align="left">Type</th>
+<th align="left">Notation element</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">\stemsOff</td>
+<td align="left"></td>
+<td align="left">P</td>
+<td align="left">disable stems drawing</td>
+</tr>
+</tbody>
+</table>
+<p>See the <a href="../../../examples/notes/">notes</a> example.</p>
+<h2 id="stemsauto">\stemsAuto</h2>
+<hr />
+<h3 id="description_15">Description</h3>
+<table>
+<thead>
+<tr>
+<th align="left">Name</th>
+<th align="left">Variants</th>
+<th align="left">Type</th>
+<th align="left">Notation element</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">\stemsAuto</td>
+<td align="left"></td>
+<td align="left">P</td>
+<td align="left">cancel \stemsOff and enable automatic stems direction</td>
+</tr>
+</tbody>
+</table>
+<h3 id="parameters_5">Parameters</h3>
+<table>
+<thead>
+<tr>
+<th align="left">Name</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+<th align="left">Default value</th>
+<th align="left">Optional</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">length</td>
+<td align="left">unit</td>
+<td align="left">the stem length</td>
+<td align="left">7.0</td>
+<td align="left">true</td>
+</tr>
+</tbody>
+</table>
+<p>See the <a href="../../../examples/notes/">notes</a> example.</p>
+<h2 id="stemsdown">\stemsDown</h2>
+<hr />
+<h3 id="description_16">Description</h3>
+<table>
+<thead>
+<tr>
+<th align="left">Name</th>
+<th align="left">Variants</th>
+<th align="left">Type</th>
+<th align="left">Notation element</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">\stemsDown</td>
+<td align="left"></td>
+<td align="left">P</td>
+<td align="left">force stem direction to down</td>
+</tr>
+</tbody>
+</table>
+<h3 id="parameters_6">Parameters</h3>
+<table>
+<thead>
+<tr>
+<th align="left">Name</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+<th align="left">Default value</th>
+<th align="left">Optional</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">length</td>
+<td align="left">unit</td>
+<td align="left">the stem length</td>
+<td align="left">7.0</td>
+<td align="left">true</td>
+</tr>
+</tbody>
+</table>
+<p>See the <a href="../../../examples/4voices/">4 voices</a> example. <br />
+See the <a href="../../../examples/notes/">notes</a> example.</p>
+<h2 id="stemsup">\stemsUp</h2>
+<hr />
+<h3 id="description_17">Description</h3>
+<table>
+<thead>
+<tr>
+<th align="left">Name</th>
+<th align="left">Variants</th>
+<th align="left">Type</th>
+<th align="left">Notation element</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">\stemsUp</td>
+<td align="left"></td>
+<td align="left">P</td>
+<td align="left">force stem direction to up</td>
+</tr>
+</tbody>
+</table>
+<h3 id="parameters_7">Parameters</h3>
+<table>
+<thead>
+<tr>
+<th align="left">Name</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+<th align="left">Default value</th>
+<th align="left">Optional</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">length</td>
+<td align="left">unit</td>
+<td align="left">the stem length</td>
+<td align="left">7.0</td>
+<td align="left">true</td>
+</tr>
+</tbody>
+</table>
+<p>See the <a href="../../../examples/4voices/">4 voices</a> example. <br />
+See the <a href="../../../examples/notes/">notes</a> example.</p>
+<p><br /></p>
+<h2 id="tie">\tie</h2>
+<hr />
+<h3 id="description_18">Description</h3>
+<table>
+<thead>
+<tr>
+<th align="left">Name</th>
+<th align="left">Variants</th>
+<th align="left">Type</th>
+<th align="left">Notation element</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">\tie</td>
+<td align="left">\tieBegin \tieEnd</td>
+<td align="left">R</td>
+<td align="left">tie between successive notes</td>
+</tr>
+</tbody>
+</table>
+<p>The ties parameters are similar to those of <a href="../Articulations#slur">slurs</a>.
+However, apart from moving the curve 'up' or 'down', there is no reason to change the other parameters.</p>
+<p>See the <a href="../../../examples/space/">Tie</a> example.</p>
+<p><br /></p>
+<h2 id="tuplet">\tuplet</h2>
+<hr />
+<h3 id="description_19">Description</h3>
+<table>
+<thead>
+<tr>
+<th align="left">Name</th>
+<th align="left">Variants</th>
+<th align="left">Type</th>
+<th align="left">Notation element</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">\tuplet</td>
+<td align="left"></td>
+<td align="left">R</td>
+<td align="left">displays an octava sign and transposes the notes accordingly</td>
+</tr>
+</tbody>
+</table>
+<h3 id="parameters_8">Parameters</h3>
+<table>
+<thead>
+<tr>
+<th align="left">Name</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+<th align="left">Default value</th>
+<th align="left">Optional</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">format</td>
+<td align="left">string</td>
+<td align="left">a format string for shape control</td>
+<td align="left"><em>none</em></td>
+<td align="left">false</td>
+</tr>
+<tr>
+<td align="left">position</td>
+<td align="left">string</td>
+<td align="left">below or above</td>
+<td align="left">above</td>
+<td align="left">true</td>
+</tr>
+<tr>
+<td align="left">dy1</td>
+<td align="left">unit</td>
+<td align="left">displacement of the left anchor point</td>
+<td align="left">0</td>
+<td align="left">true</td>
+</tr>
+<tr>
+<td align="left">dy2</td>
+<td align="left">unit</td>
+<td align="left">displacement of the right anchor point</td>
+<td align="left">0</td>
+<td align="left">true</td>
+</tr>
+<tr>
+<td align="left">lineThickness</td>
+<td align="left">float</td>
+<td align="left">the tuplet line thickness (if any)</td>
+<td align="left">4</td>
+<td align="left">true</td>
+</tr>
+<tr>
+<td align="left">bold</td>
+<td align="left">boolean</td>
+<td align="left">to use bold font</td>
+<td align="left">false</td>
+<td align="left">true</td>
+</tr>
+<tr>
+<td align="left">textSize</td>
+<td align="left">float</td>
+<td align="left">the text size</td>
+<td align="left">1</td>
+<td align="left">true</td>
+</tr>
+<tr>
+<td align="left">dispNote</td>
+<td align="left">string</td>
+<td align="left">a note duration</td>
+<td align="left"><em>none</em></td>
+<td align="left">true</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>the <strong>format</strong> string must be in "x", "-x-", "x:y", "-x:y-", or "--"
+where 'x' and 'y' are the numbers and '-' denotes the presence of left and right tuplet braces.</li>
+<li><strong>textSize</strong> is a ratio: 1 is for nominal size</li>
+<li><strong>dispNote</strong> is similar to <a href="#displayduration">\displayDuration</a>: it forces the notes appearance whatever their duration. The <strong>dispNote</strong> string must be in the form "/n", where n is a number (e.g. "/16" to display sixteenth notes)</li>
+</ul>
+<p>See the <a href="../../../examples/notes/">notes</a> example.</p></div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+                <p>Copyright &copy; 2019-2020 <a href="http://www.grame.fr">Grame-CNCM</a></p>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../../js/base.js" defer></script>
+        <script src="../../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form role="form">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="Keyboard Shortcuts Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Keyboard Shortcuts</h4>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

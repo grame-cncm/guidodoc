@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../../img/favicon.ico">
+        <title>Miscellaneous - Guido Music Notation</title>
+        <link href="../../../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+        <link href="/GMN/guidolib/guido.css" rel="stylesheet">
+        <link href="/BNF/railroad-diagrams/railroad-diagrams.css" rel="stylesheet">
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+        <script src="../../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../../js/bootstrap-3.0.3.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+
+                <!-- Collapsed navigation -->
+                <div class="navbar-header">
+                    <!-- Expander button -->
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="../../..">Guido Music Notation</a>
+                </div>
+
+                <!-- Expanded navigation -->
+                <div class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li >
+                                <a href="../../..">Home</a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">User Guide <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../../guide/basic/">Basic concepts</a>
+</li>
+                                    
+<li >
+    <a href="../../../guide/notes/">Notes and Rests</a>
+</li>
+                                    
+<li >
+    <a href="../../../guide/chords/">Chords</a>
+</li>
+                                    
+<li >
+    <a href="../../../guide/tags/">Tags and Tagged Ranges</a>
+</li>
+                                    
+<li >
+    <a href="../../../guide/voices/">Voices</a>
+</li>
+                                    
+<li >
+    <a href="../../../guide/scores/">Scores</a>
+</li>
+                                    
+<li >
+    <a href="../../../guide/comments/">Comments and Spacing</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Reference <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../tagsparams/">Tags parameters</a>
+</li>
+                                    
+<li >
+    <a href="../">Tags</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Tags reference</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../Accidentals/">Accidentals</a>
+</li>
+            
+<li >
+    <a href="../Articulations/">Articulations</a>
+</li>
+            
+<li >
+    <a href="../Barlines/">Barlines</a>
+</li>
+            
+<li >
+    <a href="../Beaming/">Beaming</a>
+</li>
+            
+<li >
+    <a href="../ClefKeyMeter/">Clef Key Meter</a>
+</li>
+            
+<li >
+    <a href="../Dynamics/">Dynamics</a>
+</li>
+            
+<li >
+    <a href="../Layout/">Layout</a>
+</li>
+            
+<li class="active">
+    <a href="./">Miscellaneous</a>
+</li>
+            
+<li >
+    <a href="../Notes/">Notes</a>
+</li>
+            
+<li >
+    <a href="../Ornaments/">Ornaments</a>
+</li>
+            
+<li >
+    <a href="../RepeatSigns/">Repeat Signs</a>
+</li>
+            
+<li >
+    <a href="../Tempo/">Tempo</a>
+</li>
+            
+<li >
+    <a href="../Text/">Text</a>
+</li>
+    </ul>
+  </li>
+                                    
+<li >
+    <a href="../../">Tags index</a>
+</li>
+                                    
+<li >
+    <a href="../../gmnf/">Language specification</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Examples <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../../examples/4voices/">4 Voices</a>
+</li>
+                                    
+<li >
+    <a href="../../../examples/accidentals/">Accidentals</a>
+</li>
+                                    
+<li >
+    <a href="../../../examples/allthethings/">All The Things You Are</a>
+</li>
+                                    
+<li >
+    <a href="../../../examples/articulations/">Articulations</a>
+</li>
+                                    
+<li >
+    <a href="../../../examples/bach/">Bach</a>
+</li>
+                                    
+<li >
+    <a href="../../../examples/barlines/">Barlines</a>
+</li>
+                                    
+<li >
+    <a href="../../../examples/bartok/">Bela Bartock</a>
+</li>
+                                    
+<li >
+    <a href="../../../examples/beaming/">Beaming</a>
+</li>
+                                    
+<li >
+    <a href="../../../examples/beethoven/">Beethoven</a>
+</li>
+                                    
+<li >
+    <a href="../../../examples/brown/">Chris Brown</a>
+</li>
+                                    
+<li >
+    <a href="../../../examples/clefkeymeter/">Clef, Key, Meter</a>
+</li>
+                                    
+<li >
+    <a href="../../../examples/cpebach/">Sonata for flute</a>
+</li>
+                                    
+<li >
+    <a href="../../../examples/dynamics/">Dynamics</a>
+</li>
+                                    
+<li >
+    <a href="../../../examples/faure/">Fauré</a>
+</li>
+                                    
+<li >
+    <a href="../../../examples/layout/">Layout</a>
+</li>
+                                    
+<li >
+    <a href="../../../examples/lutkin/">Peter C. Lutkin</a>
+</li>
+                                    
+<li >
+    <a href="../../../examples/mozart581/">Mozart Clarinet Quintet</a>
+</li>
+                                    
+<li >
+    <a href="../../../examples/notes/">Notes attributes</a>
+</li>
+                                    
+<li >
+    <a href="../../../examples/ornaments/">Ornaments</a>
+</li>
+                                    
+<li >
+    <a href="../../../examples/repeats/">Repeat Signs</a>
+</li>
+                                    
+<li >
+    <a href="../../../examples/slurs/">Slurs</a>
+</li>
+                                    
+<li >
+    <a href="../../../examples/space/">Ties & Space</a>
+</li>
+                                    
+<li >
+    <a href="../../../examples/tempo/">Tempo</a>
+</li>
+                                </ul>
+                            </li>
+                            <li >
+                                <a href="../../../about/">About</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li >
+                                <a rel="next" href="../Layout/">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li >
+                                <a rel="prev" href="../Notes/">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="main active"><a href="#miscellaneous">Miscellaneous</a></li>
+            <li><a href="#auto">\auto</a></li>
+            <li><a href="#space">\space</a></li>
+            <li><a href="#special">\special</a></li>
+    </ul>
+</div></div>
+                <div class="col-md-9" role="main">
+
+<style>
+h2 { 
+    background-color: #33A5E7 ; 
+    color: white;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+}
+</style>
+
+<h1 id="miscellaneous">Miscellaneous</h1>
+<h2 id="auto">\auto</h2>
+<hr />
+<h3 id="description">Description</h3>
+<table>
+<thead>
+<tr>
+<th align="left">Name</th>
+<th align="left">Variants</th>
+<th align="left">Type</th>
+<th align="left">Notation element</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">\auto</td>
+<td align="left">\set</td>
+<td align="left">P</td>
+<td align="left">sets voice level global settings</td>
+</tr>
+</tbody>
+</table>
+<h3 id="parameters">Parameters</h3>
+<table>
+<thead>
+<tr>
+<th align="left">Name</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+<th align="left">Default value</th>
+<th align="left">Optional</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">autoEndBar</td>
+<td align="left">boolean</td>
+<td align="left">automatic end bar</td>
+<td align="left">on</td>
+<td align="left">true</td>
+</tr>
+<tr>
+<td align="left">endBar</td>
+<td align="left">boolean</td>
+<td align="left">variant for autoEndBar</td>
+<td align="left">on</td>
+<td align="left">true</td>
+</tr>
+<tr>
+<td align="left">autoPageBreak</td>
+<td align="left">boolean</td>
+<td align="left">automatic page break</td>
+<td align="left">on</td>
+<td align="left">true</td>
+</tr>
+<tr>
+<td align="left">pageBreak</td>
+<td align="left">boolean</td>
+<td align="left">variant for autoPageBreak</td>
+<td align="left">on</td>
+<td align="left">true</td>
+</tr>
+<tr>
+<td align="left">autoSystemBreak</td>
+<td align="left">boolean</td>
+<td align="left">automatic system break</td>
+<td align="left">on</td>
+<td align="left">true</td>
+</tr>
+<tr>
+<td align="left">systemBreak</td>
+<td align="left">boolean</td>
+<td align="left">variant for autoSystemBreak</td>
+<td align="left">on</td>
+<td align="left">true</td>
+</tr>
+<tr>
+<td align="left">autoClefKeyMeterOrder</td>
+<td align="left">boolean</td>
+<td align="left">automatic reordering of clef, key and meter</td>
+<td align="left">on</td>
+<td align="left">true</td>
+</tr>
+<tr>
+<td align="left">clefKeyMeterOrder</td>
+<td align="left">boolean</td>
+<td align="left">variant for autoClefKeyMeterOrder</td>
+<td align="left">on</td>
+<td align="left">true</td>
+</tr>
+<tr>
+<td align="left">autoLyricsPos</td>
+<td align="left">boolean</td>
+<td align="left">automatic collision avoidance for \lyrics</td>
+<td align="left">off</td>
+<td align="left">true</td>
+</tr>
+<tr>
+<td align="left">lyricsAutoPos</td>
+<td align="left">boolean</td>
+<td align="left">ariant for autoLyricsPos</td>
+<td align="left">off</td>
+<td align="left">true</td>
+</tr>
+<tr>
+<td align="left">autoInstrPos</td>
+<td align="left">boolean</td>
+<td align="left">automatic positionning for \instr</td>
+<td align="left">off</td>
+<td align="left">true</td>
+</tr>
+<tr>
+<td align="left">instrAutoPos</td>
+<td align="left">boolean</td>
+<td align="left">variant for autoInstrPos</td>
+<td align="left">off</td>
+<td align="left">true</td>
+</tr>
+<tr>
+<td align="left">autoIntensPos</td>
+<td align="left">boolean</td>
+<td align="left">automatic collision avoidance for \intens</td>
+<td align="left">off</td>
+<td align="left">true</td>
+</tr>
+<tr>
+<td align="left">intensAutoPos</td>
+<td align="left">boolean</td>
+<td align="left">variant for autoIntensPos</td>
+<td align="left">off</td>
+<td align="left">true</td>
+</tr>
+<tr>
+<td align="left">autoHideTiedAccidentals</td>
+<td align="left">boolean</td>
+<td align="left">hide all acidentals on tied notes</td>
+<td align="left">on</td>
+<td align="left">true</td>
+</tr>
+<tr>
+<td align="left">harmonyPos</td>
+<td align="left">boolean</td>
+<td align="left">above or below (see <a href="../Text/#harmony">\harmony</a>)</td>
+<td align="left"><em>none</em></td>
+<td align="left">true</td>
+</tr>
+<tr>
+<td align="left">fingeringPos</td>
+<td align="left">boolean</td>
+<td align="left">above or below (see <a href="../Text/#fingering">\fingering</a>)</td>
+<td align="left"><em>none</em></td>
+<td align="left">true</td>
+</tr>
+<tr>
+<td align="left">fingeringSize</td>
+<td align="left">float</td>
+<td align="left">the fingering text size (see <a href="../Text/#fingering">\fingering</a>)</td>
+<td align="left"><em>none</em></td>
+<td align="left">true</td>
+</tr>
+</tbody>
+</table>
+<p>Collision management strategies can produce unexpected results or even create new collisions.
+In this case, you should switch to manual layout using the 'dx' and 'dy' <a href="../../tagsparams#common-parameters">common parameters</a>.</p>
+<p>See the <a href="../../../examples/allthethings/">Jazz</a> example.<br />
+See the <a href="../../../examples/beethoven/">Beethoven</a> example.<br />
+See the <a href="../../../examples/cpebach/">Sonata</a> example.</p>
+<p><br /></p>
+<h2 id="space">\space</h2>
+<hr />
+<h3 id="description_1">Description</h3>
+<table>
+<thead>
+<tr>
+<th align="left">Name</th>
+<th align="left">Variants</th>
+<th align="left">Type</th>
+<th align="left">Notation element</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">\space</td>
+<td align="left"></td>
+<td align="left">P</td>
+<td align="left">insert space at any position.</td>
+</tr>
+</tbody>
+</table>
+<p>The <strong>\space</strong> tag can be used to save space for notation elements that do not take up space.</p>
+<h3 id="parameters_1">Parameters</h3>
+<table>
+<thead>
+<tr>
+<th align="left">Name</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+<th align="left">Default value</th>
+<th align="left">Optional</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">dd</td>
+<td align="left">unit</td>
+<td align="left">the amount of space</td>
+<td align="left">0</td>
+<td align="left">false</td>
+</tr>
+</tbody>
+</table>
+<p>See the <a href="../../../examples/space/">Space</a> example.</p>
+<p><br /></p>
+<h2 id="special">\special</h2>
+<hr />
+<h3 id="description_2">Description</h3>
+<table>
+<thead>
+<tr>
+<th align="left">Name</th>
+<th align="left">Variants</th>
+<th align="left">Type</th>
+<th align="left">Notation element</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">\special</td>
+<td align="left"></td>
+<td align="left">P</td>
+<td align="left">insert a musical glyph</td>
+</tr>
+</tbody>
+</table>
+<h3 id="parameters_2">Parameters</h3>
+<table>
+<thead>
+<tr>
+<th align="left">Name</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+<th align="left">Default value</th>
+<th align="left">Optional</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">char</td>
+<td align="left">string</td>
+<td align="left">the character to display</td>
+<td align="left"><em>none</em></td>
+<td align="left">false</td>
+</tr>
+</tbody>
+</table>
+<p><strong>char</strong> may be specified as:</p>
+<ul>
+<li>a litteral character</li>
+<li>an hexadecimal number i.e. a number prefixed with "\x" (e.g. "\xa0")</li>
+<li>an octal number i.e. a number prefixed with "\o" (e.g. "\o130")</li>
+<li>a decimal number i.e. a number prefixed with "\"</li>
+</ul>
+<p>See the <a href="../../../examples/space/">Special</a> example.</p></div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+                <p>Copyright &copy; 2019-2020 <a href="http://www.grame.fr">Grame-CNCM</a></p>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../../js/base.js" defer></script>
+        <script src="../../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form role="form">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="Keyboard Shortcuts Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Keyboard Shortcuts</h4>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

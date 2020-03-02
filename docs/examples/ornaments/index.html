@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>Ornaments - Guido Music Notation</title>
+        <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+        <link href="/GMN/guidolib/guido.css" rel="stylesheet">
+        <link href="/BNF/railroad-diagrams/railroad-diagrams.css" rel="stylesheet">
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+        <script src="../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../js/bootstrap-3.0.3.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+
+                <!-- Collapsed navigation -->
+                <div class="navbar-header">
+                    <!-- Expander button -->
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="../..">Guido Music Notation</a>
+                </div>
+
+                <!-- Expanded navigation -->
+                <div class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li >
+                                <a href="../..">Home</a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">User Guide <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../guide/basic/">Basic concepts</a>
+</li>
+                                    
+<li >
+    <a href="../../guide/notes/">Notes and Rests</a>
+</li>
+                                    
+<li >
+    <a href="../../guide/chords/">Chords</a>
+</li>
+                                    
+<li >
+    <a href="../../guide/tags/">Tags and Tagged Ranges</a>
+</li>
+                                    
+<li >
+    <a href="../../guide/voices/">Voices</a>
+</li>
+                                    
+<li >
+    <a href="../../guide/scores/">Scores</a>
+</li>
+                                    
+<li >
+    <a href="../../guide/comments/">Comments and Spacing</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Reference <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../refs/tagsparams/">Tags parameters</a>
+</li>
+                                    
+<li >
+    <a href="../../refs/tags/">Tags</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Tags reference</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../refs/tags/Accidentals/">Accidentals</a>
+</li>
+            
+<li >
+    <a href="../../refs/tags/Articulations/">Articulations</a>
+</li>
+            
+<li >
+    <a href="../../refs/tags/Barlines/">Barlines</a>
+</li>
+            
+<li >
+    <a href="../../refs/tags/Beaming/">Beaming</a>
+</li>
+            
+<li >
+    <a href="../../refs/tags/ClefKeyMeter/">Clef Key Meter</a>
+</li>
+            
+<li >
+    <a href="../../refs/tags/Dynamics/">Dynamics</a>
+</li>
+            
+<li >
+    <a href="../../refs/tags/Layout/">Layout</a>
+</li>
+            
+<li >
+    <a href="../../refs/tags/Miscellaneous/">Miscellaneous</a>
+</li>
+            
+<li >
+    <a href="../../refs/tags/Notes/">Notes</a>
+</li>
+            
+<li >
+    <a href="../../refs/tags/Ornaments/">Ornaments</a>
+</li>
+            
+<li >
+    <a href="../../refs/tags/RepeatSigns/">Repeat Signs</a>
+</li>
+            
+<li >
+    <a href="../../refs/tags/Tempo/">Tempo</a>
+</li>
+            
+<li >
+    <a href="../../refs/tags/Text/">Text</a>
+</li>
+    </ul>
+  </li>
+                                    
+<li >
+    <a href="../../refs/">Tags index</a>
+</li>
+                                    
+<li >
+    <a href="../../refs/gmnf/">Language specification</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Examples <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../4voices/">4 Voices</a>
+</li>
+                                    
+<li >
+    <a href="../accidentals/">Accidentals</a>
+</li>
+                                    
+<li >
+    <a href="../allthethings/">All The Things You Are</a>
+</li>
+                                    
+<li >
+    <a href="../articulations/">Articulations</a>
+</li>
+                                    
+<li >
+    <a href="../bach/">Bach</a>
+</li>
+                                    
+<li >
+    <a href="../barlines/">Barlines</a>
+</li>
+                                    
+<li >
+    <a href="../bartok/">Bela Bartock</a>
+</li>
+                                    
+<li >
+    <a href="../beaming/">Beaming</a>
+</li>
+                                    
+<li >
+    <a href="../beethoven/">Beethoven</a>
+</li>
+                                    
+<li >
+    <a href="../brown/">Chris Brown</a>
+</li>
+                                    
+<li >
+    <a href="../clefkeymeter/">Clef, Key, Meter</a>
+</li>
+                                    
+<li >
+    <a href="../cpebach/">Sonata for flute</a>
+</li>
+                                    
+<li >
+    <a href="../dynamics/">Dynamics</a>
+</li>
+                                    
+<li >
+    <a href="../faure/">Fauré</a>
+</li>
+                                    
+<li >
+    <a href="../layout/">Layout</a>
+</li>
+                                    
+<li >
+    <a href="../lutkin/">Peter C. Lutkin</a>
+</li>
+                                    
+<li >
+    <a href="../mozart581/">Mozart Clarinet Quintet</a>
+</li>
+                                    
+<li >
+    <a href="../notes/">Notes attributes</a>
+</li>
+                                    
+<li class="active">
+    <a href="./">Ornaments</a>
+</li>
+                                    
+<li >
+    <a href="../repeats/">Repeat Signs</a>
+</li>
+                                    
+<li >
+    <a href="../slurs/">Slurs</a>
+</li>
+                                    
+<li >
+    <a href="../space/">Ties & Space</a>
+</li>
+                                    
+<li >
+    <a href="../tempo/">Tempo</a>
+</li>
+                                </ul>
+                            </li>
+                            <li >
+                                <a href="../../about/">About</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li >
+                                <a rel="next" href="../notes/">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li >
+                                <a rel="prev" href="../repeats/">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="main active"><a href="#ornaments">Ornaments</a></li>
+    </ul>
+</div></div>
+                <div class="col-md-9" role="main">
+
+<h1 id="ornaments">Ornaments</h1>
+<p>This examples illustrates ornaments: trill, turn, mordent.</p>
+<pre><code>{
+    [
+        \pageFormat&lt;lm=1cm, tm=1cm, bm=1cm, rm=1cm&gt;
+        \barFormat&lt;&quot;system&quot;&gt;
+        \mord(g) 
+        \mord&lt;type=&quot;inverted&quot;&gt;(g/2) 
+        \mord&lt;&quot;a&amp;&quot;, &quot;prallprall&quot;&gt;(g/4) \mord&lt;&quot;a&amp;&quot;, &quot;prallinverted&quot;, ady=-5.7, adx=-0.5&gt;(g) 
+    ],
+    [   
+        \trill&lt;&quot;g#&quot;&gt;(g/2) \trill(g/4) \trill&lt;tr=&quot;false&quot;&gt;(g/2)
+        \tie(\trill(d2/4) \trill&lt;&quot;e&amp;&quot;,begin=&quot;off&quot; &gt;(d2/4)) 
+    ],
+    [   
+        \turn(g/2) \turn&lt;&quot;a#&quot;&gt;(g/2)  \turn&lt;&quot;a&amp;&quot;, &quot;inverted&quot;,dy=2.5,  ady=-5.5, adx=-0.3&gt;(g2/4)
+    ]
+}
+</code></pre>
+
+<p><button class="try_it" onclick=window.open("https://guidoeditor.grame.fr/?src=https://raw.githubusercontent.com/grame-cncm/guidodoc/master/examples/mkdocs/examples/ornaments.gmn")>Try it online</button></p>
+<div class="guido-code guido-full">
+<?xml version="1.0"?>
+<svg viewBox="0 0 303 213" xmlns="http://www.w3.org/2000/svg"  version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <desc> SVG file generated using the GuidoEngine version 1.6.7</desc>
+    <g style="stroke:#000000; stroke-opacity:1">
+        <g transform="scale(0.124948, 0.124948)">
+            <g transform="translate(-0, -0)">
+            </g>
+            <g transform="translate(237.106, 237.106)">
+            </g>
+            <g transform="translate(237.106, 299.106)">
+                <polygon points="-16.5 0  -16.5 0  -24.5096 9.29099  -30.6568 21.9599  -35.1192 37.7008  -38.0744 56.2075  -39.7 77.174  -40.1736 100.294  -39.6728 125.262  -38.3752 151.772  -36.4584 179.517  -34.1 208.192  -31.4776 237.49  -28.7688 267.106  -26.1512 296.733  -23.8024 326.066  -21.9 354.798  -20.6216 382.623  -20.1448 409.236  -20.6472 434.329  -22.3064 457.598  -25.3 478.736  -29.8056 497.437  -36.0008 513.395  -44.0632 526.304  -54.1704 535.857  -66.5 541.75  -66.5 541.75  -66.5 541.75  -56.7624 535.857  -49.0312 526.304  -43.1288 513.395  -38.8776 497.437  -36.1 478.736  -34.6184 457.598  -34.2552 434.329  -34.8328 409.236  -36.1736 382.623  -38.1 354.798  -40.4344 326.066  -42.9992 296.734  -45.6168 267.106  -48.1096 237.49  -50.3 208.192  -52.0104 179.517  -53.0632 151.772  -53.2808 125.262  -52.4856 100.294  -50.5 77.174  -47.1464 56.2074  -42.2472 37.7007  -35.6248 21.9599  -27.1016 9.29095  -16.5 0  "></polygon>
+                <polygon points="-16.5 1083.5  -16.5 1083.5  -24.5096 1074.21  -30.6568 1061.54  -35.1192 1045.8  -38.0744 1027.29  -39.7 1006.33  -40.1736 983.206  -39.6728 958.238  -38.3752 931.728  -36.4584 903.983  -34.1 875.308  -31.4776 846.01  -28.7688 816.394  -26.1512 786.767  -23.8024 757.434  -21.9 728.702  -20.6216 700.877  -20.1448 674.264  -20.6472 649.171  -22.3064 625.902  -25.3 604.764  -29.8056 586.063  -36.0008 570.105  -44.0632 557.196  -54.1704 547.643  -66.5 541.75  -66.5 541.75  -66.5 541.75  -56.7624 547.643  -49.0312 557.196  -43.1288 570.105  -38.8776 586.063  -36.1 604.764  -34.6184 625.902  -34.2552 649.171  -34.8328 674.264  -36.1736 700.877  -38.1 728.702  -40.4344 757.434  -42.9992 786.767  -45.6168 816.394  -48.1096 846.01  -50.3 875.308  -52.0104 903.983  -53.0632 931.728  -53.2808 958.238  -52.4856 983.206  -50.5 1006.33  -47.1464 1027.29  -42.2472 1045.8  -35.6248 1061.54  -27.1016 1074.21  -16.5 1083.5  "></polygon>
+                <g style="stroke-width:4">
+                    <line x1="0" y1="0" x2="1950.56" y2="0"></line>
+                    <line x1="0" y1="50" x2="1950.56" y2="50"></line>
+                    <line x1="0" y1="100" x2="1950.56" y2="100"></line>
+                    <line x1="0" y1="150" x2="1950.56" y2="150"></line>
+                    <line x1="0" y1="200" x2="1950.56" y2="200"></line>
+                </g>
+            </g>
+            <g transform="translate(237.106, 299.106)">
+                <g font-family="Guido2">
+                    <text x="50.0002" y="200"  font-size="200">&#38;</text>
+                    <text x="269.2" y="-75"  font-size="200">&#109;</text>
+                    <text x="299.766" y="150"  font-size="200">&#88;</text>
+                    <text x="299.766" y="141.667"  font-size="200">&#120;</text>
+                    <text x="299.766" y="125"  font-size="200">&#120;</text>
+                    <text x="299.766" y="100"  font-size="200">&#120;</text>
+                    <text x="299.766" y="75"  font-size="200">&#120;</text>
+                    <text x="299.766" y="50"  font-size="200">&#120;</text>
+                    <text x="299.766" y="25"  font-size="200">&#120;</text>
+                    <text x="299.766" y="25"  font-size="200">&#120;</text>
+                    <text x="510.007" y="-75"  font-size="200">&#77;</text>
+                    <text x="538.62" y="150"  font-size="200">&#69;</text>
+                    <text x="538.62" y="141.667"  font-size="200">&#120;</text>
+                    <text x="538.62" y="125"  font-size="200">&#120;</text>
+                    <text x="538.62" y="100"  font-size="200">&#120;</text>
+                    <text x="538.62" y="75"  font-size="200">&#120;</text>
+                    <text x="538.62" y="50"  font-size="200">&#120;</text>
+                    <text x="538.62" y="25"  font-size="200">&#120;</text>
+                    <text x="538.62" y="25"  font-size="200">&#120;</text>
+                    <text x="910.08" y="-75"  font-size="200">&#181;</text>
+                    <text x="1005.43" y="-175"  font-size="100">&#98;</text>
+                    <text x="965.256" y="150"  font-size="200">&#88;</text>
+                    <text x="965.256" y="141.667"  font-size="200">&#120;</text>
+                    <text x="965.256" y="125"  font-size="200">&#120;</text>
+                    <text x="965.256" y="100"  font-size="200">&#120;</text>
+                    <text x="965.256" y="75"  font-size="200">&#120;</text>
+                    <text x="965.256" y="50"  font-size="200">&#120;</text>
+                    <text x="965.256" y="25"  font-size="200">&#120;</text>
+                    <text x="965.256" y="25"  font-size="200">&#120;</text>
+                    <text x="1148.93" y="-75"  font-size="200">&#187;</text>
+                    <text x="1231.79" y="-32.5"  font-size="100">&#98;</text>
+                    <text x="1204.11" y="150"  font-size="200">&#88;</text>
+                    <text x="1204.11" y="141.667"  font-size="200">&#120;</text>
+                    <text x="1204.11" y="125"  font-size="200">&#120;</text>
+                    <text x="1204.11" y="100"  font-size="200">&#120;</text>
+                    <text x="1204.11" y="75"  font-size="200">&#120;</text>
+                    <text x="1204.11" y="50"  font-size="200">&#120;</text>
+                    <text x="1204.11" y="25"  font-size="200">&#120;</text>
+                    <text x="1204.11" y="25"  font-size="200">&#120;</text>
+                </g>
+            </g>
+            <g transform="translate(237.106, 299.106)">
+                <g style="stroke-width:4">
+                    <line x1="0" y1="443.5" x2="1950.56" y2="443.5"></line>
+                    <line x1="0" y1="493.5" x2="1950.56" y2="493.5"></line>
+                    <line x1="0" y1="543.5" x2="1950.56" y2="543.5"></line>
+                    <line x1="0" y1="593.5" x2="1950.56" y2="593.5"></line>
+                    <line x1="0" y1="643.5" x2="1950.56" y2="643.5"></line>
+                </g>
+            </g>
+            <g transform="translate(237.106, 742.606)">
+                <g font-family="Guido2">
+                    <text x="50.0002" y="200"  font-size="200">&#38;</text>
+                    <text x="295.469" y="-75"  font-size="200">&#188;</text>
+                    <text x="390.45" y="-150"  font-size="100">&#35;</text>
+                    <text x="375.829" y="-75"  font-size="200">&#126;</text>
+                    <text x="444.579" y="-75"  font-size="200">&#126;</text>
+                    <text x="513.329" y="-75"  font-size="200">&#126;</text>
+                    <text x="299.766" y="150"  font-size="200">&#69;</text>
+                    <text x="299.766" y="141.667"  font-size="200">&#120;</text>
+                    <text x="299.766" y="125"  font-size="200">&#120;</text>
+                    <text x="299.766" y="100"  font-size="200">&#120;</text>
+                    <text x="299.766" y="75"  font-size="200">&#120;</text>
+                    <text x="299.766" y="50"  font-size="200">&#120;</text>
+                    <text x="299.766" y="25"  font-size="200">&#120;</text>
+                    <text x="299.766" y="25"  font-size="200">&#120;</text>
+                    <text x="722.105" y="-75"  font-size="200">&#188;</text>
+                    <text x="802.465" y="-75"  font-size="200">&#126;</text>
+                    <text x="726.402" y="150"  font-size="200">&#88;</text>
+                    <text x="726.402" y="141.667"  font-size="200">&#120;</text>
+                    <text x="726.402" y="125"  font-size="200">&#120;</text>
+                    <text x="726.402" y="100"  font-size="200">&#120;</text>
+                    <text x="726.402" y="75"  font-size="200">&#120;</text>
+                    <text x="726.402" y="50"  font-size="200">&#120;</text>
+                    <text x="726.402" y="25"  font-size="200">&#120;</text>
+                    <text x="726.402" y="25"  font-size="200">&#120;</text>
+                    <text x="960.959" y="-75"  font-size="200">&#126;</text>
+                    <text x="1029.71" y="-75"  font-size="200">&#126;</text>
+                    <text x="1098.46" y="-75"  font-size="200">&#126;</text>
+                    <text x="1167.21" y="-75"  font-size="200">&#126;</text>
+                    <text x="1235.96" y="-75"  font-size="200">&#126;</text>
+                    <text x="965.256" y="150"  font-size="200">&#69;</text>
+                    <text x="965.256" y="141.667"  font-size="200">&#120;</text>
+                    <text x="965.256" y="125"  font-size="200">&#120;</text>
+                    <text x="965.256" y="100"  font-size="200">&#120;</text>
+                    <text x="965.256" y="75"  font-size="200">&#120;</text>
+                    <text x="965.256" y="50"  font-size="200">&#120;</text>
+                    <text x="965.256" y="25"  font-size="200">&#120;</text>
+                    <text x="965.256" y="25"  font-size="200">&#120;</text>
+                    <text x="1438.67" y="-50"  font-size="200">&#188;</text>
+                    <text x="1519.03" y="-50"  font-size="200">&#126;</text>
+                    <text x="1587.78" y="-50"  font-size="200">&#126;</text>
+                    <polygon points="1510.23 37.5  1510.23 37.5  1515.47 34.3872  1521.05 31.5338  1526.92 28.9398  1533.07 26.6052  1539.46 24.53  1546.07 22.7142  1552.86 21.1578  1559.81 19.8608  1566.89 18.8232  1574.07 18.045  1581.32 17.5262  1588.62 17.2668  1595.93 17.2668  1603.22 17.5262  1610.48 18.045  1617.66 18.8232  1624.74 19.8608  1631.69 21.1578  1638.48 22.7142  1645.09 24.53  1651.48 26.6052  1657.63 28.9398  1663.5 31.5338  1669.08 34.3872  1674.32 37.5  1674.32 37.5  1674.32 37.5  1669.16 33.2352  1663.65 29.3258  1657.82 25.7718  1651.7 22.5732  1645.32 19.73  1638.71 17.2422  1631.9 15.1098  1624.93 13.3328  1617.81 11.9112  1610.59 10.845  1603.3 10.1342  1595.95 9.77885  1588.59 9.77884  1581.25 10.1342  1573.95 10.845  1566.73 11.9112  1559.62 13.3328  1552.64 15.1098  1545.84 17.2422  1539.23 19.73  1532.85 22.5732  1526.73 25.7718  1520.9 29.3258  1515.39 33.2352  1510.23 37.5  "></polygon>
+                    <text x="1442.96" y="50"  font-size="200">&#88;</text>
+                    <text x="1442.96" y="58.3333"  font-size="200">&#104;</text>
+                    <text x="1442.96" y="75"  font-size="200">&#104;</text>
+                    <text x="1442.96" y="100"  font-size="200">&#104;</text>
+                    <text x="1442.96" y="125"  font-size="200">&#104;</text>
+                    <text x="1442.96" y="150"  font-size="200">&#104;</text>
+                    <text x="1442.96" y="175"  font-size="200">&#104;</text>
+                    <text x="1442.96" y="175"  font-size="200">&#104;</text>
+                    <text x="1723.44" y="-125"  font-size="100">&#98;</text>
+                    <text x="1656.53" y="-50"  font-size="200">&#126;</text>
+                    <text x="1725.28" y="-50"  font-size="200">&#126;</text>
+                    <text x="1794.03" y="-50"  font-size="200">&#126;</text>
+                    <text x="1681.82" y="50"  font-size="200">&#88;</text>
+                    <text x="1681.82" y="58.3333"  font-size="200">&#104;</text>
+                    <text x="1681.82" y="75"  font-size="200">&#104;</text>
+                    <text x="1681.82" y="100"  font-size="200">&#104;</text>
+                    <text x="1681.82" y="125"  font-size="200">&#104;</text>
+                    <text x="1681.82" y="150"  font-size="200">&#104;</text>
+                    <text x="1681.82" y="175"  font-size="200">&#104;</text>
+                    <text x="1681.82" y="175"  font-size="200">&#104;</text>
+                </g>
+            </g>
+            <g transform="translate(237.106, 299.106)">
+                <g style="stroke-width:4">
+                    <line x1="0" y1="883.5" x2="1950.56" y2="883.5"></line>
+                    <line x1="0" y1="933.5" x2="1950.56" y2="933.5"></line>
+                    <line x1="0" y1="983.5" x2="1950.56" y2="983.5"></line>
+                    <line x1="0" y1="1033.5" x2="1950.56" y2="1033.5"></line>
+                    <line x1="0" y1="1083.5" x2="1950.56" y2="1083.5"></line>
+                </g>
+            </g>
+            <g transform="translate(237.106, 1182.61)">
+                <g font-family="Guido2">
+                    <text x="50.0002" y="200"  font-size="200">&#38;</text>
+                    <text x="277.501" y="-75"  font-size="200">&#84;</text>
+                    <text x="299.766" y="150"  font-size="200">&#69;</text>
+                    <text x="299.766" y="141.667"  font-size="200">&#120;</text>
+                    <text x="299.766" y="125"  font-size="200">&#120;</text>
+                    <text x="299.766" y="100"  font-size="200">&#120;</text>
+                    <text x="299.766" y="75"  font-size="200">&#120;</text>
+                    <text x="299.766" y="50"  font-size="200">&#120;</text>
+                    <text x="299.766" y="25"  font-size="200">&#120;</text>
+                    <text x="299.766" y="25"  font-size="200">&#120;</text>
+                    <text x="704.137" y="-75"  font-size="200">&#84;</text>
+                    <text x="751.148" y="-150"  font-size="100">&#35;</text>
+                    <text x="726.402" y="150"  font-size="200">&#69;</text>
+                    <text x="726.402" y="141.667"  font-size="200">&#120;</text>
+                    <text x="726.402" y="125"  font-size="200">&#120;</text>
+                    <text x="726.402" y="100"  font-size="200">&#120;</text>
+                    <text x="726.402" y="75"  font-size="200">&#120;</text>
+                    <text x="726.402" y="50"  font-size="200">&#120;</text>
+                    <text x="726.402" y="25"  font-size="200">&#120;</text>
+                    <text x="726.402" y="25"  font-size="200">&#120;</text>
+                    <text x="1181.84" y="-162.5"  font-size="200">&#229;</text>
+                    <text x="1222.29" y="-100"  font-size="100">&#98;</text>
+                    <text x="1204.11" y="-25"  font-size="200">&#88;</text>
+                    <text x="1204.11" y="-16.6667"  font-size="200">&#104;</text>
+                    <text x="1204.11" y="0"  font-size="200">&#104;</text>
+                    <text x="1204.11" y="25"  font-size="200">&#104;</text>
+                    <text x="1204.11" y="50"  font-size="200">&#104;</text>
+                    <text x="1204.11" y="75"  font-size="200">&#104;</text>
+                    <text x="1204.11" y="100"  font-size="200">&#104;</text>
+                    <text x="1204.11" y="100"  font-size="200">&#104;</text>
+                </g>
+            </g>
+            <g transform="translate(237.106, 299.106)">
+                <g style="stroke-width:4">
+                    <line x1="0" y1="0" x2="0" y2="1083.5"></line>
+                </g>
+                <rect x="1908.36" y="0" width="7.19995" height="1083.5"></rect>
+                <rect x="1928.36" y="0" width="25" height="1083.5"></rect>
+            </g>
+            <g transform="translate(237.106, 237.106)">
+            </g>
+            <g transform="translate(0, 1.52588e-05)">
+            </g>
+        </g>
+    </g>
+</svg>
+</div></div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+                <p>Copyright &copy; 2019-2020 <a href="http://www.grame.fr">Grame-CNCM</a></p>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js" defer></script>
+        <script src="../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form role="form">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="Keyboard Shortcuts Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Keyboard Shortcuts</h4>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

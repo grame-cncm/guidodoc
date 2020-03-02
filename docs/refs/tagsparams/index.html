@@ -1,0 +1,1032 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>Tags parameters - Guido Music Notation</title>
+        <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+        <link href="/GMN/guidolib/guido.css" rel="stylesheet">
+        <link href="/BNF/railroad-diagrams/railroad-diagrams.css" rel="stylesheet">
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+        <script src="../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../js/bootstrap-3.0.3.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+
+                <!-- Collapsed navigation -->
+                <div class="navbar-header">
+                    <!-- Expander button -->
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="../..">Guido Music Notation</a>
+                </div>
+
+                <!-- Expanded navigation -->
+                <div class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li >
+                                <a href="../..">Home</a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">User Guide <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../guide/basic/">Basic concepts</a>
+</li>
+                                    
+<li >
+    <a href="../../guide/notes/">Notes and Rests</a>
+</li>
+                                    
+<li >
+    <a href="../../guide/chords/">Chords</a>
+</li>
+                                    
+<li >
+    <a href="../../guide/tags/">Tags and Tagged Ranges</a>
+</li>
+                                    
+<li >
+    <a href="../../guide/voices/">Voices</a>
+</li>
+                                    
+<li >
+    <a href="../../guide/scores/">Scores</a>
+</li>
+                                    
+<li >
+    <a href="../../guide/comments/">Comments and Spacing</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Reference <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li class="active">
+    <a href="./">Tags parameters</a>
+</li>
+                                    
+<li >
+    <a href="../tags/">Tags</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Tags reference</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../tags/Accidentals/">Accidentals</a>
+</li>
+            
+<li >
+    <a href="../tags/Articulations/">Articulations</a>
+</li>
+            
+<li >
+    <a href="../tags/Barlines/">Barlines</a>
+</li>
+            
+<li >
+    <a href="../tags/Beaming/">Beaming</a>
+</li>
+            
+<li >
+    <a href="../tags/ClefKeyMeter/">Clef Key Meter</a>
+</li>
+            
+<li >
+    <a href="../tags/Dynamics/">Dynamics</a>
+</li>
+            
+<li >
+    <a href="../tags/Layout/">Layout</a>
+</li>
+            
+<li >
+    <a href="../tags/Miscellaneous/">Miscellaneous</a>
+</li>
+            
+<li >
+    <a href="../tags/Notes/">Notes</a>
+</li>
+            
+<li >
+    <a href="../tags/Ornaments/">Ornaments</a>
+</li>
+            
+<li >
+    <a href="../tags/RepeatSigns/">Repeat Signs</a>
+</li>
+            
+<li >
+    <a href="../tags/Tempo/">Tempo</a>
+</li>
+            
+<li >
+    <a href="../tags/Text/">Text</a>
+</li>
+    </ul>
+  </li>
+                                    
+<li >
+    <a href="../">Tags index</a>
+</li>
+                                    
+<li >
+    <a href="../gmnf/">Language specification</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Examples <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../examples/4voices/">4 Voices</a>
+</li>
+                                    
+<li >
+    <a href="../../examples/accidentals/">Accidentals</a>
+</li>
+                                    
+<li >
+    <a href="../../examples/allthethings/">All The Things You Are</a>
+</li>
+                                    
+<li >
+    <a href="../../examples/articulations/">Articulations</a>
+</li>
+                                    
+<li >
+    <a href="../../examples/bach/">Bach</a>
+</li>
+                                    
+<li >
+    <a href="../../examples/barlines/">Barlines</a>
+</li>
+                                    
+<li >
+    <a href="../../examples/bartok/">Bela Bartock</a>
+</li>
+                                    
+<li >
+    <a href="../../examples/beaming/">Beaming</a>
+</li>
+                                    
+<li >
+    <a href="../../examples/beethoven/">Beethoven</a>
+</li>
+                                    
+<li >
+    <a href="../../examples/brown/">Chris Brown</a>
+</li>
+                                    
+<li >
+    <a href="../../examples/clefkeymeter/">Clef, Key, Meter</a>
+</li>
+                                    
+<li >
+    <a href="../../examples/cpebach/">Sonata for flute</a>
+</li>
+                                    
+<li >
+    <a href="../../examples/dynamics/">Dynamics</a>
+</li>
+                                    
+<li >
+    <a href="../../examples/faure/">Fauré</a>
+</li>
+                                    
+<li >
+    <a href="../../examples/layout/">Layout</a>
+</li>
+                                    
+<li >
+    <a href="../../examples/lutkin/">Peter C. Lutkin</a>
+</li>
+                                    
+<li >
+    <a href="../../examples/mozart581/">Mozart Clarinet Quintet</a>
+</li>
+                                    
+<li >
+    <a href="../../examples/notes/">Notes attributes</a>
+</li>
+                                    
+<li >
+    <a href="../../examples/ornaments/">Ornaments</a>
+</li>
+                                    
+<li >
+    <a href="../../examples/repeats/">Repeat Signs</a>
+</li>
+                                    
+<li >
+    <a href="../../examples/slurs/">Slurs</a>
+</li>
+                                    
+<li >
+    <a href="../../examples/space/">Ties & Space</a>
+</li>
+                                    
+<li >
+    <a href="../../examples/tempo/">Tempo</a>
+</li>
+                                </ul>
+                            </li>
+                            <li >
+                                <a href="../../about/">About</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li >
+                                <a rel="next" href="../../guide/comments/">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li >
+                                <a rel="prev" href="../tags/">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="main active"><a href="#tag-parameters">Tag Parameters</a></li>
+            <li><a href="#syntax">Syntax</a></li>
+            <li><a href="#values">Values</a></li>
+            <li><a href="#units">Units</a></li>
+            <li><a href="#colors">Colors</a></li>
+            <li><a href="#common-parameters">Common parameters</a></li>
+            <li><a href="#text-parameters">Text parameters</a></li>
+    </ul>
+</div></div>
+                <div class="col-md-9" role="main">
+
+<script src='/BNF/railroad-diagrams/railroad-diagrams.js'></script>
+
+<style>
+h2 { 
+    background-color: #33A5E7 ; 
+    color: white;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+}
+</style>
+
+<h1 id="tag-parameters">Tag Parameters</h1>
+<p>This section describes the general syntax for tag parameters and parameters common to a set of tags as well.
+The parameters specific to a given tag are described with the corresponding tag.</p>
+<h2 id="syntax">Syntax</h2>
+<p>The general syntax for tag parameters is the following:</p>
+<div>
+     <script>
+     ComplexDiagram(
+            Sequence ('<', OneOrMore(
+                Choice(0, 'value', Sequence ('param', '=' , 'value'))
+                , ','), '>')
+    ).addTo()
+   </script>
+</div>
+
+<p>where <code>param</code> is the parameter name and <code>value</code> is among:</p>
+<div>
+     <script>
+     ComplexDiagram(
+            Choice(0, '"string"', Sequence('number', Optional('unit')))
+    ).addTo()
+   </script>
+</div>
+
+<p>The parameter name may be omitted when there is no ambiguity: single parameter, first parameter in the parameters list or parameters given in the parameters list order. <br />
+For example, you can write \meter&lt;"4/4"&gt; instead of \meter&lt; type="4/4"&gt;</p>
+<h2 id="values">Values</h2>
+<p>Values may be of different types among the following:</p>
+<ul>
+<li><strong>string</strong>: a double quoted string</li>
+<li><strong>float</strong>: a floating point or integer number</li>
+<li><strong>unit</strong>: a number followed by a unit string</li>
+<li><strong>boolean</strong>: a special string among:<ul>
+<li>"true", "on", "yes" </li>
+<li>"false", "off", "no" </li>
+</ul>
+</li>
+</ul>
+<p>Note that boolean values are not case sensitive. Also note that a string that is not in the <em>true</em> set is considered as false.</p>
+<h2 id="units">Units</h2>
+<p>Units may be used with numbers, generaly for for displacements (dx, dy). <br />
+The supported units are:</p>
+<table>
+<thead>
+<tr>
+<th>Unit</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>m</td>
+<td align="left">meter</td>
+</tr>
+<tr>
+<td>cm</td>
+<td align="left">centimeter</td>
+</tr>
+<tr>
+<td>mm</td>
+<td align="left">millimeter</td>
+</tr>
+<tr>
+<td>in</td>
+<td align="left">inch  (2.54cm)</td>
+</tr>
+<tr>
+<td>pt</td>
+<td align="left">point ( ~0,353 mm)</td>
+</tr>
+<tr>
+<td>pc</td>
+<td align="left">pica  ( ~4.2333 mm)</td>
+</tr>
+<tr>
+<td>hs</td>
+<td align="left">half space of the current staff</td>
+</tr>
+</tbody>
+</table>
+<p>When not specified, the default unit is <code>hs</code>.</p>
+<h3 id="example">Example</h3>
+<pre><code>{
+    [ \meter&lt;&quot;4/4&quot;&gt; \i&lt;&quot;p&quot;, dx=0.01m&gt; d/2 e/4 f ],
+    [ \meter&lt;&quot;4/4&quot;&gt; \i&lt;&quot;p&quot;, dx=1cm&gt;   d/2 e/4 f ],
+    [ \meter&lt;&quot;4/4&quot;&gt; \i&lt;&quot;p&quot;, dx=10mm&gt;  d/2 e/4 f ],
+    [ \meter&lt;&quot;4/4&quot;&gt; \i&lt;&quot;p&quot;, dx=0.3937in&gt; d/2 e/4 f ],
+    [ \meter&lt;&quot;4/4&quot;&gt; \i&lt;&quot;p&quot;, dx=28.32pt&gt;  d/2 e/4 f ],
+    [ \meter&lt;&quot;4/4&quot;&gt; \i&lt;&quot;p&quot;, dx=2.362pc&gt;  d/2 e/4 f ],
+    [ \meter&lt;&quot;4/4&quot;&gt; \i&lt;&quot;p&quot;, dx=1cm, dy=2hs&gt; d/2 e/4 f ]
+}
+</code></pre>
+
+<p><button class="try_it" onclick=window.open("https://guidoeditor.grame.fr/?code=ewoJWyAKCSAgXHBhZ2VGb3JtYXQ8bG09MWNtLCB0bT0xY20sIGJtPTFjbSwgcm09MWNtPiAKCSAgXG1ldGVyPCI0LzQiPiBcaTwicCIsIGR4PTAuMDFtPiBkLzIgZS80IGYgXSwKCVsgXG1ldGVyPCI0LzQiPiBcaTwicCIsIGR4PTFjbT4gICBkLzIgZS80IGYgXSwKCVsgXG1ldGVyPCI0LzQiPiBcaTwicCIsIGR4PTEwbW0+ICBkLzIgZS80IGYgXSwKCVsgXG1ldGVyPCI0LzQiPiBcaTwicCIsIGR4PTAuMzkzN2luPiBkLzIgZS80IGYgXSwKCVsgXG1ldGVyPCI0LzQiPiBcaTwicCIsIGR4PTI4LjMycHQ+ICBkLzIgZS80IGYgXSwKCVsgXG1ldGVyPCI0LzQiPiBcaTwicCIsIGR4PTIuMzYycGM+ICBkLzIgZS80IGYgXSwKCVsgXG1ldGVyPCI0LzQiPiBcaTwicCIsIGR4PTFjbSwgZHk9MmhzPiBkLzIgZS80IGYgXQp9Cg==")> Try it online </button>
+<div class="guido-code"></p>
+<?xml version="1.0"?>
+<svg viewBox="0 0 221 466" xmlns="http://www.w3.org/2000/svg"  version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <desc> SVG file generated using the GuidoEngine version 1.6.7</desc>
+    <g style="stroke:#000000; stroke-opacity:1">
+        <g transform="scale(0.124638, 0.124638)">
+            <g transform="translate(-0, -0)">
+            </g>
+            <g transform="translate(237.106, 237.106)">
+            </g>
+            <g transform="translate(237.106, 292.106)">
+                <polygon points="-16.5 0  -16.5 0  -24.5096 13.9548  -30.6568 40.1041  -35.1192 77.3752  -38.0744 124.695  -39.7 180.992  -40.1736 245.192  -39.6728 316.223  -38.3752 393.013  -36.4584 474.488  -34.1 559.576  -31.4776 647.204  -28.7688 736.3  -26.1512 825.79  -23.8024 914.602  -21.9 1001.66  -20.6216 1085.9  -20.1448 1166.24  -20.6472 1241.62  -22.3064 1310.95  -25.3 1373.17  -29.8056 1427.2  -36.0008 1471.97  -44.0632 1506.41  -54.1704 1529.44  -66.5 1540  -66.5 1540  -66.5 1540  -56.7624 1529.44  -49.0312 1506.41  -43.1288 1471.97  -38.8776 1427.2  -36.1 1373.17  -34.6184 1310.95  -34.2552 1241.62  -34.8328 1166.24  -36.1736 1085.9  -38.1 1001.66  -40.4344 914.602  -42.9992 825.79  -45.6168 736.3  -48.1096 647.204  -50.3 559.576  -52.0104 474.488  -53.0632 393.013  -53.2808 316.223  -52.4856 245.192  -50.5 180.992  -47.1464 124.695  -42.2472 77.3751  -35.6248 40.104  -27.1016 13.9547  -16.5 0  "></polygon>
+                <polygon points="-16.5 3080  -16.5 3080  -24.5096 3066.05  -30.6568 3039.9  -35.1192 3002.62  -38.0744 2955.3  -39.7 2899.01  -40.1736 2834.81  -39.6728 2763.78  -38.3752 2686.99  -36.4584 2605.51  -34.1 2520.42  -31.4776 2432.8  -28.7688 2343.7  -26.1512 2254.21  -23.8024 2165.4  -21.9 2078.34  -20.6216 1994.1  -20.1448 1913.76  -20.6472 1838.38  -22.3064 1769.05  -25.3 1706.83  -29.8056 1652.8  -36.0008 1608.03  -44.0632 1573.59  -54.1704 1550.56  -66.5 1540  -66.5 1540  -66.5 1540  -56.7624 1550.56  -49.0312 1573.59  -43.1288 1608.03  -38.8776 1652.8  -36.1 1706.83  -34.6184 1769.05  -34.2552 1838.38  -34.8328 1913.76  -36.1736 1994.1  -38.1 2078.34  -40.4344 2165.4  -42.9992 2254.21  -45.6168 2343.7  -48.1096 2432.8  -50.3 2520.42  -52.0104 2605.51  -53.0632 2686.99  -53.2808 2763.78  -52.4856 2834.81  -50.5 2899.01  -47.1464 2955.3  -42.2472 3002.62  -35.6248 3039.9  -27.1016 3066.05  -16.5 3080  "></polygon>
+                <g style="stroke-width:4">
+                    <line x1="0" y1="0" x2="1298.92" y2="0"></line>
+                    <line x1="0" y1="50" x2="1298.92" y2="50"></line>
+                    <line x1="0" y1="100" x2="1298.92" y2="100"></line>
+                    <line x1="0" y1="150" x2="1298.92" y2="150"></line>
+                    <line x1="0" y1="200" x2="1298.92" y2="200"></line>
+                </g>
+            </g>
+            <g transform="translate(237.106, 292.106)">
+                <g font-family="Guido2">
+                    <text x="50.0002" y="200"  font-size="200">&#38;</text>
+                    <text x="242.266" y="50"  font-size="200">&#52;</text>
+                    <text x="242.266" y="150"  font-size="200">&#52;</text>
+                    <text x="595.372" y="300"  font-size="200">&#112;</text>
+                    <text x="415.766" y="225"  font-size="200">&#69;</text>
+                    <text x="415.766" y="216.667"  font-size="200">&#120;</text>
+                    <text x="415.766" y="200"  font-size="200">&#120;</text>
+                    <text x="415.766" y="175"  font-size="200">&#120;</text>
+                    <text x="415.766" y="150"  font-size="200">&#120;</text>
+                    <text x="415.766" y="125"  font-size="200">&#120;</text>
+                    <text x="415.766" y="100"  font-size="200">&#120;</text>
+                    <text x="415.766" y="100"  font-size="200">&#120;</text>
+                    <text x="791.329" y="200"  font-size="200">&#88;</text>
+                    <text x="791.329" y="191.667"  font-size="200">&#120;</text>
+                    <text x="791.329" y="175"  font-size="200">&#120;</text>
+                    <text x="791.329" y="150"  font-size="200">&#120;</text>
+                    <text x="791.329" y="125"  font-size="200">&#120;</text>
+                    <text x="791.329" y="100"  font-size="200">&#120;</text>
+                    <text x="791.329" y="75"  font-size="200">&#120;</text>
+                    <text x="791.329" y="75"  font-size="200">&#120;</text>
+                    <text x="1030.18" y="175"  font-size="200">&#88;</text>
+                    <text x="1030.18" y="166.667"  font-size="200">&#120;</text>
+                    <text x="1030.18" y="150"  font-size="200">&#120;</text>
+                    <text x="1030.18" y="125"  font-size="200">&#120;</text>
+                    <text x="1030.18" y="100"  font-size="200">&#120;</text>
+                    <text x="1030.18" y="75"  font-size="200">&#120;</text>
+                    <text x="1030.18" y="50"  font-size="200">&#120;</text>
+                    <text x="1030.18" y="50"  font-size="200">&#120;</text>
+                    <rect x="1256.72" y="0" width="7.19995" height="200"></rect>
+                    <rect x="1276.72" y="0" width="25" height="200"></rect>
+                </g>
+            </g>
+            <g transform="translate(237.106, 292.106)">
+                <g style="stroke-width:4">
+                    <line x1="0" y1="480" x2="1298.92" y2="480"></line>
+                    <line x1="0" y1="530" x2="1298.92" y2="530"></line>
+                    <line x1="0" y1="580" x2="1298.92" y2="580"></line>
+                    <line x1="0" y1="630" x2="1298.92" y2="630"></line>
+                    <line x1="0" y1="680" x2="1298.92" y2="680"></line>
+                </g>
+            </g>
+            <g transform="translate(237.106, 772.106)">
+                <g font-family="Guido2">
+                    <text x="50.0002" y="200"  font-size="200">&#38;</text>
+                    <text x="242.266" y="50"  font-size="200">&#52;</text>
+                    <text x="242.266" y="150"  font-size="200">&#52;</text>
+                    <text x="595.372" y="300"  font-size="200">&#112;</text>
+                    <text x="415.766" y="225"  font-size="200">&#69;</text>
+                    <text x="415.766" y="216.667"  font-size="200">&#120;</text>
+                    <text x="415.766" y="200"  font-size="200">&#120;</text>
+                    <text x="415.766" y="175"  font-size="200">&#120;</text>
+                    <text x="415.766" y="150"  font-size="200">&#120;</text>
+                    <text x="415.766" y="125"  font-size="200">&#120;</text>
+                    <text x="415.766" y="100"  font-size="200">&#120;</text>
+                    <text x="415.766" y="100"  font-size="200">&#120;</text>
+                    <text x="791.329" y="200"  font-size="200">&#88;</text>
+                    <text x="791.329" y="191.667"  font-size="200">&#120;</text>
+                    <text x="791.329" y="175"  font-size="200">&#120;</text>
+                    <text x="791.329" y="150"  font-size="200">&#120;</text>
+                    <text x="791.329" y="125"  font-size="200">&#120;</text>
+                    <text x="791.329" y="100"  font-size="200">&#120;</text>
+                    <text x="791.329" y="75"  font-size="200">&#120;</text>
+                    <text x="791.329" y="75"  font-size="200">&#120;</text>
+                    <text x="1030.18" y="175"  font-size="200">&#88;</text>
+                    <text x="1030.18" y="166.667"  font-size="200">&#120;</text>
+                    <text x="1030.18" y="150"  font-size="200">&#120;</text>
+                    <text x="1030.18" y="125"  font-size="200">&#120;</text>
+                    <text x="1030.18" y="100"  font-size="200">&#120;</text>
+                    <text x="1030.18" y="75"  font-size="200">&#120;</text>
+                    <text x="1030.18" y="50"  font-size="200">&#120;</text>
+                    <text x="1030.18" y="50"  font-size="200">&#120;</text>
+                    <rect x="1256.72" y="0" width="7.19995" height="200"></rect>
+                    <rect x="1276.72" y="0" width="25" height="200"></rect>
+                </g>
+            </g>
+            <g transform="translate(237.106, 292.106)">
+                <g style="stroke-width:4">
+                    <line x1="0" y1="960" x2="1298.92" y2="960"></line>
+                    <line x1="0" y1="1010" x2="1298.92" y2="1010"></line>
+                    <line x1="0" y1="1060" x2="1298.92" y2="1060"></line>
+                    <line x1="0" y1="1110" x2="1298.92" y2="1110"></line>
+                    <line x1="0" y1="1160" x2="1298.92" y2="1160"></line>
+                </g>
+            </g>
+            <g transform="translate(237.106, 1252.11)">
+                <g font-family="Guido2">
+                    <text x="50.0002" y="200"  font-size="200">&#38;</text>
+                    <text x="242.266" y="50"  font-size="200">&#52;</text>
+                    <text x="242.266" y="150"  font-size="200">&#52;</text>
+                    <text x="595.372" y="300"  font-size="200">&#112;</text>
+                    <text x="415.766" y="225"  font-size="200">&#69;</text>
+                    <text x="415.766" y="216.667"  font-size="200">&#120;</text>
+                    <text x="415.766" y="200"  font-size="200">&#120;</text>
+                    <text x="415.766" y="175"  font-size="200">&#120;</text>
+                    <text x="415.766" y="150"  font-size="200">&#120;</text>
+                    <text x="415.766" y="125"  font-size="200">&#120;</text>
+                    <text x="415.766" y="100"  font-size="200">&#120;</text>
+                    <text x="415.766" y="100"  font-size="200">&#120;</text>
+                    <text x="791.329" y="200"  font-size="200">&#88;</text>
+                    <text x="791.329" y="191.667"  font-size="200">&#120;</text>
+                    <text x="791.329" y="175"  font-size="200">&#120;</text>
+                    <text x="791.329" y="150"  font-size="200">&#120;</text>
+                    <text x="791.329" y="125"  font-size="200">&#120;</text>
+                    <text x="791.329" y="100"  font-size="200">&#120;</text>
+                    <text x="791.329" y="75"  font-size="200">&#120;</text>
+                    <text x="791.329" y="75"  font-size="200">&#120;</text>
+                    <text x="1030.18" y="175"  font-size="200">&#88;</text>
+                    <text x="1030.18" y="166.667"  font-size="200">&#120;</text>
+                    <text x="1030.18" y="150"  font-size="200">&#120;</text>
+                    <text x="1030.18" y="125"  font-size="200">&#120;</text>
+                    <text x="1030.18" y="100"  font-size="200">&#120;</text>
+                    <text x="1030.18" y="75"  font-size="200">&#120;</text>
+                    <text x="1030.18" y="50"  font-size="200">&#120;</text>
+                    <text x="1030.18" y="50"  font-size="200">&#120;</text>
+                    <rect x="1256.72" y="0" width="7.19995" height="200"></rect>
+                    <rect x="1276.72" y="0" width="25" height="200"></rect>
+                </g>
+            </g>
+            <g transform="translate(237.106, 292.106)">
+                <g style="stroke-width:4">
+                    <line x1="0" y1="1440" x2="1298.92" y2="1440"></line>
+                    <line x1="0" y1="1490" x2="1298.92" y2="1490"></line>
+                    <line x1="0" y1="1540" x2="1298.92" y2="1540"></line>
+                    <line x1="0" y1="1590" x2="1298.92" y2="1590"></line>
+                    <line x1="0" y1="1640" x2="1298.92" y2="1640"></line>
+                </g>
+            </g>
+            <g transform="translate(237.106, 1732.11)">
+                <g font-family="Guido2">
+                    <text x="50.0002" y="200"  font-size="200">&#38;</text>
+                    <text x="242.266" y="50"  font-size="200">&#52;</text>
+                    <text x="242.266" y="150"  font-size="200">&#52;</text>
+                    <text x="595.372" y="300"  font-size="200">&#112;</text>
+                    <text x="415.766" y="225"  font-size="200">&#69;</text>
+                    <text x="415.766" y="216.667"  font-size="200">&#120;</text>
+                    <text x="415.766" y="200"  font-size="200">&#120;</text>
+                    <text x="415.766" y="175"  font-size="200">&#120;</text>
+                    <text x="415.766" y="150"  font-size="200">&#120;</text>
+                    <text x="415.766" y="125"  font-size="200">&#120;</text>
+                    <text x="415.766" y="100"  font-size="200">&#120;</text>
+                    <text x="415.766" y="100"  font-size="200">&#120;</text>
+                    <text x="791.329" y="200"  font-size="200">&#88;</text>
+                    <text x="791.329" y="191.667"  font-size="200">&#120;</text>
+                    <text x="791.329" y="175"  font-size="200">&#120;</text>
+                    <text x="791.329" y="150"  font-size="200">&#120;</text>
+                    <text x="791.329" y="125"  font-size="200">&#120;</text>
+                    <text x="791.329" y="100"  font-size="200">&#120;</text>
+                    <text x="791.329" y="75"  font-size="200">&#120;</text>
+                    <text x="791.329" y="75"  font-size="200">&#120;</text>
+                    <text x="1030.18" y="175"  font-size="200">&#88;</text>
+                    <text x="1030.18" y="166.667"  font-size="200">&#120;</text>
+                    <text x="1030.18" y="150"  font-size="200">&#120;</text>
+                    <text x="1030.18" y="125"  font-size="200">&#120;</text>
+                    <text x="1030.18" y="100"  font-size="200">&#120;</text>
+                    <text x="1030.18" y="75"  font-size="200">&#120;</text>
+                    <text x="1030.18" y="50"  font-size="200">&#120;</text>
+                    <text x="1030.18" y="50"  font-size="200">&#120;</text>
+                    <rect x="1256.72" y="0" width="7.19995" height="200"></rect>
+                    <rect x="1276.72" y="0" width="25" height="200"></rect>
+                </g>
+            </g>
+            <g transform="translate(237.106, 292.106)">
+                <g style="stroke-width:4">
+                    <line x1="0" y1="1920" x2="1298.92" y2="1920"></line>
+                    <line x1="0" y1="1970" x2="1298.92" y2="1970"></line>
+                    <line x1="0" y1="2020" x2="1298.92" y2="2020"></line>
+                    <line x1="0" y1="2070" x2="1298.92" y2="2070"></line>
+                    <line x1="0" y1="2120" x2="1298.92" y2="2120"></line>
+                </g>
+            </g>
+            <g transform="translate(237.106, 2212.11)">
+                <g font-family="Guido2">
+                    <text x="50.0002" y="200"  font-size="200">&#38;</text>
+                    <text x="242.266" y="50"  font-size="200">&#52;</text>
+                    <text x="242.266" y="150"  font-size="200">&#52;</text>
+                    <text x="594.266" y="300"  font-size="200">&#112;</text>
+                    <text x="415.766" y="225"  font-size="200">&#69;</text>
+                    <text x="415.766" y="216.667"  font-size="200">&#120;</text>
+                    <text x="415.766" y="200"  font-size="200">&#120;</text>
+                    <text x="415.766" y="175"  font-size="200">&#120;</text>
+                    <text x="415.766" y="150"  font-size="200">&#120;</text>
+                    <text x="415.766" y="125"  font-size="200">&#120;</text>
+                    <text x="415.766" y="100"  font-size="200">&#120;</text>
+                    <text x="415.766" y="100"  font-size="200">&#120;</text>
+                    <text x="791.329" y="200"  font-size="200">&#88;</text>
+                    <text x="791.329" y="191.667"  font-size="200">&#120;</text>
+                    <text x="791.329" y="175"  font-size="200">&#120;</text>
+                    <text x="791.329" y="150"  font-size="200">&#120;</text>
+                    <text x="791.329" y="125"  font-size="200">&#120;</text>
+                    <text x="791.329" y="100"  font-size="200">&#120;</text>
+                    <text x="791.329" y="75"  font-size="200">&#120;</text>
+                    <text x="791.329" y="75"  font-size="200">&#120;</text>
+                    <text x="1030.18" y="175"  font-size="200">&#88;</text>
+                    <text x="1030.18" y="166.667"  font-size="200">&#120;</text>
+                    <text x="1030.18" y="150"  font-size="200">&#120;</text>
+                    <text x="1030.18" y="125"  font-size="200">&#120;</text>
+                    <text x="1030.18" y="100"  font-size="200">&#120;</text>
+                    <text x="1030.18" y="75"  font-size="200">&#120;</text>
+                    <text x="1030.18" y="50"  font-size="200">&#120;</text>
+                    <text x="1030.18" y="50"  font-size="200">&#120;</text>
+                    <rect x="1256.72" y="0" width="7.19995" height="200"></rect>
+                    <rect x="1276.72" y="0" width="25" height="200"></rect>
+                </g>
+            </g>
+            <g transform="translate(237.106, 292.106)">
+                <g style="stroke-width:4">
+                    <line x1="0" y1="2400" x2="1298.92" y2="2400"></line>
+                    <line x1="0" y1="2450" x2="1298.92" y2="2450"></line>
+                    <line x1="0" y1="2500" x2="1298.92" y2="2500"></line>
+                    <line x1="0" y1="2550" x2="1298.92" y2="2550"></line>
+                    <line x1="0" y1="2600" x2="1298.92" y2="2600"></line>
+                </g>
+            </g>
+            <g transform="translate(237.106, 2692.11)">
+                <g font-family="Guido2">
+                    <text x="50.0002" y="200"  font-size="200">&#38;</text>
+                    <text x="242.266" y="50"  font-size="200">&#52;</text>
+                    <text x="242.266" y="150"  font-size="200">&#52;</text>
+                    <text x="594.466" y="300"  font-size="200">&#112;</text>
+                    <text x="415.766" y="225"  font-size="200">&#69;</text>
+                    <text x="415.766" y="216.667"  font-size="200">&#120;</text>
+                    <text x="415.766" y="200"  font-size="200">&#120;</text>
+                    <text x="415.766" y="175"  font-size="200">&#120;</text>
+                    <text x="415.766" y="150"  font-size="200">&#120;</text>
+                    <text x="415.766" y="125"  font-size="200">&#120;</text>
+                    <text x="415.766" y="100"  font-size="200">&#120;</text>
+                    <text x="415.766" y="100"  font-size="200">&#120;</text>
+                    <text x="791.329" y="200"  font-size="200">&#88;</text>
+                    <text x="791.329" y="191.667"  font-size="200">&#120;</text>
+                    <text x="791.329" y="175"  font-size="200">&#120;</text>
+                    <text x="791.329" y="150"  font-size="200">&#120;</text>
+                    <text x="791.329" y="125"  font-size="200">&#120;</text>
+                    <text x="791.329" y="100"  font-size="200">&#120;</text>
+                    <text x="791.329" y="75"  font-size="200">&#120;</text>
+                    <text x="791.329" y="75"  font-size="200">&#120;</text>
+                    <text x="1030.18" y="175"  font-size="200">&#88;</text>
+                    <text x="1030.18" y="166.667"  font-size="200">&#120;</text>
+                    <text x="1030.18" y="150"  font-size="200">&#120;</text>
+                    <text x="1030.18" y="125"  font-size="200">&#120;</text>
+                    <text x="1030.18" y="100"  font-size="200">&#120;</text>
+                    <text x="1030.18" y="75"  font-size="200">&#120;</text>
+                    <text x="1030.18" y="50"  font-size="200">&#120;</text>
+                    <text x="1030.18" y="50"  font-size="200">&#120;</text>
+                    <rect x="1256.72" y="0" width="7.19995" height="200"></rect>
+                    <rect x="1276.72" y="0" width="25" height="200"></rect>
+                </g>
+            </g>
+            <g transform="translate(237.106, 292.106)">
+                <g style="stroke-width:4">
+                    <line x1="0" y1="2880" x2="1298.92" y2="2880"></line>
+                    <line x1="0" y1="2930" x2="1298.92" y2="2930"></line>
+                    <line x1="0" y1="2980" x2="1298.92" y2="2980"></line>
+                    <line x1="0" y1="3030" x2="1298.92" y2="3030"></line>
+                    <line x1="0" y1="3080" x2="1298.92" y2="3080"></line>
+                </g>
+            </g>
+            <g transform="translate(237.106, 3172.11)">
+                <g font-family="Guido2">
+                    <text x="50.0002" y="200"  font-size="200">&#38;</text>
+                    <text x="242.266" y="50"  font-size="200">&#52;</text>
+                    <text x="242.266" y="150"  font-size="200">&#52;</text>
+                    <text x="595.372" y="250"  font-size="200">&#112;</text>
+                    <text x="415.766" y="225"  font-size="200">&#69;</text>
+                    <text x="415.766" y="216.667"  font-size="200">&#120;</text>
+                    <text x="415.766" y="200"  font-size="200">&#120;</text>
+                    <text x="415.766" y="175"  font-size="200">&#120;</text>
+                    <text x="415.766" y="150"  font-size="200">&#120;</text>
+                    <text x="415.766" y="125"  font-size="200">&#120;</text>
+                    <text x="415.766" y="100"  font-size="200">&#120;</text>
+                    <text x="415.766" y="100"  font-size="200">&#120;</text>
+                    <text x="791.329" y="200"  font-size="200">&#88;</text>
+                    <text x="791.329" y="191.667"  font-size="200">&#120;</text>
+                    <text x="791.329" y="175"  font-size="200">&#120;</text>
+                    <text x="791.329" y="150"  font-size="200">&#120;</text>
+                    <text x="791.329" y="125"  font-size="200">&#120;</text>
+                    <text x="791.329" y="100"  font-size="200">&#120;</text>
+                    <text x="791.329" y="75"  font-size="200">&#120;</text>
+                    <text x="791.329" y="75"  font-size="200">&#120;</text>
+                    <text x="1030.18" y="175"  font-size="200">&#88;</text>
+                    <text x="1030.18" y="166.667"  font-size="200">&#120;</text>
+                    <text x="1030.18" y="150"  font-size="200">&#120;</text>
+                    <text x="1030.18" y="125"  font-size="200">&#120;</text>
+                    <text x="1030.18" y="100"  font-size="200">&#120;</text>
+                    <text x="1030.18" y="75"  font-size="200">&#120;</text>
+                    <text x="1030.18" y="50"  font-size="200">&#120;</text>
+                    <text x="1030.18" y="50"  font-size="200">&#120;</text>
+                    <rect x="1256.72" y="0" width="7.19995" height="200"></rect>
+                    <rect x="1276.72" y="0" width="25" height="200"></rect>
+                </g>
+            </g>
+            <g transform="translate(237.106, 292.106)">
+                <g style="stroke-width:4">
+                    <line x1="0" y1="0" x2="0" y2="3080"></line>
+                </g>
+            </g>
+            <g transform="translate(237.106, 237.106)">
+            </g>
+            <g transform="translate(0, 0.000137329)">
+            </g>
+        </g>
+    </g>
+</svg>
+</div>
+
+<h2 id="colors">Colors</h2>
+<p>Color is part of the common tag parameters. A color may be specified using:</p>
+<ul>
+<li>an <a href="https://www.w3schools.com/colors/colors_names.asp">html color name</a></li>
+<li>an RGB value in the form 0xrrggbb</li>
+<li>an RGBA value in the form 0xrrggbbaa</li>
+</ul>
+<h3 id="examples">Examples</h3>
+<pre><code>[ \clef&lt;&quot;g&quot;, color=&quot;blue&quot;&gt;  \key&lt;4, color=&quot;0xaaaaaa&quot;&gt;   \meter&lt;&quot;4/4&quot;, color=&quot;0xdd000050&quot;&gt; ]
+</code></pre>
+
+<p><button class="try_it" onclick=window.open("https://guidoeditor.grame.fr/?code=WwoJXHBhZ2VGb3JtYXQ8bG09MWNtLCB0bT0xY20sIGJtPTFjbSwgcm09MWNtPgoJXGNsZWY8ImciLCBjb2xvcj0iYmx1ZSI+IAlca2V5PDQsIGNvbG9yPSIweGFhYWFhYSI+IAlcbWV0ZXI8IjQvNCIsIGNvbG9yPSIweGRkMDAwMDUwIj4gCl0K")> Try it online </button>
+<div class="guido-code"></p>
+<?xml version="1.0"?>
+<svg viewBox="0 0 140 107" xmlns="http://www.w3.org/2000/svg"  version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <desc> SVG file generated using the GuidoEngine version 1.6.7</desc>
+    <g style="stroke:#000000; stroke-opacity:1">
+        <g transform="scale(0.124533, 0.124533)">
+            <g transform="translate(-0, -0)">
+            </g>
+            <g transform="translate(237.106, 237.106)">
+            </g>
+            <g transform="translate(237.106, 337.106)">
+                <g style="stroke-width:4">
+                    <line x1="0" y1="0" x2="596.704" y2="0"></line>
+                    <line x1="0" y1="50" x2="596.704" y2="50"></line>
+                    <line x1="0" y1="100" x2="596.704" y2="100"></line>
+                    <line x1="0" y1="150" x2="596.704" y2="150"></line>
+                    <line x1="0" y1="200" x2="596.704" y2="200"></line>
+                    <line x1="596.704" y1="0" x2="646.704" y2="0"></line>
+                    <line x1="596.704" y1="50" x2="646.704" y2="50"></line>
+                    <line x1="596.704" y1="100" x2="646.704" y2="100"></line>
+                    <line x1="596.704" y1="150" x2="646.704" y2="150"></line>
+                    <line x1="596.704" y1="200" x2="646.704" y2="200"></line>
+                </g>
+            </g>
+            <g transform="translate(237.106, 337.106)">
+                <g font-family="Guido2">
+                    <text x="50.0002" y="200"  font-size="200" stroke="#0000ff" fill="#0000ff" opacity="1">&#38;</text>
+                    <text x="221.836" y="0"  font-size="200" stroke="#aaaaaa" fill="#aaaaaa" opacity="1">&#35;</text>
+                    <text x="287.696" y="75"  font-size="200" stroke="#aaaaaa" fill="#aaaaaa" opacity="1">&#35;</text>
+                    <text x="353.555" y="-25"  font-size="200" stroke="#aaaaaa" fill="#aaaaaa" opacity="1">&#35;</text>
+                    <text x="419.414" y="50"  font-size="200" stroke="#aaaaaa" fill="#aaaaaa" opacity="1">&#35;</text>
+                    <text x="530.704" y="50"  font-size="200" stroke="#dd0000" fill="#dd0000" opacity="0.313726">&#52;</text>
+                    <text x="530.704" y="150"  font-size="200" stroke="#dd0000" fill="#dd0000" opacity="0.313726">&#52;</text>
+                </g>
+            </g>
+            <g transform="translate(237.106, 337.106)">
+            </g>
+            <g transform="translate(237.106, 237.106)">
+            </g>
+            <g transform="translate(0, 1.52588e-05)">
+            </g>
+        </g>
+    </g>
+</svg>
+</div>
+
+<h2 id="common-parameters">Common parameters</h2>
+<p>Common parameters are tag parameters supported by all tags.</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+<th align="left">Default value</th>
+<th align="left">Optional</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>dx</td>
+<td align="left">unit</td>
+<td align="left">displacement on the horizontal axis</td>
+<td align="left">0</td>
+<td align="left">true</td>
+</tr>
+<tr>
+<td>dy</td>
+<td align="left">unit</td>
+<td align="left">displacement on the vertical axis</td>
+<td align="left">0</td>
+<td align="left">true</td>
+</tr>
+<tr>
+<td>color</td>
+<td align="left">string</td>
+<td align="left">a color indication (see <a href="#colors">above</a>)</td>
+<td align="left">black</td>
+<td align="left">true</td>
+</tr>
+<tr>
+<td>size</td>
+<td align="left">float</td>
+<td align="left">a size specification</td>
+<td align="left">1.0</td>
+<td align="left">true</td>
+</tr>
+</tbody>
+</table>
+<h2 id="text-parameters">Text parameters</h2>
+<p>Text parameters are tag parameters supported by text based tags such as <code>\text</code>, <code>\lyrics</code>.</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+<th align="left">Default value</th>
+<th align="left">Optional</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>textformat</td>
+<td align="left">string</td>
+<td align="left">a format string (see below)</td>
+<td align="left">rc</td>
+<td align="left">true</td>
+</tr>
+<tr>
+<td>font</td>
+<td align="left">string</td>
+<td align="left">a font name</td>
+<td align="left">Times</td>
+<td align="left">true</td>
+</tr>
+<tr>
+<td>fsize</td>
+<td align="left">unit</td>
+<td align="left">the font size</td>
+<td align="left">9pt</td>
+<td align="left">true</td>
+</tr>
+<tr>
+<td>fattrib</td>
+<td align="left">string</td>
+<td align="left">the font attributes (see below)</td>
+<td align="left"><em>none</em></td>
+<td align="left">true</td>
+</tr>
+</tbody>
+</table>
+<p>Note that the default value for the font size may change depending on the tag, </p>
+<h3 id="format-string">Format string</h3>
+<p>A format string is in the form 'hv' where :</p>
+<ul>
+<li>'h' must be in <ul>
+<li>'l' : for horizontal left alignment</li>
+<li>'c' : for horizontal centering</li>
+<li>'r' : for horizontal right alignment</li>
+</ul>
+</li>
+<li>'v' must be in <ul>
+<li>'t' : for vertical top alignment</li>
+<li>'c' : for vertical centering</li>
+<li>'b' : for vertical bottom alignment</li>
+</ul>
+</li>
+</ul>
+<h3 id="font-attributes">Font attributes</h3>
+<p>A combination of the following characters:</p>
+<ul>
+<li>'b' for bold </li>
+<li>'i' for italic </li>
+<li>'u' for underline </li>
+</ul>
+<h3 id="examples_1">Examples</h3>
+<pre><code>[ \clef&lt;&quot;f&quot;&gt; \text&lt;&quot;hello world&quot;, fsize=6pt, fattrib=&quot;bi&quot;, dy=3.9&gt; ]
+</code></pre>
+
+<p><button class="try_it" onclick=window.open("https://guidoeditor.grame.fr/?code=WyAJCglccGFnZUZvcm1hdDxsbT0xY20sIHRtPTFjbSwgYm09MWNtLCBybT0xY20+CglcY2xlZjwiZyI+IFx0ZXh0PCJIZWxsbyB3b3JsZCIsIGZzaXplPTZwdCwgZmF0dHJpYj0iYmkiLCBkeT0zLjk+IApdCg==")> Try it online </button>
+<div class="guido-code"></p>
+<?xml version="1.0"?>
+<svg viewBox="0 0 113 101" xmlns="http://www.w3.org/2000/svg"  version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <desc> SVG file generated using the GuidoEngine version 1.6.7</desc>
+    <g style="stroke:#000000; stroke-opacity:1">
+        <g transform="scale(0.124046, 0.124046)">
+            <g transform="translate(-0, -0)">
+            </g>
+            <g transform="translate(237.106, 237.106)">
+            </g>
+            <g transform="translate(237.106, 292.106)">
+                <g style="stroke-width:4">
+                    <line x1="0" y1="0" x2="192.266" y2="0"></line>
+                    <line x1="0" y1="50" x2="192.266" y2="50"></line>
+                    <line x1="0" y1="100" x2="192.266" y2="100"></line>
+                    <line x1="0" y1="150" x2="192.266" y2="150"></line>
+                    <line x1="0" y1="200" x2="192.266" y2="200"></line>
+                    <line x1="192.266" y1="0" x2="436.266" y2="0"></line>
+                    <line x1="192.266" y1="50" x2="436.266" y2="50"></line>
+                    <line x1="192.266" y1="100" x2="436.266" y2="100"></line>
+                    <line x1="192.266" y1="150" x2="436.266" y2="150"></line>
+                    <line x1="192.266" y1="200" x2="436.266" y2="200"></line>
+                </g>
+            </g>
+            <g transform="translate(237.106, 292.106)">
+                <g font-family="Guido2">
+                    <text x="50.0002" y="200"  font-size="200">&#38;</text>
+                </g>
+                <g font-family="Times" font-weight="bold" font-style="italic">
+                    <text x="192.266" y="102.5"  dominant-baseline="hanging" font-size="50">
+                        Hello world
+                    </text>
+                </g>
+            </g>
+            <g transform="translate(237.106, 292.106)">
+            </g>
+            <g transform="translate(237.106, 237.106)">
+            </g>
+            <g transform="translate(0, 1.52588e-05)">
+            </g>
+        </g>
+    </g>
+</svg>
+</div></div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+                <p>Copyright &copy; 2019-2020 <a href="http://www.grame.fr">Grame-CNCM</a></p>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js" defer></script>
+        <script src="../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form role="form">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="Keyboard Shortcuts Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Keyboard Shortcuts</h4>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

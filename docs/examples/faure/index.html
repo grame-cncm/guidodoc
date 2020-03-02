@@ -1,0 +1,2636 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>Fauré - Guido Music Notation</title>
+        <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+        <link href="/GMN/guidolib/guido.css" rel="stylesheet">
+        <link href="/BNF/railroad-diagrams/railroad-diagrams.css" rel="stylesheet">
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+        <script src="../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../js/bootstrap-3.0.3.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+
+                <!-- Collapsed navigation -->
+                <div class="navbar-header">
+                    <!-- Expander button -->
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="../..">Guido Music Notation</a>
+                </div>
+
+                <!-- Expanded navigation -->
+                <div class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li >
+                                <a href="../..">Home</a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">User Guide <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../guide/basic/">Basic concepts</a>
+</li>
+                                    
+<li >
+    <a href="../../guide/notes/">Notes and Rests</a>
+</li>
+                                    
+<li >
+    <a href="../../guide/chords/">Chords</a>
+</li>
+                                    
+<li >
+    <a href="../../guide/tags/">Tags and Tagged Ranges</a>
+</li>
+                                    
+<li >
+    <a href="../../guide/voices/">Voices</a>
+</li>
+                                    
+<li >
+    <a href="../../guide/scores/">Scores</a>
+</li>
+                                    
+<li >
+    <a href="../../guide/comments/">Comments and Spacing</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Reference <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../refs/tagsparams/">Tags parameters</a>
+</li>
+                                    
+<li >
+    <a href="../../refs/tags/">Tags</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Tags reference</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../refs/tags/Accidentals/">Accidentals</a>
+</li>
+            
+<li >
+    <a href="../../refs/tags/Articulations/">Articulations</a>
+</li>
+            
+<li >
+    <a href="../../refs/tags/Barlines/">Barlines</a>
+</li>
+            
+<li >
+    <a href="../../refs/tags/Beaming/">Beaming</a>
+</li>
+            
+<li >
+    <a href="../../refs/tags/ClefKeyMeter/">Clef Key Meter</a>
+</li>
+            
+<li >
+    <a href="../../refs/tags/Dynamics/">Dynamics</a>
+</li>
+            
+<li >
+    <a href="../../refs/tags/Layout/">Layout</a>
+</li>
+            
+<li >
+    <a href="../../refs/tags/Miscellaneous/">Miscellaneous</a>
+</li>
+            
+<li >
+    <a href="../../refs/tags/Notes/">Notes</a>
+</li>
+            
+<li >
+    <a href="../../refs/tags/Ornaments/">Ornaments</a>
+</li>
+            
+<li >
+    <a href="../../refs/tags/RepeatSigns/">Repeat Signs</a>
+</li>
+            
+<li >
+    <a href="../../refs/tags/Tempo/">Tempo</a>
+</li>
+            
+<li >
+    <a href="../../refs/tags/Text/">Text</a>
+</li>
+    </ul>
+  </li>
+                                    
+<li >
+    <a href="../../refs/">Tags index</a>
+</li>
+                                    
+<li >
+    <a href="../../refs/gmnf/">Language specification</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Examples <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../4voices/">4 Voices</a>
+</li>
+                                    
+<li >
+    <a href="../accidentals/">Accidentals</a>
+</li>
+                                    
+<li >
+    <a href="../allthethings/">All The Things You Are</a>
+</li>
+                                    
+<li >
+    <a href="../articulations/">Articulations</a>
+</li>
+                                    
+<li >
+    <a href="../bach/">Bach</a>
+</li>
+                                    
+<li >
+    <a href="../barlines/">Barlines</a>
+</li>
+                                    
+<li >
+    <a href="../bartok/">Bela Bartock</a>
+</li>
+                                    
+<li >
+    <a href="../beaming/">Beaming</a>
+</li>
+                                    
+<li >
+    <a href="../beethoven/">Beethoven</a>
+</li>
+                                    
+<li >
+    <a href="../brown/">Chris Brown</a>
+</li>
+                                    
+<li >
+    <a href="../clefkeymeter/">Clef, Key, Meter</a>
+</li>
+                                    
+<li >
+    <a href="../cpebach/">Sonata for flute</a>
+</li>
+                                    
+<li >
+    <a href="../dynamics/">Dynamics</a>
+</li>
+                                    
+<li class="active">
+    <a href="./">Fauré</a>
+</li>
+                                    
+<li >
+    <a href="../layout/">Layout</a>
+</li>
+                                    
+<li >
+    <a href="../lutkin/">Peter C. Lutkin</a>
+</li>
+                                    
+<li >
+    <a href="../mozart581/">Mozart Clarinet Quintet</a>
+</li>
+                                    
+<li >
+    <a href="../notes/">Notes attributes</a>
+</li>
+                                    
+<li >
+    <a href="../ornaments/">Ornaments</a>
+</li>
+                                    
+<li >
+    <a href="../repeats/">Repeat Signs</a>
+</li>
+                                    
+<li >
+    <a href="../slurs/">Slurs</a>
+</li>
+                                    
+<li >
+    <a href="../space/">Ties & Space</a>
+</li>
+                                    
+<li >
+    <a href="../tempo/">Tempo</a>
+</li>
+                                </ul>
+                            </li>
+                            <li >
+                                <a href="../../about/">About</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li >
+                                <a rel="next" href="../dynamics/">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li >
+                                <a rel="prev" href="../layout/">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="main active"><a href="#faure">Fauré</a></li>
+    </ul>
+</div></div>
+                <div class="col-md-9" role="main">
+
+<h1 id="faure">Fauré</h1>
+<p>Excerpt from "Après un rêve", a work by Gabriel Fauré.</p>
+<p>Source: <a href="https://www.mutopiaproject.org/ftp/FaureG/O7/apres/apres-a4.pdf">Mutopia project</a></p>
+<pre><code>{
+    [
+        \pageFormat&lt;&quot;A4&quot;, tm=6cm&gt;
+        \title&lt;&quot;Après un rêve&quot;, fattrib=&quot;b&quot;&gt;
+        \title&lt;&quot;à Madame Marguerite Baugnies&quot;, dy=8, fsize=12pt&gt;
+        \composer&lt;&quot;Gabriel Fauré&quot;, fsize=12pt, dy=9&gt;
+        \composer&lt;&quot;Poésie de Romain Bussine&quot;, fsize=12pt, dx=-12.5cm, dy=9&gt;
+
+        \instr&lt;&quot;Chant&quot;, autopos=&quot;on&quot;&gt; \accol&lt;type=&quot;none&quot;&gt; \barFormat&lt;&quot;system&quot;, range=&quot;1-1&quot;&gt;
+        \clef&lt;&quot;g&quot;&gt; \key&lt;-3&gt; \meter&lt;&quot;3/4&quot;&gt;
+        \tempo&lt;&quot;Andantino&quot;&gt;  \beamsOff
+        _*3/4
+        \lyrics&lt;&quot;Dans un som-meil  que char mait ton i-ma-ge&quot;&gt;(
+        \text&lt;&quot;dolce&quot;, dy=13, fattrib=&quot;i&quot;, fsize=10pt&gt;(g/4) \cresc&lt;dy=15, deltaY=2&gt;(c2 d)  
+        \tieBegin e&amp; \tuplet&lt;format=&quot;3&quot;, position=&quot;above&quot;&gt; (e&amp;/12 \tieEnd d \space&lt;7.5mm&gt; c) \space&lt;9mm&gt;
+        \tuplet&lt;format=&quot;3&quot;, position=&quot;above&quot;&gt;(e  \space&lt;9mm&gt; d c)
+        \dim&lt;dy=15, deltaY=2&gt;(c/2 b1/4))
+
+        \lyrics&lt;&quot;Je rê-vais le bon-heur, ar-dent mi-ra- -  - ge&quot;&gt;(
+        d&amp;2/8 f1 d&amp;2/4 c/8 b1 
+        \cresc&lt;dy=18, deltaY=2&gt; (c2/4. c/8 b&amp;1. a/16)
+        \dim&lt;dy=18, deltaY=2&gt; (
+        \tieBegin g/4 \slur&lt;h=4, dy1=7, dy2=5&gt; ( \beam (\tuplet&lt;format=&quot;3&quot;, position=&quot;below&quot;&gt;(g/12 \tieEnd a&amp; b&amp;)) 
+        \stemsDown \beam (\tuplet&lt;format=&quot;3&quot;, position=&quot;above&quot;&gt;(a&amp; b&amp; c2)))) \stemsUp g1/2.) |
+
+    ],
+    [
+        \instr&lt;&quot;Piano&quot;, dy=-7.5, autopos=&quot;on&quot;&gt; \accol&lt;range=&quot;2-3&quot;, type=&quot;thinBrace&quot;&gt;
+        \barFormat&lt;&quot;system&quot;, range=&quot;2-3&quot;&gt;
+        \clef&lt;&quot;g&quot;&gt; \key&lt;-3&gt; \meter&lt;&quot;3/4&quot;&gt;
+        \i&lt;&quot;pp&quot;, dy=-3&gt; 
+        \beam ({c/8, e&amp;, g} {c/8, e&amp;, g} {c/8, e&amp;, g} {c/8, e&amp;, g} {c/8, e&amp;, g} {c/8, e&amp;, g})
+        \beam ({c/8, e&amp;, g} {c/8, e&amp;, g} {c/8, e&amp;, g} {c/8, e&amp;, g} {b&amp;0, d1, e&amp;, g} {b&amp;0, d1, e&amp;, g})
+        \beam ({a0, c1, e&amp;, g} {a0, c1, e&amp;, g} {a0, c1, e&amp;, g} {a0, c1, e&amp;, g} {a0, c1, e&amp;, f} {a0, c1, e&amp;, f})
+        \beam ({a&amp;0, c1, d, f} {a&amp;0, c1, d, f} {a&amp;0, c1, d, f} {a&amp;0, c1, d, f} {a&amp;0, b&amp;, d1, f} {a&amp;0, b&amp;, d1, f})
+        \beam ({a&amp;0, d&amp;1, f} {a&amp;0, d&amp;1, f} {a&amp;0, d&amp;1, f} {a&amp;0, d&amp;1, f} {g0, d&amp;1, f&amp;}  {g0, d1, f&amp;})
+        \beam ({a&amp;0, c1, e} {a&amp;0, c1, e} {a&amp;0, c1, e} {a&amp;0, c1, e} {a&amp;0, c1, f}  {a&amp;0, c1, f} )
+        \beam ({f0 ,g, b, d1} {f0 ,g, b, d1} {f0 ,g, b, d1} {f0 ,g, b, d1} {f0 ,a&amp;, c1, d} {f0 ,a&amp;, c1, d})
+        \beam ({f0 ,g, b, d1} {f0 ,g, b, d1} {f0 ,g, b, d1} {f0 ,g, b, d1}  {f0 ,g, b, d1} {f0 ,g, b, d1}) |
+    ],
+    [
+        \clef&lt;&quot;f&quot;&gt; \key&lt;-3&gt; \meter&lt;&quot;3/4&quot;&gt;
+        _*3/4 _ { f-1/2., f-2 } { g-1, g-2 } { e&amp;-1/2., e&amp;-2 }
+         { a&amp;-1/2, a&amp;-2 } { d&amp;-1/4, d&amp;-2 } 
+        { \tieBegin:1&lt;&quot;up&quot;&gt; g-1*3/4, \tieBegin:2 g-2 } {g-1*3/4 \tieEnd:1, g-2 \tieEnd:2} | 
+        \text&lt;&quot;...&quot;, fattrib=&quot;b&quot;, fsize=24pt&gt;
+    ]
+}
+</code></pre>
+
+<p><button class="try_it" onclick=window.open("https://guidoeditor.grame.fr/?src=https://raw.githubusercontent.com/grame-cncm/guidodoc/master/examples/mkdocs/examples/faure.gmn")>Try it online</button></p>
+<div class="guido-code guido-full">
+<?xml version="1.0"?>
+<svg viewBox="0 0 622 880" xmlns="http://www.w3.org/2000/svg"  version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <desc> SVG file generated using the GuidoEngine version 1.6.8</desc>
+    <g style="stroke:#000000; stroke-opacity:1">
+        <g transform="scale(0.124919, 0.124919)">
+            <g transform="translate(-0, -0)">
+                <g font-family="Times" font-weight="bold">
+                    <text x="2489.62" y="711.319" text-anchor="middle" font-size="200">
+                        Après un rêve
+                    </text>
+                </g>
+                <g font-family="Times">
+                    <text x="2489.62" y="511.319" text-anchor="middle" font-size="100">
+                        à Madame Marguerite Baugnies
+                    </text>
+                </g>
+                <g font-family="Times">
+                    <text x="4505.02" y="1197.64" text-anchor="end" font-size="100">
+                        Gabriel Fauré
+                    </text>
+                </g>
+                <g font-family="Times">
+                    <text x="1541.19" y="1197.64" text-anchor="end" font-size="100">
+                        Poésie de Romain Bussine
+                    </text>
+                </g>
+            </g>
+            <g transform="translate(474.213, 1422.64)">
+            </g>
+            <g transform="translate(474.213, 1485.64)">
+                <polygon points="-16.5 448  -16.5 448  -24.5096 456.278  -30.6568 466.02  -35.1192 477.086  -38.0744 489.337  -39.7 502.632  -40.1736 516.833  -39.6728 531.799  -38.3752 547.391  -36.4584 563.47  -34.1 579.896  -31.4776 596.529  -28.7688 613.23  -26.1512 629.859  -23.8024 646.277  -21.9 662.344  -20.6216 677.92  -20.1448 692.866  -20.6472 707.043  -22.3064 720.31  -25.3 732.528  -29.8056 743.558  -36.0008 753.259  -44.0632 761.493  -54.1704 768.12  -66.5 773  -66.5 773  -66.5 773  -55.4664 768.12  -46.5472 761.493  -39.5648 753.259  -34.3416 743.558  -30.7 732.528  -28.4624 720.31  -27.4512 707.043  -27.4888 692.866  -28.3976 677.92  -30 662.344  -32.1184 646.277  -34.5752 629.859  -37.1928 613.23  -39.7936 596.529  -42.2 579.896  -44.2344 563.47  -45.7192 547.391  -46.4768 531.799  -46.3296 516.833  -45.1 502.632  -42.6104 489.337  -38.6832 477.086  -33.1408 466.02  -25.8056 456.278  -16.5 448  "></polygon>
+                <polygon points="-16.5 1098  -16.5 1098  -24.5096 1089.72  -30.6568 1079.98  -35.1192 1068.91  -38.0744 1056.66  -39.7 1043.37  -40.1736 1029.17  -39.6728 1014.2  -38.3752 998.609  -36.4584 982.53  -34.1 966.104  -31.4776 949.471  -28.7688 932.77  -26.1512 916.141  -23.8024 899.723  -21.9 883.656  -20.6216 868.08  -20.1448 853.134  -20.6472 838.957  -22.3064 825.69  -25.3 813.472  -29.8056 802.442  -36.0008 792.741  -44.0632 784.507  -54.1704 777.88  -66.5 773  -66.5 773  -66.5 773  -55.4664 777.88  -46.5472 784.507  -39.5648 792.741  -34.3416 802.442  -30.7 813.472  -28.4624 825.69  -27.4512 838.957  -27.4888 853.134  -28.3976 868.08  -30 883.656  -32.1184 899.723  -34.5752 916.141  -37.1928 932.77  -39.7936 949.471  -42.2 966.104  -44.2344 982.53  -45.7192 998.609  -46.4768 1014.2  -46.3296 1029.17  -45.1 1043.37  -42.6104 1056.66  -38.6832 1068.91  -33.1408 1079.98  -25.8056 1089.72  -16.5 1098  "></polygon>
+                <g style="stroke-width:4">
+                    <line x1="0" y1="0" x2="2279.23" y2="0"></line>
+                    <line x1="0" y1="50" x2="2279.23" y2="50"></line>
+                    <line x1="0" y1="100" x2="2279.23" y2="100"></line>
+                    <line x1="0" y1="150" x2="2279.23" y2="150"></line>
+                    <line x1="0" y1="200" x2="2279.23" y2="200"></line>
+                    <line x1="2279.23" y1="0" x2="2453.52" y2="0"></line>
+                    <line x1="2279.23" y1="50" x2="2453.52" y2="50"></line>
+                    <line x1="2279.23" y1="100" x2="2453.52" y2="100"></line>
+                    <line x1="2279.23" y1="150" x2="2453.52" y2="150"></line>
+                    <line x1="2279.23" y1="200" x2="2453.52" y2="200"></line>
+                </g>
+            </g>
+            <g transform="translate(474.213, 1485.64)">
+                <g font-family="Times">
+                    <text x="-75" y="125" text-anchor="end" font-size="75">
+                        Chant
+                    </text>
+                </g>
+                <g font-family="Guido2">
+                    <text x="81.9332" y="200"  font-size="200">&#38;</text>
+                    <text x="262.577" y="100"  font-size="200">&#98;</text>
+                    <text x="324.687" y="25"  font-size="200">&#98;</text>
+                    <text x="386.796" y="125"  font-size="200">&#98;</text>
+                    <text x="492.96" y="50"  font-size="200">&#51;</text>
+                    <text x="492.46" y="150"  font-size="200">&#52;</text>
+                    <text x="1449.13" y="50" text-anchor="middle" font-size="200">&#231;</text>
+                </g>
+            </g>
+            <g transform="translate(474.213, 1485.64)">
+                <g style="stroke-width:4">
+                    <line x1="0" y1="448" x2="2279.23" y2="448"></line>
+                    <line x1="0" y1="498" x2="2279.23" y2="498"></line>
+                    <line x1="0" y1="548" x2="2279.23" y2="548"></line>
+                    <line x1="0" y1="598" x2="2279.23" y2="598"></line>
+                    <line x1="0" y1="648" x2="2279.23" y2="648"></line>
+                    <line x1="2279.23" y1="448" x2="2453.52" y2="448"></line>
+                    <line x1="2279.23" y1="498" x2="2453.52" y2="498"></line>
+                    <line x1="2279.23" y1="548" x2="2453.52" y2="548"></line>
+                    <line x1="2279.23" y1="598" x2="2453.52" y2="598"></line>
+                    <line x1="2279.23" y1="648" x2="2453.52" y2="648"></line>
+                </g>
+            </g>
+            <g transform="translate(474.213, 1933.64)">
+                <g font-family="Times">
+                    <text x="-75" y="312.5" text-anchor="end" font-size="75">
+                        Piano
+                    </text>
+                </g>
+                <g font-family="Guido2">
+                    <text x="81.9332" y="200"  font-size="200">&#38;</text>
+                    <text x="262.577" y="100"  font-size="200">&#98;</text>
+                    <text x="324.687" y="25"  font-size="200">&#98;</text>
+                    <text x="386.796" y="125"  font-size="200">&#98;</text>
+                    <text x="492.96" y="50"  font-size="200">&#51;</text>
+                    <text x="492.46" y="150"  font-size="200">&#52;</text>
+                    <text x="608.46" y="375"  font-size="200">&#194;</text>
+                    <polygon points="727.935 -25  727.935 -2.5  2048.88 -2.5  2048.88 -25  "></polygon>
+                    <polygon points="727.935 -22.5  727.935 -2.5  2048.88 -2.5  2048.88 -22.5  "></polygon>
+                    <text x="671.935" y="241.667"  font-size="200">&#120;</text>
+                    <text x="671.935" y="225"  font-size="200">&#120;</text>
+                    <text x="671.935" y="200"  font-size="200">&#120;</text>
+                    <text x="671.935" y="175"  font-size="200">&#120;</text>
+                    <text x="671.935" y="150"  font-size="200">&#120;</text>
+                    <text x="671.935" y="125"  font-size="200">&#120;</text>
+                    <text x="671.935" y="100"  font-size="200">&#120;</text>
+                    <text x="671.935" y="75"  font-size="200">&#120;</text>
+                    <text x="671.935" y="50"  font-size="200">&#120;</text>
+                    <text x="671.935" y="27.5"  font-size="200">&#120;</text>
+                    <text x="650.935" y="250"  font-size="200">&#95;</text>
+                    <text x="672.052" y="250"  font-size="200">&#88;</text>
+                    <text x="672.052" y="200"  font-size="200">&#88;</text>
+                    <text x="672.052" y="150"  font-size="200">&#88;</text>
+                    <text x="934.524" y="241.667"  font-size="200">&#120;</text>
+                    <text x="934.524" y="225"  font-size="200">&#120;</text>
+                    <text x="934.524" y="200"  font-size="200">&#120;</text>
+                    <text x="934.524" y="175"  font-size="200">&#120;</text>
+                    <text x="934.524" y="150"  font-size="200">&#120;</text>
+                    <text x="934.524" y="125"  font-size="200">&#120;</text>
+                    <text x="934.524" y="100"  font-size="200">&#120;</text>
+                    <text x="934.524" y="75"  font-size="200">&#120;</text>
+                    <text x="934.524" y="50"  font-size="200">&#120;</text>
+                    <text x="934.524" y="27.5"  font-size="200">&#120;</text>
+                    <text x="913.524" y="250"  font-size="200">&#95;</text>
+                    <text x="934.641" y="250"  font-size="200">&#88;</text>
+                    <text x="934.641" y="200"  font-size="200">&#88;</text>
+                    <text x="934.641" y="150"  font-size="200">&#88;</text>
+                    <text x="1197.11" y="241.667"  font-size="200">&#120;</text>
+                    <text x="1197.11" y="225"  font-size="200">&#120;</text>
+                    <text x="1197.11" y="200"  font-size="200">&#120;</text>
+                    <text x="1197.11" y="175"  font-size="200">&#120;</text>
+                    <text x="1197.11" y="150"  font-size="200">&#120;</text>
+                    <text x="1197.11" y="125"  font-size="200">&#120;</text>
+                    <text x="1197.11" y="100"  font-size="200">&#120;</text>
+                    <text x="1197.11" y="75"  font-size="200">&#120;</text>
+                    <text x="1197.11" y="50"  font-size="200">&#120;</text>
+                    <text x="1197.11" y="27.5"  font-size="200">&#120;</text>
+                    <text x="1176.11" y="250"  font-size="200">&#95;</text>
+                    <text x="1197.23" y="250"  font-size="200">&#88;</text>
+                    <text x="1197.23" y="200"  font-size="200">&#88;</text>
+                    <text x="1197.23" y="150"  font-size="200">&#88;</text>
+                    <text x="1459.7" y="241.667"  font-size="200">&#120;</text>
+                    <text x="1459.7" y="225"  font-size="200">&#120;</text>
+                    <text x="1459.7" y="200"  font-size="200">&#120;</text>
+                    <text x="1459.7" y="175"  font-size="200">&#120;</text>
+                    <text x="1459.7" y="150"  font-size="200">&#120;</text>
+                    <text x="1459.7" y="125"  font-size="200">&#120;</text>
+                    <text x="1459.7" y="100"  font-size="200">&#120;</text>
+                    <text x="1459.7" y="75"  font-size="200">&#120;</text>
+                    <text x="1459.7" y="50"  font-size="200">&#120;</text>
+                    <text x="1459.7" y="27.5"  font-size="200">&#120;</text>
+                    <text x="1438.7" y="250"  font-size="200">&#95;</text>
+                    <text x="1459.82" y="250"  font-size="200">&#88;</text>
+                    <text x="1459.82" y="200"  font-size="200">&#88;</text>
+                    <text x="1459.82" y="150"  font-size="200">&#88;</text>
+                    <text x="1722.29" y="241.667"  font-size="200">&#120;</text>
+                    <text x="1722.29" y="225"  font-size="200">&#120;</text>
+                    <text x="1722.29" y="200"  font-size="200">&#120;</text>
+                    <text x="1722.29" y="175"  font-size="200">&#120;</text>
+                    <text x="1722.29" y="150"  font-size="200">&#120;</text>
+                    <text x="1722.29" y="125"  font-size="200">&#120;</text>
+                    <text x="1722.29" y="100"  font-size="200">&#120;</text>
+                    <text x="1722.29" y="75"  font-size="200">&#120;</text>
+                    <text x="1722.29" y="50"  font-size="200">&#120;</text>
+                    <text x="1722.29" y="27.5"  font-size="200">&#120;</text>
+                    <text x="1701.29" y="250"  font-size="200">&#95;</text>
+                    <text x="1722.41" y="250"  font-size="200">&#88;</text>
+                    <text x="1722.41" y="200"  font-size="200">&#88;</text>
+                    <text x="1722.41" y="150"  font-size="200">&#88;</text>
+                    <text x="1984.88" y="241.667"  font-size="200">&#120;</text>
+                    <text x="1984.88" y="225"  font-size="200">&#120;</text>
+                    <text x="1984.88" y="200"  font-size="200">&#120;</text>
+                    <text x="1984.88" y="175"  font-size="200">&#120;</text>
+                    <text x="1984.88" y="150"  font-size="200">&#120;</text>
+                    <text x="1984.88" y="125"  font-size="200">&#120;</text>
+                    <text x="1984.88" y="100"  font-size="200">&#120;</text>
+                    <text x="1984.88" y="75"  font-size="200">&#120;</text>
+                    <text x="1984.88" y="50"  font-size="200">&#120;</text>
+                    <text x="1984.88" y="27.5"  font-size="200">&#120;</text>
+                    <text x="1963.88" y="250"  font-size="200">&#95;</text>
+                    <text x="1985" y="250"  font-size="200">&#88;</text>
+                    <text x="1985" y="200"  font-size="200">&#88;</text>
+                    <text x="1985" y="150"  font-size="200">&#88;</text>
+                </g>
+            </g>
+            <g transform="translate(474.213, 1485.64)">
+                <g style="stroke-width:4">
+                    <line x1="0" y1="898" x2="2279.23" y2="898"></line>
+                    <line x1="0" y1="948" x2="2279.23" y2="948"></line>
+                    <line x1="0" y1="998" x2="2279.23" y2="998"></line>
+                    <line x1="0" y1="1048" x2="2279.23" y2="1048"></line>
+                    <line x1="0" y1="1098" x2="2279.23" y2="1098"></line>
+                    <line x1="2279.23" y1="898" x2="2453.52" y2="898"></line>
+                    <line x1="2279.23" y1="948" x2="2453.52" y2="948"></line>
+                    <line x1="2279.23" y1="998" x2="2453.52" y2="998"></line>
+                    <line x1="2279.23" y1="1048" x2="2453.52" y2="1048"></line>
+                    <line x1="2279.23" y1="1098" x2="2453.52" y2="1098"></line>
+                </g>
+            </g>
+            <g transform="translate(474.213, 2383.64)">
+                <g font-family="Guido2">
+                    <text x="74.9996" y="200"  font-size="200">&#63;</text>
+                    <text x="262.577" y="150"  font-size="200">&#98;</text>
+                    <text x="324.687" y="75"  font-size="200">&#98;</text>
+                    <text x="386.796" y="175"  font-size="200">&#98;</text>
+                    <text x="492.96" y="50"  font-size="200">&#51;</text>
+                    <text x="492.46" y="150"  font-size="200">&#52;</text>
+                    <text x="1449.13" y="50" text-anchor="middle" font-size="200">&#231;</text>
+                </g>
+            </g>
+            <g transform="translate(474.213, 1485.64)">
+                <g style="stroke-width:4">
+                    <line x1="2453.52" y1="0" x2="4030.81" y2="0"></line>
+                    <line x1="2453.52" y1="50" x2="4030.81" y2="50"></line>
+                    <line x1="2453.52" y1="100" x2="4030.81" y2="100"></line>
+                    <line x1="2453.52" y1="150" x2="4030.81" y2="150"></line>
+                    <line x1="2453.52" y1="200" x2="4030.81" y2="200"></line>
+                    <line x1="4030.81" y1="0" x2="4030.81" y2="0"></line>
+                    <line x1="4030.81" y1="50" x2="4030.81" y2="50"></line>
+                    <line x1="4030.81" y1="100" x2="4030.81" y2="100"></line>
+                    <line x1="4030.81" y1="150" x2="4030.81" y2="150"></line>
+                    <line x1="4030.81" y1="200" x2="4030.81" y2="200"></line>
+                </g>
+            </g>
+            <g transform="translate(474.213, 1485.64)">
+                <g font-family="Times" font-style="italic">
+                    <text x="2453.52" y="-125"  dominant-baseline="hanging" font-size="83">
+                        dolce
+                    </text>
+                </g>
+                <g font-family="Times">
+                    <text x="2453.52" y="275" text-anchor="middle" dominant-baseline="hanging" font-size="100">
+                        Dans
+                    </text>
+                </g>
+                <g font-family="Guido2">
+                    <text x="2423.63" y="150"  font-size="200">&#88;</text>
+                    <text x="2423.52" y="141.667"  font-size="200">&#120;</text>
+                    <text x="2423.52" y="125"  font-size="200">&#120;</text>
+                    <text x="2423.52" y="100"  font-size="200">&#120;</text>
+                    <text x="2423.52" y="75"  font-size="200">&#120;</text>
+                    <text x="2423.52" y="50"  font-size="200">&#120;</text>
+                    <text x="2423.52" y="25"  font-size="200">&#120;</text>
+                    <text x="2423.52" y="25"  font-size="200">&#120;</text>
+                    <g style="stroke-width:4">
+                        <line x1="2978.69" y1="-75" x2="3503.87" y2="-100"></line>
+                        <line x1="2978.69" y1="-75" x2="3503.87" y2="-50"></line>
+                    </g>
+                </g>
+                <g font-family="Times">
+                    <text x="2978.69" y="275" text-anchor="middle" dominant-baseline="hanging" font-size="100">
+                        un
+                    </text>
+                </g>
+                <g font-family="Guido2">
+                    <text x="2948.81" y="75"  font-size="200">&#88;</text>
+                    <text x="2948.69" y="83.3333"  font-size="200">&#104;</text>
+                    <text x="2948.69" y="100"  font-size="200">&#104;</text>
+                    <text x="2948.69" y="125"  font-size="200">&#104;</text>
+                    <text x="2948.69" y="150"  font-size="200">&#104;</text>
+                    <text x="2948.69" y="175"  font-size="200">&#104;</text>
+                    <text x="2948.69" y="200"  font-size="200">&#104;</text>
+                    <text x="2948.69" y="200"  font-size="200">&#104;</text>
+                </g>
+                <g font-family="Times">
+                    <text x="3503.87" y="275" text-anchor="middle" dominant-baseline="hanging" font-size="100">
+                        som-
+                    </text>
+                </g>
+                <g font-family="Guido2">
+                    <text x="3473.99" y="50"  font-size="200">&#88;</text>
+                    <text x="3473.87" y="58.3333"  font-size="200">&#104;</text>
+                    <text x="3473.87" y="75"  font-size="200">&#104;</text>
+                    <text x="3473.87" y="100"  font-size="200">&#104;</text>
+                    <text x="3473.87" y="125"  font-size="200">&#104;</text>
+                    <text x="3473.87" y="150"  font-size="200">&#104;</text>
+                    <text x="3473.87" y="175"  font-size="200">&#104;</text>
+                    <text x="3473.87" y="175"  font-size="200">&#104;</text>
+                </g>
+            </g>
+            <g transform="translate(474.213, 1485.64)">
+                <g style="stroke-width:4">
+                    <line x1="2453.52" y1="448" x2="4030.81" y2="448"></line>
+                    <line x1="2453.52" y1="498" x2="4030.81" y2="498"></line>
+                    <line x1="2453.52" y1="548" x2="4030.81" y2="548"></line>
+                    <line x1="2453.52" y1="598" x2="4030.81" y2="598"></line>
+                    <line x1="2453.52" y1="648" x2="4030.81" y2="648"></line>
+                    <line x1="4030.81" y1="448" x2="4030.81" y2="448"></line>
+                    <line x1="4030.81" y1="498" x2="4030.81" y2="498"></line>
+                    <line x1="4030.81" y1="548" x2="4030.81" y2="548"></line>
+                    <line x1="4030.81" y1="598" x2="4030.81" y2="598"></line>
+                    <line x1="4030.81" y1="648" x2="4030.81" y2="648"></line>
+                </g>
+            </g>
+            <g transform="translate(474.213, 1933.64)">
+                <polygon points="2479.52 -25  2479.52 -2.5  3800.46 -2.5  3800.46 -25  "></polygon>
+                <polygon points="2479.52 -22.5  2479.52 -2.5  3800.46 -2.5  3800.46 -22.5  "></polygon>
+                <g font-family="Guido2">
+                    <text x="2423.52" y="241.667"  font-size="200">&#120;</text>
+                    <text x="2423.52" y="225"  font-size="200">&#120;</text>
+                    <text x="2423.52" y="200"  font-size="200">&#120;</text>
+                    <text x="2423.52" y="175"  font-size="200">&#120;</text>
+                    <text x="2423.52" y="150"  font-size="200">&#120;</text>
+                    <text x="2423.52" y="125"  font-size="200">&#120;</text>
+                    <text x="2423.52" y="100"  font-size="200">&#120;</text>
+                    <text x="2423.52" y="75"  font-size="200">&#120;</text>
+                    <text x="2423.52" y="50"  font-size="200">&#120;</text>
+                    <text x="2423.52" y="27.5"  font-size="200">&#120;</text>
+                    <text x="2402.52" y="250"  font-size="200">&#95;</text>
+                    <text x="2423.63" y="250"  font-size="200">&#88;</text>
+                    <text x="2423.63" y="200"  font-size="200">&#88;</text>
+                    <text x="2423.63" y="150"  font-size="200">&#88;</text>
+                    <text x="2686.1" y="241.667"  font-size="200">&#120;</text>
+                    <text x="2686.1" y="225"  font-size="200">&#120;</text>
+                    <text x="2686.1" y="200"  font-size="200">&#120;</text>
+                    <text x="2686.1" y="175"  font-size="200">&#120;</text>
+                    <text x="2686.1" y="150"  font-size="200">&#120;</text>
+                    <text x="2686.1" y="125"  font-size="200">&#120;</text>
+                    <text x="2686.1" y="100"  font-size="200">&#120;</text>
+                    <text x="2686.1" y="75"  font-size="200">&#120;</text>
+                    <text x="2686.1" y="50"  font-size="200">&#120;</text>
+                    <text x="2686.1" y="27.5"  font-size="200">&#120;</text>
+                    <text x="2665.1" y="250"  font-size="200">&#95;</text>
+                    <text x="2686.22" y="250"  font-size="200">&#88;</text>
+                    <text x="2686.22" y="200"  font-size="200">&#88;</text>
+                    <text x="2686.22" y="150"  font-size="200">&#88;</text>
+                    <text x="2948.69" y="241.667"  font-size="200">&#120;</text>
+                    <text x="2948.69" y="225"  font-size="200">&#120;</text>
+                    <text x="2948.69" y="200"  font-size="200">&#120;</text>
+                    <text x="2948.69" y="175"  font-size="200">&#120;</text>
+                    <text x="2948.69" y="150"  font-size="200">&#120;</text>
+                    <text x="2948.69" y="125"  font-size="200">&#120;</text>
+                    <text x="2948.69" y="100"  font-size="200">&#120;</text>
+                    <text x="2948.69" y="75"  font-size="200">&#120;</text>
+                    <text x="2948.69" y="50"  font-size="200">&#120;</text>
+                    <text x="2948.69" y="27.5"  font-size="200">&#120;</text>
+                    <text x="2927.69" y="250"  font-size="200">&#95;</text>
+                    <text x="2948.81" y="250"  font-size="200">&#88;</text>
+                    <text x="2948.81" y="200"  font-size="200">&#88;</text>
+                    <text x="2948.81" y="150"  font-size="200">&#88;</text>
+                    <text x="3211.28" y="241.667"  font-size="200">&#120;</text>
+                    <text x="3211.28" y="225"  font-size="200">&#120;</text>
+                    <text x="3211.28" y="200"  font-size="200">&#120;</text>
+                    <text x="3211.28" y="175"  font-size="200">&#120;</text>
+                    <text x="3211.28" y="150"  font-size="200">&#120;</text>
+                    <text x="3211.28" y="125"  font-size="200">&#120;</text>
+                    <text x="3211.28" y="100"  font-size="200">&#120;</text>
+                    <text x="3211.28" y="75"  font-size="200">&#120;</text>
+                    <text x="3211.28" y="50"  font-size="200">&#120;</text>
+                    <text x="3211.28" y="27.5"  font-size="200">&#120;</text>
+                    <text x="3190.28" y="250"  font-size="200">&#95;</text>
+                    <text x="3211.4" y="250"  font-size="200">&#88;</text>
+                    <text x="3211.4" y="200"  font-size="200">&#88;</text>
+                    <text x="3211.4" y="150"  font-size="200">&#88;</text>
+                    <text x="3473.87" y="266.667"  font-size="200">&#120;</text>
+                    <text x="3473.87" y="250"  font-size="200">&#120;</text>
+                    <text x="3473.87" y="225"  font-size="200">&#120;</text>
+                    <text x="3473.87" y="200"  font-size="200">&#120;</text>
+                    <text x="3473.87" y="175"  font-size="200">&#120;</text>
+                    <text x="3473.87" y="150"  font-size="200">&#120;</text>
+                    <text x="3473.87" y="125"  font-size="200">&#120;</text>
+                    <text x="3473.87" y="100"  font-size="200">&#120;</text>
+                    <text x="3473.87" y="75"  font-size="200">&#120;</text>
+                    <text x="3473.87" y="50"  font-size="200">&#120;</text>
+                    <text x="3473.87" y="27.5"  font-size="200">&#120;</text>
+                    <text x="3452.87" y="250"  font-size="200">&#95;</text>
+                    <text x="3473.99" y="275"  font-size="200">&#88;</text>
+                    <text x="3473.99" y="225"  font-size="200">&#88;</text>
+                    <text x="3528.99" y="200"  font-size="200">&#88;</text>
+                    <text x="3473.99" y="150"  font-size="200">&#88;</text>
+                    <text x="3736.46" y="266.667"  font-size="200">&#120;</text>
+                    <text x="3736.46" y="250"  font-size="200">&#120;</text>
+                    <text x="3736.46" y="225"  font-size="200">&#120;</text>
+                    <text x="3736.46" y="200"  font-size="200">&#120;</text>
+                    <text x="3736.46" y="175"  font-size="200">&#120;</text>
+                    <text x="3736.46" y="150"  font-size="200">&#120;</text>
+                    <text x="3736.46" y="125"  font-size="200">&#120;</text>
+                    <text x="3736.46" y="100"  font-size="200">&#120;</text>
+                    <text x="3736.46" y="75"  font-size="200">&#120;</text>
+                    <text x="3736.46" y="50"  font-size="200">&#120;</text>
+                    <text x="3736.46" y="27.5"  font-size="200">&#120;</text>
+                    <text x="3715.46" y="250"  font-size="200">&#95;</text>
+                    <text x="3736.58" y="275"  font-size="200">&#88;</text>
+                    <text x="3736.58" y="225"  font-size="200">&#88;</text>
+                    <text x="3791.58" y="200"  font-size="200">&#88;</text>
+                    <text x="3736.58" y="150"  font-size="200">&#88;</text>
+                </g>
+            </g>
+            <g transform="translate(474.213, 1485.64)">
+                <g style="stroke-width:4">
+                    <line x1="2453.52" y1="898" x2="4030.81" y2="898"></line>
+                    <line x1="2453.52" y1="948" x2="4030.81" y2="948"></line>
+                    <line x1="2453.52" y1="998" x2="4030.81" y2="998"></line>
+                    <line x1="2453.52" y1="1048" x2="4030.81" y2="1048"></line>
+                    <line x1="2453.52" y1="1098" x2="4030.81" y2="1098"></line>
+                    <line x1="4030.81" y1="898" x2="4030.81" y2="898"></line>
+                    <line x1="4030.81" y1="948" x2="4030.81" y2="948"></line>
+                    <line x1="4030.81" y1="998" x2="4030.81" y2="998"></line>
+                    <line x1="4030.81" y1="1048" x2="4030.81" y2="1048"></line>
+                    <line x1="4030.81" y1="1098" x2="4030.81" y2="1098"></line>
+                </g>
+            </g>
+            <g transform="translate(474.213, 2383.64)">
+                <g font-family="Guido2">
+                    <text x="3153.26" y="50" text-anchor="middle" font-size="200">&#231;</text>
+                </g>
+            </g>
+            <g transform="translate(474.213, 1485.64)">
+                <g style="stroke-width:4">
+                    <line x1="0" y1="0" x2="0" y2="1098"></line>
+                </g>
+                <g font-family="Times New Roman">
+                    <text x="525.46" y="-100"  font-size="91">
+                        Andantino
+                    </text>
+                    <g style="stroke-width:4">
+                        <line x1="2280.47" y1="2" x2="2280.47" y2="198"></line>
+                    </g>
+                    <g style="stroke-width:4">
+                        <line x1="2280.47" y1="450" x2="2280.47" y2="1096"></line>
+                    </g>
+                    <g style="stroke-width:4">
+                        <line x1="4032.05" y1="2" x2="4032.05" y2="198"></line>
+                    </g>
+                    <g style="stroke-width:4">
+                        <line x1="4032.05" y1="450" x2="4032.05" y2="1096"></line>
+                    </g>
+                </g>
+            </g>
+            <g transform="translate(474.213, 1422.64)">
+            </g>
+            <g transform="translate(474.213, 3034.69)">
+                <polygon points="-16.5 440  -16.5 440  -24.5096 448.383  -30.6568 458.429  -35.1192 469.981  -38.0744 482.88  -39.7 496.972  -40.1736 512.098  -39.6728 528.103  -38.3752 544.829  -36.4584 562.119  -34.1 579.816  -31.4776 597.764  -28.7688 615.806  -26.1512 633.784  -23.8024 651.542  -21.9 668.924  -20.6216 685.772  -20.1448 701.929  -20.6472 717.239  -22.3064 731.544  -25.3 744.688  -29.8056 756.514  -36.0008 766.865  -44.0632 775.584  -54.1704 782.515  -66.5 787.5  -66.5 787.5  -66.5 787.5  -55.4664 782.515  -46.5472 775.584  -39.5648 766.865  -34.3416 756.514  -30.7 744.688  -28.4624 731.544  -27.4512 717.239  -27.4888 701.929  -28.3976 685.772  -30 668.924  -32.1184 651.542  -34.5752 633.784  -37.1928 615.806  -39.7936 597.764  -42.2 579.816  -44.2344 562.119  -45.7192 544.829  -46.4768 528.103  -46.3296 512.099  -45.1 496.972  -42.6104 482.88  -38.6832 469.98  -33.1408 458.429  -25.8056 448.383  -16.5 440  "></polygon>
+                <polygon points="-16.5 1135  -16.5 1135  -24.5096 1126.62  -30.6568 1116.57  -35.1192 1105.02  -38.0744 1092.12  -39.7 1078.03  -40.1736 1062.9  -39.6728 1046.9  -38.3752 1030.17  -36.4584 1012.88  -34.1 995.184  -31.4776 977.236  -28.7688 959.195  -26.1512 941.216  -23.8024 923.458  -21.9 906.076  -20.6216 889.228  -20.1448 873.071  -20.6472 857.761  -22.3064 843.456  -25.3 830.312  -29.8056 818.486  -36.0008 808.135  -44.0632 799.416  -54.1704 792.485  -66.5 787.5  -66.5 787.5  -66.5 787.5  -55.4664 792.485  -46.5472 799.416  -39.5648 808.135  -34.3416 818.486  -30.7 830.312  -28.4624 843.456  -27.4512 857.761  -27.4888 873.071  -28.3976 889.228  -30 906.076  -32.1184 923.457  -34.5752 941.216  -37.1928 959.194  -39.7936 977.236  -42.2 995.184  -44.2344 1012.88  -45.7192 1030.17  -46.4768 1046.9  -46.3296 1062.9  -45.1 1078.03  -42.6104 1092.12  -38.6832 1105.02  -33.1408 1116.57  -25.8056 1126.62  -16.5 1135  "></polygon>
+                <g style="stroke-width:4">
+                    <line x1="0" y1="0" x2="463.534" y2="0"></line>
+                    <line x1="0" y1="50" x2="463.534" y2="50"></line>
+                    <line x1="0" y1="100" x2="463.534" y2="100"></line>
+                    <line x1="0" y1="150" x2="463.534" y2="150"></line>
+                    <line x1="0" y1="200" x2="463.534" y2="200"></line>
+                    <line x1="463.534" y1="0" x2="517.46" y2="0"></line>
+                    <line x1="463.534" y1="50" x2="517.46" y2="50"></line>
+                    <line x1="463.534" y1="100" x2="517.46" y2="100"></line>
+                    <line x1="463.534" y1="150" x2="517.46" y2="150"></line>
+                    <line x1="463.534" y1="200" x2="517.46" y2="200"></line>
+                </g>
+            </g>
+            <g transform="translate(474.213, 3034.69)">
+                <g font-family="Guido2">
+                    <text x="56.9332" y="200"  font-size="200">&#38;</text>
+                    <text x="237.577" y="100"  font-size="200">&#98;</text>
+                    <text x="299.687" y="25"  font-size="200">&#98;</text>
+                    <text x="361.796" y="125"  font-size="200">&#98;</text>
+                </g>
+            </g>
+            <g transform="translate(474.213, 3034.69)">
+                <g style="stroke-width:4">
+                    <line x1="0" y1="440" x2="463.534" y2="440"></line>
+                    <line x1="0" y1="490" x2="463.534" y2="490"></line>
+                    <line x1="0" y1="540" x2="463.534" y2="540"></line>
+                    <line x1="0" y1="590" x2="463.534" y2="590"></line>
+                    <line x1="0" y1="640" x2="463.534" y2="640"></line>
+                    <line x1="463.534" y1="440" x2="517.46" y2="440"></line>
+                    <line x1="463.534" y1="490" x2="517.46" y2="490"></line>
+                    <line x1="463.534" y1="540" x2="517.46" y2="540"></line>
+                    <line x1="463.534" y1="590" x2="517.46" y2="590"></line>
+                    <line x1="463.534" y1="640" x2="517.46" y2="640"></line>
+                </g>
+            </g>
+            <g transform="translate(474.213, 3474.69)">
+                <g font-family="Guido2">
+                    <text x="56.9332" y="200"  font-size="200">&#38;</text>
+                    <text x="237.577" y="100"  font-size="200">&#98;</text>
+                    <text x="299.687" y="25"  font-size="200">&#98;</text>
+                    <text x="361.796" y="125"  font-size="200">&#98;</text>
+                </g>
+            </g>
+            <g transform="translate(474.213, 3034.69)">
+                <g style="stroke-width:4">
+                    <line x1="0" y1="935" x2="463.534" y2="935"></line>
+                    <line x1="0" y1="985" x2="463.534" y2="985"></line>
+                    <line x1="0" y1="1035" x2="463.534" y2="1035"></line>
+                    <line x1="0" y1="1085" x2="463.534" y2="1085"></line>
+                    <line x1="0" y1="1135" x2="463.534" y2="1135"></line>
+                    <line x1="463.534" y1="935" x2="517.46" y2="935"></line>
+                    <line x1="463.534" y1="985" x2="517.46" y2="985"></line>
+                    <line x1="463.534" y1="1035" x2="517.46" y2="1035"></line>
+                    <line x1="463.534" y1="1085" x2="517.46" y2="1085"></line>
+                    <line x1="463.534" y1="1135" x2="517.46" y2="1135"></line>
+                </g>
+            </g>
+            <g transform="translate(474.213, 3969.69)">
+                <g font-family="Guido2">
+                    <text x="49.9996" y="200"  font-size="200">&#63;</text>
+                    <text x="237.577" y="150"  font-size="200">&#98;</text>
+                    <text x="299.687" y="75"  font-size="200">&#98;</text>
+                    <text x="361.796" y="175"  font-size="200">&#98;</text>
+                </g>
+            </g>
+            <g transform="translate(474.213, 3034.69)">
+                <g style="stroke-width:4">
+                    <line x1="517.46" y1="0" x2="1832.95" y2="0"></line>
+                    <line x1="517.46" y1="50" x2="1832.95" y2="50"></line>
+                    <line x1="517.46" y1="100" x2="1832.95" y2="100"></line>
+                    <line x1="517.46" y1="150" x2="1832.95" y2="150"></line>
+                    <line x1="517.46" y1="200" x2="1832.95" y2="200"></line>
+                    <line x1="1832.95" y1="0" x2="1937.57" y2="0"></line>
+                    <line x1="1832.95" y1="50" x2="1937.57" y2="50"></line>
+                    <line x1="1832.95" y1="100" x2="1937.57" y2="100"></line>
+                    <line x1="1832.95" y1="150" x2="1937.57" y2="150"></line>
+                    <line x1="1832.95" y1="200" x2="1937.57" y2="200"></line>
+                </g>
+            </g>
+            <g transform="translate(474.213, 3034.69)">
+                <g font-family="Times">
+                    <text x="517.46" y="275" text-anchor="middle" dominant-baseline="hanging" font-size="100">
+                        meil
+                    </text>
+                    <polygon points="554.843 -12.5  554.843 -12.5  562.594 -15.6128  570.834 -18.4662  579.519 -21.0602  588.607 -23.3948  598.057 -25.47  607.824 -27.2858  617.868 -28.8422  628.145 -30.1392  638.613 -31.1768  649.23 -31.955  659.953 -32.4738  670.739 -32.7332  681.547 -32.7332  692.333 -32.4738  703.056 -31.955  713.673 -31.1768  724.141 -30.1392  734.418 -28.8422  744.462 -27.2858  754.229 -25.47  763.679 -23.3948  772.767 -21.0602  781.452 -18.4662  789.692 -15.6128  797.443 -12.5  797.443 -12.5  797.443 -12.5  789.818 -16.7648  781.673 -20.6742  773.053 -24.2282  764.005 -27.4268  754.572 -30.27  744.8 -32.7578  734.734 -34.8902  724.42 -36.6672  713.903 -38.0888  703.227 -39.1549  692.439 -39.8658  681.583 -40.2212  670.703 -40.2212  659.847 -39.8658  649.059 -39.155  638.383 -38.0888  627.866 -36.6672  617.551 -34.8902  607.486 -32.7578  597.714 -30.27  588.281 -27.4268  579.232 -24.2282  570.613 -20.6742  562.468 -16.7648  554.843 -12.5  "></polygon>
+                </g>
+                <g font-family="Guido2">
+                    <text x="487.577" y="25"  font-size="200">&#88;</text>
+                    <text x="487.46" y="33.3333"  font-size="200">&#104;</text>
+                    <text x="487.46" y="50"  font-size="200">&#104;</text>
+                    <text x="487.46" y="75"  font-size="200">&#104;</text>
+                    <text x="487.46" y="100"  font-size="200">&#104;</text>
+                    <text x="487.46" y="125"  font-size="200">&#104;</text>
+                    <text x="487.46" y="150"  font-size="200">&#104;</text>
+                    <text x="487.46" y="150"  font-size="200">&#104;</text>
+                </g>
+                <g font-family="Times New Roman" font-style="italic">
+                    <text x="990.525" y="-32" text-anchor="middle" font-size="80">
+                        3
+                    </text>
+                    <g style="stroke-width:4">
+                    </g>
+                </g>
+                <g font-family="Guido2">
+                    <text x="804.943" y="25"  font-size="200">&#88;</text>
+                    <text x="804.826" y="33.3333"  font-size="200">&#104;</text>
+                    <text x="804.826" y="50"  font-size="200">&#104;</text>
+                    <text x="804.826" y="75"  font-size="200">&#104;</text>
+                    <text x="804.826" y="100"  font-size="200">&#104;</text>
+                    <text x="804.826" y="125"  font-size="200">&#104;</text>
+                    <text x="804.826" y="150"  font-size="200">&#104;</text>
+                    <text x="804.826" y="150"  font-size="200">&#104;</text>
+                    <text x="804.826" y="200"  font-size="200">&#74;</text>
+                </g>
+                <g font-family="Times">
+                    <text x="965.406" y="275" text-anchor="middle" dominant-baseline="hanging" font-size="100">
+                        que
+                    </text>
+                </g>
+                <g font-family="Guido2">
+                    <text x="935.523" y="50"  font-size="200">&#88;</text>
+                    <text x="935.406" y="58.3333"  font-size="200">&#104;</text>
+                    <text x="935.406" y="75"  font-size="200">&#104;</text>
+                    <text x="935.406" y="100"  font-size="200">&#104;</text>
+                    <text x="935.406" y="125"  font-size="200">&#104;</text>
+                    <text x="935.406" y="150"  font-size="200">&#104;</text>
+                    <text x="935.406" y="175"  font-size="200">&#104;</text>
+                    <text x="935.406" y="175"  font-size="200">&#104;</text>
+                    <text x="935.406" y="225"  font-size="200">&#74;</text>
+                </g>
+                <g font-family="Times">
+                    <text x="1143.24" y="275" text-anchor="middle" dominant-baseline="hanging" font-size="100">
+                        char
+                    </text>
+                </g>
+                <g font-family="Guido2">
+                    <text x="1113.35" y="75"  font-size="200">&#88;</text>
+                    <text x="1113.24" y="83.3333"  font-size="200">&#104;</text>
+                    <text x="1113.24" y="100"  font-size="200">&#104;</text>
+                    <text x="1113.24" y="125"  font-size="200">&#104;</text>
+                    <text x="1113.24" y="150"  font-size="200">&#104;</text>
+                    <text x="1113.24" y="175"  font-size="200">&#104;</text>
+                    <text x="1113.24" y="200"  font-size="200">&#104;</text>
+                    <text x="1113.24" y="200"  font-size="200">&#104;</text>
+                    <text x="1113.24" y="250"  font-size="200">&#74;</text>
+                </g>
+                <g font-family="Times New Roman" font-style="italic">
+                    <text x="1530.11" y="-77" text-anchor="middle" font-size="80">
+                        3
+                    </text>
+                    <g style="stroke-width:4">
+                    </g>
+                </g>
+                <g font-family="Times">
+                    <text x="1356.63" y="275" text-anchor="middle" dominant-baseline="hanging" font-size="100">
+                        mait
+                    </text>
+                </g>
+                <g font-family="Guido2">
+                    <text x="1326.75" y="25"  font-size="200">&#88;</text>
+                    <text x="1326.63" y="33.3333"  font-size="200">&#104;</text>
+                    <text x="1326.63" y="50"  font-size="200">&#104;</text>
+                    <text x="1326.63" y="75"  font-size="200">&#104;</text>
+                    <text x="1326.63" y="100"  font-size="200">&#104;</text>
+                    <text x="1326.63" y="125"  font-size="200">&#104;</text>
+                    <text x="1326.63" y="150"  font-size="200">&#104;</text>
+                    <text x="1326.63" y="150"  font-size="200">&#104;</text>
+                    <text x="1326.63" y="200"  font-size="200">&#74;</text>
+                    <text x="1261.91" y="25"  font-size="200">&#110;</text>
+                </g>
+                <g font-family="Times">
+                    <text x="1570.03" y="275" text-anchor="middle" dominant-baseline="hanging" font-size="100">
+                        ton
+                    </text>
+                </g>
+                <g font-family="Guido2">
+                    <text x="1540.15" y="50"  font-size="200">&#88;</text>
+                    <text x="1540.03" y="58.3333"  font-size="200">&#104;</text>
+                    <text x="1540.03" y="75"  font-size="200">&#104;</text>
+                    <text x="1540.03" y="100"  font-size="200">&#104;</text>
+                    <text x="1540.03" y="125"  font-size="200">&#104;</text>
+                    <text x="1540.03" y="150"  font-size="200">&#104;</text>
+                    <text x="1540.03" y="175"  font-size="200">&#104;</text>
+                    <text x="1540.03" y="175"  font-size="200">&#104;</text>
+                    <text x="1540.03" y="225"  font-size="200">&#74;</text>
+                </g>
+                <g font-family="Times">
+                    <text x="1700.61" y="275" text-anchor="middle" dominant-baseline="hanging" font-size="100">
+                        i-
+                    </text>
+                </g>
+                <g font-family="Guido2">
+                    <text x="1670.73" y="75"  font-size="200">&#88;</text>
+                    <text x="1670.61" y="83.3333"  font-size="200">&#104;</text>
+                    <text x="1670.61" y="100"  font-size="200">&#104;</text>
+                    <text x="1670.61" y="125"  font-size="200">&#104;</text>
+                    <text x="1670.61" y="150"  font-size="200">&#104;</text>
+                    <text x="1670.61" y="175"  font-size="200">&#104;</text>
+                    <text x="1670.61" y="200"  font-size="200">&#104;</text>
+                    <text x="1670.61" y="200"  font-size="200">&#104;</text>
+                    <text x="1670.61" y="250"  font-size="200">&#74;</text>
+                </g>
+            </g>
+            <g transform="translate(474.213, 3034.69)">
+                <g style="stroke-width:4">
+                    <line x1="517.46" y1="440" x2="1832.95" y2="440"></line>
+                    <line x1="517.46" y1="490" x2="1832.95" y2="490"></line>
+                    <line x1="517.46" y1="540" x2="1832.95" y2="540"></line>
+                    <line x1="517.46" y1="590" x2="1832.95" y2="590"></line>
+                    <line x1="517.46" y1="640" x2="1832.95" y2="640"></line>
+                    <line x1="1832.95" y1="440" x2="1937.57" y2="440"></line>
+                    <line x1="1832.95" y1="490" x2="1937.57" y2="490"></line>
+                    <line x1="1832.95" y1="540" x2="1937.57" y2="540"></line>
+                    <line x1="1832.95" y1="590" x2="1937.57" y2="590"></line>
+                    <line x1="1832.95" y1="640" x2="1937.57" y2="640"></line>
+                </g>
+            </g>
+            <g transform="translate(474.213, 3474.69)">
+                <polygon points="543.46 -25  543.46 -2.5  1669.32 22.5  1669.32 0  "></polygon>
+                <polygon points="543.46 -22.5  543.46 -2.5  1669.32 22.3224  1669.32 2.32236  "></polygon>
+                <g font-family="Guido2">
+                    <text x="487.46" y="291.667"  font-size="200">&#120;</text>
+                    <text x="487.46" y="275"  font-size="200">&#120;</text>
+                    <text x="487.46" y="250"  font-size="200">&#120;</text>
+                    <text x="487.46" y="225"  font-size="200">&#120;</text>
+                    <text x="487.46" y="200"  font-size="200">&#120;</text>
+                    <text x="487.46" y="175"  font-size="200">&#120;</text>
+                    <text x="487.46" y="150"  font-size="200">&#120;</text>
+                    <text x="487.46" y="125"  font-size="200">&#120;</text>
+                    <text x="487.46" y="100"  font-size="200">&#120;</text>
+                    <text x="487.46" y="75"  font-size="200">&#120;</text>
+                    <text x="487.46" y="50"  font-size="200">&#120;</text>
+                    <text x="487.46" y="27.5"  font-size="200">&#120;</text>
+                    <text x="466.46" y="250"  font-size="200">&#95;</text>
+                    <text x="466.46" y="300"  font-size="200">&#95;</text>
+                    <text x="487.577" y="300"  font-size="200">&#88;</text>
+                    <text x="422.733" y="300"  font-size="200">&#110;</text>
+                    <text x="466.46" y="250"  font-size="200">&#95;</text>
+                    <text x="487.577" y="250"  font-size="200">&#88;</text>
+                    <text x="487.577" y="200"  font-size="200">&#88;</text>
+                    <text x="487.577" y="150"  font-size="200">&#88;</text>
+                    <text x="646.143" y="291.667"  font-size="200">&#120;</text>
+                    <text x="646.143" y="275"  font-size="200">&#120;</text>
+                    <text x="646.143" y="250"  font-size="200">&#120;</text>
+                    <text x="646.143" y="225"  font-size="200">&#120;</text>
+                    <text x="646.143" y="200"  font-size="200">&#120;</text>
+                    <text x="646.143" y="175"  font-size="200">&#120;</text>
+                    <text x="646.143" y="150"  font-size="200">&#120;</text>
+                    <text x="646.143" y="125"  font-size="200">&#120;</text>
+                    <text x="646.143" y="100"  font-size="200">&#120;</text>
+                    <text x="646.143" y="75"  font-size="200">&#120;</text>
+                    <text x="646.143" y="50"  font-size="200">&#120;</text>
+                    <text x="646.143" y="31.0236"  font-size="200">&#120;</text>
+                    <text x="625.143" y="250"  font-size="200">&#95;</text>
+                    <text x="625.143" y="300"  font-size="200">&#95;</text>
+                    <text x="646.26" y="300"  font-size="200">&#88;</text>
+                    <text x="625.143" y="250"  font-size="200">&#95;</text>
+                    <text x="646.26" y="250"  font-size="200">&#88;</text>
+                    <text x="646.26" y="200"  font-size="200">&#88;</text>
+                    <text x="646.26" y="150"  font-size="200">&#88;</text>
+                    <text x="804.826" y="291.667"  font-size="200">&#120;</text>
+                    <text x="804.826" y="275"  font-size="200">&#120;</text>
+                    <text x="804.826" y="250"  font-size="200">&#120;</text>
+                    <text x="804.826" y="225"  font-size="200">&#120;</text>
+                    <text x="804.826" y="200"  font-size="200">&#120;</text>
+                    <text x="804.826" y="175"  font-size="200">&#120;</text>
+                    <text x="804.826" y="150"  font-size="200">&#120;</text>
+                    <text x="804.826" y="125"  font-size="200">&#120;</text>
+                    <text x="804.826" y="100"  font-size="200">&#120;</text>
+                    <text x="804.826" y="75"  font-size="200">&#120;</text>
+                    <text x="804.826" y="50"  font-size="200">&#120;</text>
+                    <text x="804.826" y="34.5472"  font-size="200">&#120;</text>
+                    <text x="783.826" y="250"  font-size="200">&#95;</text>
+                    <text x="783.826" y="300"  font-size="200">&#95;</text>
+                    <text x="804.943" y="300"  font-size="200">&#88;</text>
+                    <text x="783.826" y="250"  font-size="200">&#95;</text>
+                    <text x="804.943" y="250"  font-size="200">&#88;</text>
+                    <text x="804.943" y="200"  font-size="200">&#88;</text>
+                    <text x="804.943" y="150"  font-size="200">&#88;</text>
+                    <text x="935.406" y="291.667"  font-size="200">&#120;</text>
+                    <text x="935.406" y="275"  font-size="200">&#120;</text>
+                    <text x="935.406" y="250"  font-size="200">&#120;</text>
+                    <text x="935.406" y="225"  font-size="200">&#120;</text>
+                    <text x="935.406" y="200"  font-size="200">&#120;</text>
+                    <text x="935.406" y="175"  font-size="200">&#120;</text>
+                    <text x="935.406" y="150"  font-size="200">&#120;</text>
+                    <text x="935.406" y="125"  font-size="200">&#120;</text>
+                    <text x="935.406" y="100"  font-size="200">&#120;</text>
+                    <text x="935.406" y="75"  font-size="200">&#120;</text>
+                    <text x="935.406" y="50"  font-size="200">&#120;</text>
+                    <text x="935.406" y="37.4468"  font-size="200">&#120;</text>
+                    <text x="914.406" y="250"  font-size="200">&#95;</text>
+                    <text x="914.406" y="300"  font-size="200">&#95;</text>
+                    <text x="935.523" y="300"  font-size="200">&#88;</text>
+                    <text x="914.406" y="250"  font-size="200">&#95;</text>
+                    <text x="935.523" y="250"  font-size="200">&#88;</text>
+                    <text x="935.523" y="200"  font-size="200">&#88;</text>
+                    <text x="935.523" y="150"  font-size="200">&#88;</text>
+                    <text x="1326.63" y="291.667"  font-size="200">&#120;</text>
+                    <text x="1326.63" y="275"  font-size="200">&#120;</text>
+                    <text x="1326.63" y="250"  font-size="200">&#120;</text>
+                    <text x="1326.63" y="225"  font-size="200">&#120;</text>
+                    <text x="1326.63" y="200"  font-size="200">&#120;</text>
+                    <text x="1326.63" y="175"  font-size="200">&#120;</text>
+                    <text x="1326.63" y="150"  font-size="200">&#120;</text>
+                    <text x="1326.63" y="125"  font-size="200">&#120;</text>
+                    <text x="1326.63" y="100"  font-size="200">&#120;</text>
+                    <text x="1326.63" y="75"  font-size="200">&#120;</text>
+                    <text x="1326.63" y="50"  font-size="200">&#120;</text>
+                    <text x="1326.63" y="46.1341"  font-size="200">&#120;</text>
+                    <text x="1305.63" y="250"  font-size="200">&#95;</text>
+                    <text x="1305.63" y="300"  font-size="200">&#95;</text>
+                    <text x="1326.75" y="300"  font-size="200">&#88;</text>
+                    <text x="1305.63" y="250"  font-size="200">&#95;</text>
+                    <text x="1326.75" y="250"  font-size="200">&#88;</text>
+                    <text x="1326.75" y="200"  font-size="200">&#88;</text>
+                    <text x="1381.75" y="175"  font-size="200">&#88;</text>
+                    <text x="1605.32" y="291.667"  font-size="200">&#120;</text>
+                    <text x="1605.32" y="275"  font-size="200">&#120;</text>
+                    <text x="1605.32" y="250"  font-size="200">&#120;</text>
+                    <text x="1605.32" y="225"  font-size="200">&#120;</text>
+                    <text x="1605.32" y="200"  font-size="200">&#120;</text>
+                    <text x="1605.32" y="175"  font-size="200">&#120;</text>
+                    <text x="1605.32" y="150"  font-size="200">&#120;</text>
+                    <text x="1605.32" y="125"  font-size="200">&#120;</text>
+                    <text x="1605.32" y="100"  font-size="200">&#120;</text>
+                    <text x="1605.32" y="75"  font-size="200">&#120;</text>
+                    <text x="1605.32" y="52.3224"  font-size="200">&#120;</text>
+                    <text x="1584.32" y="250"  font-size="200">&#95;</text>
+                    <text x="1584.32" y="300"  font-size="200">&#95;</text>
+                    <text x="1605.44" y="300"  font-size="200">&#88;</text>
+                    <text x="1540.59" y="300"  font-size="200">&#110;</text>
+                    <text x="1584.32" y="250"  font-size="200">&#95;</text>
+                    <text x="1605.44" y="250"  font-size="200">&#88;</text>
+                    <text x="1605.44" y="200"  font-size="200">&#88;</text>
+                    <text x="1660.44" y="175"  font-size="200">&#88;</text>
+                </g>
+            </g>
+            <g transform="translate(474.213, 3034.69)">
+                <g style="stroke-width:4">
+                    <line x1="517.46" y1="935" x2="1832.95" y2="935"></line>
+                    <line x1="517.46" y1="985" x2="1832.95" y2="985"></line>
+                    <line x1="517.46" y1="1035" x2="1832.95" y2="1035"></line>
+                    <line x1="517.46" y1="1085" x2="1832.95" y2="1085"></line>
+                    <line x1="517.46" y1="1135" x2="1832.95" y2="1135"></line>
+                    <line x1="1832.95" y1="935" x2="1937.57" y2="935"></line>
+                    <line x1="1832.95" y1="985" x2="1937.57" y2="985"></line>
+                    <line x1="1832.95" y1="1035" x2="1937.57" y2="1035"></line>
+                    <line x1="1832.95" y1="1085" x2="1937.57" y2="1085"></line>
+                    <line x1="1832.95" y1="1135" x2="1937.57" y2="1135"></line>
+                </g>
+            </g>
+            <g transform="translate(474.213, 3969.69)">
+                <g font-family="Guido2">
+                    <text x="487.46" y="391.667"  font-size="200">&#120;</text>
+                    <text x="487.46" y="375"  font-size="200">&#120;</text>
+                    <text x="487.46" y="350"  font-size="200">&#120;</text>
+                    <text x="487.46" y="325"  font-size="200">&#120;</text>
+                    <text x="487.46" y="300"  font-size="200">&#120;</text>
+                    <text x="487.46" y="275"  font-size="200">&#120;</text>
+                    <text x="487.46" y="250"  font-size="200">&#120;</text>
+                    <text x="487.46" y="225"  font-size="200">&#120;</text>
+                    <text x="487.46" y="200"  font-size="200">&#120;</text>
+                    <text x="487.46" y="175"  font-size="200">&#120;</text>
+                    <text x="487.46" y="150"  font-size="200">&#120;</text>
+                    <text x="487.46" y="125"  font-size="200">&#120;</text>
+                    <text x="487.46" y="100"  font-size="200">&#120;</text>
+                    <text x="487.46" y="100"  font-size="200">&#120;</text>
+                    <text x="487.577" y="225"  font-size="200">&#69;</text>
+                    <text x="562.46" y="225"  font-size="200">&#46;</text>
+                    <text x="466.46" y="250"  font-size="200">&#95;</text>
+                    <text x="466.46" y="300"  font-size="200">&#95;</text>
+                    <text x="466.46" y="350"  font-size="200">&#95;</text>
+                    <text x="466.46" y="400"  font-size="200">&#95;</text>
+                    <text x="487.577" y="400"  font-size="200">&#69;</text>
+                    <text x="562.46" y="375"  font-size="200">&#46;</text>
+                </g>
+            </g>
+            <g transform="translate(474.213, 3034.69)">
+                <g style="stroke-width:4">
+                    <line x1="1937.57" y1="0" x2="2891.43" y2="0"></line>
+                    <line x1="1937.57" y1="50" x2="2891.43" y2="50"></line>
+                    <line x1="1937.57" y1="100" x2="2891.43" y2="100"></line>
+                    <line x1="1937.57" y1="150" x2="2891.43" y2="150"></line>
+                    <line x1="1937.57" y1="200" x2="2891.43" y2="200"></line>
+                    <line x1="2891.43" y1="0" x2="3011.66" y2="0"></line>
+                    <line x1="2891.43" y1="50" x2="3011.66" y2="50"></line>
+                    <line x1="2891.43" y1="100" x2="3011.66" y2="100"></line>
+                    <line x1="2891.43" y1="150" x2="3011.66" y2="150"></line>
+                    <line x1="2891.43" y1="200" x2="3011.66" y2="200"></line>
+                </g>
+            </g>
+            <g transform="translate(474.213, 3034.69)">
+                <g style="stroke-width:4">
+                    <line x1="1937.57" y1="-100" x2="2572.31" y2="-75"></line>
+                    <line x1="1937.57" y1="-50" x2="2572.31" y2="-75"></line>
+                </g>
+                <g font-family="Times">
+                    <text x="1937.57" y="275" text-anchor="middle" dominant-baseline="hanging" font-size="100">
+                        ma-
+                    </text>
+                </g>
+                <g font-family="Guido2">
+                    <text x="1907.69" y="75"  font-size="200">&#69;</text>
+                    <text x="1907.57" y="83.3333"  font-size="200">&#104;</text>
+                    <text x="1907.57" y="100"  font-size="200">&#104;</text>
+                    <text x="1907.57" y="125"  font-size="200">&#104;</text>
+                    <text x="1907.57" y="150"  font-size="200">&#104;</text>
+                    <text x="1907.57" y="175"  font-size="200">&#104;</text>
+                    <text x="1907.57" y="200"  font-size="200">&#104;</text>
+                    <text x="1907.57" y="200"  font-size="200">&#104;</text>
+                </g>
+                <g font-family="Times">
+                    <text x="2572.31" y="275" text-anchor="middle" dominant-baseline="hanging" font-size="100">
+                        ge
+                    </text>
+                </g>
+                <g font-family="Guido2">
+                    <text x="2542.42" y="100"  font-size="200">&#88;</text>
+                    <text x="2542.31" y="108.333"  font-size="200">&#104;</text>
+                    <text x="2542.31" y="125"  font-size="200">&#104;</text>
+                    <text x="2542.31" y="150"  font-size="200">&#104;</text>
+                    <text x="2542.31" y="175"  font-size="200">&#104;</text>
+                    <text x="2542.31" y="200"  font-size="200">&#104;</text>
+                    <text x="2542.31" y="225"  font-size="200">&#104;</text>
+                    <text x="2542.31" y="225"  font-size="200">&#104;</text>
+                    <text x="2477.58" y="100"  font-size="200">&#110;</text>
+                </g>
+            </g>
+            <g transform="translate(474.213, 3034.69)">
+                <g style="stroke-width:4">
+                    <line x1="1937.57" y1="440" x2="2891.43" y2="440"></line>
+                    <line x1="1937.57" y1="490" x2="2891.43" y2="490"></line>
+                    <line x1="1937.57" y1="540" x2="2891.43" y2="540"></line>
+                    <line x1="1937.57" y1="590" x2="2891.43" y2="590"></line>
+                    <line x1="1937.57" y1="640" x2="2891.43" y2="640"></line>
+                    <line x1="2891.43" y1="440" x2="3011.66" y2="440"></line>
+                    <line x1="2891.43" y1="490" x2="3011.66" y2="490"></line>
+                    <line x1="2891.43" y1="540" x2="3011.66" y2="540"></line>
+                    <line x1="2891.43" y1="590" x2="3011.66" y2="590"></line>
+                    <line x1="2891.43" y1="640" x2="3011.66" y2="640"></line>
+                </g>
+            </g>
+            <g transform="translate(474.213, 3474.69)">
+                <polygon points="1963.57 0  1963.57 22.5  2764.99 22.5  2764.99 0  "></polygon>
+                <polygon points="1963.57 2.5  1963.57 22.5  2764.99 22.5  2764.99 2.5  "></polygon>
+                <g font-family="Guido2">
+                    <text x="1907.57" y="291.667"  font-size="200">&#120;</text>
+                    <text x="1907.57" y="275"  font-size="200">&#120;</text>
+                    <text x="1907.57" y="250"  font-size="200">&#120;</text>
+                    <text x="1907.57" y="225"  font-size="200">&#120;</text>
+                    <text x="1907.57" y="200"  font-size="200">&#120;</text>
+                    <text x="1907.57" y="175"  font-size="200">&#120;</text>
+                    <text x="1907.57" y="150"  font-size="200">&#120;</text>
+                    <text x="1907.57" y="125"  font-size="200">&#120;</text>
+                    <text x="1907.57" y="100"  font-size="200">&#120;</text>
+                    <text x="1907.57" y="75"  font-size="200">&#120;</text>
+                    <text x="1907.57" y="52.5"  font-size="200">&#120;</text>
+                    <text x="1886.57" y="250"  font-size="200">&#95;</text>
+                    <text x="1886.57" y="300"  font-size="200">&#95;</text>
+                    <text x="1907.69" y="300"  font-size="200">&#88;</text>
+                    <text x="1886.57" y="250"  font-size="200">&#95;</text>
+                    <text x="1907.69" y="250"  font-size="200">&#88;</text>
+                    <text x="1962.69" y="225"  font-size="200">&#88;</text>
+                    <text x="1907.69" y="175"  font-size="200">&#88;</text>
+                    <text x="2066.26" y="291.667"  font-size="200">&#120;</text>
+                    <text x="2066.26" y="275"  font-size="200">&#120;</text>
+                    <text x="2066.26" y="250"  font-size="200">&#120;</text>
+                    <text x="2066.26" y="225"  font-size="200">&#120;</text>
+                    <text x="2066.26" y="200"  font-size="200">&#120;</text>
+                    <text x="2066.26" y="175"  font-size="200">&#120;</text>
+                    <text x="2066.26" y="150"  font-size="200">&#120;</text>
+                    <text x="2066.26" y="125"  font-size="200">&#120;</text>
+                    <text x="2066.26" y="100"  font-size="200">&#120;</text>
+                    <text x="2066.26" y="75"  font-size="200">&#120;</text>
+                    <text x="2066.26" y="52.5"  font-size="200">&#120;</text>
+                    <text x="2045.26" y="250"  font-size="200">&#95;</text>
+                    <text x="2045.26" y="300"  font-size="200">&#95;</text>
+                    <text x="2066.37" y="300"  font-size="200">&#88;</text>
+                    <text x="2045.26" y="250"  font-size="200">&#95;</text>
+                    <text x="2066.37" y="250"  font-size="200">&#88;</text>
+                    <text x="2121.37" y="225"  font-size="200">&#88;</text>
+                    <text x="2066.37" y="175"  font-size="200">&#88;</text>
+                    <text x="2224.94" y="291.667"  font-size="200">&#120;</text>
+                    <text x="2224.94" y="275"  font-size="200">&#120;</text>
+                    <text x="2224.94" y="250"  font-size="200">&#120;</text>
+                    <text x="2224.94" y="225"  font-size="200">&#120;</text>
+                    <text x="2224.94" y="200"  font-size="200">&#120;</text>
+                    <text x="2224.94" y="175"  font-size="200">&#120;</text>
+                    <text x="2224.94" y="150"  font-size="200">&#120;</text>
+                    <text x="2224.94" y="125"  font-size="200">&#120;</text>
+                    <text x="2224.94" y="100"  font-size="200">&#120;</text>
+                    <text x="2224.94" y="75"  font-size="200">&#120;</text>
+                    <text x="2224.94" y="52.5"  font-size="200">&#120;</text>
+                    <text x="2203.94" y="250"  font-size="200">&#95;</text>
+                    <text x="2203.94" y="300"  font-size="200">&#95;</text>
+                    <text x="2225.06" y="300"  font-size="200">&#88;</text>
+                    <text x="2203.94" y="250"  font-size="200">&#95;</text>
+                    <text x="2225.06" y="250"  font-size="200">&#88;</text>
+                    <text x="2280.06" y="225"  font-size="200">&#88;</text>
+                    <text x="2225.06" y="175"  font-size="200">&#88;</text>
+                    <text x="2383.62" y="291.667"  font-size="200">&#120;</text>
+                    <text x="2383.62" y="275"  font-size="200">&#120;</text>
+                    <text x="2383.62" y="250"  font-size="200">&#120;</text>
+                    <text x="2383.62" y="225"  font-size="200">&#120;</text>
+                    <text x="2383.62" y="200"  font-size="200">&#120;</text>
+                    <text x="2383.62" y="175"  font-size="200">&#120;</text>
+                    <text x="2383.62" y="150"  font-size="200">&#120;</text>
+                    <text x="2383.62" y="125"  font-size="200">&#120;</text>
+                    <text x="2383.62" y="100"  font-size="200">&#120;</text>
+                    <text x="2383.62" y="75"  font-size="200">&#120;</text>
+                    <text x="2383.62" y="52.5"  font-size="200">&#120;</text>
+                    <text x="2362.62" y="250"  font-size="200">&#95;</text>
+                    <text x="2362.62" y="300"  font-size="200">&#95;</text>
+                    <text x="2383.74" y="300"  font-size="200">&#88;</text>
+                    <text x="2362.62" y="250"  font-size="200">&#95;</text>
+                    <text x="2383.74" y="250"  font-size="200">&#88;</text>
+                    <text x="2438.74" y="225"  font-size="200">&#88;</text>
+                    <text x="2383.74" y="175"  font-size="200">&#88;</text>
+                    <text x="2542.31" y="291.667"  font-size="200">&#120;</text>
+                    <text x="2542.31" y="275"  font-size="200">&#120;</text>
+                    <text x="2542.31" y="250"  font-size="200">&#120;</text>
+                    <text x="2542.31" y="225"  font-size="200">&#120;</text>
+                    <text x="2542.31" y="200"  font-size="200">&#120;</text>
+                    <text x="2542.31" y="175"  font-size="200">&#120;</text>
+                    <text x="2542.31" y="150"  font-size="200">&#120;</text>
+                    <text x="2542.31" y="125"  font-size="200">&#120;</text>
+                    <text x="2542.31" y="100"  font-size="200">&#120;</text>
+                    <text x="2542.31" y="75"  font-size="200">&#120;</text>
+                    <text x="2542.31" y="52.5"  font-size="200">&#120;</text>
+                    <text x="2521.31" y="250"  font-size="200">&#95;</text>
+                    <text x="2521.31" y="300"  font-size="200">&#95;</text>
+                    <text x="2542.42" y="300"  font-size="200">&#88;</text>
+                    <text x="2521.31" y="250"  font-size="200">&#95;</text>
+                    <text x="2597.42" y="275"  font-size="200">&#88;</text>
+                    <text x="2542.42" y="225"  font-size="200">&#88;</text>
+                    <text x="2542.42" y="175"  font-size="200">&#88;</text>
+                    <text x="2700.99" y="291.667"  font-size="200">&#120;</text>
+                    <text x="2700.99" y="275"  font-size="200">&#120;</text>
+                    <text x="2700.99" y="250"  font-size="200">&#120;</text>
+                    <text x="2700.99" y="225"  font-size="200">&#120;</text>
+                    <text x="2700.99" y="200"  font-size="200">&#120;</text>
+                    <text x="2700.99" y="175"  font-size="200">&#120;</text>
+                    <text x="2700.99" y="150"  font-size="200">&#120;</text>
+                    <text x="2700.99" y="125"  font-size="200">&#120;</text>
+                    <text x="2700.99" y="100"  font-size="200">&#120;</text>
+                    <text x="2700.99" y="75"  font-size="200">&#120;</text>
+                    <text x="2700.99" y="52.5"  font-size="200">&#120;</text>
+                    <text x="2679.99" y="250"  font-size="200">&#95;</text>
+                    <text x="2679.99" y="300"  font-size="200">&#95;</text>
+                    <text x="2701.11" y="300"  font-size="200">&#88;</text>
+                    <text x="2679.99" y="250"  font-size="200">&#95;</text>
+                    <text x="2756.11" y="275"  font-size="200">&#88;</text>
+                    <text x="2701.11" y="225"  font-size="200">&#88;</text>
+                    <text x="2701.11" y="175"  font-size="200">&#88;</text>
+                </g>
+            </g>
+            <g transform="translate(474.213, 3034.69)">
+                <g style="stroke-width:4">
+                    <line x1="1937.57" y1="935" x2="2891.43" y2="935"></line>
+                    <line x1="1937.57" y1="985" x2="2891.43" y2="985"></line>
+                    <line x1="1937.57" y1="1035" x2="2891.43" y2="1035"></line>
+                    <line x1="1937.57" y1="1085" x2="2891.43" y2="1085"></line>
+                    <line x1="1937.57" y1="1135" x2="2891.43" y2="1135"></line>
+                    <line x1="2891.43" y1="935" x2="3011.66" y2="935"></line>
+                    <line x1="2891.43" y1="985" x2="3011.66" y2="985"></line>
+                    <line x1="2891.43" y1="1035" x2="3011.66" y2="1035"></line>
+                    <line x1="2891.43" y1="1085" x2="3011.66" y2="1085"></line>
+                    <line x1="2891.43" y1="1135" x2="3011.66" y2="1135"></line>
+                </g>
+            </g>
+            <g transform="translate(474.213, 3969.69)">
+                <g font-family="Guido2">
+                    <text x="1907.57" y="366.667"  font-size="200">&#120;</text>
+                    <text x="1907.57" y="350"  font-size="200">&#120;</text>
+                    <text x="1907.57" y="325"  font-size="200">&#120;</text>
+                    <text x="1907.57" y="300"  font-size="200">&#120;</text>
+                    <text x="1907.57" y="275"  font-size="200">&#120;</text>
+                    <text x="1907.57" y="250"  font-size="200">&#120;</text>
+                    <text x="1907.57" y="225"  font-size="200">&#120;</text>
+                    <text x="1907.57" y="200"  font-size="200">&#120;</text>
+                    <text x="1907.57" y="175"  font-size="200">&#120;</text>
+                    <text x="1907.57" y="150"  font-size="200">&#120;</text>
+                    <text x="1907.57" y="125"  font-size="200">&#120;</text>
+                    <text x="1907.57" y="100"  font-size="200">&#120;</text>
+                    <text x="1907.57" y="75"  font-size="200">&#120;</text>
+                    <text x="1907.57" y="75"  font-size="200">&#120;</text>
+                    <text x="1907.69" y="200"  font-size="200">&#69;</text>
+                    <text x="1982.57" y="175"  font-size="200">&#46;</text>
+                    <text x="1886.57" y="250"  font-size="200">&#95;</text>
+                    <text x="1886.57" y="300"  font-size="200">&#95;</text>
+                    <text x="1886.57" y="350"  font-size="200">&#95;</text>
+                    <text x="1907.69" y="375"  font-size="200">&#69;</text>
+                    <text x="1982.57" y="375"  font-size="200">&#46;</text>
+                </g>
+            </g>
+            <g transform="translate(474.213, 3034.69)">
+                <g style="stroke-width:4">
+                    <line x1="3011.66" y1="0" x2="3965.52" y2="0"></line>
+                    <line x1="3011.66" y1="50" x2="3965.52" y2="50"></line>
+                    <line x1="3011.66" y1="100" x2="3965.52" y2="100"></line>
+                    <line x1="3011.66" y1="150" x2="3965.52" y2="150"></line>
+                    <line x1="3011.66" y1="200" x2="3965.52" y2="200"></line>
+                    <line x1="3965.52" y1="0" x2="3965.52" y2="0"></line>
+                    <line x1="3965.52" y1="50" x2="3965.52" y2="50"></line>
+                    <line x1="3965.52" y1="100" x2="3965.52" y2="100"></line>
+                    <line x1="3965.52" y1="150" x2="3965.52" y2="150"></line>
+                    <line x1="3965.52" y1="200" x2="3965.52" y2="200"></line>
+                </g>
+            </g>
+            <g transform="translate(474.213, 3034.69)">
+                <g font-family="Times">
+                    <text x="3011.66" y="275" text-anchor="middle" dominant-baseline="hanging" font-size="100">
+                        Je
+                    </text>
+                </g>
+                <g font-family="Guido2">
+                    <text x="2981.78" y="50"  font-size="200">&#88;</text>
+                    <text x="2981.66" y="58.3333"  font-size="200">&#104;</text>
+                    <text x="2981.66" y="75"  font-size="200">&#104;</text>
+                    <text x="2981.66" y="100"  font-size="200">&#104;</text>
+                    <text x="2981.66" y="125"  font-size="200">&#104;</text>
+                    <text x="2981.66" y="150"  font-size="200">&#104;</text>
+                    <text x="2981.66" y="175"  font-size="200">&#104;</text>
+                    <text x="2981.66" y="175"  font-size="200">&#104;</text>
+                    <text x="2981.66" y="225"  font-size="200">&#74;</text>
+                    <text x="2924.67" y="50"  font-size="200">&#98;</text>
+                </g>
+                <g font-family="Times">
+                    <text x="3170.35" y="275" text-anchor="middle" dominant-baseline="hanging" font-size="100">
+                        rê-
+                    </text>
+                </g>
+                <g font-family="Guido2">
+                    <text x="3140.46" y="175"  font-size="200">&#88;</text>
+                    <text x="3140.35" y="166.667"  font-size="200">&#120;</text>
+                    <text x="3140.35" y="150"  font-size="200">&#120;</text>
+                    <text x="3140.35" y="125"  font-size="200">&#120;</text>
+                    <text x="3140.35" y="100"  font-size="200">&#120;</text>
+                    <text x="3140.35" y="75"  font-size="200">&#120;</text>
+                    <text x="3140.35" y="50"  font-size="200">&#120;</text>
+                    <text x="3140.35" y="50"  font-size="200">&#120;</text>
+                    <text x="3140.35" y="0"  font-size="200">&#106;</text>
+                </g>
+                <g font-family="Times">
+                    <text x="3329.03" y="275" text-anchor="middle" dominant-baseline="hanging" font-size="100">
+                        vais
+                    </text>
+                </g>
+                <g font-family="Guido2">
+                    <text x="3299.15" y="50"  font-size="200">&#88;</text>
+                    <text x="3299.03" y="58.3333"  font-size="200">&#104;</text>
+                    <text x="3299.03" y="75"  font-size="200">&#104;</text>
+                    <text x="3299.03" y="100"  font-size="200">&#104;</text>
+                    <text x="3299.03" y="125"  font-size="200">&#104;</text>
+                    <text x="3299.03" y="150"  font-size="200">&#104;</text>
+                    <text x="3299.03" y="175"  font-size="200">&#104;</text>
+                    <text x="3299.03" y="175"  font-size="200">&#104;</text>
+                </g>
+                <g font-family="Times">
+                    <text x="3646.4" y="275" text-anchor="middle" dominant-baseline="hanging" font-size="100">
+                        le
+                    </text>
+                </g>
+                <g font-family="Guido2">
+                    <text x="3616.51" y="75"  font-size="200">&#88;</text>
+                    <text x="3616.4" y="83.3333"  font-size="200">&#104;</text>
+                    <text x="3616.4" y="100"  font-size="200">&#104;</text>
+                    <text x="3616.4" y="125"  font-size="200">&#104;</text>
+                    <text x="3616.4" y="150"  font-size="200">&#104;</text>
+                    <text x="3616.4" y="175"  font-size="200">&#104;</text>
+                    <text x="3616.4" y="200"  font-size="200">&#104;</text>
+                    <text x="3616.4" y="200"  font-size="200">&#104;</text>
+                    <text x="3616.4" y="250"  font-size="200">&#74;</text>
+                </g>
+                <g font-family="Times">
+                    <text x="3805.08" y="275" text-anchor="middle" dominant-baseline="hanging" font-size="100">
+                        bon-
+                    </text>
+                </g>
+                <g font-family="Guido2">
+                    <text x="3775.2" y="100"  font-size="200">&#88;</text>
+                    <text x="3775.08" y="108.333"  font-size="200">&#104;</text>
+                    <text x="3775.08" y="125"  font-size="200">&#104;</text>
+                    <text x="3775.08" y="150"  font-size="200">&#104;</text>
+                    <text x="3775.08" y="175"  font-size="200">&#104;</text>
+                    <text x="3775.08" y="200"  font-size="200">&#104;</text>
+                    <text x="3775.08" y="225"  font-size="200">&#104;</text>
+                    <text x="3775.08" y="225"  font-size="200">&#104;</text>
+                    <text x="3775.08" y="275"  font-size="200">&#74;</text>
+                    <text x="3710.35" y="100"  font-size="200">&#110;</text>
+                </g>
+            </g>
+            <g transform="translate(474.213, 3034.69)">
+                <g style="stroke-width:4">
+                    <line x1="3011.66" y1="440" x2="3965.52" y2="440"></line>
+                    <line x1="3011.66" y1="490" x2="3965.52" y2="490"></line>
+                    <line x1="3011.66" y1="540" x2="3965.52" y2="540"></line>
+                    <line x1="3011.66" y1="590" x2="3965.52" y2="590"></line>
+                    <line x1="3011.66" y1="640" x2="3965.52" y2="640"></line>
+                    <line x1="3965.52" y1="440" x2="3965.52" y2="440"></line>
+                    <line x1="3965.52" y1="490" x2="3965.52" y2="490"></line>
+                    <line x1="3965.52" y1="540" x2="3965.52" y2="540"></line>
+                    <line x1="3965.52" y1="590" x2="3965.52" y2="590"></line>
+                    <line x1="3965.52" y1="640" x2="3965.52" y2="640"></line>
+                </g>
+            </g>
+            <g transform="translate(474.213, 3474.69)">
+                <polygon points="3037.66 0  3037.66 22.5  3839.08 22.5  3839.08 0  "></polygon>
+                <polygon points="3037.66 2.5  3037.66 22.5  3839.08 22.5  3839.08 2.5  "></polygon>
+                <g font-family="Guido2">
+                    <text x="2981.66" y="291.667"  font-size="200">&#120;</text>
+                    <text x="2981.66" y="275"  font-size="200">&#120;</text>
+                    <text x="2981.66" y="250"  font-size="200">&#120;</text>
+                    <text x="2981.66" y="225"  font-size="200">&#120;</text>
+                    <text x="2981.66" y="200"  font-size="200">&#120;</text>
+                    <text x="2981.66" y="175"  font-size="200">&#120;</text>
+                    <text x="2981.66" y="150"  font-size="200">&#120;</text>
+                    <text x="2981.66" y="125"  font-size="200">&#120;</text>
+                    <text x="2981.66" y="100"  font-size="200">&#120;</text>
+                    <text x="2981.66" y="75"  font-size="200">&#120;</text>
+                    <text x="2981.66" y="52.5"  font-size="200">&#120;</text>
+                    <text x="2960.66" y="250"  font-size="200">&#95;</text>
+                    <text x="2960.66" y="300"  font-size="200">&#95;</text>
+                    <text x="2981.78" y="300"  font-size="200">&#88;</text>
+                    <text x="2981.78" y="225"  font-size="200">&#88;</text>
+                    <text x="2924.67" y="225"  font-size="200">&#98;</text>
+                    <text x="2981.78" y="175"  font-size="200">&#88;</text>
+                    <text x="3140.35" y="291.667"  font-size="200">&#120;</text>
+                    <text x="3140.35" y="275"  font-size="200">&#120;</text>
+                    <text x="3140.35" y="250"  font-size="200">&#120;</text>
+                    <text x="3140.35" y="225"  font-size="200">&#120;</text>
+                    <text x="3140.35" y="200"  font-size="200">&#120;</text>
+                    <text x="3140.35" y="175"  font-size="200">&#120;</text>
+                    <text x="3140.35" y="150"  font-size="200">&#120;</text>
+                    <text x="3140.35" y="125"  font-size="200">&#120;</text>
+                    <text x="3140.35" y="100"  font-size="200">&#120;</text>
+                    <text x="3140.35" y="75"  font-size="200">&#120;</text>
+                    <text x="3140.35" y="52.5"  font-size="200">&#120;</text>
+                    <text x="3119.35" y="250"  font-size="200">&#95;</text>
+                    <text x="3119.35" y="300"  font-size="200">&#95;</text>
+                    <text x="3140.46" y="300"  font-size="200">&#88;</text>
+                    <text x="3140.46" y="225"  font-size="200">&#88;</text>
+                    <text x="3140.46" y="175"  font-size="200">&#88;</text>
+                    <text x="3299.03" y="291.667"  font-size="200">&#120;</text>
+                    <text x="3299.03" y="275"  font-size="200">&#120;</text>
+                    <text x="3299.03" y="250"  font-size="200">&#120;</text>
+                    <text x="3299.03" y="225"  font-size="200">&#120;</text>
+                    <text x="3299.03" y="200"  font-size="200">&#120;</text>
+                    <text x="3299.03" y="175"  font-size="200">&#120;</text>
+                    <text x="3299.03" y="150"  font-size="200">&#120;</text>
+                    <text x="3299.03" y="125"  font-size="200">&#120;</text>
+                    <text x="3299.03" y="100"  font-size="200">&#120;</text>
+                    <text x="3299.03" y="75"  font-size="200">&#120;</text>
+                    <text x="3299.03" y="52.5"  font-size="200">&#120;</text>
+                    <text x="3278.03" y="250"  font-size="200">&#95;</text>
+                    <text x="3278.03" y="300"  font-size="200">&#95;</text>
+                    <text x="3299.15" y="300"  font-size="200">&#88;</text>
+                    <text x="3299.15" y="225"  font-size="200">&#88;</text>
+                    <text x="3299.15" y="175"  font-size="200">&#88;</text>
+                    <text x="3457.71" y="291.667"  font-size="200">&#120;</text>
+                    <text x="3457.71" y="275"  font-size="200">&#120;</text>
+                    <text x="3457.71" y="250"  font-size="200">&#120;</text>
+                    <text x="3457.71" y="225"  font-size="200">&#120;</text>
+                    <text x="3457.71" y="200"  font-size="200">&#120;</text>
+                    <text x="3457.71" y="175"  font-size="200">&#120;</text>
+                    <text x="3457.71" y="150"  font-size="200">&#120;</text>
+                    <text x="3457.71" y="125"  font-size="200">&#120;</text>
+                    <text x="3457.71" y="100"  font-size="200">&#120;</text>
+                    <text x="3457.71" y="75"  font-size="200">&#120;</text>
+                    <text x="3457.71" y="52.5"  font-size="200">&#120;</text>
+                    <text x="3436.71" y="250"  font-size="200">&#95;</text>
+                    <text x="3436.71" y="300"  font-size="200">&#95;</text>
+                    <text x="3457.83" y="300"  font-size="200">&#88;</text>
+                    <text x="3457.83" y="225"  font-size="200">&#88;</text>
+                    <text x="3457.83" y="175"  font-size="200">&#88;</text>
+                    <text x="3616.4" y="316.667"  font-size="200">&#120;</text>
+                    <text x="3616.4" y="300"  font-size="200">&#120;</text>
+                    <text x="3616.4" y="275"  font-size="200">&#120;</text>
+                    <text x="3616.4" y="250"  font-size="200">&#120;</text>
+                    <text x="3616.4" y="225"  font-size="200">&#120;</text>
+                    <text x="3616.4" y="200"  font-size="200">&#120;</text>
+                    <text x="3616.4" y="175"  font-size="200">&#120;</text>
+                    <text x="3616.4" y="150"  font-size="200">&#120;</text>
+                    <text x="3616.4" y="125"  font-size="200">&#120;</text>
+                    <text x="3616.4" y="100"  font-size="200">&#120;</text>
+                    <text x="3616.4" y="75"  font-size="200">&#120;</text>
+                    <text x="3616.4" y="52.5"  font-size="200">&#120;</text>
+                    <text x="3595.4" y="250"  font-size="200">&#95;</text>
+                    <text x="3595.4" y="300"  font-size="200">&#95;</text>
+                    <text x="3616.51" y="325"  font-size="200">&#88;</text>
+                    <text x="3616.51" y="225"  font-size="200">&#88;</text>
+                    <text x="3616.51" y="175"  font-size="200">&#88;</text>
+                    <text x="3559.4" y="175"  font-size="200">&#98;</text>
+                    <text x="3775.08" y="316.667"  font-size="200">&#120;</text>
+                    <text x="3775.08" y="300"  font-size="200">&#120;</text>
+                    <text x="3775.08" y="275"  font-size="200">&#120;</text>
+                    <text x="3775.08" y="250"  font-size="200">&#120;</text>
+                    <text x="3775.08" y="225"  font-size="200">&#120;</text>
+                    <text x="3775.08" y="200"  font-size="200">&#120;</text>
+                    <text x="3775.08" y="175"  font-size="200">&#120;</text>
+                    <text x="3775.08" y="150"  font-size="200">&#120;</text>
+                    <text x="3775.08" y="125"  font-size="200">&#120;</text>
+                    <text x="3775.08" y="100"  font-size="200">&#120;</text>
+                    <text x="3775.08" y="75"  font-size="200">&#120;</text>
+                    <text x="3775.08" y="52.5"  font-size="200">&#120;</text>
+                    <text x="3754.08" y="250"  font-size="200">&#95;</text>
+                    <text x="3754.08" y="300"  font-size="200">&#95;</text>
+                    <text x="3775.2" y="325"  font-size="200">&#88;</text>
+                    <text x="3775.2" y="225"  font-size="200">&#88;</text>
+                    <text x="3775.2" y="175"  font-size="200">&#88;</text>
+                    <text x="3718.09" y="175"  font-size="200">&#98;</text>
+                </g>
+            </g>
+            <g transform="translate(474.213, 3034.69)">
+                <g style="stroke-width:4">
+                    <line x1="3011.66" y1="935" x2="3965.52" y2="935"></line>
+                    <line x1="3011.66" y1="985" x2="3965.52" y2="985"></line>
+                    <line x1="3011.66" y1="1035" x2="3965.52" y2="1035"></line>
+                    <line x1="3011.66" y1="1085" x2="3965.52" y2="1085"></line>
+                    <line x1="3011.66" y1="1135" x2="3965.52" y2="1135"></line>
+                    <line x1="3965.52" y1="935" x2="3965.52" y2="935"></line>
+                    <line x1="3965.52" y1="985" x2="3965.52" y2="985"></line>
+                    <line x1="3965.52" y1="1035" x2="3965.52" y2="1035"></line>
+                    <line x1="3965.52" y1="1085" x2="3965.52" y2="1085"></line>
+                    <line x1="3965.52" y1="1135" x2="3965.52" y2="1135"></line>
+                </g>
+            </g>
+            <g transform="translate(474.213, 3969.69)">
+                <g font-family="Guido2">
+                    <text x="2981.66" y="416.667"  font-size="200">&#120;</text>
+                    <text x="2981.66" y="400"  font-size="200">&#120;</text>
+                    <text x="2981.66" y="375"  font-size="200">&#120;</text>
+                    <text x="2981.66" y="350"  font-size="200">&#120;</text>
+                    <text x="2981.66" y="325"  font-size="200">&#120;</text>
+                    <text x="2981.66" y="300"  font-size="200">&#120;</text>
+                    <text x="2981.66" y="275"  font-size="200">&#120;</text>
+                    <text x="2981.66" y="250"  font-size="200">&#120;</text>
+                    <text x="2981.66" y="225"  font-size="200">&#120;</text>
+                    <text x="2981.66" y="200"  font-size="200">&#120;</text>
+                    <text x="2981.66" y="175"  font-size="200">&#120;</text>
+                    <text x="2981.66" y="150"  font-size="200">&#120;</text>
+                    <text x="2981.66" y="125"  font-size="200">&#120;</text>
+                    <text x="2981.66" y="125"  font-size="200">&#120;</text>
+                    <text x="2960.66" y="250"  font-size="200">&#95;</text>
+                    <text x="2981.78" y="250"  font-size="200">&#69;</text>
+                    <text x="3056.66" y="225"  font-size="200">&#46;</text>
+                    <text x="2960.66" y="250"  font-size="200">&#95;</text>
+                    <text x="2960.66" y="300"  font-size="200">&#95;</text>
+                    <text x="2960.66" y="350"  font-size="200">&#95;</text>
+                    <text x="2960.66" y="400"  font-size="200">&#95;</text>
+                    <text x="2981.78" y="425"  font-size="200">&#69;</text>
+                    <text x="3056.66" y="425"  font-size="200">&#46;</text>
+                </g>
+            </g>
+            <g transform="translate(474.213, 3034.69)">
+                <g style="stroke-width:4">
+                    <line x1="0" y1="0" x2="0" y2="1135"></line>
+                </g>
+                <g style="stroke-width:4">
+                    <line x1="1834.19" y1="2" x2="1834.19" y2="198"></line>
+                </g>
+                <g style="stroke-width:4">
+                    <line x1="1834.19" y1="442" x2="1834.19" y2="1133"></line>
+                </g>
+                <g style="stroke-width:4">
+                    <line x1="2892.67" y1="2" x2="2892.67" y2="198"></line>
+                </g>
+                <g style="stroke-width:4">
+                    <line x1="2892.67" y1="442" x2="2892.67" y2="1133"></line>
+                </g>
+                <g style="stroke-width:4">
+                    <line x1="3966.76" y1="2" x2="3966.76" y2="198"></line>
+                </g>
+                <g style="stroke-width:4">
+                    <line x1="3966.76" y1="442" x2="3966.76" y2="1133"></line>
+                </g>
+            </g>
+            <g transform="translate(474.213, 1422.64)">
+            </g>
+            <g transform="translate(474.213, 4890.24)">
+                <polygon points="-16.5 455  -16.5 455  -24.5096 463.395  -30.6568 473.475  -35.1192 485.08  -38.0744 498.052  -39.7 512.232  -40.1736 527.461  -39.6728 543.581  -38.3752 560.433  -36.4584 577.857  -34.1 595.696  -31.4776 613.79  -28.7688 631.981  -26.1512 650.109  -23.8024 668.016  -21.9 685.544  -20.6216 702.533  -20.1448 718.825  -20.6472 734.26  -22.3064 748.681  -25.3 761.928  -29.8056 773.843  -36.0008 784.266  -44.0632 793.039  -54.1704 800.003  -66.5 805  -66.5 805  -66.5 805  -55.4664 800.003  -46.5472 793.039  -39.5648 784.266  -34.3416 773.843  -30.7 761.928  -28.4624 748.681  -27.4512 734.26  -27.4888 718.825  -28.3976 702.533  -30 685.544  -32.1184 668.016  -34.5752 650.109  -37.1928 631.981  -39.7936 613.79  -42.2 595.696  -44.2344 577.857  -45.7192 560.433  -46.4768 543.581  -46.3296 527.461  -45.1 512.232  -42.6104 498.052  -38.6832 485.08  -33.1408 473.475  -25.8056 463.395  -16.5 455  "></polygon>
+                <polygon points="-16.5 1155  -16.5 1155  -24.5096 1146.6  -30.6568 1136.53  -35.1192 1124.92  -38.0744 1111.95  -39.7 1097.77  -40.1736 1082.54  -39.6728 1066.42  -38.3752 1049.57  -36.4584 1032.14  -34.1 1014.3  -31.4776 996.21  -28.7688 978.02  -26.1512 959.891  -23.8024 941.984  -21.9 924.456  -20.6216 907.467  -20.1448 891.175  -20.6472 875.74  -22.3064 861.319  -25.3 848.072  -29.8056 836.157  -36.0008 825.734  -44.0632 816.961  -54.1704 809.997  -66.5 805  -66.5 805  -66.5 805  -55.4664 809.997  -46.5472 816.961  -39.5648 825.734  -34.3416 836.158  -30.7 848.072  -28.4624 861.319  -27.4512 875.74  -27.4888 891.175  -28.3976 907.467  -30 924.456  -32.1184 941.984  -34.5752 959.891  -37.1928 978.019  -39.7936 996.21  -42.2 1014.3  -44.2344 1032.14  -45.7192 1049.57  -46.4768 1066.42  -46.3296 1082.54  -45.1 1097.77  -42.6104 1111.95  -38.6832 1124.92  -33.1408 1136.53  -25.8056 1146.6  -16.5 1155  "></polygon>
+                <g style="stroke-width:4">
+                    <line x1="0" y1="0" x2="463.534" y2="0"></line>
+                    <line x1="0" y1="50" x2="463.534" y2="50"></line>
+                    <line x1="0" y1="100" x2="463.534" y2="100"></line>
+                    <line x1="0" y1="150" x2="463.534" y2="150"></line>
+                    <line x1="0" y1="200" x2="463.534" y2="200"></line>
+                    <line x1="463.534" y1="0" x2="517.46" y2="0"></line>
+                    <line x1="463.534" y1="50" x2="517.46" y2="50"></line>
+                    <line x1="463.534" y1="100" x2="517.46" y2="100"></line>
+                    <line x1="463.534" y1="150" x2="517.46" y2="150"></line>
+                    <line x1="463.534" y1="200" x2="517.46" y2="200"></line>
+                </g>
+            </g>
+            <g transform="translate(474.213, 4890.24)">
+                <g font-family="Guido2">
+                    <text x="56.9332" y="200"  font-size="200">&#38;</text>
+                    <text x="237.577" y="100"  font-size="200">&#98;</text>
+                    <text x="299.687" y="25"  font-size="200">&#98;</text>
+                    <text x="361.796" y="125"  font-size="200">&#98;</text>
+                </g>
+            </g>
+            <g transform="translate(474.213, 4890.24)">
+                <g style="stroke-width:4">
+                    <line x1="0" y1="455" x2="463.534" y2="455"></line>
+                    <line x1="0" y1="505" x2="463.534" y2="505"></line>
+                    <line x1="0" y1="555" x2="463.534" y2="555"></line>
+                    <line x1="0" y1="605" x2="463.534" y2="605"></line>
+                    <line x1="0" y1="655" x2="463.534" y2="655"></line>
+                    <line x1="463.534" y1="455" x2="517.46" y2="455"></line>
+                    <line x1="463.534" y1="505" x2="517.46" y2="505"></line>
+                    <line x1="463.534" y1="555" x2="517.46" y2="555"></line>
+                    <line x1="463.534" y1="605" x2="517.46" y2="605"></line>
+                    <line x1="463.534" y1="655" x2="517.46" y2="655"></line>
+                </g>
+            </g>
+            <g transform="translate(474.213, 5345.24)">
+                <g font-family="Guido2">
+                    <text x="56.9332" y="200"  font-size="200">&#38;</text>
+                    <text x="237.577" y="100"  font-size="200">&#98;</text>
+                    <text x="299.687" y="25"  font-size="200">&#98;</text>
+                    <text x="361.796" y="125"  font-size="200">&#98;</text>
+                </g>
+            </g>
+            <g transform="translate(474.213, 4890.24)">
+                <g style="stroke-width:4">
+                    <line x1="0" y1="955" x2="463.534" y2="955"></line>
+                    <line x1="0" y1="1005" x2="463.534" y2="1005"></line>
+                    <line x1="0" y1="1055" x2="463.534" y2="1055"></line>
+                    <line x1="0" y1="1105" x2="463.534" y2="1105"></line>
+                    <line x1="0" y1="1155" x2="463.534" y2="1155"></line>
+                    <line x1="463.534" y1="955" x2="517.46" y2="955"></line>
+                    <line x1="463.534" y1="1005" x2="517.46" y2="1005"></line>
+                    <line x1="463.534" y1="1055" x2="517.46" y2="1055"></line>
+                    <line x1="463.534" y1="1105" x2="517.46" y2="1105"></line>
+                    <line x1="463.534" y1="1155" x2="517.46" y2="1155"></line>
+                </g>
+            </g>
+            <g transform="translate(474.213, 5845.24)">
+                <g font-family="Guido2">
+                    <text x="49.9996" y="200"  font-size="200">&#63;</text>
+                    <text x="237.577" y="150"  font-size="200">&#98;</text>
+                    <text x="299.687" y="75"  font-size="200">&#98;</text>
+                    <text x="361.796" y="175"  font-size="200">&#98;</text>
+                </g>
+            </g>
+            <g transform="translate(474.213, 4890.24)">
+                <g style="stroke-width:4">
+                    <line x1="517.46" y1="0" x2="1508.79" y2="0"></line>
+                    <line x1="517.46" y1="50" x2="1508.79" y2="50"></line>
+                    <line x1="517.46" y1="100" x2="1508.79" y2="100"></line>
+                    <line x1="517.46" y1="150" x2="1508.79" y2="150"></line>
+                    <line x1="517.46" y1="200" x2="1508.79" y2="200"></line>
+                    <line x1="1508.79" y1="0" x2="1613.5" y2="0"></line>
+                    <line x1="1508.79" y1="50" x2="1613.5" y2="50"></line>
+                    <line x1="1508.79" y1="100" x2="1613.5" y2="100"></line>
+                    <line x1="1508.79" y1="150" x2="1613.5" y2="150"></line>
+                    <line x1="1508.79" y1="200" x2="1613.5" y2="200"></line>
+                </g>
+            </g>
+            <g transform="translate(474.213, 4890.24)">
+                <g style="stroke-width:4">
+                    <line x1="517.46" y1="-150" x2="1390.83" y2="-175"></line>
+                    <line x1="517.46" y1="-150" x2="1390.83" y2="-125"></line>
+                </g>
+                <g font-family="Times">
+                    <text x="517.46" y="275" text-anchor="middle" dominant-baseline="hanging" font-size="100">
+                        heur,
+                    </text>
+                </g>
+                <g font-family="Guido2">
+                    <text x="487.577" y="75"  font-size="200">&#88;</text>
+                    <text x="487.46" y="83.3333"  font-size="200">&#104;</text>
+                    <text x="487.46" y="100"  font-size="200">&#104;</text>
+                    <text x="487.46" y="125"  font-size="200">&#104;</text>
+                    <text x="487.46" y="150"  font-size="200">&#104;</text>
+                    <text x="487.46" y="175"  font-size="200">&#104;</text>
+                    <text x="487.46" y="200"  font-size="200">&#104;</text>
+                    <text x="487.46" y="200"  font-size="200">&#104;</text>
+                    <text x="562.46" y="75"  font-size="200">&#46;</text>
+                </g>
+                <g font-family="Times">
+                    <text x="993.845" y="275" text-anchor="middle" dominant-baseline="hanging" font-size="100">
+                        ar-
+                    </text>
+                </g>
+                <g font-family="Guido2">
+                    <text x="963.962" y="75"  font-size="200">&#88;</text>
+                    <text x="963.845" y="83.3333"  font-size="200">&#104;</text>
+                    <text x="963.845" y="100"  font-size="200">&#104;</text>
+                    <text x="963.845" y="125"  font-size="200">&#104;</text>
+                    <text x="963.845" y="150"  font-size="200">&#104;</text>
+                    <text x="963.845" y="175"  font-size="200">&#104;</text>
+                    <text x="963.845" y="200"  font-size="200">&#104;</text>
+                    <text x="963.845" y="200"  font-size="200">&#104;</text>
+                    <text x="963.845" y="250"  font-size="200">&#74;</text>
+                </g>
+                <g font-family="Times">
+                    <text x="1152.64" y="275" text-anchor="middle" dominant-baseline="hanging" font-size="100">
+                        dent
+                    </text>
+                </g>
+                <g font-family="Guido2">
+                    <text x="1122.76" y="100"  font-size="200">&#88;</text>
+                    <text x="1122.64" y="108.333"  font-size="200">&#104;</text>
+                    <text x="1122.64" y="125"  font-size="200">&#104;</text>
+                    <text x="1122.64" y="150"  font-size="200">&#104;</text>
+                    <text x="1122.64" y="175"  font-size="200">&#104;</text>
+                    <text x="1122.64" y="200"  font-size="200">&#104;</text>
+                    <text x="1122.64" y="225"  font-size="200">&#104;</text>
+                    <text x="1122.64" y="225"  font-size="200">&#104;</text>
+                    <text x="1122.64" y="275"  font-size="200">&#74;</text>
+                    <text x="1197.64" y="75"  font-size="200">&#46;</text>
+                </g>
+                <g font-family="Times">
+                    <text x="1390.83" y="275" text-anchor="middle" dominant-baseline="hanging" font-size="100">
+                        mi-
+                    </text>
+                </g>
+                <g font-family="Guido2">
+                    <text x="1360.95" y="125"  font-size="200">&#88;</text>
+                    <text x="1360.83" y="116.667"  font-size="200">&#120;</text>
+                    <text x="1360.83" y="100"  font-size="200">&#120;</text>
+                    <text x="1360.83" y="75"  font-size="200">&#120;</text>
+                    <text x="1360.83" y="50"  font-size="200">&#120;</text>
+                    <text x="1360.83" y="25"  font-size="200">&#120;</text>
+                    <text x="1360.83" y="0"  font-size="200">&#120;</text>
+                    <text x="1360.83" y="0"  font-size="200">&#120;</text>
+                    <text x="1360.83" y="-50"  font-size="200">&#107;</text>
+                    <text x="1296.11" y="125"  font-size="200">&#110;</text>
+                </g>
+            </g>
+            <g transform="translate(474.213, 4890.24)">
+                <g style="stroke-width:4">
+                    <line x1="517.46" y1="455" x2="1508.79" y2="455"></line>
+                    <line x1="517.46" y1="505" x2="1508.79" y2="505"></line>
+                    <line x1="517.46" y1="555" x2="1508.79" y2="555"></line>
+                    <line x1="517.46" y1="605" x2="1508.79" y2="605"></line>
+                    <line x1="517.46" y1="655" x2="1508.79" y2="655"></line>
+                    <line x1="1508.79" y1="455" x2="1613.5" y2="455"></line>
+                    <line x1="1508.79" y1="505" x2="1613.5" y2="505"></line>
+                    <line x1="1508.79" y1="555" x2="1613.5" y2="555"></line>
+                    <line x1="1508.79" y1="605" x2="1613.5" y2="605"></line>
+                    <line x1="1508.79" y1="655" x2="1613.5" y2="655"></line>
+                </g>
+            </g>
+            <g transform="translate(474.213, 5345.24)">
+                <polygon points="543.46 25  543.46 47.5  1345.43 22.5  1345.43 0  "></polygon>
+                <polygon points="543.46 27.5  543.46 47.5  1345.43 22.7494  1345.43 2.74939  "></polygon>
+                <g font-family="Guido2">
+                    <text x="487.46" y="291.667"  font-size="200">&#120;</text>
+                    <text x="487.46" y="275"  font-size="200">&#120;</text>
+                    <text x="487.46" y="250"  font-size="200">&#120;</text>
+                    <text x="487.46" y="225"  font-size="200">&#120;</text>
+                    <text x="487.46" y="200"  font-size="200">&#120;</text>
+                    <text x="487.46" y="175"  font-size="200">&#120;</text>
+                    <text x="487.46" y="150"  font-size="200">&#120;</text>
+                    <text x="487.46" y="125"  font-size="200">&#120;</text>
+                    <text x="487.46" y="100"  font-size="200">&#120;</text>
+                    <text x="487.46" y="77.5"  font-size="200">&#120;</text>
+                    <text x="466.46" y="250"  font-size="200">&#95;</text>
+                    <text x="466.46" y="300"  font-size="200">&#95;</text>
+                    <text x="487.577" y="300"  font-size="200">&#88;</text>
+                    <text x="466.46" y="250"  font-size="200">&#95;</text>
+                    <text x="487.577" y="250"  font-size="200">&#88;</text>
+                    <text x="487.577" y="200"  font-size="200">&#88;</text>
+                    <text x="422.733" y="200"  font-size="200">&#110;</text>
+                    <text x="646.255" y="291.667"  font-size="200">&#120;</text>
+                    <text x="646.255" y="275"  font-size="200">&#120;</text>
+                    <text x="646.255" y="250"  font-size="200">&#120;</text>
+                    <text x="646.255" y="225"  font-size="200">&#120;</text>
+                    <text x="646.255" y="200"  font-size="200">&#120;</text>
+                    <text x="646.255" y="175"  font-size="200">&#120;</text>
+                    <text x="646.255" y="150"  font-size="200">&#120;</text>
+                    <text x="646.255" y="125"  font-size="200">&#120;</text>
+                    <text x="646.255" y="100"  font-size="200">&#120;</text>
+                    <text x="646.255" y="75"  font-size="200">&#120;</text>
+                    <text x="646.255" y="72.5499"  font-size="200">&#120;</text>
+                    <text x="625.255" y="250"  font-size="200">&#95;</text>
+                    <text x="625.255" y="300"  font-size="200">&#95;</text>
+                    <text x="646.372" y="300"  font-size="200">&#88;</text>
+                    <text x="625.255" y="250"  font-size="200">&#95;</text>
+                    <text x="646.372" y="250"  font-size="200">&#88;</text>
+                    <text x="646.372" y="200"  font-size="200">&#88;</text>
+                    <text x="805.05" y="291.667"  font-size="200">&#120;</text>
+                    <text x="805.05" y="275"  font-size="200">&#120;</text>
+                    <text x="805.05" y="250"  font-size="200">&#120;</text>
+                    <text x="805.05" y="225"  font-size="200">&#120;</text>
+                    <text x="805.05" y="200"  font-size="200">&#120;</text>
+                    <text x="805.05" y="175"  font-size="200">&#120;</text>
+                    <text x="805.05" y="150"  font-size="200">&#120;</text>
+                    <text x="805.05" y="125"  font-size="200">&#120;</text>
+                    <text x="805.05" y="100"  font-size="200">&#120;</text>
+                    <text x="805.05" y="75"  font-size="200">&#120;</text>
+                    <text x="805.05" y="67.5998"  font-size="200">&#120;</text>
+                    <text x="784.05" y="250"  font-size="200">&#95;</text>
+                    <text x="784.05" y="300"  font-size="200">&#95;</text>
+                    <text x="805.167" y="300"  font-size="200">&#88;</text>
+                    <text x="784.05" y="250"  font-size="200">&#95;</text>
+                    <text x="805.167" y="250"  font-size="200">&#88;</text>
+                    <text x="805.167" y="200"  font-size="200">&#88;</text>
+                    <text x="963.845" y="291.667"  font-size="200">&#120;</text>
+                    <text x="963.845" y="275"  font-size="200">&#120;</text>
+                    <text x="963.845" y="250"  font-size="200">&#120;</text>
+                    <text x="963.845" y="225"  font-size="200">&#120;</text>
+                    <text x="963.845" y="200"  font-size="200">&#120;</text>
+                    <text x="963.845" y="175"  font-size="200">&#120;</text>
+                    <text x="963.845" y="150"  font-size="200">&#120;</text>
+                    <text x="963.845" y="125"  font-size="200">&#120;</text>
+                    <text x="963.845" y="100"  font-size="200">&#120;</text>
+                    <text x="963.845" y="75"  font-size="200">&#120;</text>
+                    <text x="963.845" y="62.6496"  font-size="200">&#120;</text>
+                    <text x="942.845" y="250"  font-size="200">&#95;</text>
+                    <text x="942.845" y="300"  font-size="200">&#95;</text>
+                    <text x="963.962" y="300"  font-size="200">&#88;</text>
+                    <text x="942.845" y="250"  font-size="200">&#95;</text>
+                    <text x="963.962" y="250"  font-size="200">&#88;</text>
+                    <text x="963.962" y="200"  font-size="200">&#88;</text>
+                    <text x="1122.64" y="291.667"  font-size="200">&#120;</text>
+                    <text x="1122.64" y="275"  font-size="200">&#120;</text>
+                    <text x="1122.64" y="250"  font-size="200">&#120;</text>
+                    <text x="1122.64" y="225"  font-size="200">&#120;</text>
+                    <text x="1122.64" y="200"  font-size="200">&#120;</text>
+                    <text x="1122.64" y="175"  font-size="200">&#120;</text>
+                    <text x="1122.64" y="150"  font-size="200">&#120;</text>
+                    <text x="1122.64" y="125"  font-size="200">&#120;</text>
+                    <text x="1122.64" y="100"  font-size="200">&#120;</text>
+                    <text x="1122.64" y="75"  font-size="200">&#120;</text>
+                    <text x="1122.64" y="57.6995"  font-size="200">&#120;</text>
+                    <text x="1101.64" y="250"  font-size="200">&#95;</text>
+                    <text x="1101.64" y="300"  font-size="200">&#95;</text>
+                    <text x="1122.76" y="300"  font-size="200">&#88;</text>
+                    <text x="1101.64" y="250"  font-size="200">&#95;</text>
+                    <text x="1122.76" y="250"  font-size="200">&#88;</text>
+                    <text x="1122.76" y="175"  font-size="200">&#88;</text>
+                    <text x="1281.43" y="291.667"  font-size="200">&#120;</text>
+                    <text x="1281.43" y="275"  font-size="200">&#120;</text>
+                    <text x="1281.43" y="250"  font-size="200">&#120;</text>
+                    <text x="1281.43" y="225"  font-size="200">&#120;</text>
+                    <text x="1281.43" y="200"  font-size="200">&#120;</text>
+                    <text x="1281.43" y="175"  font-size="200">&#120;</text>
+                    <text x="1281.43" y="150"  font-size="200">&#120;</text>
+                    <text x="1281.43" y="125"  font-size="200">&#120;</text>
+                    <text x="1281.43" y="100"  font-size="200">&#120;</text>
+                    <text x="1281.43" y="75"  font-size="200">&#120;</text>
+                    <text x="1281.43" y="52.7494"  font-size="200">&#120;</text>
+                    <text x="1260.43" y="250"  font-size="200">&#95;</text>
+                    <text x="1260.43" y="300"  font-size="200">&#95;</text>
+                    <text x="1281.55" y="300"  font-size="200">&#88;</text>
+                    <text x="1260.43" y="250"  font-size="200">&#95;</text>
+                    <text x="1281.55" y="250"  font-size="200">&#88;</text>
+                    <text x="1281.55" y="175"  font-size="200">&#88;</text>
+                </g>
+            </g>
+            <g transform="translate(474.213, 4890.24)">
+                <g style="stroke-width:4">
+                    <line x1="517.46" y1="955" x2="1508.79" y2="955"></line>
+                    <line x1="517.46" y1="1005" x2="1508.79" y2="1005"></line>
+                    <line x1="517.46" y1="1055" x2="1508.79" y2="1055"></line>
+                    <line x1="517.46" y1="1105" x2="1508.79" y2="1105"></line>
+                    <line x1="517.46" y1="1155" x2="1508.79" y2="1155"></line>
+                    <line x1="1508.79" y1="955" x2="1613.5" y2="955"></line>
+                    <line x1="1508.79" y1="1005" x2="1613.5" y2="1005"></line>
+                    <line x1="1508.79" y1="1055" x2="1613.5" y2="1055"></line>
+                    <line x1="1508.79" y1="1105" x2="1613.5" y2="1105"></line>
+                    <line x1="1508.79" y1="1155" x2="1613.5" y2="1155"></line>
+                </g>
+            </g>
+            <g transform="translate(474.213, 5845.24)">
+                <g font-family="Guido2">
+                    <text x="487.46" y="341.667"  font-size="200">&#120;</text>
+                    <text x="487.46" y="325"  font-size="200">&#120;</text>
+                    <text x="487.46" y="300"  font-size="200">&#120;</text>
+                    <text x="487.46" y="275"  font-size="200">&#120;</text>
+                    <text x="487.46" y="250"  font-size="200">&#120;</text>
+                    <text x="487.46" y="225"  font-size="200">&#120;</text>
+                    <text x="487.46" y="200"  font-size="200">&#120;</text>
+                    <text x="487.46" y="175"  font-size="200">&#120;</text>
+                    <text x="487.46" y="150"  font-size="200">&#120;</text>
+                    <text x="487.46" y="125"  font-size="200">&#120;</text>
+                    <text x="487.46" y="100"  font-size="200">&#120;</text>
+                    <text x="487.46" y="75"  font-size="200">&#120;</text>
+                    <text x="487.46" y="50"  font-size="200">&#120;</text>
+                    <text x="487.46" y="50"  font-size="200">&#120;</text>
+                    <text x="487.577" y="175"  font-size="200">&#69;</text>
+                    <text x="466.46" y="250"  font-size="200">&#95;</text>
+                    <text x="466.46" y="300"  font-size="200">&#95;</text>
+                    <text x="466.46" y="350"  font-size="200">&#95;</text>
+                    <text x="487.577" y="350"  font-size="200">&#69;</text>
+                    <text x="1122.64" y="441.667"  font-size="200">&#120;</text>
+                    <text x="1122.64" y="425"  font-size="200">&#120;</text>
+                    <text x="1122.64" y="400"  font-size="200">&#120;</text>
+                    <text x="1122.64" y="375"  font-size="200">&#120;</text>
+                    <text x="1122.64" y="350"  font-size="200">&#120;</text>
+                    <text x="1122.64" y="325"  font-size="200">&#120;</text>
+                    <text x="1122.64" y="300"  font-size="200">&#120;</text>
+                    <text x="1122.64" y="275"  font-size="200">&#120;</text>
+                    <text x="1122.64" y="250"  font-size="200">&#120;</text>
+                    <text x="1122.64" y="225"  font-size="200">&#120;</text>
+                    <text x="1122.64" y="200"  font-size="200">&#120;</text>
+                    <text x="1122.64" y="175"  font-size="200">&#120;</text>
+                    <text x="1122.64" y="150"  font-size="200">&#120;</text>
+                    <text x="1122.64" y="150"  font-size="200">&#120;</text>
+                    <text x="1101.64" y="250"  font-size="200">&#95;</text>
+                    <text x="1122.76" y="275"  font-size="200">&#88;</text>
+                    <text x="1065.65" y="275"  font-size="200">&#98;</text>
+                    <text x="1101.64" y="250"  font-size="200">&#95;</text>
+                    <text x="1101.64" y="300"  font-size="200">&#95;</text>
+                    <text x="1101.64" y="350"  font-size="200">&#95;</text>
+                    <text x="1101.64" y="400"  font-size="200">&#95;</text>
+                    <text x="1101.64" y="450"  font-size="200">&#95;</text>
+                    <text x="1122.76" y="450"  font-size="200">&#88;</text>
+                    <text x="1065.65" y="450"  font-size="200">&#98;</text>
+                </g>
+            </g>
+            <g transform="translate(474.213, 4890.24)">
+                <g style="stroke-width:4">
+                    <line x1="1613.5" y1="0" x2="2716.88" y2="0"></line>
+                    <line x1="1613.5" y1="50" x2="2716.88" y2="50"></line>
+                    <line x1="1613.5" y1="100" x2="2716.88" y2="100"></line>
+                    <line x1="1613.5" y1="150" x2="2716.88" y2="150"></line>
+                    <line x1="1613.5" y1="200" x2="2716.88" y2="200"></line>
+                    <line x1="2716.88" y1="0" x2="2821.58" y2="0"></line>
+                    <line x1="2716.88" y1="50" x2="2821.58" y2="50"></line>
+                    <line x1="2716.88" y1="100" x2="2821.58" y2="100"></line>
+                    <line x1="2716.88" y1="150" x2="2821.58" y2="150"></line>
+                    <line x1="2716.88" y1="200" x2="2821.58" y2="200"></line>
+                </g>
+            </g>
+            <g transform="translate(474.213, 4890.24)">
+                <g style="stroke-width:4">
+                    <line x1="1613.5" y1="-175" x2="2584.45" y2="-150"></line>
+                    <line x1="1613.5" y1="-125" x2="2584.45" y2="-150"></line>
+                </g>
+                <g font-family="Times">
+                    <text x="1613.5" y="275" text-anchor="middle" dominant-baseline="hanging" font-size="100">
+                        ra-
+                    </text>
+                    <polygon points="1650.88 162.5  1650.88 162.5  1658.64 165.613  1666.89 168.466  1675.58 171.06  1684.68 173.395  1694.13 175.47  1703.91 177.286  1713.96 178.842  1724.25 180.139  1734.73 181.177  1745.35 181.955  1756.09 182.474  1766.88 182.733  1777.7 182.733  1788.5 182.474  1799.23 181.955  1809.86 181.177  1820.33 180.139  1830.62 178.842  1840.67 177.286  1850.45 175.47  1859.91 173.395  1869.01 171.06  1877.7 168.466  1885.95 165.613  1893.7 162.5  1893.7 162.5  1893.7 162.5  1886.07 166.765  1877.92 170.674  1869.29 174.228  1860.24 177.427  1850.79 180.27  1841.01 182.758  1830.94 184.89  1820.61 186.667  1810.09 188.089  1799.4 189.155  1788.6 189.866  1777.74 190.221  1766.85 190.221  1755.98 189.866  1745.18 189.155  1734.5 188.089  1723.97 186.667  1713.65 184.89  1703.57 182.758  1693.79 180.27  1684.35 177.427  1675.29 174.228  1666.66 170.674  1658.51 166.765  1650.88 162.5  "></polygon>
+                </g>
+                <g font-family="Guido2">
+                    <text x="1583.61" y="150"  font-size="200">&#88;</text>
+                    <text x="1583.5" y="141.667"  font-size="200">&#120;</text>
+                    <text x="1583.5" y="125"  font-size="200">&#120;</text>
+                    <text x="1583.5" y="100"  font-size="200">&#120;</text>
+                    <text x="1583.5" y="75"  font-size="200">&#120;</text>
+                    <text x="1583.5" y="50"  font-size="200">&#120;</text>
+                    <text x="1583.5" y="25"  font-size="200">&#120;</text>
+                    <text x="1583.5" y="25"  font-size="200">&#120;</text>
+                    <polygon points="1931.09 -25  1931.09 -25  1951.93 -38.2486  1974.08 -50.51  1997.45 -61.7798  2021.9 -72.0538  2047.32 -81.3274  2073.6 -89.5963  2100.64 -96.8563  2128.3 -103.103  2156.48 -108.331  2185.06 -112.538  2213.94 -115.718  2242.98 -117.867  2272.09 -118.981  2301.14 -119.055  2330.03 -118.085  2358.63 -116.066  2386.83 -112.995  2414.52 -108.867  2441.59 -103.677  2467.92 -97.421  2493.39 -90.0949  2517.89 -81.6941  2541.31 -72.2142  2563.54 -61.651  2584.45 -50  2584.45 -50  2584.45 -50  2563.83 -62.8152  2541.82 -74.4434  2518.54 -84.8893  2494.11 -94.1576  2468.66 -102.253  2442.29 -109.18  2415.14 -114.943  2387.33 -119.547  2358.98 -122.997  2330.21 -125.297  2301.14 -126.452  2271.9 -126.467  2242.6 -125.346  2213.37 -123.094  2184.33 -119.715  2155.6 -115.215  2127.3 -109.597  2099.55 -102.867  2072.48 -95.0295  2046.21 -86.0886  2020.86 -76.0492  1996.55 -64.916  1973.41 -52.6936  1951.54 -39.3867  1931.09 -25  "></polygon>
+                    <polygon points="1956.97 -48.8656  1956.97 -26.3656  2221.31 -52.8  2221.31 -75.3  "></polygon>
+                    <polygon points="1956.97 -46.3656  1956.97 -26.3656  2221.31 -52.5  2221.31 -72.5  "></polygon>
+                </g>
+                <g font-family="Times New Roman" font-style="italic">
+                    <text x="2063.25" y="268" text-anchor="middle" font-size="80">
+                        3
+                    </text>
+                    <g style="stroke-width:4">
+                    </g>
+                </g>
+                <g font-family="Guido2">
+                    <text x="1901.2" y="150"  font-size="200">&#88;</text>
+                    <text x="1901.09" y="141.667"  font-size="200">&#120;</text>
+                    <text x="1901.09" y="125"  font-size="200">&#120;</text>
+                    <text x="1901.09" y="100"  font-size="200">&#120;</text>
+                    <text x="1901.09" y="75"  font-size="200">&#120;</text>
+                    <text x="1901.09" y="50"  font-size="200">&#120;</text>
+                    <text x="1901.09" y="25"  font-size="200">&#120;</text>
+                    <text x="1901.09" y="3.63437"  font-size="200">&#120;</text>
+                </g>
+                <g font-family="Times">
+                    <text x="2061.76" y="275" text-anchor="middle" dominant-baseline="hanging" font-size="100">
+                        -
+                    </text>
+                </g>
+                <g font-family="Guido2">
+                    <text x="2031.88" y="125"  font-size="200">&#88;</text>
+                    <text x="2031.76" y="116.667"  font-size="200">&#120;</text>
+                    <text x="2031.76" y="100"  font-size="200">&#120;</text>
+                    <text x="2031.76" y="75"  font-size="200">&#120;</text>
+                    <text x="2031.76" y="50"  font-size="200">&#120;</text>
+                    <text x="2031.76" y="25"  font-size="200">&#120;</text>
+                    <text x="2031.76" y="0"  font-size="200">&#120;</text>
+                    <text x="2031.76" y="-9.43282"  font-size="200">&#120;</text>
+                    <text x="2162.55" y="100"  font-size="200">&#88;</text>
+                    <text x="2162.43" y="91.6667"  font-size="200">&#120;</text>
+                    <text x="2162.43" y="75"  font-size="200">&#120;</text>
+                    <text x="2162.43" y="50"  font-size="200">&#120;</text>
+                    <text x="2162.43" y="25"  font-size="200">&#120;</text>
+                    <text x="2162.43" y="0"  font-size="200">&#120;</text>
+                    <text x="2162.43" y="-22.5"  font-size="200">&#120;</text>
+                    <polygon points="2293.22 300  2293.22 277.5  2559.56 250.866  2559.56 273.366  "></polygon>
+                    <polygon points="2293.22 297.5  2293.22 277.5  2559.56 251.366  2559.56 271.366  "></polygon>
+                </g>
+                <g font-family="Times New Roman" font-style="italic">
+                    <text x="2455.27" y="-32" text-anchor="middle" font-size="80">
+                        3
+                    </text>
+                    <g style="stroke-width:4">
+                    </g>
+                </g>
+                <g font-family="Guido2">
+                    <text x="2293.22" y="125"  font-size="200">&#88;</text>
+                    <text x="2293.1" y="133.333"  font-size="200">&#104;</text>
+                    <text x="2293.1" y="150"  font-size="200">&#104;</text>
+                    <text x="2293.1" y="175"  font-size="200">&#104;</text>
+                    <text x="2293.1" y="200"  font-size="200">&#104;</text>
+                    <text x="2293.1" y="225"  font-size="200">&#104;</text>
+                    <text x="2293.1" y="247.5"  font-size="200">&#104;</text>
+                </g>
+                <g font-family="Times">
+                    <text x="2453.77" y="275" text-anchor="middle" dominant-baseline="hanging" font-size="100">
+                        -
+                    </text>
+                </g>
+                <g font-family="Guido2">
+                    <text x="2423.89" y="100"  font-size="200">&#88;</text>
+                    <text x="2423.77" y="108.333"  font-size="200">&#104;</text>
+                    <text x="2423.77" y="125"  font-size="200">&#104;</text>
+                    <text x="2423.77" y="150"  font-size="200">&#104;</text>
+                    <text x="2423.77" y="175"  font-size="200">&#104;</text>
+                    <text x="2423.77" y="200"  font-size="200">&#104;</text>
+                    <text x="2423.77" y="225"  font-size="200">&#104;</text>
+                    <text x="2423.77" y="234.433"  font-size="200">&#104;</text>
+                    <text x="2554.56" y="75"  font-size="200">&#88;</text>
+                    <text x="2554.45" y="83.3333"  font-size="200">&#104;</text>
+                    <text x="2554.45" y="100"  font-size="200">&#104;</text>
+                    <text x="2554.45" y="125"  font-size="200">&#104;</text>
+                    <text x="2554.45" y="150"  font-size="200">&#104;</text>
+                    <text x="2554.45" y="175"  font-size="200">&#104;</text>
+                    <text x="2554.45" y="200"  font-size="200">&#104;</text>
+                    <text x="2554.45" y="221.366"  font-size="200">&#104;</text>
+                </g>
+            </g>
+            <g transform="translate(474.213, 4890.24)">
+                <g style="stroke-width:4">
+                    <line x1="1613.5" y1="455" x2="2716.88" y2="455"></line>
+                    <line x1="1613.5" y1="505" x2="2716.88" y2="505"></line>
+                    <line x1="1613.5" y1="555" x2="2716.88" y2="555"></line>
+                    <line x1="1613.5" y1="605" x2="2716.88" y2="605"></line>
+                    <line x1="1613.5" y1="655" x2="2716.88" y2="655"></line>
+                    <line x1="2716.88" y1="455" x2="2821.58" y2="455"></line>
+                    <line x1="2716.88" y1="505" x2="2821.58" y2="505"></line>
+                    <line x1="2716.88" y1="555" x2="2821.58" y2="555"></line>
+                    <line x1="2716.88" y1="605" x2="2821.58" y2="605"></line>
+                    <line x1="2716.88" y1="655" x2="2821.58" y2="655"></line>
+                </g>
+            </g>
+            <g transform="translate(474.213, 5345.24)">
+                <polygon points="1639.5 50  1639.5 72.5  2553.11 72.5  2553.11 50  "></polygon>
+                <polygon points="1639.5 52.5  1639.5 72.5  2553.11 72.5  2553.11 52.5  "></polygon>
+                <g font-family="Guido2">
+                    <text x="1583.5" y="341.667"  font-size="200">&#120;</text>
+                    <text x="1583.5" y="325"  font-size="200">&#120;</text>
+                    <text x="1583.5" y="300"  font-size="200">&#120;</text>
+                    <text x="1583.5" y="275"  font-size="200">&#120;</text>
+                    <text x="1583.5" y="250"  font-size="200">&#120;</text>
+                    <text x="1583.5" y="225"  font-size="200">&#120;</text>
+                    <text x="1583.5" y="200"  font-size="200">&#120;</text>
+                    <text x="1583.5" y="175"  font-size="200">&#120;</text>
+                    <text x="1583.5" y="150"  font-size="200">&#120;</text>
+                    <text x="1583.5" y="125"  font-size="200">&#120;</text>
+                    <text x="1583.5" y="102.5"  font-size="200">&#120;</text>
+                    <text x="1562.5" y="250"  font-size="200">&#95;</text>
+                    <text x="1562.5" y="300"  font-size="200">&#95;</text>
+                    <text x="1562.5" y="350"  font-size="200">&#95;</text>
+                    <text x="1583.61" y="350"  font-size="200">&#88;</text>
+                    <text x="1562.5" y="250"  font-size="200">&#95;</text>
+                    <text x="1562.5" y="300"  font-size="200">&#95;</text>
+                    <text x="1638.61" y="325"  font-size="200">&#88;</text>
+                    <text x="1562.5" y="250"  font-size="200">&#95;</text>
+                    <text x="1583.61" y="275"  font-size="200">&#88;</text>
+                    <text x="1518.77" y="275"  font-size="200">&#110;</text>
+                    <text x="1583.61" y="225"  font-size="200">&#88;</text>
+                    <text x="1742.29" y="341.667"  font-size="200">&#120;</text>
+                    <text x="1742.29" y="325"  font-size="200">&#120;</text>
+                    <text x="1742.29" y="300"  font-size="200">&#120;</text>
+                    <text x="1742.29" y="275"  font-size="200">&#120;</text>
+                    <text x="1742.29" y="250"  font-size="200">&#120;</text>
+                    <text x="1742.29" y="225"  font-size="200">&#120;</text>
+                    <text x="1742.29" y="200"  font-size="200">&#120;</text>
+                    <text x="1742.29" y="175"  font-size="200">&#120;</text>
+                    <text x="1742.29" y="150"  font-size="200">&#120;</text>
+                    <text x="1742.29" y="125"  font-size="200">&#120;</text>
+                    <text x="1742.29" y="102.5"  font-size="200">&#120;</text>
+                    <text x="1721.29" y="250"  font-size="200">&#95;</text>
+                    <text x="1721.29" y="300"  font-size="200">&#95;</text>
+                    <text x="1721.29" y="350"  font-size="200">&#95;</text>
+                    <text x="1742.41" y="350"  font-size="200">&#88;</text>
+                    <text x="1721.29" y="250"  font-size="200">&#95;</text>
+                    <text x="1721.29" y="300"  font-size="200">&#95;</text>
+                    <text x="1797.41" y="325"  font-size="200">&#88;</text>
+                    <text x="1721.29" y="250"  font-size="200">&#95;</text>
+                    <text x="1742.41" y="275"  font-size="200">&#88;</text>
+                    <text x="1742.41" y="225"  font-size="200">&#88;</text>
+                    <text x="1901.09" y="341.667"  font-size="200">&#120;</text>
+                    <text x="1901.09" y="325"  font-size="200">&#120;</text>
+                    <text x="1901.09" y="300"  font-size="200">&#120;</text>
+                    <text x="1901.09" y="275"  font-size="200">&#120;</text>
+                    <text x="1901.09" y="250"  font-size="200">&#120;</text>
+                    <text x="1901.09" y="225"  font-size="200">&#120;</text>
+                    <text x="1901.09" y="200"  font-size="200">&#120;</text>
+                    <text x="1901.09" y="175"  font-size="200">&#120;</text>
+                    <text x="1901.09" y="150"  font-size="200">&#120;</text>
+                    <text x="1901.09" y="125"  font-size="200">&#120;</text>
+                    <text x="1901.09" y="102.5"  font-size="200">&#120;</text>
+                    <text x="1880.09" y="250"  font-size="200">&#95;</text>
+                    <text x="1880.09" y="300"  font-size="200">&#95;</text>
+                    <text x="1880.09" y="350"  font-size="200">&#95;</text>
+                    <text x="1901.2" y="350"  font-size="200">&#88;</text>
+                    <text x="1880.09" y="250"  font-size="200">&#95;</text>
+                    <text x="1880.09" y="300"  font-size="200">&#95;</text>
+                    <text x="1956.2" y="325"  font-size="200">&#88;</text>
+                    <text x="1880.09" y="250"  font-size="200">&#95;</text>
+                    <text x="1901.2" y="275"  font-size="200">&#88;</text>
+                    <text x="1901.2" y="225"  font-size="200">&#88;</text>
+                    <text x="2097.09" y="341.667"  font-size="200">&#120;</text>
+                    <text x="2097.09" y="325"  font-size="200">&#120;</text>
+                    <text x="2097.09" y="300"  font-size="200">&#120;</text>
+                    <text x="2097.09" y="275"  font-size="200">&#120;</text>
+                    <text x="2097.09" y="250"  font-size="200">&#120;</text>
+                    <text x="2097.09" y="225"  font-size="200">&#120;</text>
+                    <text x="2097.09" y="200"  font-size="200">&#120;</text>
+                    <text x="2097.09" y="175"  font-size="200">&#120;</text>
+                    <text x="2097.09" y="150"  font-size="200">&#120;</text>
+                    <text x="2097.09" y="125"  font-size="200">&#120;</text>
+                    <text x="2097.09" y="102.5"  font-size="200">&#120;</text>
+                    <text x="2076.09" y="250"  font-size="200">&#95;</text>
+                    <text x="2076.09" y="300"  font-size="200">&#95;</text>
+                    <text x="2076.09" y="350"  font-size="200">&#95;</text>
+                    <text x="2097.21" y="350"  font-size="200">&#88;</text>
+                    <text x="2076.09" y="250"  font-size="200">&#95;</text>
+                    <text x="2076.09" y="300"  font-size="200">&#95;</text>
+                    <text x="2152.21" y="325"  font-size="200">&#88;</text>
+                    <text x="2076.09" y="250"  font-size="200">&#95;</text>
+                    <text x="2097.21" y="275"  font-size="200">&#88;</text>
+                    <text x="2097.21" y="225"  font-size="200">&#88;</text>
+                    <text x="2293.1" y="341.667"  font-size="200">&#120;</text>
+                    <text x="2293.1" y="325"  font-size="200">&#120;</text>
+                    <text x="2293.1" y="300"  font-size="200">&#120;</text>
+                    <text x="2293.1" y="275"  font-size="200">&#120;</text>
+                    <text x="2293.1" y="250"  font-size="200">&#120;</text>
+                    <text x="2293.1" y="225"  font-size="200">&#120;</text>
+                    <text x="2293.1" y="200"  font-size="200">&#120;</text>
+                    <text x="2293.1" y="175"  font-size="200">&#120;</text>
+                    <text x="2293.1" y="150"  font-size="200">&#120;</text>
+                    <text x="2293.1" y="125"  font-size="200">&#120;</text>
+                    <text x="2293.1" y="102.5"  font-size="200">&#120;</text>
+                    <text x="2272.1" y="250"  font-size="200">&#95;</text>
+                    <text x="2272.1" y="300"  font-size="200">&#95;</text>
+                    <text x="2272.1" y="350"  font-size="200">&#95;</text>
+                    <text x="2293.22" y="350"  font-size="200">&#88;</text>
+                    <text x="2272.1" y="250"  font-size="200">&#95;</text>
+                    <text x="2272.1" y="300"  font-size="200">&#95;</text>
+                    <text x="2293.22" y="300"  font-size="200">&#88;</text>
+                    <text x="2272.1" y="250"  font-size="200">&#95;</text>
+                    <text x="2293.22" y="250"  font-size="200">&#88;</text>
+                    <text x="2348.22" y="225"  font-size="200">&#88;</text>
+                    <text x="2489.11" y="341.667"  font-size="200">&#120;</text>
+                    <text x="2489.11" y="325"  font-size="200">&#120;</text>
+                    <text x="2489.11" y="300"  font-size="200">&#120;</text>
+                    <text x="2489.11" y="275"  font-size="200">&#120;</text>
+                    <text x="2489.11" y="250"  font-size="200">&#120;</text>
+                    <text x="2489.11" y="225"  font-size="200">&#120;</text>
+                    <text x="2489.11" y="200"  font-size="200">&#120;</text>
+                    <text x="2489.11" y="175"  font-size="200">&#120;</text>
+                    <text x="2489.11" y="150"  font-size="200">&#120;</text>
+                    <text x="2489.11" y="125"  font-size="200">&#120;</text>
+                    <text x="2489.11" y="102.5"  font-size="200">&#120;</text>
+                    <text x="2468.11" y="250"  font-size="200">&#95;</text>
+                    <text x="2468.11" y="300"  font-size="200">&#95;</text>
+                    <text x="2468.11" y="350"  font-size="200">&#95;</text>
+                    <text x="2489.23" y="350"  font-size="200">&#88;</text>
+                    <text x="2468.11" y="250"  font-size="200">&#95;</text>
+                    <text x="2468.11" y="300"  font-size="200">&#95;</text>
+                    <text x="2489.23" y="300"  font-size="200">&#88;</text>
+                    <text x="2468.11" y="250"  font-size="200">&#95;</text>
+                    <text x="2489.23" y="250"  font-size="200">&#88;</text>
+                    <text x="2544.23" y="225"  font-size="200">&#88;</text>
+                </g>
+            </g>
+            <g transform="translate(474.213, 4890.24)">
+                <g style="stroke-width:4">
+                    <line x1="1613.5" y1="955" x2="2716.88" y2="955"></line>
+                    <line x1="1613.5" y1="1005" x2="2716.88" y2="1005"></line>
+                    <line x1="1613.5" y1="1055" x2="2716.88" y2="1055"></line>
+                    <line x1="1613.5" y1="1105" x2="2716.88" y2="1105"></line>
+                    <line x1="1613.5" y1="1155" x2="2716.88" y2="1155"></line>
+                    <line x1="2716.88" y1="955" x2="2821.58" y2="955"></line>
+                    <line x1="2716.88" y1="1005" x2="2821.58" y2="1005"></line>
+                    <line x1="2716.88" y1="1055" x2="2821.58" y2="1055"></line>
+                    <line x1="2716.88" y1="1105" x2="2821.58" y2="1105"></line>
+                    <line x1="2716.88" y1="1155" x2="2821.58" y2="1155"></line>
+                </g>
+            </g>
+            <g transform="translate(474.213, 5845.24)">
+                <g font-family="Guido2">
+                    <text x="1583.5" y="366.667"  font-size="200">&#120;</text>
+                    <text x="1583.5" y="350"  font-size="200">&#120;</text>
+                    <text x="1583.5" y="325"  font-size="200">&#120;</text>
+                    <text x="1583.5" y="300"  font-size="200">&#120;</text>
+                    <text x="1583.5" y="275"  font-size="200">&#120;</text>
+                    <text x="1583.5" y="250"  font-size="200">&#120;</text>
+                    <text x="1583.5" y="225"  font-size="200">&#120;</text>
+                    <text x="1583.5" y="200"  font-size="200">&#120;</text>
+                    <text x="1583.5" y="175"  font-size="200">&#120;</text>
+                    <text x="1583.5" y="150"  font-size="200">&#120;</text>
+                    <text x="1583.5" y="125"  font-size="200">&#120;</text>
+                    <text x="1583.5" y="100"  font-size="200">&#120;</text>
+                    <text x="1583.5" y="75"  font-size="200">&#120;</text>
+                    <text x="1583.5" y="75"  font-size="200">&#120;</text>
+                    <polygon points="1650.88 187.5  1650.88 187.5  1687.09 179.718  1725.58 172.585  1766.15 166.1  1808.61 160.263  1852.75 155.075  1898.38 150.536  1945.3 146.645  1993.31 143.402  2042.22 140.808  2091.81 138.863  2141.9 137.566  2192.29 136.917  2242.78 136.917  2293.17 137.566  2343.26 138.863  2392.86 140.808  2441.76 143.402  2489.77 146.645  2536.69 150.536  2582.32 155.075  2626.46 160.263  2668.92 166.1  2709.49 172.585  2747.98 179.718  2784.2 187.5  2784.2 187.5  2784.2 187.5  2748.57 178.566  2710.52 170.377  2670.26 162.932  2627.99 156.231  2583.92 150.275  2538.27 145.064  2491.25 140.597  2443.07 136.874  2393.93 133.896  2344.06 131.663  2293.66 130.174  2242.95 129.429  2192.13 129.429  2141.41 130.174  2091.01 131.663  2041.14 133.896  1992.01 136.874  1943.82 140.597  1896.8 145.064  1851.15 150.275  1807.09 156.231  1764.82 162.932  1724.55 170.377  1686.5 178.566  1650.88 187.5  "></polygon>
+                    <text x="1583.61" y="200"  font-size="200">&#69;</text>
+                    <text x="1658.5" y="175"  font-size="200">&#46;</text>
+                    <polygon points="1650.88 412.5  1650.88 412.5  1687.09 420.282  1725.58 427.415  1766.15 433.9  1808.61 439.737  1852.75 444.925  1898.38 449.464  1945.3 453.355  1993.31 456.598  2042.22 459.192  2091.81 461.137  2141.9 462.434  2192.29 463.083  2242.78 463.083  2293.17 462.434  2343.26 461.137  2392.86 459.192  2441.76 456.598  2489.77 453.355  2536.69 449.464  2582.32 444.925  2626.46 439.737  2668.92 433.9  2709.49 427.415  2747.98 420.282  2784.2 412.5  2784.2 412.5  2784.2 412.5  2748.57 421.434  2710.52 429.623  2670.26 437.068  2627.99 443.769  2583.92 449.725  2538.27 454.936  2491.25 459.403  2443.07 463.126  2393.93 466.104  2344.06 468.337  2293.66 469.826  2242.95 470.571  2192.13 470.571  2141.41 469.826  2091.01 468.337  2041.14 466.104  1992.01 463.126  1943.82 459.403  1896.8 454.936  1851.15 449.725  1807.09 443.769  1764.82 437.068  1724.55 429.623  1686.5 421.434  1650.88 412.5  "></polygon>
+                    <text x="1562.5" y="250"  font-size="200">&#95;</text>
+                    <text x="1562.5" y="300"  font-size="200">&#95;</text>
+                    <text x="1562.5" y="350"  font-size="200">&#95;</text>
+                    <text x="1583.61" y="375"  font-size="200">&#69;</text>
+                    <text x="1658.5" y="375"  font-size="200">&#46;</text>
+                </g>
+            </g>
+            <g transform="translate(474.213, 4890.24)">
+                <g style="stroke-width:4">
+                    <line x1="2821.58" y1="0" x2="3776.11" y2="0"></line>
+                    <line x1="2821.58" y1="50" x2="3776.11" y2="50"></line>
+                    <line x1="2821.58" y1="100" x2="3776.11" y2="100"></line>
+                    <line x1="2821.58" y1="150" x2="3776.11" y2="150"></line>
+                    <line x1="2821.58" y1="200" x2="3776.11" y2="200"></line>
+                    <line x1="3776.11" y1="0" x2="4030.81" y2="0"></line>
+                    <line x1="3776.11" y1="50" x2="4030.81" y2="50"></line>
+                    <line x1="3776.11" y1="100" x2="4030.81" y2="100"></line>
+                    <line x1="3776.11" y1="150" x2="4030.81" y2="150"></line>
+                    <line x1="3776.11" y1="200" x2="4030.81" y2="200"></line>
+                </g>
+            </g>
+            <g transform="translate(474.213, 4890.24)">
+                <g font-family="Times">
+                    <text x="2821.58" y="275" text-anchor="middle" dominant-baseline="hanging" font-size="100">
+                        ge
+                    </text>
+                </g>
+                <g font-family="Guido2">
+                    <text x="2791.7" y="150"  font-size="200">&#69;</text>
+                    <text x="2791.58" y="141.667"  font-size="200">&#120;</text>
+                    <text x="2791.58" y="125"  font-size="200">&#120;</text>
+                    <text x="2791.58" y="100"  font-size="200">&#120;</text>
+                    <text x="2791.58" y="75"  font-size="200">&#120;</text>
+                    <text x="2791.58" y="50"  font-size="200">&#120;</text>
+                    <text x="2791.58" y="25"  font-size="200">&#120;</text>
+                    <text x="2791.58" y="25"  font-size="200">&#120;</text>
+                    <text x="2866.58" y="125"  font-size="200">&#46;</text>
+                </g>
+            </g>
+            <g transform="translate(474.213, 4890.24)">
+                <g style="stroke-width:4">
+                    <line x1="2821.58" y1="455" x2="3776.11" y2="455"></line>
+                    <line x1="2821.58" y1="505" x2="3776.11" y2="505"></line>
+                    <line x1="2821.58" y1="555" x2="3776.11" y2="555"></line>
+                    <line x1="2821.58" y1="605" x2="3776.11" y2="605"></line>
+                    <line x1="2821.58" y1="655" x2="3776.11" y2="655"></line>
+                    <line x1="3776.11" y1="455" x2="4030.81" y2="455"></line>
+                    <line x1="3776.11" y1="505" x2="4030.81" y2="505"></line>
+                    <line x1="3776.11" y1="555" x2="4030.81" y2="555"></line>
+                    <line x1="3776.11" y1="605" x2="4030.81" y2="605"></line>
+                    <line x1="3776.11" y1="655" x2="4030.81" y2="655"></line>
+                </g>
+            </g>
+            <g transform="translate(474.213, 5345.24)">
+                <polygon points="2847.58 50  2847.58 72.5  3649.55 72.5  3649.55 50  "></polygon>
+                <polygon points="2847.58 52.5  2847.58 72.5  3649.55 72.5  3649.55 52.5  "></polygon>
+                <g font-family="Guido2">
+                    <text x="2791.58" y="341.667"  font-size="200">&#120;</text>
+                    <text x="2791.58" y="325"  font-size="200">&#120;</text>
+                    <text x="2791.58" y="300"  font-size="200">&#120;</text>
+                    <text x="2791.58" y="275"  font-size="200">&#120;</text>
+                    <text x="2791.58" y="250"  font-size="200">&#120;</text>
+                    <text x="2791.58" y="225"  font-size="200">&#120;</text>
+                    <text x="2791.58" y="200"  font-size="200">&#120;</text>
+                    <text x="2791.58" y="175"  font-size="200">&#120;</text>
+                    <text x="2791.58" y="150"  font-size="200">&#120;</text>
+                    <text x="2791.58" y="125"  font-size="200">&#120;</text>
+                    <text x="2791.58" y="102.5"  font-size="200">&#120;</text>
+                    <text x="2770.58" y="250"  font-size="200">&#95;</text>
+                    <text x="2770.58" y="300"  font-size="200">&#95;</text>
+                    <text x="2770.58" y="350"  font-size="200">&#95;</text>
+                    <text x="2791.7" y="350"  font-size="200">&#88;</text>
+                    <text x="2770.58" y="250"  font-size="200">&#95;</text>
+                    <text x="2770.58" y="300"  font-size="200">&#95;</text>
+                    <text x="2846.7" y="325"  font-size="200">&#88;</text>
+                    <text x="2770.58" y="250"  font-size="200">&#95;</text>
+                    <text x="2791.7" y="275"  font-size="200">&#88;</text>
+                    <text x="2726.85" y="275"  font-size="200">&#110;</text>
+                    <text x="2791.7" y="225"  font-size="200">&#88;</text>
+                    <text x="2950.37" y="341.667"  font-size="200">&#120;</text>
+                    <text x="2950.37" y="325"  font-size="200">&#120;</text>
+                    <text x="2950.37" y="300"  font-size="200">&#120;</text>
+                    <text x="2950.37" y="275"  font-size="200">&#120;</text>
+                    <text x="2950.37" y="250"  font-size="200">&#120;</text>
+                    <text x="2950.37" y="225"  font-size="200">&#120;</text>
+                    <text x="2950.37" y="200"  font-size="200">&#120;</text>
+                    <text x="2950.37" y="175"  font-size="200">&#120;</text>
+                    <text x="2950.37" y="150"  font-size="200">&#120;</text>
+                    <text x="2950.37" y="125"  font-size="200">&#120;</text>
+                    <text x="2950.37" y="102.5"  font-size="200">&#120;</text>
+                    <text x="2929.37" y="250"  font-size="200">&#95;</text>
+                    <text x="2929.37" y="300"  font-size="200">&#95;</text>
+                    <text x="2929.37" y="350"  font-size="200">&#95;</text>
+                    <text x="2950.49" y="350"  font-size="200">&#88;</text>
+                    <text x="2929.37" y="250"  font-size="200">&#95;</text>
+                    <text x="2929.37" y="300"  font-size="200">&#95;</text>
+                    <text x="3005.49" y="325"  font-size="200">&#88;</text>
+                    <text x="2929.37" y="250"  font-size="200">&#95;</text>
+                    <text x="2950.49" y="275"  font-size="200">&#88;</text>
+                    <text x="2950.49" y="225"  font-size="200">&#88;</text>
+                    <text x="3109.17" y="341.667"  font-size="200">&#120;</text>
+                    <text x="3109.17" y="325"  font-size="200">&#120;</text>
+                    <text x="3109.17" y="300"  font-size="200">&#120;</text>
+                    <text x="3109.17" y="275"  font-size="200">&#120;</text>
+                    <text x="3109.17" y="250"  font-size="200">&#120;</text>
+                    <text x="3109.17" y="225"  font-size="200">&#120;</text>
+                    <text x="3109.17" y="200"  font-size="200">&#120;</text>
+                    <text x="3109.17" y="175"  font-size="200">&#120;</text>
+                    <text x="3109.17" y="150"  font-size="200">&#120;</text>
+                    <text x="3109.17" y="125"  font-size="200">&#120;</text>
+                    <text x="3109.17" y="102.5"  font-size="200">&#120;</text>
+                    <text x="3088.17" y="250"  font-size="200">&#95;</text>
+                    <text x="3088.17" y="300"  font-size="200">&#95;</text>
+                    <text x="3088.17" y="350"  font-size="200">&#95;</text>
+                    <text x="3109.29" y="350"  font-size="200">&#88;</text>
+                    <text x="3088.17" y="250"  font-size="200">&#95;</text>
+                    <text x="3088.17" y="300"  font-size="200">&#95;</text>
+                    <text x="3164.29" y="325"  font-size="200">&#88;</text>
+                    <text x="3088.17" y="250"  font-size="200">&#95;</text>
+                    <text x="3109.29" y="275"  font-size="200">&#88;</text>
+                    <text x="3109.29" y="225"  font-size="200">&#88;</text>
+                    <text x="3267.96" y="341.667"  font-size="200">&#120;</text>
+                    <text x="3267.96" y="325"  font-size="200">&#120;</text>
+                    <text x="3267.96" y="300"  font-size="200">&#120;</text>
+                    <text x="3267.96" y="275"  font-size="200">&#120;</text>
+                    <text x="3267.96" y="250"  font-size="200">&#120;</text>
+                    <text x="3267.96" y="225"  font-size="200">&#120;</text>
+                    <text x="3267.96" y="200"  font-size="200">&#120;</text>
+                    <text x="3267.96" y="175"  font-size="200">&#120;</text>
+                    <text x="3267.96" y="150"  font-size="200">&#120;</text>
+                    <text x="3267.96" y="125"  font-size="200">&#120;</text>
+                    <text x="3267.96" y="102.5"  font-size="200">&#120;</text>
+                    <text x="3246.96" y="250"  font-size="200">&#95;</text>
+                    <text x="3246.96" y="300"  font-size="200">&#95;</text>
+                    <text x="3246.96" y="350"  font-size="200">&#95;</text>
+                    <text x="3268.08" y="350"  font-size="200">&#88;</text>
+                    <text x="3246.96" y="250"  font-size="200">&#95;</text>
+                    <text x="3246.96" y="300"  font-size="200">&#95;</text>
+                    <text x="3323.08" y="325"  font-size="200">&#88;</text>
+                    <text x="3246.96" y="250"  font-size="200">&#95;</text>
+                    <text x="3268.08" y="275"  font-size="200">&#88;</text>
+                    <text x="3268.08" y="225"  font-size="200">&#88;</text>
+                    <text x="3426.76" y="341.667"  font-size="200">&#120;</text>
+                    <text x="3426.76" y="325"  font-size="200">&#120;</text>
+                    <text x="3426.76" y="300"  font-size="200">&#120;</text>
+                    <text x="3426.76" y="275"  font-size="200">&#120;</text>
+                    <text x="3426.76" y="250"  font-size="200">&#120;</text>
+                    <text x="3426.76" y="225"  font-size="200">&#120;</text>
+                    <text x="3426.76" y="200"  font-size="200">&#120;</text>
+                    <text x="3426.76" y="175"  font-size="200">&#120;</text>
+                    <text x="3426.76" y="150"  font-size="200">&#120;</text>
+                    <text x="3426.76" y="125"  font-size="200">&#120;</text>
+                    <text x="3426.76" y="102.5"  font-size="200">&#120;</text>
+                    <text x="3405.76" y="250"  font-size="200">&#95;</text>
+                    <text x="3405.76" y="300"  font-size="200">&#95;</text>
+                    <text x="3405.76" y="350"  font-size="200">&#95;</text>
+                    <text x="3426.88" y="350"  font-size="200">&#88;</text>
+                    <text x="3405.76" y="250"  font-size="200">&#95;</text>
+                    <text x="3405.76" y="300"  font-size="200">&#95;</text>
+                    <text x="3481.88" y="325"  font-size="200">&#88;</text>
+                    <text x="3405.76" y="250"  font-size="200">&#95;</text>
+                    <text x="3426.88" y="275"  font-size="200">&#88;</text>
+                    <text x="3426.88" y="225"  font-size="200">&#88;</text>
+                    <text x="3585.55" y="341.667"  font-size="200">&#120;</text>
+                    <text x="3585.55" y="325"  font-size="200">&#120;</text>
+                    <text x="3585.55" y="300"  font-size="200">&#120;</text>
+                    <text x="3585.55" y="275"  font-size="200">&#120;</text>
+                    <text x="3585.55" y="250"  font-size="200">&#120;</text>
+                    <text x="3585.55" y="225"  font-size="200">&#120;</text>
+                    <text x="3585.55" y="200"  font-size="200">&#120;</text>
+                    <text x="3585.55" y="175"  font-size="200">&#120;</text>
+                    <text x="3585.55" y="150"  font-size="200">&#120;</text>
+                    <text x="3585.55" y="125"  font-size="200">&#120;</text>
+                    <text x="3585.55" y="102.5"  font-size="200">&#120;</text>
+                    <text x="3564.55" y="250"  font-size="200">&#95;</text>
+                    <text x="3564.55" y="300"  font-size="200">&#95;</text>
+                    <text x="3564.55" y="350"  font-size="200">&#95;</text>
+                    <text x="3585.67" y="350"  font-size="200">&#88;</text>
+                    <text x="3564.55" y="250"  font-size="200">&#95;</text>
+                    <text x="3564.55" y="300"  font-size="200">&#95;</text>
+                    <text x="3640.67" y="325"  font-size="200">&#88;</text>
+                    <text x="3564.55" y="250"  font-size="200">&#95;</text>
+                    <text x="3585.67" y="275"  font-size="200">&#88;</text>
+                    <text x="3520.83" y="275"  font-size="200">&#110;</text>
+                    <text x="3585.67" y="225"  font-size="200">&#88;</text>
+                </g>
+            </g>
+            <g transform="translate(474.213, 4890.24)">
+                <g style="stroke-width:4">
+                    <line x1="2821.58" y1="955" x2="3776.11" y2="955"></line>
+                    <line x1="2821.58" y1="1005" x2="3776.11" y2="1005"></line>
+                    <line x1="2821.58" y1="1055" x2="3776.11" y2="1055"></line>
+                    <line x1="2821.58" y1="1105" x2="3776.11" y2="1105"></line>
+                    <line x1="2821.58" y1="1155" x2="3776.11" y2="1155"></line>
+                    <line x1="3776.11" y1="955" x2="4030.81" y2="955"></line>
+                    <line x1="3776.11" y1="1005" x2="4030.81" y2="1005"></line>
+                    <line x1="3776.11" y1="1055" x2="4030.81" y2="1055"></line>
+                    <line x1="3776.11" y1="1105" x2="4030.81" y2="1105"></line>
+                    <line x1="3776.11" y1="1155" x2="4030.81" y2="1155"></line>
+                </g>
+            </g>
+            <g transform="translate(474.213, 5845.24)">
+                <g font-family="Guido2">
+                    <text x="2791.58" y="366.667"  font-size="200">&#120;</text>
+                    <text x="2791.58" y="350"  font-size="200">&#120;</text>
+                    <text x="2791.58" y="325"  font-size="200">&#120;</text>
+                    <text x="2791.58" y="300"  font-size="200">&#120;</text>
+                    <text x="2791.58" y="275"  font-size="200">&#120;</text>
+                    <text x="2791.58" y="250"  font-size="200">&#120;</text>
+                    <text x="2791.58" y="225"  font-size="200">&#120;</text>
+                    <text x="2791.58" y="200"  font-size="200">&#120;</text>
+                    <text x="2791.58" y="175"  font-size="200">&#120;</text>
+                    <text x="2791.58" y="150"  font-size="200">&#120;</text>
+                    <text x="2791.58" y="125"  font-size="200">&#120;</text>
+                    <text x="2791.58" y="100"  font-size="200">&#120;</text>
+                    <text x="2791.58" y="75"  font-size="200">&#120;</text>
+                    <text x="2791.58" y="75"  font-size="200">&#120;</text>
+                    <text x="2791.7" y="200"  font-size="200">&#69;</text>
+                    <text x="2866.58" y="175"  font-size="200">&#46;</text>
+                    <text x="2770.58" y="250"  font-size="200">&#95;</text>
+                    <text x="2770.58" y="300"  font-size="200">&#95;</text>
+                    <text x="2770.58" y="350"  font-size="200">&#95;</text>
+                    <text x="2791.7" y="375"  font-size="200">&#69;</text>
+                    <text x="2866.58" y="375"  font-size="200">&#46;</text>
+                </g>
+                <g font-family="Times" font-weight="bold">
+                    <text x="3880.81" y="225"  dominant-baseline="hanging" font-size="200">
+                        ...
+                    </text>
+                </g>
+            </g>
+            <g transform="translate(474.213, 4890.24)">
+                <g style="stroke-width:4">
+                    <line x1="0" y1="0" x2="0" y2="1155"></line>
+                </g>
+                <g style="stroke-width:4">
+                    <line x1="1510.04" y1="2" x2="1510.04" y2="198"></line>
+                </g>
+                <g style="stroke-width:4">
+                    <line x1="1510.04" y1="457" x2="1510.04" y2="1153"></line>
+                </g>
+                <g style="stroke-width:4">
+                    <line x1="2718.12" y1="2" x2="2718.12" y2="198"></line>
+                </g>
+                <g style="stroke-width:4">
+                    <line x1="2718.12" y1="457" x2="2718.12" y2="1153"></line>
+                </g>
+                <g style="stroke-width:4">
+                    <line x1="3777.35" y1="2" x2="3777.35" y2="198"></line>
+                </g>
+                <g style="stroke-width:4">
+                    <line x1="3777.35" y1="457" x2="3777.35" y2="1153"></line>
+                </g>
+            </g>
+            <g transform="translate(474.213, 1422.64)">
+            </g>
+            <g transform="translate(0, -0.00012207)">
+            </g>
+        </g>
+    </g>
+</svg>
+</div></div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+                <p>Copyright &copy; 2019-2020 <a href="http://www.grame.fr">Grame-CNCM</a></p>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js" defer></script>
+        <script src="../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form role="form">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="Keyboard Shortcuts Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Keyboard Shortcuts</h4>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

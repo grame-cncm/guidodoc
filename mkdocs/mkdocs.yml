@@ -1,6 +1,6 @@
 site_name: Guido Music Notation
 site_description: A guide to Guido Music Notation format.
-copyright: Copyright &copy; 2019 <a href="http://www.grame.fr">Grame-CNCM</a>
+copyright: Copyright &copy; 2019-2020 <a href="http://www.grame.fr">Grame-CNCM</a>
 nav:
     - Home: index.md
     - User Guide: 
@@ -58,6 +58,7 @@ nav:
 
 #theme: readthedocs
 
+site_dir: ../docs
 
 extra:
     social:

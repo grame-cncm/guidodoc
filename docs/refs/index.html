@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>Tags index - Guido Music Notation</title>
+        <link href="../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+        <link href="/GMN/guidolib/guido.css" rel="stylesheet">
+        <link href="/BNF/railroad-diagrams/railroad-diagrams.css" rel="stylesheet">
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+        <script src="../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../js/bootstrap-3.0.3.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+
+                <!-- Collapsed navigation -->
+                <div class="navbar-header">
+                    <!-- Expander button -->
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="..">Guido Music Notation</a>
+                </div>
+
+                <!-- Expanded navigation -->
+                <div class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li >
+                                <a href="..">Home</a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">User Guide <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../guide/basic/">Basic concepts</a>
+</li>
+                                    
+<li >
+    <a href="../guide/notes/">Notes and Rests</a>
+</li>
+                                    
+<li >
+    <a href="../guide/chords/">Chords</a>
+</li>
+                                    
+<li >
+    <a href="../guide/tags/">Tags and Tagged Ranges</a>
+</li>
+                                    
+<li >
+    <a href="../guide/voices/">Voices</a>
+</li>
+                                    
+<li >
+    <a href="../guide/scores/">Scores</a>
+</li>
+                                    
+<li >
+    <a href="../guide/comments/">Comments and Spacing</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Reference <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="tagsparams/">Tags parameters</a>
+</li>
+                                    
+<li >
+    <a href="tags/">Tags</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Tags reference</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="tags/Accidentals/">Accidentals</a>
+</li>
+            
+<li >
+    <a href="tags/Articulations/">Articulations</a>
+</li>
+            
+<li >
+    <a href="tags/Barlines/">Barlines</a>
+</li>
+            
+<li >
+    <a href="tags/Beaming/">Beaming</a>
+</li>
+            
+<li >
+    <a href="tags/ClefKeyMeter/">Clef Key Meter</a>
+</li>
+            
+<li >
+    <a href="tags/Dynamics/">Dynamics</a>
+</li>
+            
+<li >
+    <a href="tags/Layout/">Layout</a>
+</li>
+            
+<li >
+    <a href="tags/Miscellaneous/">Miscellaneous</a>
+</li>
+            
+<li >
+    <a href="tags/Notes/">Notes</a>
+</li>
+            
+<li >
+    <a href="tags/Ornaments/">Ornaments</a>
+</li>
+            
+<li >
+    <a href="tags/RepeatSigns/">Repeat Signs</a>
+</li>
+            
+<li >
+    <a href="tags/Tempo/">Tempo</a>
+</li>
+            
+<li >
+    <a href="tags/Text/">Text</a>
+</li>
+    </ul>
+  </li>
+                                    
+<li class="active">
+    <a href="./">Tags index</a>
+</li>
+                                    
+<li >
+    <a href="gmnf/">Language specification</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Examples <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../examples/4voices/">4 Voices</a>
+</li>
+                                    
+<li >
+    <a href="../examples/accidentals/">Accidentals</a>
+</li>
+                                    
+<li >
+    <a href="../examples/allthethings/">All The Things You Are</a>
+</li>
+                                    
+<li >
+    <a href="../examples/articulations/">Articulations</a>
+</li>
+                                    
+<li >
+    <a href="../examples/bach/">Bach</a>
+</li>
+                                    
+<li >
+    <a href="../examples/barlines/">Barlines</a>
+</li>
+                                    
+<li >
+    <a href="../examples/bartok/">Bela Bartock</a>
+</li>
+                                    
+<li >
+    <a href="../examples/beaming/">Beaming</a>
+</li>
+                                    
+<li >
+    <a href="../examples/beethoven/">Beethoven</a>
+</li>
+                                    
+<li >
+    <a href="../examples/brown/">Chris Brown</a>
+</li>
+                                    
+<li >
+    <a href="../examples/clefkeymeter/">Clef, Key, Meter</a>
+</li>
+                                    
+<li >
+    <a href="../examples/cpebach/">Sonata for flute</a>
+</li>
+                                    
+<li >
+    <a href="../examples/dynamics/">Dynamics</a>
+</li>
+                                    
+<li >
+    <a href="../examples/faure/">Fauré</a>
+</li>
+                                    
+<li >
+    <a href="../examples/layout/">Layout</a>
+</li>
+                                    
+<li >
+    <a href="../examples/lutkin/">Peter C. Lutkin</a>
+</li>
+                                    
+<li >
+    <a href="../examples/mozart581/">Mozart Clarinet Quintet</a>
+</li>
+                                    
+<li >
+    <a href="../examples/notes/">Notes attributes</a>
+</li>
+                                    
+<li >
+    <a href="../examples/ornaments/">Ornaments</a>
+</li>
+                                    
+<li >
+    <a href="../examples/repeats/">Repeat Signs</a>
+</li>
+                                    
+<li >
+    <a href="../examples/slurs/">Slurs</a>
+</li>
+                                    
+<li >
+    <a href="../examples/space/">Ties & Space</a>
+</li>
+                                    
+<li >
+    <a href="../examples/tempo/">Tempo</a>
+</li>
+                                </ul>
+                            </li>
+                            <li >
+                                <a href="../about/">About</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li >
+                                <a rel="next" href="tags/Text/">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li >
+                                <a rel="prev" href="gmnf/">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="main active"><a href="#tags-index">Tags index</a></li>
+            <li><a href="#a">A</a></li>
+            <li><a href="#b">B</a></li>
+            <li><a href="#c">C</a></li>
+            <li><a href="#d">D</a></li>
+            <li><a href="#e">E</a></li>
+            <li><a href="#f">F</a></li>
+            <li><a href="#g">G</a></li>
+            <li><a href="#h">H</a></li>
+            <li><a href="#i">I</a></li>
+            <li><a href="#k">K</a></li>
+            <li><a href="#l">L</a></li>
+            <li><a href="#m">M</a></li>
+            <li><a href="#n">N</a></li>
+            <li><a href="#o">O</a></li>
+            <li><a href="#p">P</a></li>
+            <li><a href="#r">R</a></li>
+            <li><a href="#s">S</a></li>
+            <li><a href="#t">T</a></li>
+            <li><a href="#v">V</a></li>
+    </ul>
+</div></div>
+                <div class="col-md-9" role="main">
+
+<h1 id="tags-index">Tags index</h1>
+<h2 id="a">A</h2>
+<p><a href="tags/Articulations">\acc</a> <a href="tags/Tempo">\accel</a> <a href="tags/Tempo">\accelBegin</a> <a href="tags/Tempo">\accelEnd</a> <a href="tags/Tempo">\accelerando</a> <a href="tags/Articulations">\accent</a> <a href="tags/Accidentals">\accidental</a> <a href="tags/Layout">\accol</a> <a href="tags/Layout">\accolade</a> <a href="tags/Accidentals">\alter</a> <a href="tags/Articulations">\arpeggio</a> <a href="tags/Miscellaneous">\auto</a></p>
+<h2 id="b">B</h2>
+<p><a href="tags/Beaming">\b</a> <a href="tags/Barlines">\bar</a> <a href="tags/Barlines">\barFormat</a> <a href="tags/Beaming">\beam</a> <a href="tags/Beaming">\beamBegin</a> <a href="tags/Beaming">\beamEnd</a> <a href="tags/Beaming">\beamsAuto</a> <a href="tags/Beaming">\beamsFull</a> <a href="tags/Beaming">\beamsOff</a> <a href="tags/Beaming">\bm</a> <a href="tags/Articulations">\bow</a> <a href="tags/Articulations">\breathMark</a></p>
+<h2 id="c">C</h2>
+<p><a href="tags/ClefKeyMeter">\clef</a> <a href="tags/Notes">\cluster</a> <a href="tags/RepeatSigns">\coda</a> <a href="tags/Header">\composer</a> <a href="tags/Dynamics">\cresc</a> <a href="tags/Dynamics">\crescBegin</a> <a href="tags/Dynamics">\crescEnd</a> <a href="tags/Dynamics">\crescendo</a> <a href="tags/Notes">\cue</a></p>
+<h2 id="d">D</h2>
+<p><a href="tags/RepeatSigns">\daCapo</a> <a href="tags/RepeatSigns">\daCapoAlFine</a> <a href="tags/RepeatSigns">\daCoda</a> <a href="tags/RepeatSigns">\dalSegno</a> <a href="tags/RepeatSigns">\dalSegnoAlFine</a> <a href="tags/Dynamics">\decresc</a> <a href="tags/Dynamics">\decrescBegin</a> <a href="tags/Dynamics">\decrescEnd</a> <a href="tags/Dynamics">\decrescendo</a> <a href="tags/Dynamics">\dim</a> <a href="tags/Dynamics">\dimBegin</a> <a href="tags/Dynamics">\dimEnd</a> <a href="tags/Dynamics">\diminuendo</a> <a href="tags/Dynamics">\diminuendoBegin</a> <a href="tags/Dynamics">\diminuendoEnd</a> <a href="tags/Notes">\dispDur</a> <a href="tags/Notes">\displayDuration</a> <a href="tags/Notes">\dotFormat</a> <a href="tags/Barlines">\doubleBar</a></p>
+<h2 id="e">E</h2>
+<p><a href="tags/Barlines">\endBar</a></p>
+<h2 id="f">F</h2>
+<p><a href="tags/Beaming">\fBeam</a> <a href="tags/Beaming">\fBeamBegin</a> <a href="tags/Beaming">\fBeamEnd</a> <a href="tags/Articulations">\fermata</a> <a href="tags/RepeatSigns">\fine</a> <a href="tags/Text">\fing</a> <a href="tags/Text">\fingering</a></p>
+<h2 id="g">G</h2>
+<p><a href="tags/Articulations">\glissando</a> <a href="tags/Articulations">\glissandoBegin</a> <a href="tags/Articulations">\glissandoEnd</a> <a href="tags/Notes">\grace</a></p>
+<h2 id="h">H</h2>
+<p><a href="tags/Articulations">\harmonic</a> <a href="tags/Text">\harmony</a> <a href="tags/Notes">\headsCenter</a> <a href="tags/Notes">\headsLeft</a> <a href="tags/Notes">\headsNormal</a> <a href="tags/Notes">\headsReverse</a> <a href="tags/Notes">\headsRight</a></p>
+<h2 id="i">I</h2>
+<p><a href="tags/Dynamics">\i</a> <a href="tags/Text">\instr</a> <a href="tags/Text">\instrument</a> <a href="tags/Dynamics">\intens</a> <a href="tags/Dynamics">\intensity</a></p>
+<h2 id="k">K</h2>
+<p><a href="tags/ClefKeyMeter">\key</a></p>
+<h2 id="l">L</h2>
+<p><a href="tags/Text">\label</a> <a href="tags/Text">\lyrics</a></p>
+<h2 id="m">M</h2>
+<p><a href="tags/Articulations">\marcato</a> <a href="tags/Text">\mark</a> <a href="tags/ClefKeyMeter">\meter</a> <a href="tags/Ornaments">\mord</a> <a href="tags/Ornaments">\mordent</a></p>
+<h2 id="n">N</h2>
+<p><a href="tags/Layout">\newLine</a> <a href="tags/Layout">\newPage</a> <a href="tags/Layout">\newSystem</a> <a href="tags/Notes">\noteFormat</a></p>
+<h2 id="o">O</h2>
+<p><a href="tags/Notes">\oct</a> <a href="tags/Notes">\octava</a></p>
+<h2 id="p">P</h2>
+<p><a href="tags/Layout">\pageFormat</a> <a href="tags/Articulations">\pedalOff</a> <a href="tags/Articulations">\pedalOn</a> <a href="tags/Articulations">\pizz</a> <a href="tags/Articulations">\pizzicato</a></p>
+<h2 id="r">R</h2>
+<p><a href="tags/RepeatSigns">\repeatBegin</a> <a href="tags/RepeatSigns">\repeatEnd</a> <a href="tags/Notes">\restFormat</a> <a href="tags/Tempo">\rit</a> <a href="tags/Tempo">\ritardando</a> <a href="tags/Tempo">\ritBegin</a> <a href="tags/Tempo">\ritEnd</a></p>
+<h2 id="s">S</h2>
+<p><a href="tags/RepeatSigns">\segno</a> <a href="tags/Miscellaneous">\set</a> <a href="tags/Articulations">\sl</a> <a href="tags/Articulations">\slur</a> <a href="tags/Articulations">\slurBegin</a> <a href="tags/Articulations">\slurEnd</a> <a href="tags/Miscellaneous">\space</a> <a href="tags/Miscellaneous">\special</a> <a href="tags/Articulations">\stacc</a> <a href="tags/Articulations">\staccato</a> <a href="tags/Articulations">\staccBegin</a> <a href="tags/Articulations">\staccEnd</a> <a href="tags/Layout">\staff</a> <a href="tags/Layout">\staffFormat</a> <a href="tags/Layout">\staffOff</a> <a href="tags/Layout">\staffOn</a> <a href="tags/Notes">\stemsAuto</a> <a href="tags/Notes">\stemsDown</a> <a href="tags/Notes">\stemsOff</a> <a href="tags/Notes">\stemsUp</a> <a href="tags/Layout">\systemFormat</a></p>
+<h2 id="t">T</h2>
+<p><a href="tags/Text">\t</a> <a href="tags/Tempo">\tempo</a> <a href="tags/Articulations">\ten</a> <a href="tags/Articulations">\tenuto</a> <a href="tags/Text">\text</a> <a href="tags/Notes">\tie</a> <a href="tags/Notes">\tieBegin</a> <a href="tags/Notes">\tieEnd</a> <a href="tags/Header">\title</a> <a href="tags/RepeatSigns">\trem</a> <a href="tags/RepeatSigns">\tremBegin</a> <a href="tags/RepeatSigns">\tremEnd</a> <a href="tags/RepeatSigns">\tremolo</a> <a href="tags/RepeatSigns">\tremoloBegin</a> <a href="tags/RepeatSigns">\tremoloEnd</a> <a href="tags/Ornaments">\trill</a> <a href="tags/Ornaments">\trillBegin</a> <a href="tags/Ornaments">\trillEnd</a> <a href="tags/Notes">\tuplet</a> <a href="tags/Ornaments">\turn</a></p>
+<h2 id="v">V</h2>
+<p><a href="tags/RepeatSigns">\volta</a> <a href="tags/RepeatSigns">\voltaBegin</a> <a href="tags/RepeatSigns">\voltaEnd</a></p></div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+                <p>Copyright &copy; 2019-2020 <a href="http://www.grame.fr">Grame-CNCM</a></p>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../js/base.js" defer></script>
+        <script src="../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form role="form">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="Keyboard Shortcuts Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Keyboard Shortcuts</h4>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

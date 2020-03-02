@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../../img/favicon.ico">
+        <title>Clef Key Meter - Guido Music Notation</title>
+        <link href="../../../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+        <link href="/GMN/guidolib/guido.css" rel="stylesheet">
+        <link href="/BNF/railroad-diagrams/railroad-diagrams.css" rel="stylesheet">
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+        <script src="../../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../../js/bootstrap-3.0.3.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+
+                <!-- Collapsed navigation -->
+                <div class="navbar-header">
+                    <!-- Expander button -->
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="../../..">Guido Music Notation</a>
+                </div>
+
+                <!-- Expanded navigation -->
+                <div class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li >
+                                <a href="../../..">Home</a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">User Guide <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../../guide/basic/">Basic concepts</a>
+</li>
+                                    
+<li >
+    <a href="../../../guide/notes/">Notes and Rests</a>
+</li>
+                                    
+<li >
+    <a href="../../../guide/chords/">Chords</a>
+</li>
+                                    
+<li >
+    <a href="../../../guide/tags/">Tags and Tagged Ranges</a>
+</li>
+                                    
+<li >
+    <a href="../../../guide/voices/">Voices</a>
+</li>
+                                    
+<li >
+    <a href="../../../guide/scores/">Scores</a>
+</li>
+                                    
+<li >
+    <a href="../../../guide/comments/">Comments and Spacing</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Reference <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../tagsparams/">Tags parameters</a>
+</li>
+                                    
+<li >
+    <a href="../">Tags</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Tags reference</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../Accidentals/">Accidentals</a>
+</li>
+            
+<li >
+    <a href="../Articulations/">Articulations</a>
+</li>
+            
+<li >
+    <a href="../Barlines/">Barlines</a>
+</li>
+            
+<li >
+    <a href="../Beaming/">Beaming</a>
+</li>
+            
+<li class="active">
+    <a href="./">Clef Key Meter</a>
+</li>
+            
+<li >
+    <a href="../Dynamics/">Dynamics</a>
+</li>
+            
+<li >
+    <a href="../Layout/">Layout</a>
+</li>
+            
+<li >
+    <a href="../Miscellaneous/">Miscellaneous</a>
+</li>
+            
+<li >
+    <a href="../Notes/">Notes</a>
+</li>
+            
+<li >
+    <a href="../Ornaments/">Ornaments</a>
+</li>
+            
+<li >
+    <a href="../RepeatSigns/">Repeat Signs</a>
+</li>
+            
+<li >
+    <a href="../Tempo/">Tempo</a>
+</li>
+            
+<li >
+    <a href="../Text/">Text</a>
+</li>
+    </ul>
+  </li>
+                                    
+<li >
+    <a href="../../">Tags index</a>
+</li>
+                                    
+<li >
+    <a href="../../gmnf/">Language specification</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Examples <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../../examples/4voices/">4 Voices</a>
+</li>
+                                    
+<li >
+    <a href="../../../examples/accidentals/">Accidentals</a>
+</li>
+                                    
+<li >
+    <a href="../../../examples/allthethings/">All The Things You Are</a>
+</li>
+                                    
+<li >
+    <a href="../../../examples/articulations/">Articulations</a>
+</li>
+                                    
+<li >
+    <a href="../../../examples/bach/">Bach</a>
+</li>
+                                    
+<li >
+    <a href="../../../examples/barlines/">Barlines</a>
+</li>
+                                    
+<li >
+    <a href="../../../examples/bartok/">Bela Bartock</a>
+</li>
+                                    
+<li >
+    <a href="../../../examples/beaming/">Beaming</a>
+</li>
+                                    
+<li >
+    <a href="../../../examples/beethoven/">Beethoven</a>
+</li>
+                                    
+<li >
+    <a href="../../../examples/brown/">Chris Brown</a>
+</li>
+                                    
+<li >
+    <a href="../../../examples/clefkeymeter/">Clef, Key, Meter</a>
+</li>
+                                    
+<li >
+    <a href="../../../examples/cpebach/">Sonata for flute</a>
+</li>
+                                    
+<li >
+    <a href="../../../examples/dynamics/">Dynamics</a>
+</li>
+                                    
+<li >
+    <a href="../../../examples/faure/">Fauré</a>
+</li>
+                                    
+<li >
+    <a href="../../../examples/layout/">Layout</a>
+</li>
+                                    
+<li >
+    <a href="../../../examples/lutkin/">Peter C. Lutkin</a>
+</li>
+                                    
+<li >
+    <a href="../../../examples/mozart581/">Mozart Clarinet Quintet</a>
+</li>
+                                    
+<li >
+    <a href="../../../examples/notes/">Notes attributes</a>
+</li>
+                                    
+<li >
+    <a href="../../../examples/ornaments/">Ornaments</a>
+</li>
+                                    
+<li >
+    <a href="../../../examples/repeats/">Repeat Signs</a>
+</li>
+                                    
+<li >
+    <a href="../../../examples/slurs/">Slurs</a>
+</li>
+                                    
+<li >
+    <a href="../../../examples/space/">Ties & Space</a>
+</li>
+                                    
+<li >
+    <a href="../../../examples/tempo/">Tempo</a>
+</li>
+                                </ul>
+                            </li>
+                            <li >
+                                <a href="../../../about/">About</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li >
+                                <a rel="next" href="../Beaming/">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li >
+                                <a rel="prev" href="../Dynamics/">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="main active"><a href="#clef-key-meter">Clef Key Meter</a></li>
+            <li><a href="#clef">\clef</a></li>
+            <li><a href="#key">\key</a></li>
+            <li><a href="#meter">\meter</a></li>
+    </ul>
+</div></div>
+                <div class="col-md-9" role="main">
+
+<style>
+h2 { 
+    background-color: #33A5E7 ; 
+    color: white;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+}
+</style>
+
+<h1 id="clef-key-meter">Clef Key Meter</h1>
+<h2 id="clef">\clef</h2>
+<hr />
+<h3 id="description">Description</h3>
+<table>
+<thead>
+<tr>
+<th align="left">Name</th>
+<th align="left">Variants</th>
+<th align="left">Type</th>
+<th align="left">Notation element</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">\clef</td>
+<td align="left"></td>
+<td align="left">P</td>
+<td align="left">clef signs</td>
+</tr>
+</tbody>
+</table>
+<h3 id="parameters">Parameters</h3>
+<table>
+<thead>
+<tr>
+<th align="left">Name</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+<th align="left">Default value</th>
+<th align="left">Optional</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">type</td>
+<td align="left">string</td>
+<td align="left">bass, basso, f, f5, f4, f3, f2, f1, <br />tenor, c, c5, c4, c3, c2, c1, c0, <br />alto, violin, treble, <br />g, g5, g4, g3, g2, g1, <br />gg, gg5, gg4, gg3, gg2, gg1, <br />perc, perc5, perc4, perc3, perc2, perc1, <br />none or off</td>
+<td align="left">treble</td>
+<td align="left">false</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>bass, basso, f, f4 are equivalent and represent a standard F clef on the 4th staff line</li>
+<li>f1, f2, f3, f5 represent a f clef on the 1st, 2nd and 5th staff line</li>
+<li>alto, c, c3 are equivalent and represent a bratsche clef on the 3rd staff line</li>
+<li>c4 and tenor are equivalent and represent a bratsche clef on the 4th staff line</li>
+<li>c1, c2, c3, c5 represent a bratsche clef on the 1st, 2nd, 3rd and 5th staff line</li>
+<li>c0 represent a bratsche clef on the 1st ledger line under the staff</li>
+<li>g, g2, treble, violin are equivalent and represent a G clef on the 2nd staff line</li>
+<li>g1, g3, g4, g5 represent a G clef on the 1st, 3rd, 4th and 5th staff line</li>
+<li>gg, gg2 are equivalent and represent a double G clef on the 2nd staff line</li>
+<li>gg1, gg3, gg4, gg5 represent a double G clef on the 1st, 3rd, 4th and 5th staff line</li>
+<li>perc, perc3 are equivalent and represent a percussion clef on the 3rd staff line</li>
+<li>perc1, perc2, perc4, perc5 represent a percussion clef on the 1st, 2nd, 4th and 5th staff line</li>
+<li>none, off prevents the clef to be displayed</li>
+</ul>
+<p>See the <a href="../../../examples/clefkeymeter/">Clefs</a> example.</p>
+<p><br /></p>
+<h2 id="key">\key</h2>
+<hr />
+<h3 id="description_1">Description</h3>
+<table>
+<thead>
+<tr>
+<th align="left">Name</th>
+<th align="left">Variants</th>
+<th align="left">Type</th>
+<th align="left">Notation element</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">\key</td>
+<td align="left"></td>
+<td align="left">P</td>
+<td align="left">key signatures</td>
+</tr>
+</tbody>
+</table>
+<p>The <strong>\key</strong> tag displays a key signature specified as tonality or as a number of sharps or flats. It supports also arbitrary keys and micro-tonality.</p>
+<h3 id="parameters_1">Parameters</h3>
+<table>
+<thead>
+<tr>
+<th align="left">Name</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+<th align="left">Default value</th>
+<th align="left">Optional</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">key</td>
+<td align="left">string|integer</td>
+<td align="left">F, C, G, D, A, E, B, H or a signed integer<br />a free key string</td>
+<td align="left"><em>none</em></td>
+<td align="left">false</td>
+</tr>
+<tr>
+<td align="left">hideNaturals</td>
+<td align="left">string</td>
+<td align="left">a boolean value to prevent naturals on key change</td>
+<td align="left">false</td>
+<td align="left">true</td>
+</tr>
+<tr>
+<td align="left">free</td>
+<td align="left">string</td>
+<td align="left">a free key string</td>
+<td align="left"><em>none</em></td>
+<td align="left">true</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>when specified with a signed integer, positive values are for sharps and negative values for flat</li>
+<li>F is equivalent to -1</li>
+<li>C, G, D, A, E are respectively equivalent to 0, 1, 2, 3 and 4</li>
+<li>B and H are equivalent to 5</li>
+<li>a <strong>free key</strong> string is an arbitrary list of notes with accidentals separated by spaces. When not indicated, an accidental takes the previous value, Accidentals support micro-tonality using signed floating point numbers inside brackets. Example: "g#d&amp;" denotes a key signature with a 'g' sharp and a 'd' flat; "f[0.5]c" denotes a key with a quarter tone sharp on 'f' and 'c'.</li>
+</ul>
+<p>See the <a href="../../../examples/clefkeymeter/">Key</a> example.</p>
+<p><br /></p>
+<h2 id="meter">\meter</h2>
+<hr />
+<h3 id="description_2">Description</h3>
+<table>
+<thead>
+<tr>
+<th align="left">Name</th>
+<th align="left">Variants</th>
+<th align="left">Type</th>
+<th align="left">Notation element</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">\meter</td>
+<td align="left"></td>
+<td align="left">P</td>
+<td align="left">time signatures</td>
+</tr>
+</tbody>
+</table>
+<p>The <strong>\meter</strong> tag displays a time signature.</p>
+<h3 id="parameters_2">Parameters</h3>
+<table>
+<thead>
+<tr>
+<th align="left">Name</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+<th align="left">Default value</th>
+<th align="left">Optional</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">type</td>
+<td align="left">string</td>
+<td align="left">C, c, C/, c/<br />a rational string<br />a complex time signature string</td>
+<td align="left">4/4</td>
+<td align="left">false</td>
+</tr>
+<tr>
+<td align="left">autoBarlines</td>
+<td align="left">boolean</td>
+<td align="left">control automatic barlines</td>
+<td align="left">on</td>
+<td align="left">true</td>
+</tr>
+<tr>
+<td align="left">autoMeasuresNum</td>
+<td align="left">string</td>
+<td align="left">on, off, system, page</td>
+<td align="left">off</td>
+<td align="left">true</td>
+</tr>
+<tr>
+<td align="left">group</td>
+<td align="left">boolean</td>
+<td align="left">control complex meter appearance</td>
+<td align="left">off</td>
+<td align="left">true</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>C, c, C/, c/ : a C or a crossed C meter.</li>
+<li>complex time strings are in on of the following forms:<ul>
+<li>a) "a+b+...+n/d" a rational with a sum as numerator</li>
+<li>b) "a/b + c/d" a sum of rationals</li>
+<li>c) a combination of a) and b)</li>
+</ul>
+</li>
+<li><strong>autoMeasuresNum</strong> activates automatic measures numbering and supports 3 modes:<ul>
+<li>on: the measure number is displayed at every bar</li>
+<li>system: the measure number is displayed on every system only</li>
+<li>page: the measure number is displayed on every page only</li>
+</ul>
+</li>
+<li><strong>group</strong> applies to complex time signatures and control how the a) form encountered in a c) form is displayed: when <strong>group</strong> if off, the a) form is transformed in a b) form</li>
+</ul>
+<p>See the <a href="../../../examples/clefkeymeter/">Meter</a> example.</p>
+<p>See also the <a href="../../../examples/cpebach/">Sonata</a> example for measure numbers at system level.</p></div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+                <p>Copyright &copy; 2019-2020 <a href="http://www.grame.fr">Grame-CNCM</a></p>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../../js/base.js" defer></script>
+        <script src="../../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form role="form">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="Keyboard Shortcuts Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Keyboard Shortcuts</h4>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

@@ -1,0 +1,846 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>Notes attributes - Guido Music Notation</title>
+        <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+        <link href="/GMN/guidolib/guido.css" rel="stylesheet">
+        <link href="/BNF/railroad-diagrams/railroad-diagrams.css" rel="stylesheet">
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+        <script src="../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../js/bootstrap-3.0.3.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+
+                <!-- Collapsed navigation -->
+                <div class="navbar-header">
+                    <!-- Expander button -->
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="../..">Guido Music Notation</a>
+                </div>
+
+                <!-- Expanded navigation -->
+                <div class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li >
+                                <a href="../..">Home</a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">User Guide <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../guide/basic/">Basic concepts</a>
+</li>
+                                    
+<li >
+    <a href="../../guide/notes/">Notes and Rests</a>
+</li>
+                                    
+<li >
+    <a href="../../guide/chords/">Chords</a>
+</li>
+                                    
+<li >
+    <a href="../../guide/tags/">Tags and Tagged Ranges</a>
+</li>
+                                    
+<li >
+    <a href="../../guide/voices/">Voices</a>
+</li>
+                                    
+<li >
+    <a href="../../guide/scores/">Scores</a>
+</li>
+                                    
+<li >
+    <a href="../../guide/comments/">Comments and Spacing</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Reference <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../refs/tagsparams/">Tags parameters</a>
+</li>
+                                    
+<li >
+    <a href="../../refs/tags/">Tags</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Tags reference</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../refs/tags/Accidentals/">Accidentals</a>
+</li>
+            
+<li >
+    <a href="../../refs/tags/Articulations/">Articulations</a>
+</li>
+            
+<li >
+    <a href="../../refs/tags/Barlines/">Barlines</a>
+</li>
+            
+<li >
+    <a href="../../refs/tags/Beaming/">Beaming</a>
+</li>
+            
+<li >
+    <a href="../../refs/tags/ClefKeyMeter/">Clef Key Meter</a>
+</li>
+            
+<li >
+    <a href="../../refs/tags/Dynamics/">Dynamics</a>
+</li>
+            
+<li >
+    <a href="../../refs/tags/Layout/">Layout</a>
+</li>
+            
+<li >
+    <a href="../../refs/tags/Miscellaneous/">Miscellaneous</a>
+</li>
+            
+<li >
+    <a href="../../refs/tags/Notes/">Notes</a>
+</li>
+            
+<li >
+    <a href="../../refs/tags/Ornaments/">Ornaments</a>
+</li>
+            
+<li >
+    <a href="../../refs/tags/RepeatSigns/">Repeat Signs</a>
+</li>
+            
+<li >
+    <a href="../../refs/tags/Tempo/">Tempo</a>
+</li>
+            
+<li >
+    <a href="../../refs/tags/Text/">Text</a>
+</li>
+    </ul>
+  </li>
+                                    
+<li >
+    <a href="../../refs/">Tags index</a>
+</li>
+                                    
+<li >
+    <a href="../../refs/gmnf/">Language specification</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Examples <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../4voices/">4 Voices</a>
+</li>
+                                    
+<li >
+    <a href="../accidentals/">Accidentals</a>
+</li>
+                                    
+<li >
+    <a href="../allthethings/">All The Things You Are</a>
+</li>
+                                    
+<li >
+    <a href="../articulations/">Articulations</a>
+</li>
+                                    
+<li >
+    <a href="../bach/">Bach</a>
+</li>
+                                    
+<li >
+    <a href="../barlines/">Barlines</a>
+</li>
+                                    
+<li >
+    <a href="../bartok/">Bela Bartock</a>
+</li>
+                                    
+<li >
+    <a href="../beaming/">Beaming</a>
+</li>
+                                    
+<li >
+    <a href="../beethoven/">Beethoven</a>
+</li>
+                                    
+<li >
+    <a href="../brown/">Chris Brown</a>
+</li>
+                                    
+<li >
+    <a href="../clefkeymeter/">Clef, Key, Meter</a>
+</li>
+                                    
+<li >
+    <a href="../cpebach/">Sonata for flute</a>
+</li>
+                                    
+<li >
+    <a href="../dynamics/">Dynamics</a>
+</li>
+                                    
+<li >
+    <a href="../faure/">Fauré</a>
+</li>
+                                    
+<li >
+    <a href="../layout/">Layout</a>
+</li>
+                                    
+<li >
+    <a href="../lutkin/">Peter C. Lutkin</a>
+</li>
+                                    
+<li >
+    <a href="../mozart581/">Mozart Clarinet Quintet</a>
+</li>
+                                    
+<li class="active">
+    <a href="./">Notes attributes</a>
+</li>
+                                    
+<li >
+    <a href="../ornaments/">Ornaments</a>
+</li>
+                                    
+<li >
+    <a href="../repeats/">Repeat Signs</a>
+</li>
+                                    
+<li >
+    <a href="../slurs/">Slurs</a>
+</li>
+                                    
+<li >
+    <a href="../space/">Ties & Space</a>
+</li>
+                                    
+<li >
+    <a href="../tempo/">Tempo</a>
+</li>
+                                </ul>
+                            </li>
+                            <li >
+                                <a href="../../about/">About</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li >
+                                <a rel="next" href="../mozart581/">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li >
+                                <a rel="prev" href="../ornaments/">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="main active"><a href="#notes-attributes">Notes attributes</a></li>
+    </ul>
+</div></div>
+                <div class="col-md-9" role="main">
+
+<h1 id="notes-attributes">Notes attributes</h1>
+<p>This examples show clusters, grace notes, tuplets.</p>
+<p>It illustrates also how to change the notes appearance: heads shape, position, displayed duration.</p>
+<p>Note that the absence of meter prevents the layout engine to insert barlines and system breaks. 
+That's why a manual system break is inserted (in between two barlines).</p>
+<pre><code>[ 
+    \pageFormat&lt;lm=1cm, tm=1cm, bm=1cm, rm=1cm&gt;
+
+    \accent (\cluster({e, b}))
+    \cresc&lt;deltaY=2, dy=1&gt;( \fBeam&lt;durations=&quot;1/8,1/32&quot;&gt;(g/16 g g/32 g g/64 ))
+    \stemsUp \slur&lt;&quot;down&quot;&gt;( \beam(\grace(f2/16 a g f))) \stemsAuto 
+    \text&lt;&quot;note the heads position&quot;, dx=-4, dy=-3, fsize=16pt, fattrib=&quot;i&quot;&gt;
+    (\beam (e/8 \headsLeft(e) \headsCenter(e) \headsRight(e)))
+    \cluster({ \tieBegin:1&lt;&quot;down&quot;&gt; c/4, \tieBegin:2 g}) | \cluster({c/4 \tieEnd:1, g \tieEnd:2})
+    \noteFormat&lt;size=1.5&gt; (a1/1)
+    \tuplet&lt;&quot;-5:4-&quot;, &quot;below&quot;&gt;( \bm(f/16 a c2 e g)) |
+    \beam(\noteFormat&lt;style=&quot;square&quot;&gt; (a1/8 b e f)) 
+
+    \newSystem
+    \text&lt;&quot;... and the heads shape&quot;, dx=-4, dy=14, fsize=16pt, fattrib=&quot;i&quot;&gt;
+    (\beam(\noteFormat&lt;style=&quot;[diamond]&quot;, color=&quot;0x666666&quot;&gt; (\stemsOff a1/8 b e f g a))) 
+    \text&lt;&quot;a no range text&quot;, dx=-4, dy=6.4, fsize=9pt&gt;
+    \glissando(\cluster({e/4, c2}) \cluster({c1, f2}) \cluster({b1, e2})) \stemsAuto  |
+    \fermata&lt;&quot;long&quot;, &quot;below&quot;&gt;(\harmonic( \displayDuration&lt;2, 1, 0&gt;(b1/2))) 
+    \i&lt;&quot;sfz&quot;, autopos=&quot;on&quot;&gt; \marcato(b/4)   
+]
+</code></pre>
+
+<p><button class="try_it" onclick=window.open("https://guidoeditor.grame.fr/?src=https://raw.githubusercontent.com/grame-cncm/guidodoc/master/examples/mkdocs/examples/notes.gmn")>Try it online</button></p>
+<div class="guido-code guido-full">
+<?xml version="1.0"?>
+<svg viewBox="0 0 624 228" xmlns="http://www.w3.org/2000/svg"  version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <desc> SVG file generated using the GuidoEngine version 1.6.7</desc>
+    <g style="stroke:#000000; stroke-opacity:1">
+        <g transform="scale(0.124468, 0.124468)">
+            <g transform="translate(-0, -0)">
+            </g>
+            <g transform="translate(237.106, 237.106)">
+            </g>
+            <g transform="translate(237.106, 437.106)">
+                <g style="stroke-width:4">
+                    <line x1="0" y1="0" x2="2200.05" y2="0"></line>
+                    <line x1="0" y1="50" x2="2200.05" y2="50"></line>
+                    <line x1="0" y1="100" x2="2200.05" y2="100"></line>
+                    <line x1="0" y1="150" x2="2200.05" y2="150"></line>
+                    <line x1="0" y1="200" x2="2200.05" y2="200"></line>
+                    <line x1="2200.05" y1="0" x2="2308.18" y2="0"></line>
+                    <line x1="2200.05" y1="50" x2="2308.18" y2="50"></line>
+                    <line x1="2200.05" y1="100" x2="2308.18" y2="100"></line>
+                    <line x1="2200.05" y1="150" x2="2308.18" y2="150"></line>
+                    <line x1="2200.05" y1="200" x2="2308.18" y2="200"></line>
+                </g>
+            </g>
+            <g transform="translate(237.106, 437.106)">
+                <g font-family="Guido2">
+                    <text x="50.0002" y="200"  font-size="200">&#38;</text>
+                    <text x="270.075" y="191.667"  font-size="200">&#120;</text>
+                    <text x="270.075" y="175"  font-size="200">&#120;</text>
+                    <text x="270.075" y="150"  font-size="200">&#120;</text>
+                    <text x="270.075" y="125"  font-size="200">&#120;</text>
+                    <text x="270.075" y="100"  font-size="200">&#120;</text>
+                    <text x="270.075" y="75"  font-size="200">&#120;</text>
+                    <text x="270.075" y="50"  font-size="200">&#120;</text>
+                    <text x="270.075" y="25"  font-size="200">&#120;</text>
+                    <text x="270.075" y="0"  font-size="200">&#120;</text>
+                    <text x="270.075" y="-25"  font-size="200">&#120;</text>
+                    <text x="270.075" y="-25"  font-size="200">&#120;</text>
+                    <text x="261.97" y="300"  font-size="200">&#62;</text>
+                    <polygon points="268.958 75  328.958 75  328.958 225  268.958 225  "></polygon>
+                    <g style="stroke-width:4">
+                        <line x1="544.929" y1="275" x2="978.795" y2="250"></line>
+                        <line x1="544.929" y1="275" x2="978.795" y2="300"></line>
+                    </g>
+                    <polygon points="570.812 -51.3134  570.812 -28.8134  1007.68 -72.5  1007.68 -95  "></polygon>
+                    <polygon points="570.812 -51.3134  570.812 -31.3134  1007.68 -75  1007.68 -95  "></polygon>
+                    <polygon points="570.812 -51.3134  570.812 -31.3134  1007.68 -37.5  1007.68 -57.5  "></polygon>
+                    <polygon points="570.812 -51.3134  570.812 -31.3134  1007.68 0  1007.68 -20  "></polygon>
+                    <text x="515.046" y="150"  font-size="200">&#88;</text>
+                    <text x="515.046" y="141.667"  font-size="200">&#120;</text>
+                    <text x="515.046" y="125"  font-size="200">&#120;</text>
+                    <text x="515.046" y="100"  font-size="200">&#120;</text>
+                    <text x="515.046" y="75"  font-size="200">&#120;</text>
+                    <text x="515.046" y="50"  font-size="200">&#120;</text>
+                    <text x="515.046" y="25"  font-size="200">&#120;</text>
+                    <text x="515.046" y="1.1866"  font-size="200">&#120;</text>
+                    <text x="634.991" y="150"  font-size="200">&#88;</text>
+                    <text x="634.991" y="141.667"  font-size="200">&#120;</text>
+                    <text x="634.991" y="125"  font-size="200">&#120;</text>
+                    <text x="634.991" y="100"  font-size="200">&#120;</text>
+                    <text x="634.991" y="75"  font-size="200">&#120;</text>
+                    <text x="634.991" y="50"  font-size="200">&#120;</text>
+                    <text x="634.991" y="25"  font-size="200">&#120;</text>
+                    <text x="634.991" y="0"  font-size="200">&#120;</text>
+                    <text x="634.991" y="-10.8079"  font-size="200">&#120;</text>
+                    <text x="754.936" y="150"  font-size="200">&#88;</text>
+                    <text x="754.936" y="141.667"  font-size="200">&#120;</text>
+                    <text x="754.936" y="125"  font-size="200">&#120;</text>
+                    <text x="754.936" y="100"  font-size="200">&#120;</text>
+                    <text x="754.936" y="75"  font-size="200">&#120;</text>
+                    <text x="754.936" y="50"  font-size="200">&#120;</text>
+                    <text x="754.936" y="25"  font-size="200">&#120;</text>
+                    <text x="754.936" y="0"  font-size="200">&#120;</text>
+                    <text x="754.936" y="-22.8024"  font-size="200">&#120;</text>
+                    <text x="851.924" y="150"  font-size="200">&#88;</text>
+                    <text x="851.924" y="141.667"  font-size="200">&#120;</text>
+                    <text x="851.924" y="125"  font-size="200">&#120;</text>
+                    <text x="851.924" y="100"  font-size="200">&#120;</text>
+                    <text x="851.924" y="75"  font-size="200">&#120;</text>
+                    <text x="851.924" y="50"  font-size="200">&#120;</text>
+                    <text x="851.924" y="25"  font-size="200">&#120;</text>
+                    <text x="851.924" y="0"  font-size="200">&#120;</text>
+                    <text x="851.924" y="-25"  font-size="200">&#120;</text>
+                    <text x="851.924" y="-32.5012"  font-size="200">&#120;</text>
+                    <text x="948.912" y="150"  font-size="200">&#88;</text>
+                    <text x="948.912" y="141.667"  font-size="200">&#120;</text>
+                    <text x="948.912" y="125"  font-size="200">&#120;</text>
+                    <text x="948.912" y="100"  font-size="200">&#120;</text>
+                    <text x="948.912" y="75"  font-size="200">&#120;</text>
+                    <text x="948.912" y="50"  font-size="200">&#120;</text>
+                    <text x="948.912" y="25"  font-size="200">&#120;</text>
+                    <text x="948.912" y="0"  font-size="200">&#120;</text>
+                    <text x="948.912" y="-25"  font-size="200">&#120;</text>
+                    <text x="948.912" y="-42.2"  font-size="200">&#120;</text>
+                    <polygon points="1064.78 62.5  1064.78 62.5  1071.3 66.4029  1077.95 69.9805  1084.72 73.2328  1091.61 76.16  1098.59 78.7619  1105.66 81.0386  1112.81 82.99  1120.02 84.6162  1127.29 85.9171  1134.6 86.8928  1141.93 87.5433  1149.29 87.8686  1156.64 87.8686  1164 87.5433  1171.33 86.8929  1178.64 85.9171  1185.91 84.6162  1193.12 82.99  1200.27 81.0386  1207.34 78.7619  1214.32 76.16  1221.21 73.2328  1227.98 69.9805  1234.63 66.4028  1241.15 62.5  1241.15 62.5  1241.15 62.5  1234.8 67.5549  1228.27 72.1885  1221.58 76.4009  1214.75 80.192  1207.78 83.5619  1200.71 86.5106  1193.53 89.038  1186.27 91.1442  1178.94 92.8291  1171.56 94.0928  1164.14 94.9353  1156.69 95.3566  1149.24 95.3566  1141.8 94.9353  1134.37 94.0929  1126.99 92.8291  1119.66 91.1442  1112.4 89.038  1105.22 86.5106  1098.15 83.5619  1091.18 80.192  1084.35 76.4008  1077.66 72.1885  1071.13 67.5548  1064.78 62.5  "></polygon>
+                    <polygon points="1083.45 -131.25  1083.45 -114.375  1263.31 -114.375  1263.31 -131.25  "></polygon>
+                    <polygon points="1083.45 -128.75  1083.45 -113.75  1263.31 -113.75  1263.31 -128.75  "></polygon>
+                    <polygon points="1083.45 -100.625  1083.45 -85.625  1263.31 -85.625  1263.31 -100.625  "></polygon>
+                    <text x="1041.62" y="0"  font-size="150">&#88;</text>
+                    <text x="1041.62" y="-6.25"  font-size="150">&#120;</text>
+                    <text x="1041.62" y="-18.75"  font-size="150">&#120;</text>
+                    <text x="1041.62" y="-37.5"  font-size="150">&#120;</text>
+                    <text x="1041.62" y="-56.25"  font-size="150">&#120;</text>
+                    <text x="1041.62" y="-75"  font-size="150">&#120;</text>
+                    <text x="1041.62" y="-91.25"  font-size="150">&#120;</text>
+                    <text x="1089.06" y="-50"  font-size="150">&#95;</text>
+                    <text x="1104.89" y="-50"  font-size="150">&#88;</text>
+                    <text x="1104.89" y="-56.25"  font-size="150">&#120;</text>
+                    <text x="1104.89" y="-68.75"  font-size="150">&#120;</text>
+                    <text x="1104.89" y="-87.5"  font-size="150">&#120;</text>
+                    <text x="1104.89" y="-91.25"  font-size="150">&#120;</text>
+                    <text x="1168.16" y="-25"  font-size="150">&#88;</text>
+                    <text x="1168.16" y="-31.25"  font-size="150">&#120;</text>
+                    <text x="1168.16" y="-43.75"  font-size="150">&#120;</text>
+                    <text x="1168.16" y="-62.5"  font-size="150">&#120;</text>
+                    <text x="1168.16" y="-81.25"  font-size="150">&#120;</text>
+                    <text x="1168.16" y="-91.25"  font-size="150">&#120;</text>
+                    <text x="1217.99" y="0"  font-size="150">&#88;</text>
+                    <text x="1217.99" y="-6.25"  font-size="150">&#120;</text>
+                    <text x="1217.99" y="-18.75"  font-size="150">&#120;</text>
+                    <text x="1217.99" y="-37.5"  font-size="150">&#120;</text>
+                    <text x="1217.99" y="-56.25"  font-size="150">&#120;</text>
+                    <text x="1217.99" y="-75"  font-size="150">&#120;</text>
+                    <text x="1217.99" y="-91.25"  font-size="150">&#120;</text>
+                </g>
+                <g font-family="Times" font-style="italic">
+                    <text x="1197.7" y="275"  dominant-baseline="hanging" font-size="133">
+                        note the heads position
+                    </text>
+                    <polygon points="1267.81 200  1267.81 177.5  1764.53 177.5  1764.53 200  "></polygon>
+                    <polygon points="1267.81 197.5  1267.81 177.5  1764.53 177.5  1764.53 197.5  "></polygon>
+                </g>
+                <g font-family="Guido2">
+                    <text x="1267.81" y="25"  font-size="200">&#88;</text>
+                    <text x="1267.81" y="33.3333"  font-size="200">&#104;</text>
+                    <text x="1267.81" y="50"  font-size="200">&#104;</text>
+                    <text x="1267.81" y="75"  font-size="200">&#104;</text>
+                    <text x="1267.81" y="100"  font-size="200">&#104;</text>
+                    <text x="1267.81" y="125"  font-size="200">&#104;</text>
+                    <text x="1267.81" y="147.5"  font-size="200">&#104;</text>
+                    <text x="1376.72" y="25"  font-size="200">&#88;</text>
+                    <text x="1431.72" y="16.6667"  font-size="200">&#104;</text>
+                    <text x="1431.72" y="50"  font-size="200">&#104;</text>
+                    <text x="1431.72" y="75"  font-size="200">&#104;</text>
+                    <text x="1431.72" y="100"  font-size="200">&#104;</text>
+                    <text x="1431.72" y="125"  font-size="200">&#104;</text>
+                    <text x="1431.72" y="147.5"  font-size="200">&#104;</text>
+                    <text x="1568.13" y="25"  font-size="200">&#88;</text>
+                    <text x="1595.63" y="33.3333"  font-size="200">&#104;</text>
+                    <text x="1595.63" y="50"  font-size="200">&#104;</text>
+                    <text x="1595.63" y="75"  font-size="200">&#104;</text>
+                    <text x="1595.63" y="100"  font-size="200">&#104;</text>
+                    <text x="1595.63" y="125"  font-size="200">&#104;</text>
+                    <text x="1595.63" y="147.5"  font-size="200">&#104;</text>
+                    <text x="1759.53" y="25"  font-size="200">&#88;</text>
+                    <text x="1759.53" y="33.3333"  font-size="200">&#104;</text>
+                    <text x="1759.53" y="50"  font-size="200">&#104;</text>
+                    <text x="1759.53" y="75"  font-size="200">&#104;</text>
+                    <text x="1759.53" y="100"  font-size="200">&#104;</text>
+                    <text x="1759.53" y="125"  font-size="200">&#104;</text>
+                    <text x="1759.53" y="147.5"  font-size="200">&#104;</text>
+                    <text x="1923.44" y="-16.6667"  font-size="200">&#104;</text>
+                    <text x="1923.44" y="0"  font-size="200">&#104;</text>
+                    <text x="1923.44" y="25"  font-size="200">&#104;</text>
+                    <text x="1923.44" y="50"  font-size="200">&#104;</text>
+                    <text x="1923.44" y="75"  font-size="200">&#104;</text>
+                    <text x="1923.44" y="100"  font-size="200">&#104;</text>
+                    <text x="1923.44" y="125"  font-size="200">&#104;</text>
+                    <text x="1923.44" y="150"  font-size="200">&#104;</text>
+                    <text x="1923.44" y="175"  font-size="200">&#104;</text>
+                    <text x="1923.44" y="200"  font-size="200">&#104;</text>
+                    <text x="1923.44" y="200"  font-size="200">&#104;</text>
+                    <polygon points="1990.7 112.5  1990.7 112.5  1999.65 115.613  2009.16 118.466  2019.19 121.06  2029.69 123.395  2040.6 125.47  2051.87 127.286  2063.47 128.842  2075.33 130.139  2087.42 131.177  2099.68 131.955  2112.06 132.474  2124.51 132.733  2136.99 132.733  2149.44 132.474  2161.82 131.955  2174.08 131.177  2186.16 130.139  2198.03 128.842  2209.63 127.286  2220.9 125.47  2231.81 123.395  2242.31 121.06  2252.33 118.466  2261.85 115.613  2270.8 112.5  2270.8 112.5  2270.8 112.5  2261.99 116.765  2252.59 120.674  2242.64 124.228  2232.19 127.427  2221.3 130.27  2210.02 132.758  2198.4 134.89  2186.49 136.667  2174.34 138.089  2162.02 139.155  2149.56 139.866  2137.03 140.221  2124.47 140.221  2111.93 139.866  2099.48 139.155  2087.15 138.089  2075.01 136.667  2063.1 134.89  2051.48 132.758  2040.2 130.27  2029.31 127.427  2018.86 124.228  2008.91 120.674  1999.51 116.765  1990.7 112.5  "></polygon>
+                    <polygon points="1922.32 -50  1982.32 -50  1982.32 100  1922.32 100  "></polygon>
+                    <polygon points="1990.7 -62.5  1990.7 -62.5  1999.65 -65.6128  2009.16 -68.4662  2019.19 -71.0602  2029.69 -73.3948  2040.6 -75.47  2051.87 -77.2858  2063.47 -78.8422  2075.33 -80.1392  2087.42 -81.1768  2099.68 -81.9549  2112.06 -82.4738  2124.51 -82.7332  2136.99 -82.7332  2149.44 -82.4738  2161.82 -81.955  2174.08 -81.1768  2186.16 -80.1392  2198.03 -78.8422  2209.63 -77.2858  2220.9 -75.47  2231.81 -73.3948  2242.31 -71.0602  2252.33 -68.4662  2261.85 -65.6128  2270.8 -62.5  2270.8 -62.5  2270.8 -62.5  2261.99 -66.7648  2252.59 -70.6742  2242.64 -74.2282  2232.19 -77.4268  2221.3 -80.27  2210.02 -82.7578  2198.4 -84.8902  2186.49 -86.6672  2174.34 -88.0888  2162.02 -89.1549  2149.56 -89.8658  2137.03 -90.2212  2124.47 -90.2212  2111.93 -89.8658  2099.48 -89.155  2087.15 -88.0888  2075.01 -86.6672  2063.1 -84.8902  2051.48 -82.7578  2040.2 -80.27  2029.31 -77.4268  2018.86 -74.2282  2008.91 -70.6742  1999.51 -66.7648  1990.7 -62.5  "></polygon>
+                    <g style="stroke-width:4">
+                        <line x1="2201.29" y1="2" x2="2201.29" y2="198"></line>
+                    </g>
+                </g>
+            </g>
+            <g transform="translate(237.106, 437.106)">
+                <g style="stroke-width:4">
+                    <line x1="2308.18" y1="0" x2="3761.27" y2="0"></line>
+                    <line x1="2308.18" y1="50" x2="3761.27" y2="50"></line>
+                    <line x1="2308.18" y1="100" x2="3761.27" y2="100"></line>
+                    <line x1="2308.18" y1="150" x2="3761.27" y2="150"></line>
+                    <line x1="2308.18" y1="200" x2="3761.27" y2="200"></line>
+                    <line x1="3761.27" y1="0" x2="3869.39" y2="0"></line>
+                    <line x1="3761.27" y1="50" x2="3869.39" y2="50"></line>
+                    <line x1="3761.27" y1="100" x2="3869.39" y2="100"></line>
+                    <line x1="3761.27" y1="150" x2="3869.39" y2="150"></line>
+                    <line x1="3761.27" y1="200" x2="3869.39" y2="200"></line>
+                </g>
+            </g>
+            <g transform="translate(237.106, 437.106)">
+                <g font-family="Guido2">
+                    <text x="2278.3" y="-16.6667"  font-size="200">&#104;</text>
+                    <text x="2278.3" y="0"  font-size="200">&#104;</text>
+                    <text x="2278.3" y="25"  font-size="200">&#104;</text>
+                    <text x="2278.3" y="50"  font-size="200">&#104;</text>
+                    <text x="2278.3" y="75"  font-size="200">&#104;</text>
+                    <text x="2278.3" y="100"  font-size="200">&#104;</text>
+                    <text x="2278.3" y="125"  font-size="200">&#104;</text>
+                    <text x="2278.3" y="150"  font-size="200">&#104;</text>
+                    <text x="2278.3" y="175"  font-size="200">&#104;</text>
+                    <text x="2278.3" y="200"  font-size="200">&#104;</text>
+                    <text x="2278.3" y="200"  font-size="200">&#104;</text>
+                    <polygon points="2277.18 -50  2337.18 -50  2337.18 100  2277.18 100  "></polygon>
+                    <text x="2492.94" y="125"  font-size="300">&#119;</text>
+                </g>
+                <g font-family="Times New Roman" font-style="italic">
+                    <text x="3401.17" y="268" text-anchor="middle" font-size="80">
+                        5:4
+                    </text>
+                    <g style="stroke-width:4">
+                        <line x1="3129.9" y1="225" x2="3129.9" y2="250.08"></line>
+                        <line x1="3129.9" y1="250" x2="3313.67" y2="250"></line>
+                        <line x1="3488.67" y1="250" x2="3672.43" y2="250"></line>
+                        <line x1="3672.43" y1="250.08" x2="3672.43" y2="225"></line>
+                    </g>
+                    <polygon points="3185.66 -152.022  3185.66 -129.522  3668.45 -177.8  3668.45 -200.3  "></polygon>
+                    <polygon points="3185.66 -149.522  3185.66 -129.522  3668.45 -177.5  3668.45 -197.5  "></polygon>
+                    <polygon points="3185.66 -112.022  3185.66 -92.022  3668.45 -140  3668.45 -160  "></polygon>
+                </g>
+                <g font-family="Guido2">
+                    <text x="3129.9" y="175"  font-size="200">&#88;</text>
+                    <text x="3129.9" y="166.667"  font-size="200">&#120;</text>
+                    <text x="3129.9" y="150"  font-size="200">&#120;</text>
+                    <text x="3129.9" y="125"  font-size="200">&#120;</text>
+                    <text x="3129.9" y="100"  font-size="200">&#120;</text>
+                    <text x="3129.9" y="75"  font-size="200">&#120;</text>
+                    <text x="3129.9" y="50"  font-size="200">&#120;</text>
+                    <text x="3129.9" y="25"  font-size="200">&#120;</text>
+                    <text x="3129.9" y="0"  font-size="200">&#120;</text>
+                    <text x="3129.9" y="-25"  font-size="200">&#120;</text>
+                    <text x="3129.9" y="-50"  font-size="200">&#120;</text>
+                    <text x="3129.9" y="-75"  font-size="200">&#120;</text>
+                    <text x="3129.9" y="-99.522"  font-size="200">&#120;</text>
+                    <text x="3249.84" y="125"  font-size="200">&#88;</text>
+                    <text x="3249.84" y="116.667"  font-size="200">&#120;</text>
+                    <text x="3249.84" y="100"  font-size="200">&#120;</text>
+                    <text x="3249.84" y="75"  font-size="200">&#120;</text>
+                    <text x="3249.84" y="50"  font-size="200">&#120;</text>
+                    <text x="3249.84" y="25"  font-size="200">&#120;</text>
+                    <text x="3249.84" y="0"  font-size="200">&#120;</text>
+                    <text x="3249.84" y="-25"  font-size="200">&#120;</text>
+                    <text x="3249.84" y="-50"  font-size="200">&#120;</text>
+                    <text x="3249.84" y="-75"  font-size="200">&#120;</text>
+                    <text x="3249.84" y="-100"  font-size="200">&#120;</text>
+                    <text x="3249.84" y="-111.516"  font-size="200">&#120;</text>
+                    <text x="3369.79" y="75"  font-size="200">&#88;</text>
+                    <text x="3369.79" y="66.6667"  font-size="200">&#120;</text>
+                    <text x="3369.79" y="50"  font-size="200">&#120;</text>
+                    <text x="3369.79" y="25"  font-size="200">&#120;</text>
+                    <text x="3369.79" y="0"  font-size="200">&#120;</text>
+                    <text x="3369.79" y="-25"  font-size="200">&#120;</text>
+                    <text x="3369.79" y="-50"  font-size="200">&#120;</text>
+                    <text x="3369.79" y="-75"  font-size="200">&#120;</text>
+                    <text x="3369.79" y="-100"  font-size="200">&#120;</text>
+                    <text x="3369.79" y="-123.511"  font-size="200">&#120;</text>
+                    <text x="3489.73" y="25"  font-size="200">&#88;</text>
+                    <text x="3489.73" y="16.6667"  font-size="200">&#120;</text>
+                    <text x="3489.73" y="0"  font-size="200">&#120;</text>
+                    <text x="3489.73" y="-25"  font-size="200">&#120;</text>
+                    <text x="3489.73" y="-50"  font-size="200">&#120;</text>
+                    <text x="3489.73" y="-75"  font-size="200">&#120;</text>
+                    <text x="3489.73" y="-100"  font-size="200">&#120;</text>
+                    <text x="3489.73" y="-125"  font-size="200">&#120;</text>
+                    <text x="3489.73" y="-135.505"  font-size="200">&#120;</text>
+                    <text x="3609.68" y="-25"  font-size="200">&#88;</text>
+                    <text x="3609.68" y="-33.3333"  font-size="200">&#120;</text>
+                    <text x="3609.68" y="-50"  font-size="200">&#120;</text>
+                    <text x="3609.68" y="-75"  font-size="200">&#120;</text>
+                    <text x="3609.68" y="-100"  font-size="200">&#120;</text>
+                    <text x="3609.68" y="-125"  font-size="200">&#120;</text>
+                    <text x="3609.68" y="-147.5"  font-size="200">&#120;</text>
+                    <g style="stroke-width:4">
+                        <line x1="3762.51" y1="2" x2="3762.51" y2="198"></line>
+                    </g>
+                </g>
+            </g>
+            <g transform="translate(237.106, 437.106)">
+                <g style="stroke-width:4">
+                    <line x1="3869.39" y1="0" x2="4393.98" y2="0"></line>
+                    <line x1="3869.39" y1="50" x2="4393.98" y2="50"></line>
+                    <line x1="3869.39" y1="100" x2="4393.98" y2="100"></line>
+                    <line x1="3869.39" y1="150" x2="4393.98" y2="150"></line>
+                    <line x1="3869.39" y1="200" x2="4393.98" y2="200"></line>
+                    <line x1="4393.98" y1="0" x2="4525.02" y2="0"></line>
+                    <line x1="4393.98" y1="50" x2="4525.02" y2="50"></line>
+                    <line x1="4393.98" y1="100" x2="4525.02" y2="100"></line>
+                    <line x1="4393.98" y1="150" x2="4525.02" y2="150"></line>
+                    <line x1="4393.98" y1="200" x2="4525.02" y2="200"></line>
+                </g>
+            </g>
+            <g transform="translate(237.106, 437.106)">
+                <polygon points="3895.28 -91.3906  3895.28 -68.8906  4390 -19.4188  4390 -41.9188  "></polygon>
+                <polygon points="3895.28 -88.8906  3895.28 -68.8906  4390 -19.7188  4390 -39.7188  "></polygon>
+                <g font-family="Guido2">
+                    <text x="3844.51" y="125"  font-size="200">&#215;</text>
+                    <text x="3839.51" y="125"  font-size="200">&#120;</text>
+                    <text x="3839.51" y="100"  font-size="200">&#120;</text>
+                    <text x="3839.51" y="75"  font-size="200">&#120;</text>
+                    <text x="3839.51" y="50"  font-size="200">&#120;</text>
+                    <text x="3839.51" y="25"  font-size="200">&#120;</text>
+                    <text x="3839.51" y="0"  font-size="200">&#120;</text>
+                    <text x="3839.51" y="-25"  font-size="200">&#120;</text>
+                    <text x="3839.51" y="-38.8906"  font-size="200">&#120;</text>
+                    <text x="4008.42" y="100"  font-size="200">&#215;</text>
+                    <text x="4003.42" y="100"  font-size="200">&#120;</text>
+                    <text x="4003.42" y="75"  font-size="200">&#120;</text>
+                    <text x="4003.42" y="50"  font-size="200">&#120;</text>
+                    <text x="4003.42" y="25"  font-size="200">&#120;</text>
+                    <text x="4003.42" y="0"  font-size="200">&#120;</text>
+                    <text x="4003.42" y="-22.5"  font-size="200">&#120;</text>
+                    <text x="4172.32" y="200"  font-size="200">&#215;</text>
+                    <text x="4167.32" y="200"  font-size="200">&#120;</text>
+                    <text x="4167.32" y="175"  font-size="200">&#120;</text>
+                    <text x="4167.32" y="150"  font-size="200">&#120;</text>
+                    <text x="4167.32" y="125"  font-size="200">&#120;</text>
+                    <text x="4167.32" y="100"  font-size="200">&#120;</text>
+                    <text x="4167.32" y="75"  font-size="200">&#120;</text>
+                    <text x="4167.32" y="50"  font-size="200">&#120;</text>
+                    <text x="4167.32" y="25"  font-size="200">&#120;</text>
+                    <text x="4167.32" y="0"  font-size="200">&#120;</text>
+                    <text x="4167.32" y="-6.10941"  font-size="200">&#120;</text>
+                    <text x="4336.23" y="175"  font-size="200">&#215;</text>
+                    <text x="4331.23" y="175"  font-size="200">&#120;</text>
+                    <text x="4331.23" y="150"  font-size="200">&#120;</text>
+                    <text x="4331.23" y="125"  font-size="200">&#120;</text>
+                    <text x="4331.23" y="100"  font-size="200">&#120;</text>
+                    <text x="4331.23" y="75"  font-size="200">&#120;</text>
+                    <text x="4331.23" y="50"  font-size="200">&#120;</text>
+                    <text x="4331.23" y="25"  font-size="200">&#120;</text>
+                    <text x="4331.23" y="10.2812"  font-size="200">&#120;</text>
+                </g>
+            </g>
+            <g transform="translate(237.106, 437.106)">
+            </g>
+            <g transform="translate(237.106, 237.106)">
+            </g>
+            <g transform="translate(237.106, 1269.69)">
+                <g style="stroke-width:4">
+                    <line x1="0" y1="0" x2="3363.87" y2="0"></line>
+                    <line x1="0" y1="50" x2="3363.87" y2="50"></line>
+                    <line x1="0" y1="100" x2="3363.87" y2="100"></line>
+                    <line x1="0" y1="150" x2="3363.87" y2="150"></line>
+                    <line x1="0" y1="200" x2="3363.87" y2="200"></line>
+                    <line x1="3363.87" y1="0" x2="3527.38" y2="0"></line>
+                    <line x1="3363.87" y1="50" x2="3527.38" y2="50"></line>
+                    <line x1="3363.87" y1="100" x2="3527.38" y2="100"></line>
+                    <line x1="3363.87" y1="150" x2="3527.38" y2="150"></line>
+                    <line x1="3363.87" y1="200" x2="3527.38" y2="200"></line>
+                </g>
+            </g>
+            <g transform="translate(237.106, 1269.69)">
+                <g font-family="Guido2">
+                    <text x="50.0002" y="200"  font-size="200">&#38;</text>
+                </g>
+                <g font-family="Times" font-style="italic">
+                    <text x="233.718" y="-150"  dominant-baseline="hanging" font-size="133">
+                        ... and the heads shape
+                    </text>
+                </g>
+                <g font-family="Guido2">
+                    <text x="303.835" y="125"  font-size="200" stroke="#666666" fill="#666666" opacity="1">&#81;</text>
+                    <text x="278.835" y="180"  font-size="200" stroke="#666666" fill="#666666" opacity="1">&#238;</text>
+                    <text x="353.835" y="180"  font-size="200" stroke="#666666" fill="#666666" opacity="1">&#239;</text>
+                    <text x="550.349" y="100"  font-size="200" stroke="#666666" fill="#666666" opacity="1">&#81;</text>
+                    <text x="525.349" y="155"  font-size="200" stroke="#666666" fill="#666666" opacity="1">&#238;</text>
+                    <text x="600.349" y="155"  font-size="200" stroke="#666666" fill="#666666" opacity="1">&#239;</text>
+                    <text x="796.863" y="200"  font-size="200" stroke="#666666" fill="#666666" opacity="1">&#81;</text>
+                    <text x="771.863" y="255"  font-size="200" stroke="#666666" fill="#666666" opacity="1">&#238;</text>
+                    <text x="846.863" y="255"  font-size="200" stroke="#666666" fill="#666666" opacity="1">&#239;</text>
+                    <text x="1043.38" y="175"  font-size="200" stroke="#666666" fill="#666666" opacity="1">&#81;</text>
+                    <text x="1018.38" y="230"  font-size="200" stroke="#666666" fill="#666666" opacity="1">&#238;</text>
+                    <text x="1093.38" y="230"  font-size="200" stroke="#666666" fill="#666666" opacity="1">&#239;</text>
+                    <text x="1289.89" y="150"  font-size="200" stroke="#666666" fill="#666666" opacity="1">&#81;</text>
+                    <text x="1264.89" y="205"  font-size="200" stroke="#666666" fill="#666666" opacity="1">&#238;</text>
+                    <text x="1339.89" y="205"  font-size="200" stroke="#666666" fill="#666666" opacity="1">&#239;</text>
+                    <text x="1536.41" y="125"  font-size="200" stroke="#666666" fill="#666666" opacity="1">&#81;</text>
+                    <text x="1511.41" y="180"  font-size="200" stroke="#666666" fill="#666666" opacity="1">&#238;</text>
+                    <text x="1586.41" y="180"  font-size="200" stroke="#666666" fill="#666666" opacity="1">&#239;</text>
+                </g>
+                <g font-family="Times">
+                    <text x="1712.8" y="40"  dominant-baseline="hanging" font-size="75">
+                        a no range text
+                    </text>
+                    <polygon points="2304.99 210.324  2304.99 202.755  2577.05 239.676  2577.05 247.245  "></polygon>
+                    <polygon points="2225.8 50  2285.8 50  2285.8 225  2225.8 225  "></polygon>
+                    <polygon points="2304.99 69.018  2304.99 61.3642  2577.05 5.98197  2577.05 13.6358  "></polygon>
+                    <polygon points="2673.43 234.431  2673.43 226.333  2945.49 115.569  2945.49 123.667  "></polygon>
+                </g>
+                <g font-family="Guido2">
+                    <text x="2574.24" y="250"  font-size="200">&#95;</text>
+                    <polygon points="2594.24 -25  2654.24 -25  2654.24 275  2594.24 275  "></polygon>
+                    <polygon points="2673.43 7.02825  2673.43 -0.488998  2945.49 17.9718  2945.49 25.489  "></polygon>
+                    <polygon points="2962.68 0  3022.68 0  3022.68 125  2962.68 125  "></polygon>
+                    <g style="stroke-width:4">
+                        <line x1="3365.11" y1="2" x2="3365.11" y2="198"></line>
+                    </g>
+                </g>
+            </g>
+            <g transform="translate(237.106, 1269.69)">
+                <g style="stroke-width:4">
+                    <line x1="3527.38" y1="0" x2="4505.02" y2="0"></line>
+                    <line x1="3527.38" y1="50" x2="4505.02" y2="50"></line>
+                    <line x1="3527.38" y1="100" x2="4505.02" y2="100"></line>
+                    <line x1="3527.38" y1="150" x2="4505.02" y2="150"></line>
+                    <line x1="3527.38" y1="200" x2="4505.02" y2="200"></line>
+                </g>
+            </g>
+            <g transform="translate(237.106, 1269.69)">
+                <g font-family="Guido2">
+                    <text x="3463.42" y="100"  font-size="200">&#87;</text>
+                    <text x="3513.42" y="-32.5"  font-size="200">&#111;</text>
+                    <text x="3474.94" y="275"  font-size="200">&#185;</text>
+                    <text x="4062.23" y="362.5"  font-size="200">&#243;</text>
+                    <text x="4106.7" y="100"  font-size="200">&#88;</text>
+                    <text x="4106.7" y="108.333"  font-size="200">&#104;</text>
+                    <text x="4106.7" y="125"  font-size="200">&#104;</text>
+                    <text x="4106.7" y="150"  font-size="200">&#104;</text>
+                    <text x="4106.7" y="175"  font-size="200">&#104;</text>
+                    <text x="4106.7" y="200"  font-size="200">&#104;</text>
+                    <text x="4106.7" y="225"  font-size="200">&#104;</text>
+                    <text x="4106.7" y="225"  font-size="200">&#104;</text>
+                    <text x="4110.41" y="-22.61"  font-size="200">&#94;</text>
+                    <rect x="4462.82" y="0" width="7.2002" height="200"></rect>
+                    <rect x="4482.82" y="0" width="25" height="200"></rect>
+                </g>
+            </g>
+            <g transform="translate(237.106, 1269.69)">
+            </g>
+            <g transform="translate(237.106, 237.106)">
+            </g>
+            <g transform="translate(0, 1.52588e-05)">
+            </g>
+        </g>
+    </g>
+</svg>
+</div></div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+                <p>Copyright &copy; 2019-2020 <a href="http://www.grame.fr">Grame-CNCM</a></p>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js" defer></script>
+        <script src="../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form role="form">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="Keyboard Shortcuts Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Keyboard Shortcuts</h4>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
