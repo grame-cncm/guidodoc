@@ -44,8 +44,7 @@ help:
 	@echo "  zip      : create a zip file with all examples at the appropriate location"
 	@echo "  gmnclean : remove the output of the gmn target"
 	@echo "Making the current version publicly available:"
-	@echo "  publish  : make all + build, switch to gh-pages and copy to root"
-	@echo "             commit and push are still manual operations"
+	@echo "  publish  : make all + build"
 
 test: 
 	@echo EXAMPLESMENU: $(EXAMPLESMENU)
@@ -67,13 +66,7 @@ all:
 publish:
 	$(MAKE) all
 	$(MAKE) build
-	git checkout gh-pages
-	mv $(MKDIR) .$(MKDIR)
-	rm -rf *
-	cp -Rf .$(MKDIR)/site/* .
-	mv .$(MKDIR) $(MKDIR)
-	git checkout CNAME				# never delete !!!
-	@echo "Review the changes, add new files, commit and push manually"
+	@echo "Site is in docs folder: review the changes, add new files, commit and push manually"
 	
 
 ####################################################################
