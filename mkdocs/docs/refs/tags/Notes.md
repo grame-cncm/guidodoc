@@ -155,6 +155,38 @@ See the [notes](../../../examples/notes/) example.
 <br />
 
 
+## \mrest
+
+-------
+
+### Description
+
+| Name | Variants | Type | Notation element |
+| :----| :--------| :----| :----------------|
+| \mrest |  | R | when applied to a whole measure rest, indicates the measures count. |
+
+
+
+
+### Parameters
+
+| Name        	| Type   | Description    | Default value  | Optional |
+| :------------ |:-------| :--------------| :------------- | :--------| 
+| count | integer | a measures count | *none* | false |
+
+[Common parameters](../../tagsparams#common-parameters) are applied to the measures count only.
+You can use the [\restFormat](#restformat) tag to control the rest appearance.
+
+The tag is ignored when not applied to a rest.
+When the rest is not a full measure rest, the rest appearance is preserved and the count is still displayed.
+
+
+
+
+
+<br />
+
+
 ## \noteFormat
 
 -------

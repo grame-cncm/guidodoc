@@ -34,7 +34,7 @@
 [\label](tags/Text) [\lyrics](tags/Text)
 
 ##M
-[\marcato](tags/Articulations) [\mark](tags/Text) [\meter](tags/ClefKeyMeter) [\mord](tags/Ornaments) [\mordent](tags/Ornaments)
+[\marcato](tags/Articulations) [\mark](tags/Text) [\meter](tags/ClefKeyMeter) [\mord](tags/Ornaments) [\mordent](tags/Ornaments) [\mrest](tags/Notes)
 
 ##N
 [\newLine](tags/Layout) [\newPage](tags/Layout) [\newSystem](tags/Layout) [\noteFormat](tags/Notes)

@@ -21,6 +21,8 @@
 | Name        	| Type   | Description    | Default value  | Optional |
 | :------------ |:-------| :--------------| :------------- | :--------| 
 | displayMeasNum | boolean | displays measure number | false | true |
+| hidden | boolean | hide bar and prevent measure num increment | false | true |
+| measNum | integer | set measure number | *none* | true |
 | numDx | unit | measure number displacement | 0 | true |
 | numDy | unit | measure number displacement | 0 | true |
 

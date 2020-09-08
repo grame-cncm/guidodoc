@@ -82,6 +82,7 @@ mark:Text
 meter:Clef Key Meter
 mord:Ornaments
 mordent:Ornaments
+mrest:Notes
 newLine:Layout
 newPage:Layout
 newSystem:Layout
