@@ -1,6 +1,31 @@
 
 
 
+## GMN Code 
+-----------
+~~~~~~
+gmn		    : score
+			| variables_section score
+			;
+~~~~~~
+
+## Variables section
+-----------
+~~~~~~
+var_section	: var_decl
+			| var_section var_decl
+			;
+~~~~~~
+
+~~~~~~
+var_decl	: varname = string
+			| varname = number
+			;
+
+varname     : $[a-z_A-Z][a-z_A-Z0-9]*
+~~~~~~
+
+
 ## Score 
 -----------
 
@@ -20,6 +45,7 @@ symbols		:
 			| symbols music	
 			| symbols tag
 			| symbols chord	
+			| symbols varname	
 			;
 ~~~~~~
 
@@ -55,6 +81,7 @@ tagparam	: tagarg
 tagarg		: number
 			| number UNIT
 			| string
+			| varname
 			;
 
 number		: integer | float ;

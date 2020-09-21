@@ -10,6 +10,7 @@ This user guide describes
 - the concept of [tag and tagged notes](tags.md)
 - the concept of [voice](voices.md)
 - the concept of [score](scores.md)
+- the concept of [variables](variables.md)
 
 The reference section describes all the supported tags and tags parameters.   
 It includes also the Guido Music Notation format full [specification](../../refs/gmnf). 

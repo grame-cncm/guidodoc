@@ -25,4 +25,4 @@ the perfection of the staff system for music notation and the invention of solmi
 
 ----
 
-The current documentation describes the Guido Music Notation language as supported by the Guido Engine version 1.6.8. 
+The current documentation describes the Guido Music Notation language as supported by the **Guido Engine version 1.7.0**. 
