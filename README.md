@@ -40,3 +40,9 @@ When ready, you can generate the documentation web site. Type:
 $ make build
 ~~~~~~~~~~~~~~~~
 
+More details on the available targets:
+~~~~~~~~~~~~~~~~
+$ make help
+~~~~~~~~~~~~~~~~
+
+
