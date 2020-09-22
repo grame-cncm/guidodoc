@@ -10,6 +10,7 @@ nav:
         - 'Tags and Tagged Ranges': guide/tags.md
         - 'Voices': guide/voices.md
         - 'Scores': guide/scores.md
+        - 'Variables': guide/variables.md
         - 'Comments and Spacing': guide/comments.md
     - Reference: 
         - 'Tags parameters': refs/tagsparams.md

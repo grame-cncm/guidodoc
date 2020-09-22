@@ -296,6 +296,7 @@
             <li><a href="#dotformat">\dotFormat</a></li>
             <li><a href="#grace">\grace</a></li>
             <li><a href="#harmonic">\harmonic</a></li>
+            <li><a href="#mrest">\mrest</a></li>
             <li><a href="#noteformat">\noteFormat</a></li>
             <li><a href="#octava">\octava</a></li>
             <li><a href="#restformat">\restFormat</a></li>
@@ -559,9 +560,56 @@ For the latter, the format is applied up to the next format specification or to 
 </table>
 <p>See the <a href="../../../examples/notes/">notes</a> example.</p>
 <p><br /></p>
-<h2 id="noteformat">\noteFormat</h2>
+<h2 id="mrest">\mrest</h2>
 <hr />
 <h3 id="description_6">Description</h3>
+<table>
+<thead>
+<tr>
+<th align="left">Name</th>
+<th align="left">Variants</th>
+<th align="left">Type</th>
+<th align="left">Notation element</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">\mrest</td>
+<td align="left"></td>
+<td align="left">R</td>
+<td align="left">when applied to a whole measure rest, indicates the measures count.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="parameters_3">Parameters</h3>
+<table>
+<thead>
+<tr>
+<th align="left">Name</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+<th align="left">Default value</th>
+<th align="left">Optional</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">count</td>
+<td align="left">integer</td>
+<td align="left">a measures count</td>
+<td align="left"><em>none</em></td>
+<td align="left">false</td>
+</tr>
+</tbody>
+</table>
+<p><a href="../../tagsparams#common-parameters">Common parameters</a> are applied to the measures count only.
+You can use the <a href="#restformat">\restFormat</a> tag to control the rest appearance.</p>
+<p>The tag is ignored when not applied to a rest.
+When the rest is not a full measure rest, the rest appearance is preserved and the count is still displayed.</p>
+<p><br /></p>
+<h2 id="noteformat">\noteFormat</h2>
+<hr />
+<h3 id="description_7">Description</h3>
 <table>
 <thead>
 <tr>
@@ -583,7 +631,7 @@ For the latter, the format is applied up to the next format specification or to 
 <p>The <strong>\noteFormat</strong> tag supports both a range and a position form.
 For the latter, the format is applied up to the next format specification or to the end of the voice.</p>
 <p><strong>\noteFormat</strong> is a way to introduce <a href="../../tagsparams#common-parameters">common parameters</a> to notes.</p>
-<h3 id="parameters_3">Parameters</h3>
+<h3 id="parameters_4">Parameters</h3>
 <table>
 <thead>
 <tr>
@@ -611,7 +659,7 @@ For standard notehead, these variations are simply the  "()", "&lt;&gt;" or "[]"
 <p><br /></p>
 <h2 id="octava">\octava</h2>
 <hr />
-<h3 id="description_7">Description</h3>
+<h3 id="description_8">Description</h3>
 <table>
 <thead>
 <tr>
@@ -630,7 +678,7 @@ For standard notehead, these variations are simply the  "()", "&lt;&gt;" or "[]"
 </tr>
 </tbody>
 </table>
-<h3 id="parameters_4">Parameters</h3>
+<h3 id="parameters_5">Parameters</h3>
 <table>
 <thead>
 <tr>
@@ -654,7 +702,7 @@ For standard notehead, these variations are simply the  "()", "&lt;&gt;" or "[]"
 <p><br /></p>
 <h2 id="restformat">\restFormat</h2>
 <hr />
-<h3 id="description_8">Description</h3>
+<h3 id="description_9">Description</h3>
 <table>
 <thead>
 <tr>
@@ -679,7 +727,7 @@ For the latter, the format is applied up to the next format specification or to 
 <p><br /></p>
 <h2 id="headscenter">\headsCenter</h2>
 <hr />
-<h3 id="description_9">Description</h3>
+<h3 id="description_10">Description</h3>
 <table>
 <thead>
 <tr>
@@ -703,7 +751,7 @@ For the latter, it is is applied up to the next <em>head</em> specification or t
 <p>See the <a href="../../../examples/notes/">notes</a> example.</p>
 <h2 id="headsleft">\headsLeft</h2>
 <hr />
-<h3 id="description_10">Description</h3>
+<h3 id="description_11">Description</h3>
 <table>
 <thead>
 <tr>
@@ -727,7 +775,7 @@ For the latter, it is is applied up to the next <em>head</em> specification or t
 <p>See the <a href="../../../examples/notes/">notes</a> example.</p>
 <h2 id="headsright">\headsRight</h2>
 <hr />
-<h3 id="description_11">Description</h3>
+<h3 id="description_12">Description</h3>
 <table>
 <thead>
 <tr>
@@ -751,7 +799,7 @@ For the latter, it is is applied up to the next <em>head</em> specification or t
 <p>See the <a href="../../../examples/notes/">notes</a> example.</p>
 <h2 id="headsnormal">\headsNormal</h2>
 <hr />
-<h3 id="description_12">Description</h3>
+<h3 id="description_13">Description</h3>
 <table>
 <thead>
 <tr>
@@ -774,7 +822,7 @@ For the latter, it is is applied up to the next <em>head</em> specification or t
 For the latter, it is is applied up to the next <em>head</em> specification or to the end of the voice.</p>
 <h2 id="headsreverse">\headsReverse</h2>
 <hr />
-<h3 id="description_13">Description</h3>
+<h3 id="description_14">Description</h3>
 <table>
 <thead>
 <tr>
@@ -798,7 +846,7 @@ For the latter, it is is applied up to the next <em>head</em> specification or t
 <p><br /></p>
 <h2 id="stemsoff">\stemsOff</h2>
 <hr />
-<h3 id="description_14">Description</h3>
+<h3 id="description_15">Description</h3>
 <table>
 <thead>
 <tr>
@@ -820,7 +868,7 @@ For the latter, it is is applied up to the next <em>head</em> specification or t
 <p>See the <a href="../../../examples/notes/">notes</a> example.</p>
 <h2 id="stemsauto">\stemsAuto</h2>
 <hr />
-<h3 id="description_15">Description</h3>
+<h3 id="description_16">Description</h3>
 <table>
 <thead>
 <tr>
@@ -836,49 +884,6 @@ For the latter, it is is applied up to the next <em>head</em> specification or t
 <td align="left"></td>
 <td align="left">P</td>
 <td align="left">cancel \stemsOff and enable automatic stems direction</td>
-</tr>
-</tbody>
-</table>
-<h3 id="parameters_5">Parameters</h3>
-<table>
-<thead>
-<tr>
-<th align="left">Name</th>
-<th align="left">Type</th>
-<th align="left">Description</th>
-<th align="left">Default value</th>
-<th align="left">Optional</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="left">length</td>
-<td align="left">unit</td>
-<td align="left">the stem length</td>
-<td align="left">7.0</td>
-<td align="left">true</td>
-</tr>
-</tbody>
-</table>
-<p>See the <a href="../../../examples/notes/">notes</a> example.</p>
-<h2 id="stemsdown">\stemsDown</h2>
-<hr />
-<h3 id="description_16">Description</h3>
-<table>
-<thead>
-<tr>
-<th align="left">Name</th>
-<th align="left">Variants</th>
-<th align="left">Type</th>
-<th align="left">Notation element</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="left">\stemsDown</td>
-<td align="left"></td>
-<td align="left">P</td>
-<td align="left">force stem direction to down</td>
 </tr>
 </tbody>
 </table>
@@ -903,9 +908,8 @@ For the latter, it is is applied up to the next <em>head</em> specification or t
 </tr>
 </tbody>
 </table>
-<p>See the <a href="../../../examples/4voices/">4 voices</a> example. <br />
-See the <a href="../../../examples/notes/">notes</a> example.</p>
-<h2 id="stemsup">\stemsUp</h2>
+<p>See the <a href="../../../examples/notes/">notes</a> example.</p>
+<h2 id="stemsdown">\stemsDown</h2>
 <hr />
 <h3 id="description_17">Description</h3>
 <table>
@@ -919,10 +923,10 @@ See the <a href="../../../examples/notes/">notes</a> example.</p>
 </thead>
 <tbody>
 <tr>
-<td align="left">\stemsUp</td>
+<td align="left">\stemsDown</td>
 <td align="left"></td>
 <td align="left">P</td>
-<td align="left">force stem direction to up</td>
+<td align="left">force stem direction to down</td>
 </tr>
 </tbody>
 </table>
@@ -949,10 +953,54 @@ See the <a href="../../../examples/notes/">notes</a> example.</p>
 </table>
 <p>See the <a href="../../../examples/4voices/">4 voices</a> example. <br />
 See the <a href="../../../examples/notes/">notes</a> example.</p>
+<h2 id="stemsup">\stemsUp</h2>
+<hr />
+<h3 id="description_18">Description</h3>
+<table>
+<thead>
+<tr>
+<th align="left">Name</th>
+<th align="left">Variants</th>
+<th align="left">Type</th>
+<th align="left">Notation element</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">\stemsUp</td>
+<td align="left"></td>
+<td align="left">P</td>
+<td align="left">force stem direction to up</td>
+</tr>
+</tbody>
+</table>
+<h3 id="parameters_8">Parameters</h3>
+<table>
+<thead>
+<tr>
+<th align="left">Name</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+<th align="left">Default value</th>
+<th align="left">Optional</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">length</td>
+<td align="left">unit</td>
+<td align="left">the stem length</td>
+<td align="left">7.0</td>
+<td align="left">true</td>
+</tr>
+</tbody>
+</table>
+<p>See the <a href="../../../examples/4voices/">4 voices</a> example. <br />
+See the <a href="../../../examples/notes/">notes</a> example.</p>
 <p><br /></p>
 <h2 id="tie">\tie</h2>
 <hr />
-<h3 id="description_18">Description</h3>
+<h3 id="description_19">Description</h3>
 <table>
 <thead>
 <tr>
@@ -977,7 +1025,7 @@ However, apart from moving the curve 'up' or 'down', there is no reason to chang
 <p><br /></p>
 <h2 id="tuplet">\tuplet</h2>
 <hr />
-<h3 id="description_19">Description</h3>
+<h3 id="description_20">Description</h3>
 <table>
 <thead>
 <tr>
@@ -996,7 +1044,7 @@ However, apart from moving the curve 'up' or 'down', there is no reason to chang
 </tr>
 </tbody>
 </table>
-<h3 id="parameters_8">Parameters</h3>
+<h3 id="parameters_9">Parameters</h3>
 <table>
 <thead>
 <tr>
