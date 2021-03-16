@@ -1,5 +1,6 @@
 
 MAKE 	?= make
+PIP		?= pip3
 
 TMPTAGDIR := .tmptags
 
@@ -52,9 +53,11 @@ test:
 ####################################################################
 build:
 	cd $(MKDIR) && mkdocs build
+	git checkout docs/CNAME
 
 serve:
 	cd $(MKDIR) && mkdocs serve
+	git checkout docs/CNAME
 
 all:
 	$(MAKE) tagfiles
@@ -163,13 +166,14 @@ $(DOCDIR)/examples/%.item : $(DOCDIR)/examples/%.md
 
 ####################################################################
 install:
-	pip install mkdocs
-	pip install mkdocs-pdf-export-plugin
-	pip install markdown-include
+	$(PIP) install mkdocs
+	$(PIP) install markdown-include
 #	npm i railroad-diagrams
 
+upgrade:
+	$(PIP) install mkdocs --upgrade
+	$(PIP) install markdown-include --upgrade
+
 uninstall:
-	pip uninstall -y mkdocs-material
-	pip uninstall -y pymdown-extensions
-	pip uninstall -y markdown-blockdiag
-	pip uninstall -y mkdocs-pdf-export-plugin
+	$(PIP) uninstall -y markdown-include
+	$(PIP) uninstall -y mkdocs
