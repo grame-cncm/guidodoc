@@ -1,14 +1,14 @@
 {!include.txt!}
 
-## Chords
+# Chords
 
 A chord is a list of notes and/or tagged notes, separated by commas and enclosed in braces.
 
 {!BNF/chord.html!}
 
 
-#### Remarks:
-<ul>
+### Remarks:
+
 All notes of a chord should have the same duration.   
 If this is not the case, the duration of the chord is the duration of the longest note within the
 chord; all other notes are interpreted as being succeeded by rests which compensate for the
@@ -20,9 +20,8 @@ suggested to consistently write chords in either an ascending or descending orde
 If for some note of a chord, duration or octave values are omitted, these are assumed to be
 equal to the last respective value specified in the current sequence; this applies also to the case
 where this value was specified for a preceeding note of the same chord.
-</ul>
 
-### Examples
+## Examples
 ~~~~~~
 {c1/4., e&1/4., g1/4.}   % c minor triad , ascending order   
 {c1/4., e&,g}            % same as above, abbreviated notation   

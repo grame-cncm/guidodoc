@@ -1,16 +1,16 @@
 {!include.txt!}
 
-## Variables
+# Variables
 
 Variables have been introduced with the version 1.7.0 of the Guido Engine. They are intended to share tags parameters or to structure a score. 
 
-### Variable names
+## Variable names
 
 A variable name must always start with `$` followed by a letter and by any number of letters, numbers or `_` characters.
 {!BNF/varname.html!}
 
 
-### Declaration section
+## Declaration section
 
 Variables must be declared in a variables declaration section that precedes the score description.  
 A variable declaration assigns a value to a variable name.
@@ -24,11 +24,11 @@ A variable `string` value should not refer to itself (directly or indirectly). I
 
 
 
-### Using variables
+## Using variables
 
 Variables may be used at any location within a [voice](../voices) description. They are expanded in place at parsing level. You may think of *macro* when using a variable and thus, figure out how to use it in a given context.
 
-### Examples
+## Examples
 ~~~~~~
 % start of variables declaration section
 $dx = -2;

@@ -29,7 +29,7 @@
 | autoClefKeyMeterOrder | boolean | automatic reordering of clef, key and meter | on | true |
 | clefKeyMeterOrder | boolean | variant for autoClefKeyMeterOrder | on | true |
 | autoLyricsPos | boolean | automatic collision avoidance for \lyrics | off | true |
-| lyricsAutoPos | boolean | ariant for autoLyricsPos | off | true |
+| lyricsAutoPos | boolean | variant for autoLyricsPos | off | true |
 | autoInstrPos | boolean | automatic positionning for \instr | off | true |
 | instrAutoPos | boolean | variant for autoInstrPos | off | true |
 | autoIntensPos | boolean | automatic collision avoidance for \intens | off | true |

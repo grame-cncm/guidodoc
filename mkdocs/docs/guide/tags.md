@@ -1,6 +1,6 @@
 {!include.txt!}
 
-## Tags and Tagged Ranges
+# Tags and Tagged Ranges
 
 Tags are used to represent additional musical information, such as slurs, clefs, keys, etc. A tag has
 one of the forms
@@ -21,21 +21,19 @@ The general syntax for tags is:
 {!BNF/tags.html!}
 
 
-#### Remarks:
-<ul>
-In general, tag-structures can be arbitrarily nested, since the note-series in (3) and (4) may
+### Remarks:
+In general, tag-structures can be arbitrarily nested, since the note-series in 3) and 4) may
 contain other tags.
 
-The tags which are defined in Basic GUIDO are described in detail in Section 2.7 (see below).
-Tags of the from (1) and (2) are used for elements of CMN like clefs, meter, key, etc.   
-Tags of the from (3) and (4) are called tagged ranges, they define properties of series of notes
+The tags which are defined in Basic GUIDO are described in detail in the Reference section.
+Tags of the from 1) and 2) are used for elements of CMN like clefs, meter, key, etc.   
+Tags of the from 3) and 4) are called tagged ranges, they define properties of series of notes
 such as slurs, beams, etc.  
 
 Generally, tags have no duration; however, tagged ranges can be thought of extending over the
 duration of the note series they are associated with.
-</ul>
 
-### Examples
+## Examples
 ~~~~~~
 \bar                                % barline
 \clef<"g2">                         % treble clef

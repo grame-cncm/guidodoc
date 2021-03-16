@@ -474,7 +474,7 @@ See the [Tie](../../../examples/space/) example.
 
 | Name | Variants | Type | Notation element |
 | :----| :--------| :----| :----------------|
-| \tuplet |  | R | displays an octava sign and transposes the notes accordingly |
+| \tuplet |  | R | control tuplets format |
 
 
 
