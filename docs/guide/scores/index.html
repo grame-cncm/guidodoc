@@ -9,275 +9,266 @@
         
         <link rel="shortcut icon" href="../../img/favicon.ico">
         <title>Scores - Guido Music Notation</title>
-        <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
         <link href="../../css/font-awesome.min.css" rel="stylesheet">
         <link href="../../css/base.css" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
         <link href="/GMN/guidolib/guido.css" rel="stylesheet">
         <link href="/BNF/railroad-diagrams/railroad-diagrams.css" rel="stylesheet">
-        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-        <!--[if lt IE 9]>
-            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-        <![endif]-->
 
         <script src="../../js/jquery-1.10.2.min.js" defer></script>
-        <script src="../../js/bootstrap-3.0.3.min.js" defer></script>
+        <script src="../../js/bootstrap.min.js" defer></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
         <script>hljs.initHighlightingOnLoad();</script> 
     </head>
 
     <body>
-
-        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
             <div class="container">
-
-                <!-- Collapsed navigation -->
-                <div class="navbar-header">
-                    <!-- Expander button -->
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" href="../..">Guido Music Notation</a>
-                </div>
+                <a class="navbar-brand" href="../..">Guido Music Notation</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
                 <!-- Expanded navigation -->
-                <div class="navbar-collapse collapse">
+                <div id="navbar-collapse" class="navbar-collapse collapse">
                         <!-- Main navigation -->
                         <ul class="nav navbar-nav">
-                            <li >
-                                <a href="../..">Home</a>
+                            <li class="navitem">
+                                <a href="../.." class="nav-link">Home</a>
                             </li>
                             <li class="dropdown active">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">User Guide <b class="caret"></b></a>
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">User Guide <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     
-<li >
-    <a href="../basic/">Basic concepts</a>
+<li>
+    <a href="../basic/" class="dropdown-item">Basic concepts</a>
 </li>
                                     
-<li >
-    <a href="../notes/">Notes and Rests</a>
+<li>
+    <a href="../notes/" class="dropdown-item">Notes and Rests</a>
 </li>
                                     
-<li >
-    <a href="../chords/">Chords</a>
+<li>
+    <a href="../chords/" class="dropdown-item">Chords</a>
 </li>
                                     
-<li >
-    <a href="../tags/">Tags and Tagged Ranges</a>
+<li>
+    <a href="../tags/" class="dropdown-item">Tags and Tagged Ranges</a>
 </li>
                                     
-<li >
-    <a href="../voices/">Voices</a>
+<li>
+    <a href="../voices/" class="dropdown-item">Voices</a>
 </li>
                                     
-<li class="active">
-    <a href="./">Scores</a>
+<li>
+    <a href="./" class="dropdown-item active">Scores</a>
 </li>
                                     
-<li >
-    <a href="../comments/">Comments and Spacing</a>
+<li>
+    <a href="../variables/" class="dropdown-item">Variables</a>
+</li>
+                                    
+<li>
+    <a href="../comments/" class="dropdown-item">Comments and Spacing</a>
 </li>
                                 </ul>
                             </li>
                             <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Reference <b class="caret"></b></a>
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Reference <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     
-<li >
-    <a href="../../refs/tagsparams/">Tags parameters</a>
+<li>
+    <a href="../../refs/tagsparams/" class="dropdown-item">Tags parameters</a>
 </li>
                                     
-<li >
-    <a href="../../refs/tags/">Tags</a>
+<li>
+    <a href="../../refs/tags/" class="dropdown-item">Tags</a>
 </li>
                                     
   <li class="dropdown-submenu">
-    <a href="#">Tags reference</a>
+    <a href="#" class="dropdown-item">Tags reference</a>
     <ul class="dropdown-menu">
             
-<li >
-    <a href="../../refs/tags/Accidentals/">Accidentals</a>
+<li>
+    <a href="../../refs/tags/Accidentals/" class="dropdown-item">Accidentals</a>
 </li>
             
-<li >
-    <a href="../../refs/tags/Articulations/">Articulations</a>
+<li>
+    <a href="../../refs/tags/Articulations/" class="dropdown-item">Articulations</a>
 </li>
             
-<li >
-    <a href="../../refs/tags/Barlines/">Barlines</a>
+<li>
+    <a href="../../refs/tags/Barlines/" class="dropdown-item">Barlines</a>
 </li>
             
-<li >
-    <a href="../../refs/tags/Beaming/">Beaming</a>
+<li>
+    <a href="../../refs/tags/Beaming/" class="dropdown-item">Beaming</a>
 </li>
             
-<li >
-    <a href="../../refs/tags/ClefKeyMeter/">Clef Key Meter</a>
+<li>
+    <a href="../../refs/tags/ClefKeyMeter/" class="dropdown-item">Clef Key Meter</a>
 </li>
             
-<li >
-    <a href="../../refs/tags/Dynamics/">Dynamics</a>
+<li>
+    <a href="../../refs/tags/Dynamics/" class="dropdown-item">Dynamics</a>
 </li>
             
-<li >
-    <a href="../../refs/tags/Layout/">Layout</a>
+<li>
+    <a href="../../refs/tags/Layout/" class="dropdown-item">Layout</a>
 </li>
             
-<li >
-    <a href="../../refs/tags/Miscellaneous/">Miscellaneous</a>
+<li>
+    <a href="../../refs/tags/Miscellaneous/" class="dropdown-item">Miscellaneous</a>
 </li>
             
-<li >
-    <a href="../../refs/tags/Notes/">Notes</a>
+<li>
+    <a href="../../refs/tags/Notes/" class="dropdown-item">Notes</a>
 </li>
             
-<li >
-    <a href="../../refs/tags/Ornaments/">Ornaments</a>
+<li>
+    <a href="../../refs/tags/Ornaments/" class="dropdown-item">Ornaments</a>
 </li>
             
-<li >
-    <a href="../../refs/tags/RepeatSigns/">Repeat Signs</a>
+<li>
+    <a href="../../refs/tags/RepeatSigns/" class="dropdown-item">Repeat Signs</a>
 </li>
             
-<li >
-    <a href="../../refs/tags/Tempo/">Tempo</a>
+<li>
+    <a href="../../refs/tags/Tempo/" class="dropdown-item">Tempo</a>
 </li>
             
-<li >
-    <a href="../../refs/tags/Text/">Text</a>
+<li>
+    <a href="../../refs/tags/Text/" class="dropdown-item">Text</a>
 </li>
     </ul>
   </li>
                                     
-<li >
-    <a href="../../refs/">Tags index</a>
+<li>
+    <a href="../../refs/" class="dropdown-item">Tags index</a>
 </li>
                                     
-<li >
-    <a href="../../refs/gmnf/">Language specification</a>
+<li>
+    <a href="../../refs/gmnf/" class="dropdown-item">Language specification</a>
 </li>
                                 </ul>
                             </li>
                             <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Examples <b class="caret"></b></a>
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Examples <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     
-<li >
-    <a href="../../examples/4voices/">4 Voices</a>
+<li>
+    <a href="../../examples/4voices/" class="dropdown-item">4 Voices</a>
 </li>
                                     
-<li >
-    <a href="../../examples/accidentals/">Accidentals</a>
+<li>
+    <a href="../../examples/accidentals/" class="dropdown-item">Accidentals</a>
 </li>
                                     
-<li >
-    <a href="../../examples/allthethings/">All The Things You Are</a>
+<li>
+    <a href="../../examples/allthethings/" class="dropdown-item">All The Things You Are</a>
 </li>
                                     
-<li >
-    <a href="../../examples/articulations/">Articulations</a>
+<li>
+    <a href="../../examples/articulations/" class="dropdown-item">Articulations</a>
 </li>
                                     
-<li >
-    <a href="../../examples/bach/">Bach</a>
+<li>
+    <a href="../../examples/bach/" class="dropdown-item">Bach</a>
 </li>
                                     
-<li >
-    <a href="../../examples/barlines/">Barlines</a>
+<li>
+    <a href="../../examples/barlines/" class="dropdown-item">Barlines</a>
 </li>
                                     
-<li >
-    <a href="../../examples/bartok/">Bela Bartock</a>
+<li>
+    <a href="../../examples/bartok/" class="dropdown-item">Bela Bartock</a>
 </li>
                                     
-<li >
-    <a href="../../examples/beaming/">Beaming</a>
+<li>
+    <a href="../../examples/beaming/" class="dropdown-item">Beaming</a>
 </li>
                                     
-<li >
-    <a href="../../examples/beethoven/">Beethoven</a>
+<li>
+    <a href="../../examples/beethoven/" class="dropdown-item">Beethoven</a>
 </li>
                                     
-<li >
-    <a href="../../examples/brown/">Chris Brown</a>
+<li>
+    <a href="../../examples/brown/" class="dropdown-item">Chris Brown</a>
 </li>
                                     
-<li >
-    <a href="../../examples/clefkeymeter/">Clef, Key, Meter</a>
+<li>
+    <a href="../../examples/clefkeymeter/" class="dropdown-item">Clef, Key, Meter</a>
 </li>
                                     
-<li >
-    <a href="../../examples/cpebach/">Sonata for flute</a>
+<li>
+    <a href="../../examples/cpebach/" class="dropdown-item">Sonata for flute</a>
 </li>
                                     
-<li >
-    <a href="../../examples/dynamics/">Dynamics</a>
+<li>
+    <a href="../../examples/dynamics/" class="dropdown-item">Dynamics</a>
 </li>
                                     
-<li >
-    <a href="../../examples/faure/">Fauré</a>
+<li>
+    <a href="../../examples/faure/" class="dropdown-item">Fauré</a>
 </li>
                                     
-<li >
-    <a href="../../examples/layout/">Layout</a>
+<li>
+    <a href="../../examples/layout/" class="dropdown-item">Layout</a>
 </li>
                                     
-<li >
-    <a href="../../examples/lutkin/">Peter C. Lutkin</a>
+<li>
+    <a href="../../examples/lutkin/" class="dropdown-item">Peter C. Lutkin</a>
 </li>
                                     
-<li >
-    <a href="../../examples/mozart581/">Mozart Clarinet Quintet</a>
+<li>
+    <a href="../../examples/mozart581/" class="dropdown-item">Mozart Clarinet Quintet</a>
 </li>
                                     
-<li >
-    <a href="../../examples/notes/">Notes attributes</a>
+<li>
+    <a href="../../examples/notes/" class="dropdown-item">Notes attributes</a>
 </li>
                                     
-<li >
-    <a href="../../examples/ornaments/">Ornaments</a>
+<li>
+    <a href="../../examples/ornaments/" class="dropdown-item">Ornaments</a>
 </li>
                                     
-<li >
-    <a href="../../examples/repeats/">Repeat Signs</a>
+<li>
+    <a href="../../examples/repeats/" class="dropdown-item">Repeat Signs</a>
 </li>
                                     
-<li >
-    <a href="../../examples/slurs/">Slurs</a>
+<li>
+    <a href="../../examples/slurs/" class="dropdown-item">Slurs</a>
 </li>
                                     
-<li >
-    <a href="../../examples/space/">Ties & Space</a>
+<li>
+    <a href="../../examples/space/" class="dropdown-item">Ties & Space</a>
 </li>
                                     
-<li >
-    <a href="../../examples/tempo/">Tempo</a>
+<li>
+    <a href="../../examples/tempo/" class="dropdown-item">Tempo</a>
 </li>
                                 </ul>
                             </li>
-                            <li >
-                                <a href="../../about/">About</a>
+                            <li class="navitem">
+                                <a href="../../about/" class="nav-link">About</a>
                             </li>
                         </ul>
 
-                    <ul class="nav navbar-nav navbar-right">
-                        <li>
-                            <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
                                 <i class="fa fa-search"></i> Search
                             </a>
                         </li>
-                            <li >
-                                <a rel="next" href="../voices/">
+                            <li class="nav-item">
+                                <a rel="prev" href="../voices/" class="nav-link">
                                     <i class="fa fa-arrow-left"></i> Previous
                                 </a>
                             </li>
-                            <li >
-                                <a rel="prev" href="../comments/">
+                            <li class="nav-item">
+                                <a rel="next" href="../variables/" class="nav-link">
                                     Next <i class="fa fa-arrow-right"></i>
                                 </a>
                             </li>
@@ -287,20 +278,35 @@
         </div>
 
         <div class="container">
-                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
-    <ul class="nav bs-sidenav">
-        <li class="main active"><a href="#scores">Scores</a></li>
-            <li><a href="#remarks">Remarks:</a></li>
-            <li><a href="#note">Note:</a></li>
-            <li><a href="#examples">Examples</a></li>
-    </ul>
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#scores" class="nav-link">Scores</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#examples" class="nav-link">Examples</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
 </div></div>
-                <div class="col-md-9" role="main">
+                    <div class="col-md-9" role="main">
 
 <script src='/BNF/railroad-diagrams/railroad-diagrams.js'></script>
 
-<h2 id="scores">Scores</h2>
-<p>A score is a sequence of one or several voices denoted by: <br />
+<h1 id="scores">Scores</h1>
+<p>A score is a sequence of one or several voices denoted by:   </p>
 <div>
      <script>
      ComplexDiagram(
@@ -308,30 +314,32 @@
             Sequence ('{', OneOrMore('voice', ','), '}')) 
      ).addTo();
    </script>
-</div></p>
+</div>
+
 <p>It is assumed that all voices start simultaneously. 
 Normally, the voices should have equal durations; if this is not the case, the
 duration of the score is the duration of the longest voice; all other voices
 are interpreted as if they were succeeded by additional rests which compensate for the difference
 between their duration and that of the segment.</p>
-<h4 id="remarks">Remarks:</h4>
-<p><ul>
+<h3 id="remarks">Remarks:</h3>
+<ul>
 Octave and duration values should be specified at the beginning of each voice; if this is not
 done, default values will be assumed when required in the context of a specific application. In
 particular, octave and duration values don't carry over from one voice to the next.
-</ul></p>
-<h4 id="note">Note:</h4>
+</ul>
+
+<h3 id="note">Note:</h3>
 <p>A single-voice score may be described as a single <a href="../voices/">voice</a>.</p>
-<h3 id="examples">Examples</h3>
+<h2 id="examples">Examples</h2>
 <pre><code>{ 
     [ e1/8. \slur(f/16 e/8) d c h0 a/4 ],   % first voice
     [ c1/4 d e/2 ],                         % second voice
     [ a0/4 h \slur(c1/8 h0) a/4 ]           % third voic
 }
 </code></pre>
+<p><button class="try_it" onclick=window.open("https://guidoeditor.grame.fr/?code=eyAKICAgIFsgXHBhZ2VGb3JtYXQ8bG09MWNtLCB0bT0xY20sIGJtPTFjbSwgcm09MWNtPgogICAJICBlMS84LiBcc2x1cihmLzE2IGUvOCkgZCBjIGgwIGEvNCBdLAogICAgWyBjMS80IGQgZS8yIF0sICAKICAgIFsgYTAvNCBoIFxzbHVyKGMxLzggaDApIGEvNCBdCn0K")> Try it online </button></p>
+<div class="guido-code">
 
-<p><button class="try_it" onclick=window.open("https://guidoeditor.grame.fr/?code=eyAKICAgIFsgXHBhZ2VGb3JtYXQ8bG09MWNtLCB0bT0xY20sIGJtPTFjbSwgcm09MWNtPgogICAJICBlMS84LiBcc2x1cihmLzE2IGUvOCkgZCBjIGgwIGEvNCBdLAogICAgWyBjMS80IGQgZS8yIF0sICAKICAgIFsgYTAvNCBoIFxzbHVyKGMxLzggaDApIGEvNCBdCn0K")> Try it online </button>
-<div class="guido-code"></p>
 <?xml version="1.0"?>
 <svg viewBox="0 0 251 208" xmlns="http://www.w3.org/2000/svg"  version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink">
     <desc> SVG file generated using the GuidoEngine version 1.6.7</desc>
@@ -539,11 +547,12 @@ particular, octave and duration values don't carry over from one voice to the ne
     </g>
 </svg>
 </div></div>
+            </div>
         </div>
 
         <footer class="col-md-12">
             <hr>
-                <p>Copyright &copy; 2019-2020 <a href="http://www.grame.fr">Grame-CNCM</a></p>
+                <p>Copyright &copy; 2019-2020 <a href="https://www.grame.fr">Grame-CNCM</a></p>
             <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
         </footer>
         <script>
@@ -553,21 +562,21 @@ particular, octave and duration values don't carry over from one voice to the ne
         <script src="../../js/base.js" defer></script>
         <script src="../../search/main.js" defer></script>
 
-        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
-    <div class="modal-dialog">
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
         <div class="modal-content">
             <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
                 <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                <h4 class="modal-title" id="exampleModalLabel">Search</h4>
             </div>
             <div class="modal-body">
                 <p>
                     From here you can search these documents. Enter
                     your search terms below.
                 </p>
-                <form role="form">
+                <form>
                     <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
                     </div>
                 </form>
                 <div id="mkdocs-search-results"></div>
@@ -576,12 +585,12 @@ particular, octave and duration values don't carry over from one voice to the ne
             </div>
         </div>
     </div>
-</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="Keyboard Shortcuts Modal" aria-hidden="true">
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
                 <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                <h4 class="modal-title" id="exampleModalLabel">Keyboard Shortcuts</h4>
             </div>
             <div class="modal-body">
               <table class="table">
