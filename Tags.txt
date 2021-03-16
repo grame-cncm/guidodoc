@@ -8,7 +8,7 @@ accidental:Accidentals
 accol:Layout
 accolade:Layout
 alter:Accidentals
-arpeggio:Articulations
+arpeggio:Ornaments
 auto:Miscellaneous
 b:Beaming
 bar:Barlines
