@@ -79,7 +79,7 @@ See the [Sonata](../../../examples/cpebach/) example.
 
 | Name | Variants | Type | Notation element |
 | :----| :--------| :----| :----------------|
-| \trill | \trillBegin \trillEnd | R | a turn ornament |
+| \trill | \trillBegin \trillEnd | R | a trill ornament |
 
 
 
@@ -126,12 +126,14 @@ See the [Sonata](../../../examples/cpebach/) example.
 | Name        	| Type   | Description    | Default value  | Optional |
 | :------------ |:-------| :--------------| :------------- | :--------| 
 | note | string | a note, part of the ornament | *none* | true |
-| type | string | inverted or regular | regular | true |
+| type | string | inverted, invertedb or regular | regular | true |
 | detune | float | note tuning (for microtonality) | 0.0 | true |
 | accidental | string | cautionary or force | *none* | true |
 | adx | unit | accidental displacement (if any) | 0hs | true |
 | ady | unit | accidental displacement (if any) | 0hs | true |
 | position | string | above, below | above | true |
+
+- **invertedb** displays as a regular turn with a bar.
 
 The parameters have the same effect as for [\mordent](#mordent)
 

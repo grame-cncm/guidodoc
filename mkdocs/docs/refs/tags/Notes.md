@@ -242,6 +242,7 @@ See the [notes](../../../examples/notes/) example.
 | Name        	| Type   | Description    | Default value  | Optional |
 | :------------ |:-------| :--------------| :------------- | :--------| 
 | i | integer | a signed number of octaves (up or down) | *none* | false |
+| hidden | bool | hides the octava sign | false | true |
 
 
 
