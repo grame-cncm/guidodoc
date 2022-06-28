@@ -38,8 +38,9 @@
 | harmonyPos | boolean | above or below (see [\harmony](../Text/#harmony)) | *none* | true |
 | fingeringPos | boolean | above or below (see [\fingering](../Text/#fingering)) | *none* | true |
 | fingeringSize | float | the fingering text size (see [\fingering](../Text/#fingering)) | *none* | true |
+| resolveMultiVoiceCollisions | boolean | resolve collisions between notes on the same staff in a multi voice context | off | true |
 
-Collision management strategies can produce unexpected results or even create new collisions.
+Lyrics collision management can produce unexpected results or even create new collisions.
 In this case, you should switch to manual layout using the 'dx' and 'dy' [common parameters](../../tagsparams#common-parameters).
 
 See the [Jazz](../../../examples/allthethings/) example.<br />
