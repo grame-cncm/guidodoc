@@ -93,10 +93,11 @@ In this case, the actual musical duration is computed by assuming that the tempo
 
 
 ### General remarks
->No white space (blank, newline or tab) are allowed within note descriptions.
+No white space (blank, newline or tab) are allowed within note descriptions.
 
 ## Example
 ~~~~~~
 d1*3/4  c#0/8 h&/4  _/4.  c&&/2. cis/4.. fa##1/4 sol&0  
 ~~~~~~
-{!GMN/notes.html!}
+<button class="try_it" onclick=window.open("https://guidoeditor.grame.fr/?code=WwoJXHBhZ2VGb3JtYXQ8bG09MWNtLCB0bT0xY20sIGJtPTFjbSwgcm09MWNtPgoJZDEqMy80ICBjIzIvOCBoJi80ICBfLzQuICBjaXMvNC4uICBzb2wmMCAKXQo=")> Try it online </button>
+
