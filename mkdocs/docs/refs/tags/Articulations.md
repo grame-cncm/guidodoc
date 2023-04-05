@@ -273,6 +273,8 @@ See the [Articulations](../../../examples/articulations/) example.
 
 The **r3** parameter should be between 0 (leftmost) and 1 (rightmost).
 
+Note that using **h** parameter while **curve** direction is also specified may be conflicting.
+
 See the [Slurs](../../../examples/slurs/) example.
 
 
