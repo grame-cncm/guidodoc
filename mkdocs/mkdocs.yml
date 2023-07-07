@@ -57,7 +57,8 @@ nav:
         - 'Tempo': examples/tempo.md
     - About: about.md
 
-#theme: readthedocs
+theme: 
+    name: mkdocs
 
 site_dir: ../docs
 
