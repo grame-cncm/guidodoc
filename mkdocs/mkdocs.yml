@@ -11,6 +11,7 @@ nav:
         - 'Voices': guide/voices.md
         - 'Scores': guide/scores.md
         - 'Variables': guide/variables.md
+        - 'Engine settings': guide/settings.md
         - 'Comments and Spacing': guide/comments.md
     - Reference: 
         - 'Tags parameters': refs/tagsparams.md
@@ -82,9 +83,9 @@ plugins:
 
 
 extra_javascript:
+  - '/BNF/railroad-diagrams/railroad-diagrams.js'
 #  - '/GMN/guidolib/libGUIDOEngine.js'
 #  - '/GMN/guidolib/guidocode.js'
-#  - '/BNF/railroad-diagrams/railroad-diagrams.js'
 
 extra_css:
    - '/GMN/guidolib/guido.css'
