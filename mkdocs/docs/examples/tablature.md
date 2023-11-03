@@ -1,5 +1,5 @@
 
-	Example of tablatures mixed with regular notation
+# Example of tablature with regular notation
 
 ~~~~~~
 {
