@@ -10,6 +10,7 @@ nav:
         - 'Tags and Tagged Ranges': guide/tags.md
         - 'Voices': guide/voices.md
         - 'Scores': guide/scores.md
+        - 'Guitar tablature': guide/gtablature.md
         - 'Variables': guide/variables.md
         - 'Engine settings': guide/settings.md
         - 'Comments and Spacing': guide/comments.md
@@ -39,23 +40,24 @@ nav:
         - 'Articulations': examples/articulations.md
         - 'Bach': examples/bach.md
         - 'Barlines': examples/barlines.md
-        - 'Bela Bartock': examples/bartok.md
         - 'Beaming': examples/beaming.md
         - 'Beethoven': examples/beethoven.md
+        - 'Bela Bartock': examples/bartok.md
         - 'Chris Brown': examples/brown.md
         - 'Clef, Key, Meter': examples/clefkeymeter.md
-        - 'Sonata for flute': examples/cpebach.md
         - 'Dynamics': examples/dynamics.md
         - 'Fauré': examples/faure.md
         - 'Layout': examples/layout.md
-        - 'Peter C. Lutkin': examples/lutkin.md
         - 'Mozart Clarinet Quintet': examples/mozart581.md
         - 'Notes attributes': examples/notes.md
         - 'Ornaments': examples/ornaments.md
+        - 'Peter C. Lutkin': examples/lutkin.md
         - 'Repeat Signs': examples/repeats.md
         - 'Slurs': examples/slurs.md
-        - 'Ties & Space': examples/space.md
+        - 'Sonata for flute': examples/cpebach.md
+        - 'Tablature': examples/tablature.md
         - 'Tempo': examples/tempo.md
+        - 'Ties & Space': examples/space.md
     - About: about.md
 
 theme: 

@@ -12,14 +12,11 @@
         <link href="css/bootstrap.min.css" rel="stylesheet">
         <link href="css/font-awesome.min.css" rel="stylesheet">
         <link href="css/base.css" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css">
         <link href="/GMN/guidolib/guido.css" rel="stylesheet">
         <link href="/BNF/railroad-diagrams/railroad-diagrams.css" rel="stylesheet">
-
-        <script src="js/jquery-3.6.0.min.js" defer></script>
-        <script src="js/bootstrap.min.js" defer></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
-        <script>hljs.initHighlightingOnLoad();</script> 
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
     </head>
 
     <body class="homepage">
@@ -67,7 +64,15 @@
 </li>
                                     
 <li>
+    <a href="guide/gtablature/" class="dropdown-item">Guitar tablature</a>
+</li>
+                                    
+<li>
     <a href="guide/variables/" class="dropdown-item">Variables</a>
+</li>
+                                    
+<li>
+    <a href="guide/settings/" class="dropdown-item">Engine settings</a>
 </li>
                                     
 <li>
@@ -319,7 +324,7 @@ Kilian. It is named after <a href="https://en.wikipedia.org/wiki/Guido_of_Arezzo
 important contributor to today's conventional musical notation (CMN). His achievements include
 the perfection of the staff system for music notation and the invention of solmisation (solfege).</p>
 <hr />
-<p>The current documentation describes the Guido Music Notation language as supported by the <strong>Guido Engine version 1.7.6</strong>. </p></div>
+<p>The current documentation describes the Guido Music Notation language as supported by the <strong>Guido Engine version 1.7.7</strong>. </p></div>
             </div>
         </div>
 
@@ -328,12 +333,15 @@ the perfection of the staff system for music notation and the invention of solmi
                 <p>Copyright &copy; 2019-2020 <a href="https://www.grame.fr">Grame-CNCM</a></p>
             <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
         </footer>
+        <script src="js/jquery-3.6.0.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
         <script>
             var base_url = ".",
                 shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
         </script>
-        <script src="js/base.js" defer></script>
-        <script src="search/main.js" defer></script>
+        <script src="js/base.js"></script>
+        <script src="/BNF/railroad-diagrams/railroad-diagrams.js"></script>
+        <script src="search/main.js"></script>
 
         <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">
@@ -400,6 +408,6 @@ the perfection of the staff system for music notation and the invention of solmi
 </html>
 
 <!--
-MkDocs version : 1.4.3
-Build Date UTC : 2023-07-07 08:15:46.790366+00:00
+MkDocs version : 1.5.3
+Build Date UTC : 2023-11-03 07:47:04.308593+00:00
 -->

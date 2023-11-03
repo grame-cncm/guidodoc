@@ -161,9 +161,12 @@ See the [4 voices](../../../examples/4voices/) example.
 
 | Name        	| Type   | Description    | Default value  | Optional |
 | :------------ |:-------| :--------------| :------------- | :--------| 
-| style | string | a style string in the form n-lines | 5-lines | true |
+| style | string | a style string in the form 'n-lines' or 'TAB' | 5-lines | true |
 | lineThickness | float | the staff lines thickness | 0.08 | true |
 | distance | unit | sets a fixed distance to the preceding staff | 0hs | true |
+
+The "TAB" style is intended to display tablatures, it is similar to
+`style="6-lines", size=1.35`
 
 Note: the **\staffFormat** tag supports common parameters but dx has no effect.
 

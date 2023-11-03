@@ -77,7 +77,7 @@ When a value doesn't match the expected type, the system variable is ignored.
 
 ## Warning
 
-The following variables are unchecked, i.e. their values are passed to the system with a minimal control : the values are rejected when <= 0. However, using values outside their expected range may result in very strange layout and even in **system crash**.
+The following variables are unchecked, i.e. their values are passed to the system with a minimal control : the values are rejected only when <= 0. However, using values outside their expected range may result in very strange layout and even in **system crash**.
 
 - SYSTEM_DISTANCE  
 - SYSTEM_DISTRIBUTION_LIMIT  
