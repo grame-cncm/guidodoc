@@ -9,8 +9,8 @@ Since version 1.7.7, the Guido engine supports guitar tablatures.
 
 Two extensions are provided to support a special staff for tablature :
 
-- the [\clef](../../refs/tags/ClefKeyMeter) tag supports a new 'TAB' type
-- the [\staffFormat](../../refs/tags/Layout/#staffformat) tag supports a 'TAB' type.
+- the [\clef](/refs/tags/ClefKeyMeter) tag supports a new 'TAB' type
+- the [\staffFormat](/refs/tags/Layout/#staffformat) tag supports a 'TAB' type.
 
 Tablatures are using special notes names that behave similarly to regular notes except that they don't support accidentals..
 

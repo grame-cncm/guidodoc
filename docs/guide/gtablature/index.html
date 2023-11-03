@@ -188,10 +188,6 @@
 </li>
                                     
 <li>
-    <a href="../../examples/bartok/" class="dropdown-item">Bela Bartock</a>
-</li>
-                                    
-<li>
     <a href="../../examples/beaming/" class="dropdown-item">Beaming</a>
 </li>
                                     
@@ -200,15 +196,15 @@
 </li>
                                     
 <li>
+    <a href="../../examples/bartok/" class="dropdown-item">Bela Bartock</a>
+</li>
+                                    
+<li>
     <a href="../../examples/brown/" class="dropdown-item">Chris Brown</a>
 </li>
                                     
 <li>
     <a href="../../examples/clefkeymeter/" class="dropdown-item">Clef, Key, Meter</a>
-</li>
-                                    
-<li>
-    <a href="../../examples/cpebach/" class="dropdown-item">Sonata for flute</a>
 </li>
                                     
 <li>
@@ -224,10 +220,6 @@
 </li>
                                     
 <li>
-    <a href="../../examples/lutkin/" class="dropdown-item">Peter C. Lutkin</a>
-</li>
-                                    
-<li>
     <a href="../../examples/mozart581/" class="dropdown-item">Mozart Clarinet Quintet</a>
 </li>
                                     
@@ -240,6 +232,10 @@
 </li>
                                     
 <li>
+    <a href="../../examples/lutkin/" class="dropdown-item">Peter C. Lutkin</a>
+</li>
+                                    
+<li>
     <a href="../../examples/repeats/" class="dropdown-item">Repeat Signs</a>
 </li>
                                     
@@ -248,11 +244,19 @@
 </li>
                                     
 <li>
-    <a href="../../examples/space/" class="dropdown-item">Ties & Space</a>
+    <a href="../../examples/cpebach/" class="dropdown-item">Sonata for flute</a>
+</li>
+                                    
+<li>
+    <a href="../../examples/tablature/" class="dropdown-item">Tablature</a>
 </li>
                                     
 <li>
     <a href="../../examples/tempo/" class="dropdown-item">Tempo</a>
+</li>
+                                    
+<li>
+    <a href="../../examples/space/" class="dropdown-item">Ties & Space</a>
 </li>
                                 </ul>
                             </li>
@@ -317,17 +321,174 @@
 <h1 id="guido-extension-for-guitar-tablatures">Guido extension for guitar tablatures.</h1>
 <p>Since version 1.7.7, the Guido engine supports guitar tablatures.</p>
 <h2 id="designing-a-tablature-for-guitar">Designing a tablature for guitar</h2>
-<p>Two extensions are provided to support a special staff for tablature :
-- the <a href="../refs/tags/ClefKeyMeter">\clef</a> tag supports a new 'TAB' type
-- the <a href="../refs/tags/Layout">\staffFormat</a> tag supports a 'TAB' type.</p>
-<p>Tablatures are using special notes names that behave like regular notes.</p>
-<p>ComplexDiagram(
-    Sequence ('s', ':', NonTerminal('string'), ':', NonTerminal('fret'))
-).addTo() </p>
+<p>Two extensions are provided to support a special staff for tablature :</p>
+<ul>
+<li>the <a href="/refs/tags/ClefKeyMeter">\clef</a> tag supports a new 'TAB' type</li>
+<li>the <a href="/refs/tags/Layout/#staffformat">\staffFormat</a> tag supports a 'TAB' type.</li>
+</ul>
+<p>Tablatures are using special notes names that behave similarly to regular notes except that they don't support accidentals..</p>
+<div>
+    <script>
+ComplexDiagram(
+    Sequence ('s', NonTerminal('string'), ':', NonTerminal('fret'), ':')
+).addTo()
+
+    </script>
+</div>
+
+<p>The leading <code>s</code> is a marker for tablature notes and stands for string.<br />
+It is followed by a string number where 1 corresponds to the upper string, followed by a frette number enclosed in colons (':'). <br />
+String numbers must be in the interval 1 to 6.<br />
+Frette number is actually a string intended to display numbers but it supports any string.</p>
 <h2 id="example">Example</h2>
-<pre><code>d1*3/4  c#0/8 h&amp;/4  _/4.  c&amp;&amp;/2. cis/4.. fa##1/4 sol&amp;0  
+<pre><code>[
+    \clef&lt;&quot;TAB&quot;&gt; 
+    \staffFormat&lt;style=&quot;TAB&quot;&gt;
+    { s4:5:/8, s3:5: } s5:4: s2:4: s1:2:
+    { s4:7:/8, s3:7: }  { s4:x:/4, s3:x: }
+]
 </code></pre>
-<p><button class="try_it" onclick=window.open("https://guidoeditor.grame.fr/?code=WwoJXHBhZ2VGb3JtYXQ8bG09MWNtLCB0bT0xY20sIGJtPTFjbSwgcm09MWNtPgoJZDEqMy80ICBjIzIvOCBoJi80ICBfLzQuICBjaXMvNC4uICBzb2wmMCAKXQo=")> Try it online </button></p></div>
+<p><button class="try_it" onclick=window.open("https://guidoeditor.grame.fr/?code=WwoJXHBhZ2VGb3JtYXQ8bG09MWNtLCB0bT0xY20sIGJtPTFjbSwgcm09MWNtPgoJXGNsZWY8IlRBQiI+IAoJXHN0YWZmRm9ybWF0PHN0eWxlPSJUQUIiPgoJeyBzNDo1Oi84LCBzMzo1OiB9IHM1OjQ6IHMyOjQ6IHMxOjI6Cgl7IHM0Ojc6LzgsIHMzOjc6IH0geyBzNDp4Oi80LCBzMzp4OiB9Cl0K")> Try it online </button></p>
+<div class="guido-code">
+
+<?xml version="1.0"?>
+<svg viewBox="0 0 231 122" xmlns="http://www.w3.org/2000/svg"  version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <desc> SVG file generated using the GuidoEngine version 1.7.6</desc>
+    <g style="stroke:#000000; stroke-opacity:1">
+        <g transform="scale(0.124717, 0.124717)">
+            <g transform="translate(-0, -0)">
+            </g>
+            <g transform="translate(237.106, 237.106)">
+            </g>
+            <g transform="translate(237.106, 272.106)">
+                <g style="stroke-width:5.6">
+                    <line x1="0" y1="0" x2="1377.68" y2="0"></line>
+                    <line x1="0" y1="70" x2="1377.68" y2="70"></line>
+                    <line x1="0" y1="140" x2="1377.68" y2="140"></line>
+                    <line x1="0" y1="210" x2="1377.68" y2="210"></line>
+                    <line x1="0" y1="280" x2="1377.68" y2="280"></line>
+                    <line x1="0" y1="350" x2="1377.68" y2="350"></line>
+                </g>
+            </g>
+            <g transform="translate(237.106, 272.106)">
+                <g font-family="Helvetica">
+                    <text x="121.133" y="105" text-anchor="middle" font-size="105">
+                        T
+                    </text>
+                </g>
+                <g font-family="Helvetica">
+                    <text x="121.133" y="210" text-anchor="middle" font-size="105">
+                        A
+                    </text>
+                </g>
+                <g font-family="Helvetica">
+                    <text x="121.133" y="315" text-anchor="middle" font-size="105">
+                        B
+                    </text>
+                    <g style="stroke:#ffffff; stroke-opacity:1">
+                        <g style="fill:#ffffff; fill-opacity:1;">
+                            <rect x="315.266" y="177.275" width="52" height="77"></rect>
+                        </g>
+                    </g>
+                </g>
+                <g font-family="Helvetica">
+                    <text x="318.266" y="235.667"  font-size="77">
+                        5
+                    </text>
+                    <g style="stroke:#ffffff; stroke-opacity:1">
+                        <g style="fill:#ffffff; fill-opacity:1;">
+                            <rect x="315.266" y="107.275" width="52" height="77"></rect>
+                        </g>
+                    </g>
+                </g>
+                <g font-family="Helvetica">
+                    <text x="318.266" y="165.667"  font-size="77">
+                        5
+                    </text>
+                    <g style="stroke:#ffffff; stroke-opacity:1">
+                        <g style="fill:#ffffff; fill-opacity:1;">
+                            <rect x="475.078" y="247.275" width="52" height="77"></rect>
+                        </g>
+                    </g>
+                </g>
+                <g font-family="Helvetica">
+                    <text x="478.078" y="305.667"  font-size="77">
+                        4
+                    </text>
+                    <g style="stroke:#ffffff; stroke-opacity:1">
+                        <g style="fill:#ffffff; fill-opacity:1;">
+                            <rect x="634.89" y="37.275" width="52" height="77"></rect>
+                        </g>
+                    </g>
+                </g>
+                <g font-family="Helvetica">
+                    <text x="637.89" y="95.6667"  font-size="77">
+                        4
+                    </text>
+                    <g style="stroke:#ffffff; stroke-opacity:1">
+                        <g style="fill:#ffffff; fill-opacity:1;">
+                            <rect x="794.702" y="-32.725" width="52" height="77"></rect>
+                        </g>
+                    </g>
+                </g>
+                <g font-family="Helvetica">
+                    <text x="797.702" y="25.6667"  font-size="77">
+                        2
+                    </text>
+                    <g style="stroke:#ffffff; stroke-opacity:1">
+                        <g style="fill:#ffffff; fill-opacity:1;">
+                            <rect x="954.514" y="177.275" width="52" height="77"></rect>
+                        </g>
+                    </g>
+                </g>
+                <g font-family="Helvetica">
+                    <text x="957.514" y="235.667"  font-size="77">
+                        7
+                    </text>
+                    <g style="stroke:#ffffff; stroke-opacity:1">
+                        <g style="fill:#ffffff; fill-opacity:1;">
+                            <rect x="954.514" y="107.275" width="52" height="77"></rect>
+                        </g>
+                    </g>
+                </g>
+                <g font-family="Helvetica">
+                    <text x="957.514" y="165.667"  font-size="77">
+                        7
+                    </text>
+                    <g style="stroke:#ffffff; stroke-opacity:1">
+                        <g style="fill:#ffffff; fill-opacity:1;">
+                            <rect x="1116.33" y="177.275" width="48" height="77"></rect>
+                        </g>
+                    </g>
+                </g>
+                <g font-family="Helvetica">
+                    <text x="1119.33" y="235.667"  font-size="77">
+                        x
+                    </text>
+                    <g style="stroke:#ffffff; stroke-opacity:1">
+                        <g style="fill:#ffffff; fill-opacity:1;">
+                            <rect x="1116.33" y="107.275" width="48" height="77"></rect>
+                        </g>
+                    </g>
+                </g>
+                <g font-family="Helvetica">
+                    <text x="1119.33" y="165.667"  font-size="77">
+                        x
+                    </text>
+                    <rect x="1318.2" y="0" width="10.08" height="350"></rect>
+                    <rect x="1346.2" y="0" width="35" height="350"></rect>
+                </g>
+            </g>
+            <g transform="translate(237.106, 272.106)">
+            </g>
+            <g transform="translate(237.106, 237.106)">
+            </g>
+            <g transform="translate(0, 1.52588e-05)">
+            </g>
+        </g>
+    </g>
+</svg>
+</div></div>
             </div>
         </div>
 
