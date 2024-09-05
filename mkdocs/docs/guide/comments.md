@@ -22,7 +22,7 @@ Alternately, `(* comment *)` can be used for specifying comments.
 This form of comments can include multiple lines and may be nested.
 
 ## Examples
-~~~~~~sql
+~~~~~~
 % a comment line
 a0/4 h \slur(c1/8 h0) % a/4    <-- the last note is commented out
 

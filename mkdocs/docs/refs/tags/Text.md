@@ -157,11 +157,14 @@ See the [jazz](../../../examples/allthethings/) example.
 | name | string | the instrument name | *none* | false |
 | transp | string | a transposition string | *none* | true |
 | autopos | boolean | automatic position control | off | true |
+| repeat | boolean | allows to display on each system | off | true |
+| MIDI | int | MIDI instrument number | -1 | true |
 Supports [font parameters](../../tagsparams#text-parameters)
 
 - **name** is the instrument name (e.g. "Violin I")
 - **transp** is provided for transposing instruments. For example, with a Trumpet in B flat, you should set **transp** to "B&". When *transp* is set, a transposing key is automatically inserted and the notes are automatically transposed to the corresponding interval.
 - **autopos**: when "on", put the instrument string centered to the left of the corresponding staff. The default position if on top, left of the staff.
+- **repeat**: when "on", the instrument string is repeated on each system.
 
 See the [Articulations](../../../examples/articulations/) example.<br />
 See the [Mozart](../../../examples/mozart581/) example.<br />
