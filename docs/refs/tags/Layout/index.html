@@ -305,6 +305,10 @@
               <ul class="nav flex-column">
               </ul>
             </li>
+            <li class="nav-item" data-level="2"><a href="#color" class="nav-link">\color</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
             <li class="nav-item" data-level="2"><a href="#newpage" class="nav-link">\newPage</a>
               <ul class="nav flex-column">
               </ul>
@@ -430,9 +434,56 @@ where 'n' and 'm' are staves indexes (starting from 1)</li>
 </ul>
 <p>See the <a href="../../../examples/barlines/">Barlines</a> example.</p>
 <p><br /></p>
-<h2 id="newpage">\newPage</h2>
+<h2 id="color">\color</h2>
 <hr />
 <h3 id="description_1">Description</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Name</th>
+<th style="text-align: left;">Variants</th>
+<th style="text-align: left;">Type</th>
+<th style="text-align: left;">Notation element</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">\color</td>
+<td style="text-align: left;">\colour</td>
+<td style="text-align: left;">P</td>
+<td style="text-align: left;">sets the voice color</td>
+</tr>
+</tbody>
+</table>
+<p>The <strong>\color</strong> tag sets the voice color.
+Note that cross staff (like \accol) or global tags (like \title) are ignored. To set the whole score color, use the \pageFormat color parameter.
+Note also that the color applies to the voices that follow.</p>
+<h3 id="parameters_1">Parameters</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Name</th>
+<th style="text-align: left;">Type</th>
+<th style="text-align: left;">Description</th>
+<th style="text-align: left;">Default value</th>
+<th style="text-align: left;">Optional</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">c</td>
+<td style="text-align: left;">string</td>
+<td style="text-align: left;">a color string</td>
+<td style="text-align: left;"><em>none</em></td>
+<td style="text-align: left;">false</td>
+</tr>
+</tbody>
+</table>
+<p>The color string must be an html color name or a rgb(a) string in the form <code>0xrrggbb</code> or <code>0xrrggbbaa</code></p>
+<p><br /></p>
+<h2 id="newpage">\newPage</h2>
+<hr />
+<h3 id="description_2">Description</h3>
 <table>
 <thead>
 <tr>
@@ -455,7 +506,7 @@ where 'n' and 'm' are staves indexes (starting from 1)</li>
 <p><br /></p>
 <h2 id="newline">\newLine</h2>
 <hr />
-<h3 id="description_2">Description</h3>
+<h3 id="description_3">Description</h3>
 <table>
 <thead>
 <tr>
@@ -479,7 +530,7 @@ See the <a href="../../../examples/bartok/">Bartok</a> example.</p>
 <p><br /></p>
 <h2 id="pageformat">\pageFormat</h2>
 <hr />
-<h3 id="description_3">Description</h3>
+<h3 id="description_4">Description</h3>
 <table>
 <thead>
 <tr>
@@ -500,7 +551,7 @@ See the <a href="../../../examples/bartok/">Bartok</a> example.</p>
 </table>
 <p>The <strong>\pageFormat</strong> tag indicates the score page format. It should be set at the beginning of the first staff.
 When no page format is encountered, the default page format is 21cm x 29.6 (A4) and the margins are set to 2 cm.</p>
-<h3 id="parameters_1">Parameters</h3>
+<h3 id="parameters_2">Parameters</h3>
 <table>
 <thead>
 <tr>
@@ -561,13 +612,20 @@ When no page format is encountered, the default page format is 21cm x 29.6 (A4) 
 <td style="text-align: left;">3cm</td>
 <td style="text-align: left;">true</td>
 </tr>
+<tr>
+<td style="text-align: left;">color</td>
+<td style="text-align: left;">string</td>
+<td style="text-align: left;">the score color</td>
+<td style="text-align: left;">black</td>
+<td style="text-align: left;">true</td>
+</tr>
 </tbody>
 </table>
 <p>See the <a href="../../../examples/layout/">Layout</a> example.</p>
 <p><br /></p>
 <h2 id="staff">\staff</h2>
 <hr />
-<h3 id="description_4">Description</h3>
+<h3 id="description_5">Description</h3>
 <table>
 <thead>
 <tr>
@@ -586,7 +644,7 @@ When no page format is encountered, the default page format is 21cm x 29.6 (A4) 
 </tr>
 </tbody>
 </table>
-<h3 id="parameters_2">Parameters</h3>
+<h3 id="parameters_3">Parameters</h3>
 <table>
 <thead>
 <tr>
@@ -620,7 +678,7 @@ When no page format is encountered, the default page format is 21cm x 29.6 (A4) 
 <p><br /></p>
 <h2 id="staffformat">\staffFormat</h2>
 <hr />
-<h3 id="description_5">Description</h3>
+<h3 id="description_6">Description</h3>
 <table>
 <thead>
 <tr>
@@ -639,7 +697,7 @@ When no page format is encountered, the default page format is 21cm x 29.6 (A4) 
 </tr>
 </tbody>
 </table>
-<h3 id="parameters_3">Parameters</h3>
+<h3 id="parameters_4">Parameters</h3>
 <table>
 <thead>
 <tr>
@@ -681,7 +739,7 @@ When no page format is encountered, the default page format is 21cm x 29.6 (A4) 
 <p><br /></p>
 <h2 id="staffoff">\staffOff</h2>
 <hr />
-<h3 id="description_6">Description</h3>
+<h3 id="description_7">Description</h3>
 <table>
 <thead>
 <tr>
@@ -706,7 +764,7 @@ When no page format is encountered, the default page format is 21cm x 29.6 (A4) 
 <p><br /></p>
 <h2 id="staffon">\staffOn</h2>
 <hr />
-<h3 id="description_7">Description</h3>
+<h3 id="description_8">Description</h3>
 <table>
 <thead>
 <tr>
@@ -730,7 +788,7 @@ When no page format is encountered, the default page format is 21cm x 29.6 (A4) 
 <p><br /></p>
 <h2 id="systemformat">\systemFormat</h2>
 <hr />
-<h3 id="description_8">Description</h3>
+<h3 id="description_9">Description</h3>
 <table>
 <thead>
 <tr>
@@ -749,7 +807,7 @@ When no page format is encountered, the default page format is 21cm x 29.6 (A4) 
 </tr>
 </tbody>
 </table>
-<h3 id="parameters_4">Parameters</h3>
+<h3 id="parameters_5">Parameters</h3>
 <table>
 <thead>
 <tr>

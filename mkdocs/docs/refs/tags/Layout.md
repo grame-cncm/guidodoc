@@ -38,6 +38,37 @@ See the [Barlines](../../../examples/barlines/) example.
 <br />
 
 
+## \color
+
+-------
+
+### Description
+
+| Name | Variants | Type | Notation element |
+| :----| :--------| :----| :----------------|
+| \color |  \colour | P | sets the voice color |
+
+The **\color** tag sets the voice color.
+Note that cross staff (like \accol) or global tags (like \title) are ignored. To set the whole score color, use the \pageFormat color parameter.
+Note also that the color applies to the voices that follow.
+
+
+
+### Parameters
+
+| Name        	| Type   | Description    | Default value  | Optional |
+| :------------ |:-------| :--------------| :------------- | :--------| 
+| c | string | a color string | *none* | false |
+
+The color string must be an html color name or a rgb(a) string in the form `0xrrggbb` or `0xrrggbbaa`
+
+
+
+
+
+<br />
+
+
 ## \newPage
 
 -------
@@ -101,6 +132,7 @@ When no page format is encountered, the default page format is 21cm x 29.6 (A4) 
 | tm | unit | the top margin size | 5cm | true |
 | rm | unit | the right margin size | 2cm | true |
 | bm | unit | the bottom margin size | 3cm | true |
+| color | string | the score color | black | true |
 
 See the [Layout](../../../examples/layout/) example.
 
